@@ -22,6 +22,8 @@ import {
   Vue,
 } from "../../components/gallery/Tech";
 
+import { PorjectCard } from "../../components/blocs/Project";
+
 const Aboutpage = () => {
   return (
     <>
@@ -61,25 +63,74 @@ const Aboutpage = () => {
         </section>
         <section className="bg-red-200">zone de text</section>
         <section className="bg-red-300 col-span-2">
-          Logo des tech utilisé
-          <section>
-            <Html />
-            <Css />
-            <Sass />
-            <Javascript />
-            <Typescript />
-            <Reactjs />
-            <Vue />
-            <Nodejs />
-            <Mongo />
-            <Git />
-            <Vscode />
-            <Bash />
-            <Bootstrap />
-            <Tailwind />
-          </section>
+          <ul className="flex flex-row align-center">
+            <li>
+              <Html />
+            </li>
+            <li>
+              <Css />
+            </li>
+            <li>
+              <Sass />
+            </li>
+            <li>
+              <Bootstrap />
+            </li>
+            <li>
+              <Tailwind />
+            </li>
+            <li>
+              <Javascript />
+            </li>
+            <li>
+              <Typescript />
+            </li>
+            <li>
+              <Reactjs />
+            </li>
+            <li>
+              <Vue />
+            </li>
+            <li>
+              <Nodejs />
+            </li>
+            <li>
+              <Mongo />
+            </li>
+            <li>
+              <Git />
+            </li>
+            <li>
+              {" "}
+              <Vscode />
+            </li>
+            <li>
+              <Bash />
+            </li>
+          </ul>
         </section>
-        <section className="bg-red-400 col-span-2">Projects</section>
+        <section className="bg-red-400 col-span-2 grid grid-cols-2">
+          <PorjectCard
+            id="1"
+            src="https://via.placeholder.com/150"
+            name="projet 1"
+          />
+          <PorjectCard
+            id="2"
+            src="https://via.placeholder.com/150"
+            name="projet 2"
+          />
+          <PorjectCard
+            id="3"
+            src="https://via.placeholder.com/150"
+            name="projet 3"
+          />
+          <PorjectCard
+            id="4"
+            src="https://via.placeholder.com/150"
+            name="projet 4"
+          />
+        </section>
         <section className="bg-red-600 ">Exp</section>
         <section className="bg-red-700">Formation</section>
       </section>
