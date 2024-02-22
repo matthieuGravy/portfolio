@@ -1,56 +1,30 @@
 import Photo from "../../components/blocs/Photo";
-import Article from "../../components/blocs/Article";
-import Ads from "../../components/blocs/Ads";
-import Heading from "../../components/blocs/Heading";
-import { Buttonext } from "../../components/blocs/Buttons";
-import GithubIcon from "../../components/icons/GithubIcon";
-import Paragraphe from "../../components/blocs/Paragraphe";
 import Scroller from "../../components/blocs/Scroller";
-
+import Resume from "../../components/fr/Resume";
 import { PorjectCard } from "../../components/blocs/Project";
+import Heading from "../../components/blocs/Heading";
 
 const Aboutpage = () => {
+  const titre = "Matthieu Gravy";
   return (
     <>
-      <section className="grid grid-cols-2 gap-y-16">
-        <section className="w-56 ">
-          <Article
-            children1={
-              <Article
-                children1={<Photo />}
-                children2={
-                  <Article
-                    children1={
-                      <Heading
-                        level="h2"
-                        className="text-3xl text-center uppercase w-56"
-                        title="Matthieu Gravy"
-                      />
-                    }
-                    children2={
-                      <Paragraphe
-                        children={"Développer web"}
-                        className="text-center"
-                      />
-                    }
-                  ></Article>
-                }
-              />
-            }
-            children2={
-              <Ads
-                children={
-                  <Buttonext content={<GithubIcon />} link="" title="github" />
-                }
-              />
-            }
+      <section className="grid grid-cols-3 gap-y-16">
+        <section className="col-span-2 py-24">
+          <Heading
+            title={titre}
+            level="h1"
+            className="text-7xl font-extralight uppercase tracking-wide"
           />
+          <Photo />
         </section>
-        <section className="bg-red-200">zone de text</section>
-        <hr className="col-span-2" />
-        <section className="col-span-2 overflow-hidden flex flex-row group">
+        <hr className="col-span-3" />
+        <section className="col-span-3 overflow-hidden flex flex-row group">
           <Scroller />
         </section>
+        <section className="col-span-3 pt-16">
+          <Resume />
+        </section>
+        <hr className="col-span-3" />
 
         <section className="bg-red-400 col-span-2 grid grid-cols-2">
           <PorjectCard
@@ -74,8 +48,6 @@ const Aboutpage = () => {
             name="projet 4"
           />
         </section>
-        <section className="bg-red-600 ">Exp</section>
-        <section className="bg-red-700">Formation</section>
       </section>
     </>
   );
