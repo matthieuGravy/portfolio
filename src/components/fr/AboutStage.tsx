@@ -1,0 +1,88 @@
+import Paragraphe from "../blocs/Paragraphe";
+import { ButtonextTwo, ButtonOne } from "../blocs/Buttons";
+import FlechTo from "../icons/FlechetoIcon";
+import FlecheRight from "../icons/FlecheRightIcon";
+
+const textcenter = "text-center px-2";
+const Whatstage = () => {
+  const whatstage =
+    "Actuellement, je participe au Bootcamp intensif de Developpeur Web chez BeCode.org.";
+  const whatstage2 =
+    " à présent, le bootcamp arrive à terme et c'est l'opportunité pour moi de mettre en pratique mes compétences acquises.";
+  return (
+    <>
+      <article className={textcenter}>
+        <Paragraphe children={whatstage} />
+        <Paragraphe children={whatstage2} className="pb-8" />
+        <ButtonextTwo
+          link="https://becode.org/fr/"
+          content={
+            <>
+              En savoir plus sur BeCode
+              <span className="ps-2">
+                <FlecheRight />
+              </span>
+            </>
+          }
+        />
+      </article>
+    </>
+  );
+};
+
+const Duree = () => {
+  const duree =
+    "Il est possible de mofiier la durée de stage, jusqu'à 3 mois maximum.";
+  const possible =
+    "Si vous avez besoin de plus de temps, nous pouvons explorer les solutions ensemble.";
+  const avancer =
+    "Il est également totalement possible de commencer plus tôt si vous le souhaitez.";
+  return (
+    <>
+      <article className={textcenter}>
+        <Paragraphe children={<>{duree}</>} />
+        <Paragraphe children={<>{possible}</>} />
+        <Paragraphe children={<>{avancer}</>} className="pb-8" />
+        <ButtonOne
+          to="/contact"
+          content={
+            <>
+              Contactez moi
+              <span className="ps-2">
+                <FlechTo />
+              </span>
+            </>
+          }
+        />
+      </article>
+    </>
+  );
+};
+
+const Whyme = () => {
+  const whyme =
+    "Pendant ces derniers mois, j'ai acquis de nouvelles compétences, notamment en codage, en création de sites web, et en utilisation d'outils de développement.";
+  const whyme2 =
+    "En parallèle, j'ai développé des qualités essentielles telles que le travail en équipe, la résolution de problèmes, et l'adaptabilité.";
+  return (
+    <>
+      <article className={textcenter}>
+        <Paragraphe children={whyme} />
+        <Paragraphe children={whyme2} className="pb-8" />
+        <ButtonOne
+          to="/about"
+          content={
+            <>
+              En savoir plus sur moi
+              <span className="ps-2">
+                <FlechTo />
+              </span>
+            </>
+          }
+        />
+      </article>
+    </>
+  );
+};
+
+export { Whyme, Duree, Whatstage };

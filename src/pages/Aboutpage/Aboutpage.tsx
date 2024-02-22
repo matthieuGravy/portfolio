@@ -12,7 +12,7 @@ import { PorjectCard } from "../../components/blocs/Project";
 const Aboutpage = () => {
   return (
     <>
-      <section className="grid grid-cols-2">
+      <section className="grid grid-cols-2 gap-y-16">
         <section className="w-56 ">
           <Article
             children1={
@@ -47,7 +47,8 @@ const Aboutpage = () => {
           />
         </section>
         <section className="bg-red-200">zone de text</section>
-        <section className="bg-red-300 col-span-2 overflow-hidden flex flex-row group">
+        <hr className="col-span-2" />
+        <section className="col-span-2 overflow-hidden flex flex-row group">
           <Scroller />
         </section>
 

@@ -10,7 +10,7 @@ const Footer = () => {
   const author = <Matthieu />;
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-fuchsia-500 grid grid-cols-2 px-4 py-8 text-white uppercase">
+    <footer className="bg-zinc-800 grid grid-cols-2 px-4 py-8 text-white uppercase">
       <article className="ps-2">
         <Itsgravy />
       </article>

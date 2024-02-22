@@ -42,7 +42,7 @@ const Homepage = () => {
           </figure>
         </section>
         <hr />
-        <article className="flex flex-row justify-between w-full">
+        <article className="flex flex-row justify-between w-full py-16">
           <section className="flex flex-row items-end gap-x-8">
             <Maintech />
             <Paragraphe children={showcode} />

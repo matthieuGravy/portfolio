@@ -39,7 +39,7 @@ const Scroller = () => {
 
   const ListeScroller: FC<ListeScrollerProps> = ({ liste }) => {
     return (
-      <ul className="flex flex-row align-center animate animate-scroll-right gap-x-8 bg-yellow-200 px-4 justify-between whitespace-nowrap group-hover:paused">
+      <ul className="flex flex-row align-center animate animate-scroll-right gap-x-16 px-8 justify-between whitespace-nowrap group-hover:paused">
         {liste.map((tech, index) => (
           <li key={index} className="w-16 h-16">
             {tech}
