@@ -5,22 +5,7 @@ import Heading from "../../components/blocs/Heading";
 import { Buttonext } from "../../components/blocs/Buttons";
 import GithubIcon from "../../components/icons/GithubIcon";
 import Paragraphe from "../../components/blocs/Paragraphe";
-import {
-  Css,
-  Sass,
-  Html,
-  Bash,
-  Bootstrap,
-  Git,
-  Javascript,
-  Mongo,
-  Nodejs,
-  Reactjs,
-  Tailwind,
-  Typescript,
-  Vscode,
-  Vue,
-} from "../../components/gallery/Tech";
+import Scroller from "../../components/blocs/Scroller";
 
 import { PorjectCard } from "../../components/blocs/Project";
 
@@ -62,53 +47,10 @@ const Aboutpage = () => {
           />
         </section>
         <section className="bg-red-200">zone de text</section>
-        <section className="bg-red-300 col-span-2">
-          <ul className="flex flex-row align-center">
-            <li>
-              <Html />
-            </li>
-            <li>
-              <Css />
-            </li>
-            <li>
-              <Sass />
-            </li>
-            <li>
-              <Bootstrap />
-            </li>
-            <li>
-              <Tailwind />
-            </li>
-            <li>
-              <Javascript />
-            </li>
-            <li>
-              <Typescript />
-            </li>
-            <li>
-              <Reactjs />
-            </li>
-            <li>
-              <Vue />
-            </li>
-            <li>
-              <Nodejs />
-            </li>
-            <li>
-              <Mongo />
-            </li>
-            <li>
-              <Git />
-            </li>
-            <li>
-              {" "}
-              <Vscode />
-            </li>
-            <li>
-              <Bash />
-            </li>
-          </ul>
+        <section className="bg-red-300 col-span-2 overflow-hidden flex flex-row group">
+          <Scroller />
         </section>
+
         <section className="bg-red-400 col-span-2 grid grid-cols-2">
           <PorjectCard
             id="1"
