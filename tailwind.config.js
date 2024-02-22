@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       animation: {
-        "scroll-right": "animate-scroll-right 5s linear infinite",
+        "scroll-right": "animate-scroll-right 10s linear infinite",
       },
       keyframes: {
         "animate-scroll-right": {
