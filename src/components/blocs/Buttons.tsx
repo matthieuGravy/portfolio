@@ -10,7 +10,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
     <>
       <NavLink
         to={to}
-        className="bg-neutral-100 text-zinc-800 flex justify-center py-1 hover:bg-fuchsia-800 hover:text-neutral-50 transition-colors	"
+        className="bg-neutral-100 text-zinc-800 flex justify-center py-2 hover:bg-fuchsia-800 hover:text-neutral-50 transition-colors	"
       >
         {content}
       </NavLink>

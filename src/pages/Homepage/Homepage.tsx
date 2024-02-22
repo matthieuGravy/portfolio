@@ -49,7 +49,7 @@ const Homepage = () => {
 
             <Buttonext
               content={<FlecheRightIcon />}
-              link="https://github.com/matthieuGravy"
+              link="https://github.com/matthieuGravy/portfolio"
             />
           </section>
           <Jumbo

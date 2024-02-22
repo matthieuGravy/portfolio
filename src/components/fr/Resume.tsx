@@ -14,121 +14,122 @@ const Resume = () => {
   const paragraphe6 =
     "Cette trajectoire m'a non seulement permis d'acquérir des compétences techniques solides, mais elle m'a également enseigné l'importance du travail collaboratif, de l'adaptabilité et de la persévérance dans un domaine en constante évolution.";
   return (
-    <article className="grid grid-cols-3 gap-y-16 gap-x-8">
-      <Paragraphe children={paragraphe1} className="col-span-2" />
-      <section>
-        <ul>
-          <li>
-            <Heading
-              title="Gardiennage"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>European Protection Group</li>
-              <li>Trigion</li>
-              <li>Fact Security</li>
-              <li>Full Security</li>
-            </ul>
-          </li>
-          <li>
-            <Heading
-              title="CESI - CESS"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>Institut Jean Jaurès Charleroi</li>
-            </ul>
-          </li>
-          <li>
-            <Heading
-              title="Job d'étudiant"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>Bart Smit</li>
-              <li>European Protection Group</li>
-            </ul>
-          </li>
-        </ul>
+    <section className="grid grid-cols-2">
+      <article className="flex flex-col gap-y-8">
+        <Paragraphe children={paragraphe1} className="col-span-2" />
+        <Paragraphe children={paragraphe2} className="col-span-2" />
+        <Paragraphe children={paragraphe3} className="col-span-2" />
+        <Paragraphe children={paragraphe4} className="col-span-2" />
+        <Paragraphe children={paragraphe5} className="col-span-2" />
+        <Paragraphe children={paragraphe6} className="col-span-2" />
+      </article>
+      <section className="grid grid-cols-2">
+        <article className="flex flex-col gap-y-4">
+          <Heading
+            title="Education"
+            level="h5"
+            className="text-fuchsia-800 text-4xl text-center pb-2 uppercase"
+          />
+          <ul>
+            <li>
+              <Heading
+                title="CESI - CESS"
+                level="h6"
+                className="text-zinc-400 text-lg text-center pb-2 uppercase"
+              />
+              <ul className="grid grid-cols-2 text-zinc-500 gap-y-2 gap-x-2">
+                <li className="text-right">...-2010</li>
+                <li>Institut Jean Jaurès</li>
+                <li className="text-right">2014-2017</li>
+                <li>Institut Jean Jaurès</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Heading
+                title="Bachelier"
+                level="h6"
+                className="text-zinc-400 text-lg text-center pb-2 uppercase"
+              />
+              <ul className="grid grid-cols-2 text-zinc-500 gap-y-2 gap-x-2">
+                <li className="text-right">2017-2018</li>
+                <li>Université Libre de Bruxelles</li>
+                <li className="text-right">2018-2019</li>
+                <li>EPHEC</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+        <article className="flex flex-col gap-y-4">
+          <Heading
+            title="EXPÉRIENCE PROFESSIONNELLE"
+            level="h5"
+            className="text-fuchsia-800 text-4xl text-center pb-2 uppercase"
+          />
+          <ul>
+            <li>
+              <Heading
+                title="Gardiennage"
+                level="h6"
+                className="text-zinc-400 text-lg text-center pb-2 uppercase"
+              />
+              <ul className="grid grid-cols-2 text-zinc-500 gap-y-2 gap-x-2">
+                <li className="text-right">2010-2011</li>
+                <li>Fact Security</li>
+                <li className="text-right">2011-2011</li>
+                <li>Full Securit</li>
+                <li className="text-right">2011-2013</li>
+                <li>Trigion</li>
+                <li className="text-right">2011-2017</li>
+                <li>European Protection Group</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Heading
+                title="Grande distribution"
+                level="h6"
+                className="text-zinc-400 text-lg text-center pb-2 uppercase"
+              />
+              <ul className="grid grid-cols-2 text-zinc-500 gap-y-2 gap-x-2">
+                <li className="text-right">2013-2013</li>
+                <li>Red Market</li>
+                <li className="text-right">2014-2015</li>
+                <li>Bart Smit</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Heading
+                title="Horeca"
+                level="h6"
+                className="text-zinc-400 text-lg text-center pb-2 uppercase"
+              />
+              <ul className="grid grid-cols-2 text-zinc-500 gap-y-2 gap-x-2">
+                <li className="text-right">2017-2023</li>
+                <li>Pizza Hut</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <Heading
+                title="IT"
+                level="h6"
+                className="text-zinc-400 text-lg text-center pb-2 uppercase"
+              />
+              <ul className="grid grid-cols-2 text-zinc-500 gap-y-2 gap-x-2">
+                <li className="text-right">2023</li>
+                <li>BeCode</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
       </section>
-      <Paragraphe children={paragraphe2} className="col-span-2" />
-      <section>
-        <ul>
-          <li>
-            <Heading
-              title="Job d'étudiant"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>Pizza Hut</li>
-            </ul>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Heading
-              title="Parcours supérieur"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>ULB</li>
-              <li>EPHEC</li>
-            </ul>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Heading
-              title="Restauration rapide"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>Pizza Hut</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <Paragraphe children={paragraphe3} className="col-span-2" />
-      <section>
-        <ul>
-          <li>
-            <Heading
-              title="Apprentissage autodidacte"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>Dyma</li>
-              <li>Gsap</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <Paragraphe children={paragraphe4} className="col-span-2" />
-      <section>
-        <ul>
-          <li>
-            <Heading
-              title="Bootcamp"
-              level="h6"
-              className="text-neutral-400 text-lg"
-            />
-            <ul className="ps-2">
-              <li>BeCode</li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <Paragraphe children={paragraphe5} className="col-span-2" />
-      <section></section>
-      <Paragraphe children={paragraphe6} className="col-span-2" />
-    </article>
+    </section>
   );
 };
 

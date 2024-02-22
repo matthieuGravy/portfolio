@@ -11,7 +11,7 @@ import Article from "../../components/blocs/Article";
 import { Whatstage, Duree, Whyme } from "../../components/fr/AboutStage";
 
 const Internshippage = () => {
-  const hstyle = "text-3xl flex justify-center text-center uppercase py-8";
+  const hstyle = "text-4xl flex justify-center text-center uppercase py-8";
   const hduree = "Modifier la durée";
   const hstage = "Le stage";
   return (

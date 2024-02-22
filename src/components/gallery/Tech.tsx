@@ -16,7 +16,11 @@ import vue from "../../assets/vue.svg";
 const Html = () => {
   return (
     <>
-      <img src={html} alt="html" className="grayscale hover:grayscale-0" />
+      <img
+        src={html}
+        alt="html"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -24,7 +28,11 @@ const Html = () => {
 const Sass = () => {
   return (
     <>
-      <img src={sass} alt="Sass" className="grayscale hover:grayscale-0" />
+      <img
+        src={sass}
+        alt="Sass"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -32,7 +40,11 @@ const Sass = () => {
 const Css = () => {
   return (
     <>
-      <img src={css} alt="css" className="grayscale hover:grayscale-0" />
+      <img
+        src={css}
+        alt="css"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -40,7 +52,11 @@ const Css = () => {
 const Bash = () => {
   return (
     <>
-      <img src={bash} alt="Bash" className="grayscale hover:grayscale-0" />
+      <img
+        src={bash}
+        alt="Bash"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -48,7 +64,11 @@ const Bash = () => {
 const Bootstrap = () => {
   return (
     <>
-      <img src={bootstrap} alt="Bash" className="grayscale hover:grayscale-0" />
+      <img
+        src={bootstrap}
+        alt="Bash"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -56,7 +76,11 @@ const Bootstrap = () => {
 const Git = () => {
   return (
     <>
-      <img src={git} alt="Bash" className="grayscale hover:grayscale-0" />
+      <img
+        src={git}
+        alt="Bash"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -66,7 +90,7 @@ const Javascript = () => {
       <img
         src={javascript}
         alt="bash"
-        className="grayscale hover:grayscale-0"
+        className="grayscale hover:grayscale-0 transition-all"
       />
     </>
   );
@@ -74,14 +98,22 @@ const Javascript = () => {
 const Mongo = () => {
   return (
     <>
-      <img src={mongo} alt="mongodb" className="grayscale hover:grayscale-0" />
+      <img
+        src={mongo}
+        alt="mongodb"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
 const Nodejs = () => {
   return (
     <>
-      <img src={nodejs} alt="nodejs" className="grayscale hover:grayscale-0" />
+      <img
+        src={nodejs}
+        alt="nodejs"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -89,7 +121,11 @@ const Nodejs = () => {
 const Reactjs = () => {
   return (
     <>
-      <img src={react} alt="react" className="grayscale hover:grayscale-0" />
+      <img
+        src={react}
+        alt="react"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
@@ -100,7 +136,7 @@ const Tailwind = () => {
       <img
         src={tailwind}
         alt="tailwind"
-        className="grayscale hover:grayscale-0"
+        className="grayscale hover:grayscale-0 transition-all"
       />
     </>
   );
@@ -112,7 +148,7 @@ const Typescript = () => {
       <img
         src={typescript}
         alt="typescript"
-        className="grayscale hover:grayscale-0"
+        className="grayscale hover:grayscale-0 transition-all"
       />
     </>
   );
@@ -121,14 +157,22 @@ const Typescript = () => {
 const Vscode = () => {
   return (
     <>
-      <img src={vscode} alt="vscode" className="grayscale hover:grayscale-0" />
+      <img
+        src={vscode}
+        alt="vscode"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
 const Vue = () => {
   return (
     <>
-      <img src={vue} alt="vue" className="grayscale hover:grayscale-0" />
+      <img
+        src={vue}
+        alt="vue"
+        className="grayscale hover:grayscale-0 transition-all"
+      />
     </>
   );
 };
