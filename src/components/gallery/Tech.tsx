@@ -1,7 +1,6 @@
 import css from "../../assets/css.svg";
 import sass from "../../assets/sass.svg";
 import html from "../../assets/html.svg";
-import bash from "../../assets/bash.svg";
 import bootstrap from "../../assets/bootstrap.svg";
 import git from "../../assets/git.svg";
 import javascript from "../../assets/javascript.svg";
@@ -49,24 +48,12 @@ const Css = () => {
   );
 };
 
-const Bash = () => {
-  return (
-    <>
-      <img
-        src={bash}
-        alt="Bash"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
-    </>
-  );
-};
-
 const Bootstrap = () => {
   return (
     <>
       <img
         src={bootstrap}
-        alt="Bash"
+        alt="Bootstrap"
         className="grayscale hover:grayscale-0 transition-all"
       />
     </>
@@ -78,7 +65,7 @@ const Git = () => {
     <>
       <img
         src={git}
-        alt="Bash"
+        alt="git"
         className="grayscale hover:grayscale-0 transition-all"
       />
     </>
@@ -89,7 +76,7 @@ const Javascript = () => {
     <>
       <img
         src={javascript}
-        alt="bash"
+        alt="Javascript"
         className="grayscale hover:grayscale-0 transition-all"
       />
     </>
@@ -181,7 +168,6 @@ export {
   Css,
   Sass,
   Html,
-  Bash,
   Bootstrap,
   Git,
   Javascript,

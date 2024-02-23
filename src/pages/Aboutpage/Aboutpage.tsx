@@ -3,20 +3,27 @@ import Scroller from "../../components/blocs/Scroller";
 import Resume from "../../components/fr/Resume";
 import { PorjectCard } from "../../components/blocs/Project";
 import Heading from "../../components/blocs/Heading";
+import ArticleHorizontal from "../../components/blocs/ArticleHorizontal";
 
 const Aboutpage = () => {
   const titre = "Matthieu Gravy";
   return (
     <>
       <section className="grid grid-cols-3 gap-y-16">
-        <section className="col-span-2 py-24">
-          <Heading
-            title={titre}
-            level="h1"
-            className="text-7xl font-extralight uppercase tracking-wide"
+        <section className="col-span-3 py-24">
+          <ArticleHorizontal
+            className="justify-between w-full flex-row-reverse"
+            children1={<Photo />}
+            children2={
+              <Heading
+                title={titre}
+                level="h1"
+                className="text-7xl font-extralight uppercase tracking-wide"
+              />
+            }
           />
-          <Photo />
         </section>
+
         <hr className="col-span-3" />
         <section className="col-span-3 overflow-hidden flex flex-row group">
           <Scroller />
@@ -25,7 +32,6 @@ const Aboutpage = () => {
           <Resume />
         </section>
         <hr className="col-span-3" />
-
         <section className="bg-red-400 col-span-2 grid grid-cols-2">
           <PorjectCard
             id="1"

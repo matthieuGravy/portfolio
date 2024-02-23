@@ -2,7 +2,6 @@ import {
   Css,
   Sass,
   Html,
-  Bash,
   Bootstrap,
   Git,
   Javascript,
@@ -30,7 +29,6 @@ const Scroller = () => {
     <Mongo />,
     <Git />,
     <Vscode />,
-    <Bash />,
   ];
 
   interface ListeScrollerProps {
