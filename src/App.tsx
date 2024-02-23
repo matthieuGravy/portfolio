@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <Topnav />
+
       <main className={styeMain}>
         <Outlet />
       </main>
