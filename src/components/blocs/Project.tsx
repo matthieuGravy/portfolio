@@ -28,8 +28,4 @@ const PorjectCard: React.F<PorjectCardProps> = ({ src, name, id }) => {
   );
 };
 
-const ProjectPage = () => {
-  return <></>;
-};
-
-export { PorjectCard, ProjectPage };
+export { PorjectCard };

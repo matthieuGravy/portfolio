@@ -12,7 +12,6 @@ import {
   Buttonext,
 } from "../../components/blocs/Buttons";
 import FlecheToIcon from "../../components/icons/FlechetoIcon";
-import GithubIcon from "../../components/icons/GithubIcon";
 import FlecheRightIcon from "../../components/icons/FlecheRightIcon";
 import Showcode from "../../components/fr/Showcode";
 import Ads from "../../components/blocs/Ads";
@@ -37,9 +36,6 @@ const Homepage = () => {
             level="h1"
             className="text-7xl font-extralight uppercase tracking-wide"
           />
-          <figure className="text-white">
-            <Buttonext content={<GithubIcon />} link="" />
-          </figure>
         </section>
         <hr />
         <article className="flex flex-row justify-between w-full py-16">

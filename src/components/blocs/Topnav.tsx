@@ -3,12 +3,10 @@ import { ButtonNav } from "./Buttons";
 
 const Topnav = () => {
   return (
-    <>
-      <header>
-        <Itsgravy />
-      </header>
+    <header className="flex px-4 justify-between align-center fixed w-full top-0 py-4 text-neutral-50">
+      <ButtonNav to="/" content={<Itsgravy />} />
       <nav>
-        <ul>
+        <ul className="flex flex-cols gap-x-4">
           <li>{<ButtonNav to="/" content="Home" />}</li>
           <li>{<ButtonNav to="/internship" content="Stage" />}</li>
           <li>{<ButtonNav to="/about" content="à propos" />}</li>
@@ -16,7 +14,7 @@ const Topnav = () => {
           <li>{<ButtonNav to="/contact" content="contact" />}</li>
         </ul>
       </nav>
-    </>
+    </header>
   );
 };
 
