@@ -59,8 +59,12 @@ const Aboutpage = () => {
             }
           />
         </section>
-        <section className="col-span-1 py-24">
+        <section className="col-span-1 py-24 ">
           <Photo />
+        </section>
+        <hr className="col-span-3" />
+        <section className="col-span-3 overflow-hidden flex flex-row group ">
+          <ParallaxTextor />
         </section>
 
         <hr className="col-span-3" />
@@ -70,9 +74,7 @@ const Aboutpage = () => {
         <section className="col-span-3 grid grid-cols-1 gap-y-40 py-16 overflow-hidden">
           <Resume />
         </section>
-        <section className="col-span-3 overflow-hidden flex flex-row group bg-blue-200">
-          <ParallaxTextor />
-        </section>
+
         <section className="col-span-3 grid grid-cols-1 gap-y-40 py-16 overflow-hidden">
           <PorjectCard
             ref={ref}
