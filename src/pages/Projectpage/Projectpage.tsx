@@ -108,7 +108,7 @@ const Projectpage = () => {
   return (
     <>
       <Article
-        className="py-24 w-3/4"
+        className="py-24 md:w-3/4"
         children1={
           <Heading
             title="Projets"
@@ -122,7 +122,7 @@ const Projectpage = () => {
       />
 
       <hr />
-      <section className="grid grid-cols-2 gap-y-16 gap-x-16 py-24 ">
+      <section className="grid lg:grid-cols-2 gap-y-16 gap-x-16 py-24 ">
         {Projets.map((projet) => (
           <PorjectCard
             key={projet.id}
