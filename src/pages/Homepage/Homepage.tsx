@@ -34,15 +34,14 @@ const Homepage = () => {
           <Heading
             title={titre}
             level="h1"
-            className="text-7xl font-extralight uppercase tracking-wide"
+            className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
           />
         </section>
         <hr />
-        <article className="flex flex-row justify-between w-full py-16">
+        <article className="flex flex-col-reverse md:flex-row md:justify-between gap-y-24 md:gap-y-0 w-full py-16">
           <section className="flex flex-row items-end gap-x-8">
             <Maintech />
-            <Paragraphe children={showcode} />
-
+            <Paragraphe className="text-center" children={showcode} />
             <Buttonext
               content={<FlecheRightIcon />}
               link="https://github.com/matthieuGravy/portfolio"
@@ -65,7 +64,7 @@ const Homepage = () => {
                 <ButtonOne content="infos" to="/internship" />
               </article>
             }
-            className="flex flex-row-reverse gap-x-8 text-center uppercase tracking-widest"
+            className="flex md:flex-row-reverse flex-col gap-y-8 gap-x-8 text-center uppercase tracking-widest "
           ></Jumbo>
         </article>
       </article>
