@@ -23,7 +23,7 @@ const Aboutpage = () => {
   return (
     <>
       <motion.div
-        className="h-1 w-full fixed top-10 left-0 bg-fuchsia-800 z-50"
+        className="h-1 w-full fixed top-14 left-0 bg-fuchsia-700 opacity-75 z-50"
         style={{ scaleX, originX: 0 }}
       />
       <section className="grid grid-cols-3 gap-y-16">

@@ -8,61 +8,58 @@ const Projectpage = () => {
   function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [-distance, distance]);
   }
-  const ref = useRef(null);
-  const { scrollYProgress: scrollYProgress2 } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress2, 300);
+  // Premier conteneur
+  const ref1 = useRef(null);
+  const { scrollYProgress: scrollYProgress1 } = useScroll({ target: ref1 });
+  const y1 = useParallax(scrollYProgress1, 1000);
+
+  // Deuxième conteneur
+  const ref2 = useRef(null);
+  const { scrollYProgress: scrollYProgress2 } = useScroll({ target: ref2 });
+  const y2 = useParallax(scrollYProgress2, 400);
+
+  // Troisième conteneur
+  const ref3 = useRef(null);
+  const { scrollYProgress: scrollYProgress3 } = useScroll({ target: ref3 });
+  const y3 = useParallax(scrollYProgress3, 0);
 
   return (
-    <section className="grid gap-y-16">
+    <section className="grid grid-rows-4 gap-y-16 py-24 ">
       <PorjectCard
-        ref={ref}
         id={
-          <motion.h3
-            style={{ y, originY: 0 }}
-            className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800"
-          >
+          <h3 className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800">
             1
-          </motion.h3>
+          </h3>
         }
         src="https://via.placeholder.com/150"
         name="projet 1"
       />
       <PorjectCard
-        ref={ref}
         id={
-          <motion.h3
-            style={{ y }}
-            className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800"
-          >
-            2
-          </motion.h3>
+          <h3 className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800">
+            1
+          </h3>
         }
         src="https://via.placeholder.com/150"
-        name={<>project</>}
+        name="projet 1"
       />
       <PorjectCard
-        ref={ref}
         id={
-          <motion.h3
-            style={{ y }}
-            className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800"
-          >
-            3
-          </motion.h3>
+          <h3 className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800">
+            1
+          </h3>
         }
         src="https://via.placeholder.com/150"
-        name="projet 3"
+        name="projet 1"
       />
       <PorjectCard
-        ref={ref}
         id={
-          <motion.h3
-            style={{ y }}
-            className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800"
-          ></motion.h3>
+          <h3 className="text-8xl font-extralight uppercase tracking-wide top-0 left-0 z-50 bg-fuchsia-800">
+            1
+          </h3>
         }
         src="https://via.placeholder.com/150"
-        name="projet 4"
+        name="projet 1"
       />
     </section>
   );

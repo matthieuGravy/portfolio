@@ -21,9 +21,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
-    stiffness: 400,
+    stiffness: 200,
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1200], [0, 8], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 1200], [0, 4], {
     clamp: false,
   });
 
@@ -31,7 +31,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
   const directionFactor = useRef<number>(2);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1200);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;
@@ -45,8 +45,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   });
 
   return (
-    <div className="text-center overflow-hidden flex flex-nowrap m-0">
-      <motion.div className=" w-[120vw]" style={{ x }}>
+    <div className="text-center overflow-hidden m-0">
+      <motion.div className=" w-max" style={{ x }}>
         <span className="inline">{children} </span>
       </motion.div>
     </div>

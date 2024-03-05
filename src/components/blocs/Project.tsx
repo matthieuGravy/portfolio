@@ -10,7 +10,7 @@ interface PorjectCardProps {
 const PorjectCard: React.F<PorjectCardProps> = ({ src, name, id }) => {
   return (
     <>
-      <figure className="flex flex-row h-[80vh] overflow-hidden">
+      <figure className="flex flex-row h-[90vh] w-[90vw] overflow-hidden bg-red-200">
         <section className="relative bg-blue-200">
           <img src={src} alt={name} className="w-64" />
           <p className="absolute top-0 left-2 text-8xl">{id}</p>
