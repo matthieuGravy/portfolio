@@ -27,7 +27,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(90, -90, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(110, -110, v)}%`);
 
   const directionFactor = useRef<number>(2);
   useAnimationFrame((t, delta) => {

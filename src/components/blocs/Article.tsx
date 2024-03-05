@@ -1,11 +1,16 @@
 interface ArticleProps {
   children1: React.ReactNode;
   children2: React.ReactNode;
+  className?: string;
 }
 
-const Article: React.FC<ArticleProps> = ({ children1, children2 }) => {
+const Article: React.FC<ArticleProps> = ({
+  children1,
+  children2,
+  className,
+}) => {
   return (
-    <article className="flex flex-col gap-y-8">
+    <article className={`flex flex-col gap-y-8 ${className}`}>
       {children1}
       {children2}
     </article>

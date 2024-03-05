@@ -10,17 +10,18 @@ interface PorjectCardProps {
 const PorjectCard: React.F<PorjectCardProps> = ({ src, name, id }) => {
   return (
     <>
-      <figure className="flex flex-row h-[90vh] w-[90vw] overflow-hidden bg-red-200">
-        <section className="relative bg-blue-200">
+      <figure className="flex flex-row overflow-hidden">
+        <section className="relative">
           <img src={src} alt={name} className="w-64" />
-          <p className="absolute top-0 left-2 text-8xl">{id}</p>
+          <p className="absolute top-2 left-4 text-8xl">{id}</p>
         </section>
-        <figcaption>
+        <figcaption className="w-full px-2">
           <Heading
             title={name}
             level="h3"
-            className="text-3xl font-extralight uppercase tracking-wide"
+            className="text-3xl font-extralight uppercase tracking-wide py-4"
           />
+          <hr />
           <ButtonTwo to={`/projects/${id}`} content="voir" />
         </figcaption>
       </figure>
