@@ -25,17 +25,17 @@ const Internshippage = () => {
         className="flex flex-row justify-between text-center uppercase tracking-widest py-24 "
         children={
           <Slog
-            classNameContainer="flex flex-col gap-y-4 justify-end	"
+            classNameContainer="flex flex-col gap-y-4 md:justify-end	justify-center"
             data1={<InternshipIn />}
-            classNameData1="text-7xl font-extralight uppercase tracking-wide"
+            classNameData1="md:text-7xl text-3xl font-extralight uppercase tracking-wide"
             string="au"
             data2={<InternshipOff />}
-            classNameData2="text-7xl font-extralight uppercase tracking-wide"
+            classNameData2="md:text-7xl text-3xl font-extralight uppercase tracking-wide"
           />
         }
       ></Jumbo>
       <hr />
-      <section className="grid grid-cols-3 justify-items-center py-24 gap-x-8	xl:w-3/4 m-auto">
+      <section className="md:grid md:grid-cols-3 flex flex-col gap-y-16 justify-items-center py-24 gap-x-8	xl:w-3/4 m-auto">
         <Article
           children1={
             <Ads
