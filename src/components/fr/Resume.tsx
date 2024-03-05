@@ -2,7 +2,7 @@ import Paragraphe from "../../components/blocs/Paragraphe";
 
 const Resume = () => {
   return (
-    <section className="grid  grid-cols-3 gap-x-16 grid-flow-col">
+    <section className="md:grid lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-1 md:grid-rows-2 md:gap-x-16 lg:grid-flow-col md:flex-none flex flex-col">
       <article>
         <Paragraphe>
           J'ai une expérience variée dans le secteur de la sécurité privée en
@@ -21,7 +21,7 @@ const Resume = () => {
           et la méthode étaient essentielles.
         </Paragraphe>
       </article>
-      <article>
+      <article className="pt-8 md:pt-0 md:col-start-2">
         <Paragraphe>
           Ce changement m'a permis d'assumer des responsabilités, ce que je
           désirais, et j'ai décidé d'élargir mes horizons en poursuivant des
@@ -41,7 +41,7 @@ const Resume = () => {
           sans augmentation de salaire totalment adaptée.
         </Paragraphe>
       </article>
-      <article>
+      <article className="pt-8 md:pt-0">
         <Paragraphe>
           Mes compétences en management ont permis au centre où je travaillais
           d'établir des records de ventes, d'améliorer la présence du personnel

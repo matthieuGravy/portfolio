@@ -25,10 +25,10 @@ const Aboutpage = () => {
         className="h-1 w-full fixed top-14 left-0 bg-fuchsia-700 opacity-75 z-50"
         style={{ scaleX, originX: 0 }}
       />
-      <section className="grid grid-cols-3 gap-y-16">
-        <section className="col-span-2 py-24">
+      <section className="md:grid md:grid-cols-3 flex md:flex-none flex-col md:gap-y-16 py-24">
+        <section className="md:col-span-2">
           <Article
-            className="justify-between w-full flex-row-reverse"
+            className="justify-between w-full md:flex-col"
             children1={
               <Heading
                 title={titre}
@@ -43,19 +43,18 @@ const Aboutpage = () => {
             }
           />
         </section>
-        <section className="col-span-1 py-24 ">
+        <section className="col-span-1 pt-8 pb-16 md:pt-0 md:pb-0">
           <Photo />
         </section>
         <hr className="col-span-3" />
-        <section className="col-span-3 overflow-hidden flex flex-row group ">
+        <section className="col-span-3 overflow-hidden flex flex-row group py-8 md:py-0">
           <ParallaxTextor />
         </section>
-
         <hr className="col-span-3" />
-        <section className="col-span-3 overflow-hidden flex flex-row group">
+        <section className="col-span-3 overflow-hidden flex flex-row group pt-8 md:pt-0">
           <Scroller />
         </section>
-        <section className="col-span-3 grid grid-cols-1 gap-y-40 py-16 overflow-hidden text-justify">
+        <section className="col-span-3 grid gap-y-40 py-16 overflow-hidden text-justify">
           <Resume />
         </section>
       </section>

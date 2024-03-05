@@ -26,16 +26,15 @@ const Projectpage = () => {
     {
       id: "3",
       src: "https://via.placeholder.com/150",
-      name: "Plateforme de streaming",
+      name: "Sora cine",
       description:
-        "Site de streaming pour la diffusion d'anime.En utilisant une API externe pour les données. Le site rencontre quelques problèmes comme le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
+        "Site de streaming pour la diffusion d'anime. Réalisé en groupe de 4, utilisant une API externe pour les données. Le site rencontre quelques problèmes comme le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
       role: "Front-end ",
       tech: [
         "React",
         "react-router",
         "validator",
         "tailwindcss",
-        "daisy-ui",
         "framer-motion",
         "Node.js",
         "Express",
@@ -61,6 +60,7 @@ const Projectpage = () => {
       tech: [
         "typescript",
         "React",
+        "react-router",
         "Node.js",
         "Express",
         "mongoose",
