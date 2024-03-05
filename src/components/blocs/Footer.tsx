@@ -1,5 +1,4 @@
-import Matthieu from "../fr/Matthieu";
-import Itsgravy from "./Itsgravy";
+import Hello from "../fr/Hello";
 
 const Copyright = ({ author }) => {
   return <a href="https://www.linkedin.com/in/matthieugravy/">{author}</a>;
@@ -7,7 +6,7 @@ const Copyright = ({ author }) => {
 
 const Footer = () => {
   const signe = "©";
-  const author = <Matthieu />;
+  const author = <Hello />;
   const year = new Date().getFullYear();
   return (
     <footer className="bg-zinc-800 px-4 py-8 text-white uppercase font-extralight text-right">

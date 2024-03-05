@@ -98,4 +98,26 @@ const ButtonNav: React.FC<ButtonNavProps> = ({ to, content }) => {
   );
 };
 
-export { ButtonOne, ButtonTwo, Buttonext, ButtonextTwo, ButtonNav };
+interface ButtonCardsProps {
+  to: string;
+  content: React.ReactNode;
+}
+
+const ButtonCards: React.FC<ButtonCardsProps> = ({ to, content }) => {
+  return (
+    <>
+      <NavLink to={to} className="hover:opacity-75	">
+        {content}
+      </NavLink>
+    </>
+  );
+};
+
+export {
+  ButtonOne,
+  ButtonTwo,
+  Buttonext,
+  ButtonextTwo,
+  ButtonNav,
+  ButtonCards,
+};

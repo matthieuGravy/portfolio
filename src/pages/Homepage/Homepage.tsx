@@ -1,4 +1,4 @@
-import Matthieu from "../../components/fr/matthieu";
+import Hello from "../../components/fr/Hello";
 import Heading from "../../components/blocs/Heading";
 import Jumbo from "../../components/blocs/Jumbo";
 import Maintech from "../../components/fr/maintech";
@@ -22,7 +22,7 @@ const Homepage = () => {
   const showcode = <Showcode />;
   const titre = (
     <>
-      <Matthieu /> <br /> <Job /> <br />
+      <Hello /> <br /> <Job /> <br />
       <ButtonTwo to="/about" content={<FlecheToIcon />} />
     </>
   );

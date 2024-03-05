@@ -6,13 +6,12 @@ import Resume from "../../components/fr/Resume";
 
 import Heading from "../../components/blocs/Heading";
 import Article from "../../components/blocs/Article";
-import Socials from "../../components/blocs/Socials";
 import Accroche from "../../components/fr/Accroche";
 
 import ParallaxTextor from "../../components/blocs/ParallaxTextor";
 
 const Aboutpage = () => {
-  const titre = <>Matthieu Gravy</>;
+  const titre = <>Matthieu</>;
   const { scrollYProgress: scrollYProgress1 } = useScroll();
   const scaleX = useSpring(scrollYProgress1, {
     stiffness: 100,
@@ -40,7 +39,6 @@ const Aboutpage = () => {
             children2={
               <>
                 <Accroche />
-                <Socials />
               </>
             }
           />
@@ -57,7 +55,7 @@ const Aboutpage = () => {
         <section className="col-span-3 overflow-hidden flex flex-row group">
           <Scroller />
         </section>
-        <section className="col-span-3 grid grid-cols-1 gap-y-40 py-16 overflow-hidden">
+        <section className="col-span-3 grid grid-cols-1 gap-y-40 py-16 overflow-hidden text-justify">
           <Resume />
         </section>
       </section>

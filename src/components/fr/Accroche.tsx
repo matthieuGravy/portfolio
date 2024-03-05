@@ -2,7 +2,7 @@ import Paragraphe from "../../components/blocs/Paragraphe";
 
 const Accroche = () => {
   return (
-    <Paragraphe className="w-3/5">
+    <Paragraphe className="w-3/5 text-justify">
       En 2023, j'ai décidé de me lancer dans le développement web. Avec des
       notions en HTML, CSS et PHP acquises à l'EPHEC, j'ai progressé pour me
       concentrer de manière plus sérieuse et autodidacte sur JavaScript. Par la

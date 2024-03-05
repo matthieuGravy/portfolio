@@ -3,7 +3,7 @@ import { ButtonextTwo, ButtonOne } from "../blocs/Buttons";
 import FlechTo from "../icons/FlechetoIcon";
 import FlecheRight from "../icons/FlecheRightIcon";
 
-const textcenter = "text-center px-2";
+const textcenter = "text-justify px-2";
 const Whatstage = () => {
   const whatstage =
     "Actuellement, je participe au Bootcamp intensif de Developpeur Web chez BeCode.org.";

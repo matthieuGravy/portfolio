@@ -8,27 +8,100 @@ const Projectpage = () => {
     {
       id: "1",
       src: "https://via.placeholder.com/150",
-      name: "Site vitrine de restaurant",
+      name: "Its Gravy Kitchen's",
+      role: "Front-end",
+      description:
+        "Site statique pour un restaurant fictif. Développé en autonomie en respectant les consignes (pas de framework).",
+      tech: ["HTML", "JS", "bootstrap"],
     },
     {
       id: "2",
       src: "https://via.placeholder.com/150",
-      name: "Jeu de click",
+      name: "Plant Clicker",
+      role: "Front-end ",
+      description:
+        "Jeu de click en vanilla JavaScript. Il a été développé en groupe de 3 personnes. Pour ce projet nous avons utilisé pixi.js pour la partie graphique. Au clic, vous faites poussez un arbre.",
+      tech: ["HTML", "JS", "CSS", "pixi.js"],
     },
     {
       id: "3",
       src: "https://via.placeholder.com/150",
       name: "Plateforme de streaming",
+      description:
+        "Site de streaming pour la diffusion d'anime.En utilisant une API externe pour les données. Le site rencontre quelques problèmes comme le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
+      role: "Front-end ",
+      tech: [
+        "React",
+        "react-router",
+        "validator",
+        "tailwindcss",
+        "daisy-ui",
+        "framer-motion",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "bcrypt",
+        "cors",
+        "dotenv",
+        "nodemailer",
+        "body-parser",
+        "cookie-parser",
+        "express-session",
+        "jsonwebtoken",
+        "mongoose",
+      ],
     },
     {
       id: "4",
       src: "https://via.placeholder.com/150",
-      name: "Réseau social",
+      name: "Bookface",
+      description:
+        "C'est un réseau socal fictif, développé en groupe de 3 personnes. L'idée de départ est de recevoir un mail qui nous invite à donner notre avis lorsqu'on reçoit une notification, par mail et contribuer à la création de contenu. Ici malheureusment une grande partie de l'architecture React est à revoir avant la publication.",
+      role: "back-end ",
+      tech: [
+        "typescript",
+        "React",
+        "Node.js",
+        "Express",
+        "mongoose",
+        "bcrypt",
+        "cors",
+        "dotenv",
+        "nodemailer",
+        "mjml",
+        "winston",
+        "JWT (jose)",
+        "multer",
+        "pnpm",
+      ],
     },
     {
       id: "5",
       src: "https://via.placeholder.com/150",
-      name: "Site de vente de produit",
+      name: "Fresh shop",
+      role: "fullstack",
+      description:
+        "Site de vente de produit pour une entreprise fictive. Le projet est en fin de construction sur les fonctionalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
+      tech: [
+        "typescript",
+        "react",
+        "redux",
+        "redux-persist",
+        "react-router",
+        "framer-motion",
+        "tailwindcss",
+        "Node.js",
+        "Express",
+        "mongoose",
+        "bcrypt",
+        "cors",
+        "dotenv",
+        "nodemailer",
+        "mjml",
+        "winston",
+        "JWT (jose)",
+        "pnpm",
+      ],
     },
   ];
 
@@ -40,10 +113,12 @@ const Projectpage = () => {
           <Heading
             title="Projets"
             level="h2"
-            className="text-5xl font-light uppercase tracking-wider"
+            className="text-7xl font-extralight uppercase tracking-wide"
           />
         }
-        children2={<Paragraphe children={<AboutProject />} />}
+        children2={
+          <Paragraphe className="text-justify" children={<AboutProject />} />
+        }
       />
 
       <hr />
@@ -54,6 +129,16 @@ const Projectpage = () => {
             id={projet.id}
             src={projet.src}
             name={projet.name}
+            content={projet.description}
+            role={projet.role}
+            liste={projet.tech.map((tech) => (
+              <li
+                key={tech}
+                className="bg-fuchsia-700 p-2 rounded-lg uppercase"
+              >
+                {tech}
+              </li>
+            ))}
           />
         ))}
       </section>

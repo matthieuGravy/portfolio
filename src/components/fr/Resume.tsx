@@ -2,7 +2,7 @@ import Paragraphe from "../../components/blocs/Paragraphe";
 
 const Resume = () => {
   return (
-    <section className="grid  grid-cols-3 gap-x-8 grid-flow-col">
+    <section className="grid  grid-cols-3 gap-x-16 grid-flow-col">
       <article>
         <Paragraphe>
           J'ai une expérience variée dans le secteur de la sécurité privée en

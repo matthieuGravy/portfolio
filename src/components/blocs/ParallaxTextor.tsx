@@ -27,7 +27,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(110, -110, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(90, -100, v)}%`);
 
   const directionFactor = useRef<number>(2);
   useAnimationFrame((t, delta) => {
@@ -47,7 +47,9 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   return (
     <div className="text-center overflow-hidden m-0">
       <motion.div className=" w-max" style={{ x }}>
-        <span className="inline">{children} </span>
+        <span className="inline text-3xl font-extralight uppercase tracking-wide">
+          {children}{" "}
+        </span>
       </motion.div>
     </div>
   );

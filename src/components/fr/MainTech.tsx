@@ -3,7 +3,9 @@ const MainTech = () => {
     { id: 1, name: "TS" },
     { id: 2, name: "React" },
     { id: 3, name: "Redux" },
-    { id: 4, name: "Tailwind CSS" },
+    { id: 4, name: "React Router" },
+    { id: 5, name: "Tailwind CSS" },
+    { id: 6, name: "Express" },
   ];
 
   return (
