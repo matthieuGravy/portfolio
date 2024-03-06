@@ -38,7 +38,7 @@ const Resume = () => {
           commandes de pizza, etc. J'ai ensuite passé un test qui a démontré que
           je maîtrisais parfaitement tous les postes. En conséquence, j'ai
           obtenu davantage de responsabilités et suis devenu responsable, mais
-          sans augmentation de salaire totalment adaptée.
+          sans augmentation de salaire totalement adaptée.
         </Paragraphe>
       </article>
       <article className="pt-8 md:pt-0">
