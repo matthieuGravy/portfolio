@@ -1,40 +1,168 @@
+import { Formik, Field, Form } from "formik";
+import * as Yup from "yup";
+
 const Contactpage = () => {
+  const SignupSchema = Yup.object().shape({
+    nom: Yup.string()
+      .min(2, "Trop court !")
+      .max(50, "Trop long !")
+      .required("Requis"),
+    prenom: Yup.string()
+      .min(2, "Trop court !")
+      .max(50, "Trop long !")
+      .required("Requis"),
+    email: Yup.string().email("Email invalide").required("Requis"),
+    entreprise: Yup.string()
+      .min(2, "Trop court !")
+      .max(50, "Trop long !")
+      .required("Requis"),
+    sujet: Yup.string()
+      .min(2, "Trop court !")
+      .max(50, "Trop long !")
+      .required("Requis"),
+    message: Yup.string()
+      .min(2, "Trop court !")
+      .max(500, "Trop long !")
+      .required("Requis"),
+  });
+
+  const submitForm = (values) => {
+    console.log(values);
+  };
   return (
     <>
-      <section className="py-24">Me contacter</section>
-      <form action="" className="w-1/2 mx-auto">
-        <section className="grid grid-cols-2 grid-rows-3 gap-8 py-8">
-          <input
-            className="bg-zinc-800 border-b-[1px] py-2 px-2 uppercase"
-            type="text"
-            placeholder="Nom"
-          ></input>
-          <input
-            className="bg-zinc-800 border-b-[1px] py-2 px-2 uppercase"
-            type="text"
-            placeholder="Prénom"
-          ></input>
-          <input
-            className="bg-zinc-800 border-b-[1px] py-2 px-2 uppercase"
-            type="text"
-            placeholder="Email"
-          ></input>
-          <input
-            className="bg-zinc-800 border-b-[1px] py-2 px-2 uppercase row-start-3"
-            type="text"
-            placeholder="Sujet"
-          ></input>
-        </section>
-        <textarea
-          className="bg-zinc-800 border-b-[1px] py-2 px-2 uppercase row-start-4 col-span-2 w-full m-auto "
-          placeholder="Message"
-        ></textarea>
-        <input
-          type="submit"
-          value="Envoyer"
-          className="uppercase block py-8"
-        ></input>
-      </form>
+      <section className="py-24">form</section>
+      <Formik
+        initialValues={{
+          nom: "",
+          prenom: "",
+          email: "",
+          entreprise: "",
+          sujet: "",
+          message: "",
+        }}
+        validationSchema={SignupSchema}
+        onSubmit={submitForm}
+      >
+        {({ errors, touched, values }) => (
+          <Form className="xl:w-1/4 mx-auto">
+            <section className="grid grid-cols-2 grid-rows-3 gap-8 py-8 ">
+              <label className="relative">
+                <Field
+                  name="nom"
+                  placeholder="Nom"
+                  className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                    errors.nom && touched.nom
+                      ? "border-red-500"
+                      : values.nom === ""
+                      ? "border-natural-50"
+                      : "border-green-500"
+                  }`}
+                />
+                {errors.nom && touched.nom ? (
+                  <p className="absolute text-red-500 left-1">{errors.nom}</p>
+                ) : null}
+              </label>
+              <label className="relative place-self-end">
+                <Field
+                  name="prenom"
+                  placeholder="Prénom"
+                  className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                    errors.prenom && touched.prenom
+                      ? "border-red-500"
+                      : values.prenom === ""
+                      ? "border-natural-50"
+                      : "border-green-500"
+                  }`}
+                />
+                {errors.prenom && touched.prenom ? (
+                  <p className="absolute text-red-500 left-1">
+                    {errors.prenom}
+                  </p>
+                ) : null}
+              </label>
+              <label className="relative">
+                <Field
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                    errors.email && touched.email
+                      ? "border-red-500"
+                      : values.email === ""
+                      ? "border-natural-50"
+                      : "border-green-500"
+                  }`}
+                />
+                {errors.email && touched.email ? (
+                  <p className="absolute text-red-500 left-1">{errors.email}</p>
+                ) : null}
+              </label>
+              <label className="relative place-self-end">
+                <Field
+                  name="entreprise"
+                  placeholder="Entreprise"
+                  className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                    errors.entreprise && touched.entreprise
+                      ? "border-red-500"
+                      : values.entreprise === ""
+                      ? "border-natural-50"
+                      : "border-green-500"
+                  }`}
+                />
+                {errors.entreprise && touched.entreprise ? (
+                  <p className="absolute text-red-500 left-1">
+                    {errors.entreprise}
+                  </p>
+                ) : null}
+              </label>
+              <label className="relative">
+                <Field
+                  name="sujet"
+                  placeholder="Sujet"
+                  className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                    errors.sujet && touched.sujet
+                      ? "border-red-500"
+                      : values.sujet === ""
+                      ? "border-natural-50"
+                      : "border-green-500"
+                  }`}
+                />
+                {errors.sujet && touched.sujet ? (
+                  <p className="absolute text-red-500 left-1">{errors.sujet}</p>
+                ) : null}
+              </label>
+            </section>
+            <section className="flex flex-col gap-y-8">
+              <label className="relative">
+                <Field
+                  as="textarea"
+                  name="message"
+                  placeholder="Message"
+                  className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none w-full ${
+                    errors.message && touched.message
+                      ? "border-red-500"
+                      : values.message === ""
+                      ? "border-natural-50"
+                      : "border-green-500"
+                  }`}
+                />
+                {errors.message && touched.message ? (
+                  <p className="absolute text-red-500 left-1">
+                    {errors.message}
+                  </p>
+                ) : null}
+              </label>
+              <button
+                type="submit"
+                className="uppercase w-full bg-neutral-50 text-zinc-800 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors"
+              >
+                Envoyer
+              </button>
+            </section>
+          </Form>
+        )}
+      </Formik>
     </>
   );
 };
