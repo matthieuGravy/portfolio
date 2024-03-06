@@ -1,6 +1,8 @@
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-
+import Heading from "../../components/blocs/Heading";
+import Paragraphe from "../../components/blocs/Paragraphe";
+import Article from "../../components/blocs/Article";
 const Contactpage = () => {
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
@@ -31,7 +33,25 @@ const Contactpage = () => {
   };
   return (
     <>
-      <section className="py-24">form</section>
+      <Article
+        className="py-24"
+        children1={
+          <Heading
+            title="Contactez-moi"
+            level="h2"
+            className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
+          />
+        }
+        children2={
+          <>
+            <Paragraphe
+              className=""
+              children="Vous avez une question, un projet ou une idée ? N'hésitez pas à me contacter via le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais."
+            />
+          </>
+        }
+      />
+      <hr />
       <Formik
         initialValues={{
           nom: "",
@@ -45,8 +65,8 @@ const Contactpage = () => {
         onSubmit={submitForm}
       >
         {({ errors, touched, values }) => (
-          <Form className="xl:w-1/4 mx-auto">
-            <section className="grid grid-cols-2 grid-rows-3 gap-8 py-8 ">
+          <Form className="md:w-3/5 xl:w-1/4 mx-auto py-24">
+            <section className="grid md:grid-cols-2  grid-rows-3 gap-8 py-8">
               <label className="relative">
                 <Field
                   name="nom"
@@ -63,7 +83,7 @@ const Contactpage = () => {
                   <p className="absolute text-red-500 left-1">{errors.nom}</p>
                 ) : null}
               </label>
-              <label className="relative place-self-end">
+              <label className="relative md:place-self-end">
                 <Field
                   name="prenom"
                   placeholder="Prénom"
@@ -98,7 +118,7 @@ const Contactpage = () => {
                   <p className="absolute text-red-500 left-1">{errors.email}</p>
                 ) : null}
               </label>
-              <label className="relative place-self-end">
+              <label className="relative md:place-self-end">
                 <Field
                   name="entreprise"
                   placeholder="Entreprise"
