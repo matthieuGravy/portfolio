@@ -27,10 +27,9 @@ const Resume = () => {
           désirais, et j'ai décidé d'élargir mes horizons en poursuivant des
           études. Pendant ce temps, j'ai accepté un poste de livreur après avoir
           quitté le gardiennage. Bien que le salaire ait diminué de 150 euros la
-          soirée à 35 euros les 4 heures, cela n'a pas entamé ma détermination à
-          effectuer le changement que j'avais décidé d'entreprendre. Avoir une
-          base plus solide et être en accord avec moi-même étaient mes
-          priorités.
+          soirée à 35 euros, cela n'a pas entamé ma détermination à effectuer le
+          changement que j'avais décidé d'entreprendre. Avoir une base plus
+          solide et être en accord avec moi-même étaient mes priorités.
         </Paragraphe>
         <Paragraphe className="pt-8">
           Pour augmenter mes revenus, je suis devenu à nouveau un véritable
