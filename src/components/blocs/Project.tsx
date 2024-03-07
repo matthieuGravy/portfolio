@@ -8,19 +8,20 @@ interface PorjectCardProps {
   content: React.ReactNode;
   liste: React.ReactNode;
   role?: string;
+  to?: string;
 }
 
 const PorjectCard: React.F<PorjectCardProps> = ({
   name,
-  id,
   role,
   content,
   liste,
+  to,
 }) => {
   return (
     <>
       <ButtonCards
-        to={`/projects/${id}`}
+        to={`/project/${to}`}
         content={
           <>
             <article className="w-full px-2">

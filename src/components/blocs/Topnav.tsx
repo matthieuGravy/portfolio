@@ -79,7 +79,7 @@ const Topnav = () => {
 
   const navFr = [
     { to: "/", content: "Home" },
-    { to: "/project", content: "projets" },
+    { to: "/project/projects", content: "projets" },
     { to: "/about", content: "à propos" },
     { to: "/contact", content: "contact" },
   ];
