@@ -12,7 +12,7 @@ const Projectpage = () => {
       role: "Front-end",
       description:
         "Site statique pour un restaurant fictif. Développé en autonomie en respectant les consignes (pas de framework).",
-      tech: ["HTML", "JS", "bootstrap"],
+      tech: ["HTML", "JavaScript", "bootstrap"],
     },
     {
       id: "2",
@@ -21,7 +21,7 @@ const Projectpage = () => {
       role: "Front-end ",
       description:
         "Jeu de click en vanilla JavaScript. Il a été développé en groupe de 3 personnes. Pour ce projet nous avons utilisé pixi.js pour la partie graphique. Au clic, vous faites poussez un arbre.",
-      tech: ["HTML", "JS", "CSS", "pixi.js"],
+      tech: ["HTML", "JavaScript", "CSS", "pixi.js"],
     },
     {
       id: "3",
@@ -134,7 +134,7 @@ const Projectpage = () => {
             liste={projet.tech.map((tech) => (
               <li
                 key={tech}
-                className="bg-fuchsia-700 p-2 rounded-lg uppercase"
+                className="bg-fuchsia-700 p-2 rounded-lg uppercase text-xs"
               >
                 {tech}
               </li>

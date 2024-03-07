@@ -1,8 +1,9 @@
 const MainTech = () => {
   const technologies = [
-    { id: 1, name: "TS" },
+    { id: 0, name: "JavaScript" },
+    { id: 1, name: "TypeScript" },
     { id: 2, name: "React" },
-    { id: 3, name: "React Router" },
+    { id: 3, name: "Vue" },
     { id: 4, name: "Tailwind CSS" },
     { id: 5, name: "Express" },
   ];

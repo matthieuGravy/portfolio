@@ -55,7 +55,7 @@ const Buttonext: React.FC<ButtonextProps> = ({
         title={title}
         target="_blank"
         rel="noreferrer"
-        className={`scale-110 hover:scale-90 transition-all ${className}"`}
+        className={`transition-all ${className}"`}
       >
         {content}
       </a>
