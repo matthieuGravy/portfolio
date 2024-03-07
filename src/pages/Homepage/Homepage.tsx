@@ -1,25 +1,21 @@
 import Hello from "../../components/fr/Hello";
 import Heading from "../../components/blocs/Heading";
 import Jumbo from "../../components/blocs/Jumbo";
-import Maintech from "../../components/fr/maintech";
 import InternshipIn from "../../components/fr/internshipIn";
 import InternshipOff from "../../components/fr/internshipOff";
 import Job from "../../components/fr/job";
 import Slog from "../../components/blocs/slog";
-import {
-  ButtonOne,
-  ButtonTwo,
-  Buttonext,
-} from "../../components/blocs/Buttons";
+import { ButtonTwo } from "../../components/blocs/Buttons";
 import FlecheToIcon from "../../components/icons/FlechetoIcon";
-import FlecheRightIcon from "../../components/icons/FlecheRightIcon";
-import Showcode from "../../components/fr/Showcode";
 import Ads from "../../components/blocs/Ads";
-import Paragraphe from "../../components/blocs/Paragraphe";
 import Stage from "../../components/fr/stage";
+import Article from "../../components/blocs/Article";
+import { Whatstage, Duree, Whyme } from "../../components/fr/AboutStage";
 
 const Homepage = () => {
-  const showcode = <Showcode />;
+  const hstyle = "text-4xl flex justify-center text-center uppercase py-8";
+  const hduree = "Modifier la durée";
+  const hstage = "Le stage";
   const titre = (
     <>
       <Hello /> <br /> <Job /> <br />
@@ -29,45 +25,74 @@ const Homepage = () => {
 
   return (
     <>
-      <article className="flex flex-col justify-between  min-h-[90vh]">
-        <section className="py-24 flex flex-row justify-between">
-          <Heading
-            title={titre}
-            level="h1"
-            className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
+      <section className="py-24 flex flex-row justify-between">
+        <Heading
+          title={titre}
+          level="h1"
+          className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
+        />
+      </section>
+      <hr />
+
+      <Jumbo
+        title={
+          <>
+            <Ads children={<Stage />} />
+          </>
+        }
+        className="flex flex-row justify-between text-center uppercase tracking-widest py-24 "
+        children={
+          <Slog
+            classNameContainer="flex flex-col gap-y-4 md:justify-end	justify-center"
+            data1={<InternshipIn />}
+            classNameData1="md:text-7xl text-3xl font-extralight uppercase tracking-wide"
+            string="au"
+            data2={<InternshipOff />}
+            classNameData2="md:text-7xl text-3xl font-extralight uppercase tracking-wide"
           />
-        </section>
-        <hr />
-        <article className="flex flex-col-reverse md:flex-row md:justify-between gap-y-24 md:gap-y-0 w-full py-16">
-          <section className="flex flex-row items-end gap-x-8">
-            <Maintech />
-            <Paragraphe className="text-center" children={showcode} />
-            <Buttonext
-              content={<FlecheRightIcon />}
-              link="https://github.com/matthieuGravy/portfolio"
+        }
+      ></Jumbo>
+      <section className="lg:grid lg:grid-cols-3 w-full md:w-2/3 lg:w-full flex flex-col gap-y-16 justify-items-center py-24 gap-x-8 m-auto">
+        <Article
+          children1={
+            <Ads
+              children={
+                <>
+                  <Heading level="h2" className={hstyle} title={hstage} />
+                  <hr />
+                </>
+              }
             />
-          </section>
-          <Jumbo
-            title={
-              <>
-                <Ads children={<Stage />} />
-              </>
-            }
-            children={
-              <article className="flex flex-col gap-y-4 justify-end	">
-                <Slog
-                  classNameContainer="flex flex-col gap-y-4 justify-end"
-                  data1={<InternshipIn />}
-                  string="au"
-                  data2={<InternshipOff />}
-                />
-                <ButtonOne content="infos" to="/internship" />
-              </article>
-            }
-            className="flex md:flex-row-reverse flex-col gap-y-8 gap-x-8 text-center uppercase tracking-widest "
-          ></Jumbo>
-        </article>
-      </article>
+          }
+          children2={<Whatstage />}
+        ></Article>
+        <Article
+          children1={
+            <Ads
+              children={
+                <>
+                  <Heading level="h2" className={hstyle} title="Le bon choix" />
+                  <hr />
+                </>
+              }
+            />
+          }
+          children2={<Whyme />}
+        ></Article>
+        <Article
+          children1={
+            <Ads
+              children={
+                <>
+                  <Heading level="h2" className={hstyle} title={hduree} />
+                  <hr />
+                </>
+              }
+            />
+          }
+          children2={<Duree />}
+        ></Article>
+      </section>
     </>
   );
 };

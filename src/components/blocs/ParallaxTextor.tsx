@@ -23,7 +23,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
     damping: 50,
     stiffness: 200,
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1200], [0, 4], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 4], {
     clamp: false,
   });
 
@@ -31,7 +31,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
   const directionFactor = useRef<number>(2);
   useAnimationFrame((t, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 3000);
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;

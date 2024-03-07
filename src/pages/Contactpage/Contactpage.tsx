@@ -65,7 +65,7 @@ const Contactpage = () => {
         onSubmit={submitForm}
       >
         {({ errors, touched, values }) => (
-          <Form className="md:w-3/5 xl:w-1/4 mx-auto py-24">
+          <Form className="md:w-3/5 lg:w-2/5 mx-auto py-24">
             <section className="grid md:grid-cols-2  grid-rows-3 gap-8 py-8">
               <label className="relative">
                 <Field

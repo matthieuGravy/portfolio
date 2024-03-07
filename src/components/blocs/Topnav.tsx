@@ -18,18 +18,28 @@ const Topnav = () => {
     const updateNavVisibility = () => {
       const isVisible = window.innerWidth >= 768;
       setIsNavVisible(isVisible);
+      console.log(("1.isNavVisible", isNavVisible));
     };
 
     updateNavVisibility();
-    window.addEventListener("resize", updateNavVisibility);
+
+    const handleResize = () => {
+      updateNavVisibility();
+      console.log("2. useEffect", isNavVisible);
+    };
+
+    window.addEventListener("resize", handleResize);
+    console.log("3. useEffect", isNavVisible);
 
     return () => {
-      window.removeEventListener("resize", updateNavVisibility);
+      window.removeEventListener("resize", handleResize);
+      console.log("5. useEffect", isNavVisible);
     };
-  }, []);
+  });
 
   useEffect(() => {
     if (isNavVisible) {
+      console.log("4. useEffect", isNavVisible);
       controls.start((i) => ({
         opacity: 1,
         scale: 1,
@@ -69,7 +79,6 @@ const Topnav = () => {
 
   const navFr = [
     { to: "/", content: "Home" },
-    { to: "/internship", content: "Stage" },
     { to: "/project", content: "projets" },
     { to: "/about", content: "à propos" },
     { to: "/contact", content: "contact" },
@@ -97,20 +106,11 @@ const Topnav = () => {
         {isNavVisible && (
           <AnimatePresence>
             <motion.ul
-              className={`
-
-        flex 
-        md:static 
-        md:flex-row 
-        md:top-0 
-        md:py-0 
-        md:gap-x-4 
-        gap-y-6 
-        ${
-          isNavVisible
-            ? "pointer-events-auto absolute flex-col md:flex px-12 top-14 -right-4 bg-fuchsia-700 py-8"
-            : "pointer-events-none hidden md:flex"
-        }`}
+              className={`flex md:static md:flex-row md:top-0 md:py-0 md:gap-x-4 gap-y-6 ${
+                isNavVisible
+                  ? "pointer-events-auto absolute flex-col md:flex px-12 top-14 -right-4 bg-fuchsia-700 py-8"
+                  : "pointer-events-none hidden md:flex"
+              }`}
               initial={{ clipPath: "inset(60% 70% 90% 50% round 0px)" }}
               animate={{ clipPath: "inset(0% 0% 0% 0% round 0px)" }}
               exit={{ clipPath: "inset(80% 50% 90% 50% round 0px)" }}

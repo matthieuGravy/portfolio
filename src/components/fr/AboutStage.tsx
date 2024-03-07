@@ -1,7 +1,6 @@
 import Paragraphe from "../blocs/Paragraphe";
-import { ButtonextTwo, ButtonOne } from "../blocs/Buttons";
+import { ButtonOne } from "../blocs/Buttons";
 import FlechTo from "../icons/FlechetoIcon";
-import FlecheRight from "../icons/FlecheRightIcon";
 
 const textcenter = "text-justify px-2";
 const Whatstage = () => {
@@ -14,13 +13,13 @@ const Whatstage = () => {
       <article className={textcenter}>
         <Paragraphe children={whatstage} />
         <Paragraphe children={whatstage2} className="pb-8" />
-        <ButtonextTwo
-          link="https://becode.org/fr/"
+        <ButtonOne
+          to="/project"
           content={
             <>
-              En savoir plus sur BeCode
+              Voir les projets
               <span className="ps-2">
-                <FlecheRight />
+                <FlechTo />
               </span>
             </>
           }
