@@ -15,30 +15,7 @@ const Topnav = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    const updateNavVisibility = () => {
-      const isVisible = window.innerWidth >= 768;
-      setIsNavVisible(isVisible);
-      console.log(("1.isNavVisible", isNavVisible));
-    };
-
-    updateNavVisibility();
-
-    const handleResize = () => {
-      updateNavVisibility();
-      console.log("2. useEffect", isNavVisible);
-    };
-
-    window.addEventListener("resize", handleResize);
-    console.log("3. useEffect", isNavVisible);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      console.log("5. useEffect", isNavVisible);
-    };
-  });
-
-  useEffect(() => {
-    if (isNavVisible) {
+    if (isNavVisible || window.innerWidth > 768) {
       console.log("4. useEffect", isNavVisible);
       controls.start((i) => ({
         opacity: 1,
@@ -66,6 +43,9 @@ const Topnav = () => {
       setIsHidden(true);
     } else {
       setIsHidden(false);
+      if (window.innerWidth <= 768) {
+        setIsNavVisible(false);
+      }
     }
   });
 
@@ -94,42 +74,35 @@ const Topnav = () => {
       className={`fixed flex px-4 justify-between items-center fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-fuchsia-700`}
     >
       <ButtonNav to="/" content={<Itsgravy />} />
-      <nav className="">
+
+      <nav className="text-right w-auto">
         <motion.button
           onClick={toggleNav}
-          className="md:hidden"
+          className="md:hidden uppercase"
           aria-label="Menu"
           whileTap={{ scale: 0.8 }}
         >
           Menu
         </motion.button>
-        {isNavVisible && (
-          <AnimatePresence>
-            <motion.ul
-              className={`flex md:static md:flex-row md:top-0 md:py-0 md:gap-x-4 gap-y-6 ${
-                isNavVisible
-                  ? "pointer-events-auto absolute flex-col md:flex px-12 top-14 -right-4 bg-fuchsia-700 py-8"
-                  : "pointer-events-none hidden md:flex"
-              }`}
-              initial={{ clipPath: "inset(60% 70% 90% 50% round 0px)" }}
-              animate={{ clipPath: "inset(0% 0% 0% 0% round 0px)" }}
-              exit={{ clipPath: "inset(80% 50% 90% 50% round 0px)" }}
-              transition={{ type: "spring", bounce: 0, duration: 0.5 }}
+        <motion.ul
+          className={`pointer-events-auto ${
+            isNavVisible
+              ? "top-0 py-4 absolute top-14 right-0 gap-y-4  bg-fuchsia-700 text-center"
+              : "md:flex md:flex-row md:gap-x-4 md:flex hidden md:justify-center md:items-center"
+          }`}
+          animate={controls}
+        >
+          {navFr.map((nav) => (
+            <li
+              key={nav.to}
+              onClick={window.innerWidth < 768 ? closeNav : undefined}
+              className="w-full px-8 py-2 md:px-0 md:py-0 md:block md:w-auto overflow-hidden"
+              initial={{ opacity: 1, scale: 0.5 }}
             >
-              {navFr.map((nav) => (
-                <motion.li
-                  key={nav.to}
-                  onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className="w-max"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={controls}
-                >
-                  <ButtonNav to={nav.to} content={nav.content} />
-                </motion.li>
-              ))}
-            </motion.ul>
-          </AnimatePresence>
-        )}
+              <ButtonNav to={nav.to} content={nav.content} />
+            </li>
+          ))}
+        </motion.ul>
       </nav>
     </motion.header>
   );
