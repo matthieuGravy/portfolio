@@ -1,4 +1,3 @@
-import { motion, useScroll, useSpring } from "framer-motion";
 import { ButtonextTwo } from "../../components/blocs/Buttons";
 import FlecheToIcon from "../../components/Icons/FlecheToIcon";
 
@@ -14,19 +13,9 @@ import ParallaxTextor from "../../components/blocs/ParallaxTextor";
 
 const Aboutpage = () => {
   const titre = <>Matthieu</>;
-  const { scrollYProgress: scrollYProgress1 } = useScroll();
-  const scaleX = useSpring(scrollYProgress1, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
 
   return (
     <>
-      <motion.div
-        className="h-1 w-full fixed top-14 left-0 bg-fuchsia-700 opacity-75 z-50"
-        style={{ scaleX, originX: 0 }}
-      />
       <section className="md:grid md:grid-cols-3 flex md:flex-none flex-col md:gap-y-16 py-24">
         <section className="md:col-span-2">
           <Article
