@@ -17,7 +17,6 @@ const Topnav = () => {
 
   useEffect(() => {
     if (isNavVisible || window.innerWidth > 768) {
-      console.log("4. useEffect", isNavVisible);
       controls.start((i) => ({
         opacity: 1,
         scale: 1,

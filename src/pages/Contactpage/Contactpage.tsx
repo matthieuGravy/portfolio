@@ -34,7 +34,7 @@ const Contactpage = () => {
   return (
     <>
       <Article
-        className="py-24 md:w-3/4"
+        className="py-24 md:w-3/5"
         children1={
           <Heading
             title="Contactez-moi"

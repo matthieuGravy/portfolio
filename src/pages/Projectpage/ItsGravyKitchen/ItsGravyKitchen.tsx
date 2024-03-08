@@ -18,9 +18,8 @@ const ItsGravyKitchen = () => {
       deploie: "Déployé avec Github",
       tonext: "project/plant-clicker-js",
       toprev: "project/projects",
-      source:
-        "https://matthieugravy.github.io/restaurant-css-framework/index.html",
-      link: "https://github.com/matthieuGravy/restaurant-css-framework",
+      link: "https://matthieugravy.github.io/restaurant-css-framework/index.html",
+      source: "https://github.com/matthieuGravy/restaurant-css-framework",
     },
   ];
   const gallery = [
