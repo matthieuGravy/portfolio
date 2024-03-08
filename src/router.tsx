@@ -11,16 +11,20 @@ import PlantClicker from "./pages/Projectpage/PlantClicker/PlantClicker";
 import SoraCine from "./pages/Projectpage/SoraCine/SoraCine";
 import BookFace from "./pages/Projectpage/BookFace/BookFace";
 import FreshSHop from "./pages/Projectpage/FreshShop/FreshShop";
+import Errorpage from "./pages/Errorpage/Errorpage";
+
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Errorpage />,
     children: [
       { path: "/", element: <Homepage /> },
       { path: "/about", element: <Aboutpage /> },
       {
         path: "/project",
         element: <Projectpage />,
+        errorElement: <Errorpage />,
         children: [
           { path: "kitchens-bootstrap", element: <ItsGravyKitchen /> },
           { path: "projects", element: <ProjetAllPage /> },
