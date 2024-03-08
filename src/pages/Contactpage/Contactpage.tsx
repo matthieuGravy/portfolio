@@ -3,28 +3,45 @@ import * as Yup from "yup";
 import Heading from "../../components/blocs/Heading";
 import Paragraphe from "../../components/blocs/Paragraphe";
 import Article from "../../components/blocs/Article";
+
 const Contactpage = () => {
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
       .min(2, "Trop court !")
       .max(50, "Trop long !")
+      .matches(/^[A-Za-z ]+$/, "Seuls les lettres, les espaces sont autorisés")
       .required("Requis"),
     prenom: Yup.string()
       .min(2, "Trop court !")
       .max(50, "Trop long !")
+      .matches(/^[A-Za-z ]+$/, "Seuls les lettres, les espaces sont autorisés")
       .required("Requis"),
     email: Yup.string().email("Email invalide").required("Requis"),
     entreprise: Yup.string()
       .min(2, "Trop court !")
       .max(50, "Trop long !")
-      .required("Requis"),
+      .matches(
+        /^[A-Za-z0-9 ]+$/,
+        "Seuls les lettres, les chiffres et les espaces sont autorisés"
+      )
+      .notRequired(),
+
     sujet: Yup.string()
       .min(2, "Trop court !")
       .max(50, "Trop long !")
+      .matches(
+        /^[A-Za-z0-9 !,;.?:]+$/,
+        "Seuls les lettres, les chiffres, les espaces et les caractères spécifiques sont autorisés"
+      )
       .required("Requis"),
+
     message: Yup.string()
       .min(2, "Trop court !")
       .max(500, "Trop long !")
+      .matches(
+        /^[A-Za-z0-9 !,;.?:]+$/,
+        "Seuls les lettres, les chiffres, les espaces et les caractères spécifiques sont autorisés"
+      )
       .required("Requis"),
   });
 
