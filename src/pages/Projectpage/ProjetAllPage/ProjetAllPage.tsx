@@ -121,7 +121,7 @@ const ProjetAllPage = () => {
           <Heading
             title="Projets"
             level="h2"
-            className="text-7xl font-extralight uppercase tracking-wide"
+            className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
           />
         }
         children2={

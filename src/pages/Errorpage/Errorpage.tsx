@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Errorpage = () => {
   return (
     <section className="bg-zinc-800 w-full uppercase font-light xl:px-12 px-8">
-      <h1 className=" text-7xl py-24 text-fuchsia-700">Oups ..</h1>
+      <h1 className="md:text-7xl text-5xl py-24 text-fuchsia-700">Oups ..</h1>
       <article className="text-neutral-400 xl:w-3/5 text-justify flex flex-col gap-y-8 pb-8">
         <p className=" ">
           Etant donné que je en suis pas du genre à balancer je ne vais pas vous
