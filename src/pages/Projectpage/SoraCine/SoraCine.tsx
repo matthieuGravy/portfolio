@@ -3,6 +3,8 @@ import sorahome from "../../../assets/sora-home.png";
 import soralogin from "../../../assets/sora-login.png";
 import soralogged from "../../../assets/sora-logged.png";
 import soramovie from "../../../assets/sora-movies.png";
+import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
+import FlecheToIcon from "../../../components/Icons/FlecheToIcon";
 
 const SoraCine = () => {
   const sc = [
@@ -32,6 +34,8 @@ const SoraCine = () => {
       deploie: "Déployé avec Vercel",
       tonext: "project/bookface",
       toprev: "project/plant-clicker-js",
+      source: "https://github.com/matthieuGravy/sora-cine",
+      link: "https://sora-cine.vercel.app/",
     },
   ];
   const gallery = [
@@ -69,6 +73,22 @@ const SoraCine = () => {
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}
+          source={project.source}
+          button={
+            <figure className="pt-8 flex">
+              <ButtonextTwo
+                link={project.link}
+                title="lien github"
+                content={
+                  <>
+                    <span className="pe-2 uppercase">Voir le site</span>
+                    <FlecheToIcon />
+                  </>
+                }
+                className="px-2"
+              />
+            </figure>
+          }
           figure={gallery.map((img, index) => (
             <Figure
               key={index}

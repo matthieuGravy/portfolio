@@ -1,6 +1,8 @@
 import { ProjetUnitaire, Figure } from "../../../components/blocs/Project.tsx";
 import plantclicker from "../../../assets/plantclicker.png";
 import plantclickerpanel from "../../../assets/plantclicker-panel.png";
+import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
+import FlecheToIcon from "../../../components/Icons/FlecheToIcon";
 
 const PlantClicker = () => {
   const pc = [
@@ -13,6 +15,8 @@ const PlantClicker = () => {
       deploie: "Déployé avec Github",
       toprev: "project/kitchens-bootstrap",
       tonext: "project/sora-cine",
+      source: "https://github.com/matthieuGravy/plant-clicker",
+      link: "https://matthieugravy.github.io/plant-clicker/",
     },
   ];
   const gallery = [
@@ -39,6 +43,22 @@ const PlantClicker = () => {
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}
+          source={project.source}
+          button={
+            <figure className="pt-8 flex">
+              <ButtonextTwo
+                link={project.link}
+                title="lien github"
+                content={
+                  <>
+                    <span className="pe-2 uppercase">Voir le site</span>
+                    <FlecheToIcon />
+                  </>
+                }
+                className="px-2"
+              />
+            </figure>
+          }
           figure={gallery.map((img, index) => (
             <Figure
               key={index}

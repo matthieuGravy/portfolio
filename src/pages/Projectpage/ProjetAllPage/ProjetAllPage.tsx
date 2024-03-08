@@ -3,6 +3,8 @@ import Heading from "../../../components/blocs/Heading";
 import Paragraphe from "../../../components/blocs/Paragraphe";
 import AboutProject from "../../../components/fr/AboutProject";
 import Article from "../../../components/blocs/Article";
+import { ButtonextTwo } from "../../../components/blocs/Buttons";
+import FlecheToIcon from "../../../components/icons/FlecheToIcon";
 
 const ProjetAllPage = () => {
   const Projets = [
@@ -84,7 +86,7 @@ const ProjetAllPage = () => {
       id: "5",
       src: "https://via.placeholder.com/150",
       name: "Fresh shop",
-      role: "fullstack",
+      role: "full-stack",
       description:
         "Site de vente de produit pour une entreprise fictive. Le projet est en fin de construction sur les fonctionalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
       tech: [
@@ -114,7 +116,7 @@ const ProjetAllPage = () => {
   return (
     <>
       <Article
-        className="py-24 md:w-3/4"
+        className="py-24 md:w-3/5"
         children1={
           <Heading
             title="Projets"
@@ -123,7 +125,27 @@ const ProjetAllPage = () => {
           />
         }
         children2={
-          <Paragraphe className="text-justify" children={<AboutProject />} />
+          <Paragraphe
+            className="text-justify"
+            children={
+              <>
+                <AboutProject />
+                <figure className="pt-8 flex">
+                  <ButtonextTwo
+                    link="https://github.com/matthieuGravy/"
+                    title="lien github"
+                    content={
+                      <>
+                        <span className="pe-2">Voir mon github</span>
+                        <FlecheToIcon />
+                      </>
+                    }
+                    className="px-2"
+                  />
+                </figure>
+              </>
+            }
+          />
         }
       />
 

@@ -1,4 +1,6 @@
 import { motion, useScroll, useSpring } from "framer-motion";
+import { ButtonextTwo } from "../../components/blocs/Buttons";
+import FlecheToIcon from "../../components/Icons/FlecheToIcon";
 
 import Photo from "../../components/blocs/Photo";
 import Scroller from "../../components/blocs/Scroller";
@@ -39,6 +41,21 @@ const Aboutpage = () => {
             children2={
               <>
                 <Accroche />
+                <figure className="pt-8 flex">
+                  <ButtonextTwo
+                    link="https://www.linkedin.com/in/matthieugravy/"
+                    title="lien github"
+                    content={
+                      <>
+                        <span className="pe-2 uppercase">
+                          Suivez moi sur Linkedin
+                        </span>
+                        <FlecheToIcon />
+                      </>
+                    }
+                    className="px-2"
+                  />
+                </figure>
               </>
             }
           />

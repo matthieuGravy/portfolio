@@ -22,11 +22,12 @@ const BookFace = () => {
         "winston - ",
         "JWT (jose) - ",
         "multer - ",
-        "pnpm - ",
+        "pnpm",
       ],
       deploie: "Non déployé",
       tonext: "project/fresh-shop",
       toprev: "project/sora-cine",
+      source: "https://github.com/matthieuGravy/book-face",
     },
   ];
   const gallery = [
@@ -48,6 +49,7 @@ const BookFace = () => {
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}
+          source={project.source}
           figure={gallery.map((img, index) => (
             <Figure
               key={index}

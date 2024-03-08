@@ -4,6 +4,8 @@ import IGKContact from "../../../assets/IGK-Contact.png";
 import IGKPictures from "../../../assets/IGK-Pictures.png";
 import IGKRestaurant from "../../../assets/IGK-Restaurants.png";
 import { ProjetUnitaire, Figure } from "../../../components/blocs/Project.tsx";
+import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
+import FlecheToIcon from "../../../components/Icons/FlecheToIcon";
 
 const ItsGravyKitchen = () => {
   const itg = [
@@ -16,6 +18,9 @@ const ItsGravyKitchen = () => {
       deploie: "Déployé avec Github",
       tonext: "project/plant-clicker-js",
       toprev: "project/projects",
+      source:
+        "https://matthieugravy.github.io/restaurant-css-framework/index.html",
+      link: "https://github.com/matthieuGravy/restaurant-css-framework",
     },
   ];
   const gallery = [
@@ -57,6 +62,22 @@ const ItsGravyKitchen = () => {
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}
+          source={project.source}
+          button={
+            <figure className="pt-8 flex">
+              <ButtonextTwo
+                link={project.link}
+                title="lien github"
+                content={
+                  <>
+                    <span className="pe-2 uppercase">Voir le site</span>
+                    <FlecheToIcon />
+                  </>
+                }
+                className="px-2"
+              />
+            </figure>
+          }
           figure={gallery.map((img, index) => (
             <Figure
               key={index}

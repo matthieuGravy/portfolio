@@ -2,9 +2,10 @@ import Heading from "./Heading";
 import { ButtonCards } from "./Buttons";
 import Paragraphe from "./Paragraphe";
 import Article from "./Article";
-import { ButtonOne } from "./Buttons";
+import { ButtonOne, ButtonextTwo } from "./Buttons";
 import FlecheRightIcon from "../icons/FlecheRightIcon";
 import FlecheLeftIcon from "../icons/FlecheLeftIcon";
+import FlecheToIcon from "../icons/FlecheToIcon";
 
 interface PorjectCardProps {
   id: string;
@@ -66,6 +67,8 @@ interface ProjetUnitaireProps {
   role?: string;
   tonext: string;
   toprev: string;
+  source: string;
+  button?: React.ReactNode;
 }
 
 const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
@@ -77,6 +80,8 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
   role,
   tonext,
   toprev,
+  button,
+  source,
 }) => {
   return (
     <>
@@ -94,11 +99,28 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
                 />
               }
               children2={
-                <Heading
-                  level="h3"
-                  className="text-4xl font-extralight uppercase tracking-wide"
-                  title={role}
-                />
+                <>
+                  <Heading
+                    level="h3"
+                    className="text-4xl font-extralight uppercase tracking-wide"
+                    title={role}
+                  />
+                  <figure className="pt-8 flex">
+                    <ButtonextTwo
+                      link={source}
+                      title="lien github"
+                      content={
+                        <>
+                          <span className="pe-2 uppercase">
+                            Voir le code source
+                          </span>
+                          <FlecheToIcon />
+                        </>
+                      }
+                      className="px-2"
+                    />
+                  </figure>
+                </>
               }
             />
             <hr className="pb-8" />
@@ -125,6 +147,7 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
                       className="text-2xl font-extralight uppercase tracking-wide pb-2"
                     />
                     <p className="uppercase text-zinc-400">{pversion}</p>
+                    {button}
                   </article>
                 </section>
               </section>
@@ -135,7 +158,7 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
           </>
         }
       />
-      <section className="flex justify-between">
+      <section className="flex justify-between pb-24">
         <ButtonOne
           to={`/${toprev}`}
           content={
@@ -148,7 +171,7 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
           to={`/${tonext}`}
           content={
             <>
-              <span className="pe-2">suivant</span>
+              <span className="pe-2">Suivant</span>
               <FlecheRightIcon />
             </>
           }
