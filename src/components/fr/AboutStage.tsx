@@ -14,7 +14,7 @@ const Whatstage = () => {
         <Paragraphe children={whatstage} />
         <Paragraphe children={whatstage2} className="pb-8" />
         <ButtonOne
-          to="/project"
+          to="/project/projects"
           content={
             <>
               Voir les projets

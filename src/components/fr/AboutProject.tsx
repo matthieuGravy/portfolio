@@ -15,6 +15,9 @@ const AboutProject = () => {
       tout le monde dans le projet. Aujourd'hui, il me reste encore beaucoup de
       travail à faire pour terminer mes projets, mais je suis fier de ce que
       j'ai accompli.
+      <br />
+      <br />
+      évidement tous mes projets sont visible sur mon github, n'
     </>
   );
 };

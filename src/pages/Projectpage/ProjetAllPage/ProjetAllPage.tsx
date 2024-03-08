@@ -33,7 +33,7 @@ const ProjetAllPage = () => {
       name: "Sora cine",
       description:
         "Site de streaming pour la diffusion d'anime. Réalisé en groupe de 4, utilisant une API externe pour les données. Le site rencontre quelques problèmes comme le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
-      role: "Front-end ",
+      role: "Front-end - chef de projet",
       tech: [
         "React",
         "react-router",

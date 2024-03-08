@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 interface ButtonOneProps {
   to: string;
-  content: string;
+  content: React.ReactNode;
 }
 
 const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
@@ -10,7 +10,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
     <>
       <NavLink
         to={to}
-        className="uppercase bg-neutral-50 text-zinc-800 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors	"
+        className="uppercase bg-neutral-50 text-zinc-800 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors px-2"
       >
         {content}
       </NavLink>
