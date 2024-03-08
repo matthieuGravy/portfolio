@@ -8,7 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import HamburgerIcon from "../icons/HamburgerIcon";
-
+import { NavLink } from "react-router-dom";
 const Topnav = () => {
   const [isNavVisible, setIsNavVisible] = useState<boolean>(false);
   const [isHidden, setIsHidden] = useState<boolean>(false);
@@ -63,6 +63,7 @@ const Topnav = () => {
     { to: "/about", content: "à propos" },
     { to: "/contact", content: "contact" },
   ];
+
   return (
     <motion.header
       variants={{ isVisible: { y: 0 }, isHidden: { y: -100 } }}
@@ -74,7 +75,9 @@ const Topnav = () => {
       className={`fixed flex px-4 justify-between items-center fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-fuchsia-700`}
     >
       <motion.div whileTap={{ scale: 0.8 }}>
-        <ButtonNav to="/" content={<Itsgravy />} />
+        <NavLink to="/">
+          <Itsgravy />
+        </NavLink>
       </motion.div>
       <nav className="text-right w-auto pointer-events-auto ">
         <motion.button
@@ -96,14 +99,14 @@ const Topnav = () => {
           {navFr.map((nav) => (
             <li
               key={nav.to}
-              className="w-full py-4  md:py-0 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
+              className="w-full py-4  md:py-2 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
               initial={{ opacity: 1, scale: 0.5 }}
             >
               <ButtonNav
                 to={nav.to}
                 onClick={window.innerWidth < 768 ? closeNav : undefined}
                 content={nav.content}
-                className="px-8 md:px-0  w-full"
+                className="px-8 md:px-2 w-full"
               />
             </li>
           ))}

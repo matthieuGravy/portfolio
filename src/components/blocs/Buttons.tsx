@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useMatch } from "react-router-dom";
 
 interface ButtonOneProps {
   to: string;
@@ -96,11 +96,13 @@ const ButtonNav: React.FC<ButtonNavProps> = ({
   className,
   onClick,
 }) => {
+  const match = useMatch(to);
+
   return (
     <>
       <NavLink
         to={to}
-        className={`font-extralight ${className}`}
+        className={`font-extralight ${className} ${match ? "opacity-75" : ""} `}
         onClick={onClick}
       >
         {content}
