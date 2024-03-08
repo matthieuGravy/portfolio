@@ -3,7 +3,8 @@ import Topnav from "./components/blocs/Topnav";
 import Footer from "./components/blocs/Footer";
 
 function App() {
-  const styeMain = "bg-zinc-800 px-4 py-2 text-neutral-50 pt-10 min-h-[100vh]";
+  const styeMain =
+    "bg-zinc-800 px-4 xl:px-12 py-2 text-neutral-50 pt-10 min-h-[100vh]";
   return (
     <>
       <Topnav />

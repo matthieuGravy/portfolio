@@ -86,7 +86,7 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
   return (
     <>
       <Article
-        className="py-24 md:w-3/4 lg:w-full"
+        className="py-24  lg:w-full"
         children1={
           <>
             <Article
@@ -128,9 +128,9 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
         }
         children2={
           <>
-            <article className="grid grid-cols-2 place-content-between relative gap-x-8">
+            <article className="md:grid md:grid-cols-2 flex flex-col  place-content-between relative gap-x-8">
               <section className="">
-                <section className="sticky top-14 flex flex-col gap-y-8">
+                <section className="sticky top-14 flex flex-col gap-y-8 pb-24">
                   <Paragraphe className="text-justify" children={paragraphe} />
                   <article>
                     <Heading
