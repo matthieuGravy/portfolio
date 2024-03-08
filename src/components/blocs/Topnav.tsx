@@ -3,11 +3,11 @@ import { ButtonNav } from "./Buttons";
 import { useState, useEffect } from "react";
 import {
   motion,
-  AnimatePresence,
   useAnimation,
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
+import HamburgerIcon from "../icons/HamburgerIcon";
 
 const Topnav = () => {
   const [isNavVisible, setIsNavVisible] = useState<boolean>(false);
@@ -73,16 +73,17 @@ const Topnav = () => {
       transition={{ duration: 0.3 }}
       className={`fixed flex px-4 justify-between items-center fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-fuchsia-700`}
     >
-      <ButtonNav to="/" content={<Itsgravy />} />
-
-      <nav className="text-right w-auto">
+      <motion.div whileTap={{ scale: 0.8 }}>
+        <ButtonNav to="/" content={<Itsgravy />} />
+      </motion.div>
+      <nav className="text-right w-auto pointer-events-auto ">
         <motion.button
           onClick={toggleNav}
           className="md:hidden uppercase"
           aria-label="Menu"
           whileTap={{ scale: 0.8 }}
         >
-          Menu
+          <HamburgerIcon />
         </motion.button>
         <motion.ul
           className={`pointer-events-auto ${
@@ -95,11 +96,15 @@ const Topnav = () => {
           {navFr.map((nav) => (
             <li
               key={nav.to}
-              onClick={window.innerWidth < 768 ? closeNav : undefined}
-              className="w-full px-8 py-2 md:px-0 md:py-0 md:block md:w-auto overflow-hidden"
+              className="w-full py-4  md:py-0 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
               initial={{ opacity: 1, scale: 0.5 }}
             >
-              <ButtonNav to={nav.to} content={nav.content} />
+              <ButtonNav
+                to={nav.to}
+                onClick={window.innerWidth < 768 ? closeNav : undefined}
+                content={nav.content}
+                className="px-8 md:px-0  w-full"
+              />
             </li>
           ))}
         </motion.ul>

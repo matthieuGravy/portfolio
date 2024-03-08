@@ -87,11 +87,22 @@ const ButtonextTwo: React.FC<ButtonextProps> = ({
 interface ButtonNavProps {
   to: string;
   content: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 }
-const ButtonNav: React.FC<ButtonNavProps> = ({ to, content }) => {
+const ButtonNav: React.FC<ButtonNavProps> = ({
+  to,
+  content,
+  className,
+  onClick,
+}) => {
   return (
     <>
-      <NavLink to={to} className="font-extralight	">
+      <NavLink
+        to={to}
+        className={`font-extralight ${className}`}
+        onClick={onClick}
+      >
         {content}
       </NavLink>
     </>
