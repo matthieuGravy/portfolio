@@ -1,5 +1,6 @@
 import { PorjectCard } from "../../../components/blocs/Project";
 import Heading from "../../../components/blocs/Heading";
+import Paragraphe from "../../../components/blocs/Paragraphe";
 import AboutProject from "../../../components/fr/AboutProject";
 import Article from "../../../components/blocs/Article";
 import { ButtonextTwo } from "../../../components/blocs/Buttons";
@@ -85,7 +86,7 @@ const ProjetAllPage = () => {
       id: "5",
       src: "https://via.placeholder.com/150",
       name: "Fresh shop",
-      role: "full-stack",
+      role: "fullstack",
       description:
         "Site de vente de produit pour une entreprise fictive. Le projet est en fin de construction sur les fonctionalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
       tech: [
@@ -124,24 +125,27 @@ const ProjetAllPage = () => {
           />
         }
         children2={
-          <article>
-            <>
-              <AboutProject />
-              <figure className="pt-8 flex">
-                <ButtonextTwo
-                  link="https://github.com/matthieuGravy/"
-                  title="lien github"
-                  content={
-                    <>
-                      <span className="pe-2">Voir mon github</span>
-                      <FlecheToIcon />
-                    </>
-                  }
-                  className="px-2"
-                />
-              </figure>
-            </>
-          </article>
+          <Paragraphe
+            className="text-justify"
+            children={
+              <>
+                <AboutProject />
+                <span className="pt-8 flex">
+                  <ButtonextTwo
+                    link="https://github.com/matthieuGravy"
+                    title="lien github"
+                    content={
+                      <>
+                        <span className="pe-2">Voir mon github</span>
+                        <FlecheToIcon />
+                      </>
+                    }
+                    className="px-2"
+                  />
+                </span>
+              </>
+            }
+          />
         }
       />
 
