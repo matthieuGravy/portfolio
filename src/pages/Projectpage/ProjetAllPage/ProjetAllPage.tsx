@@ -1,6 +1,5 @@
 import { PorjectCard } from "../../../components/blocs/Project";
 import Heading from "../../../components/blocs/Heading";
-import Paragraphe from "../../../components/blocs/Paragraphe";
 import AboutProject from "../../../components/fr/AboutProject";
 import Article from "../../../components/blocs/Article";
 import { ButtonextTwo } from "../../../components/blocs/Buttons";
@@ -125,27 +124,24 @@ const ProjetAllPage = () => {
           />
         }
         children2={
-          <Paragraphe
-            className="text-justify"
-            children={
-              <>
-                <AboutProject />
-                <figure className="pt-8 flex">
-                  <ButtonextTwo
-                    link="https://github.com/matthieuGravy/"
-                    title="lien github"
-                    content={
-                      <>
-                        <span className="pe-2">Voir mon github</span>
-                        <FlecheToIcon />
-                      </>
-                    }
-                    className="px-2"
-                  />
-                </figure>
-              </>
-            }
-          />
+          <article>
+            <>
+              <AboutProject />
+              <figure className="pt-8 flex">
+                <ButtonextTwo
+                  link="https://github.com/matthieuGravy/"
+                  title="lien github"
+                  content={
+                    <>
+                      <span className="pe-2">Voir mon github</span>
+                      <FlecheToIcon />
+                    </>
+                  }
+                  className="px-2"
+                />
+              </figure>
+            </>
+          </article>
         }
       />
 
