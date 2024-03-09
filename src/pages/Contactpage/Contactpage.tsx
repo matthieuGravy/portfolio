@@ -44,9 +44,28 @@ const Contactpage = () => {
       )
       .required("Requis"),
   });
+  const submitForm = async (values, { setSubmitting }) => {
+    try {
+      const response = await fetch("http://localhost:4700/contact", {
+        method: "POST", // ou 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values), // convertit les valeurs du formulaire en JSON
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-  const submitForm = (values) => {
-    console.log(values);
+      const data = await response.json();
+    } catch (error) {
+      console.error(
+        "Il y a eu un problème avec votre fetch opération: ",
+        error
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
   return (
     <>
