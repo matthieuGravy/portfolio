@@ -1,16 +1,23 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import Topnav from "./components/blocs/Topnav";
 import Footer from "./components/blocs/Footer";
+import { motion } from "framer-motion";
 
 function App() {
   const styeMain =
     "bg-zinc-800 px-4 xl:px-12 py-2 text-neutral-50 pt-10 min-h-[100vh]";
+  const pageTransition = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.5 },
+  };
   return (
     <>
       <Topnav />
-      <main className={styeMain}>
+      <motion.main className={styeMain} {...pageTransition}>
         <Outlet />
-      </main>
+      </motion.main>
       <hr />
       <Footer />
       <ScrollRestoration />

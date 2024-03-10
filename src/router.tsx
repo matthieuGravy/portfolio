@@ -19,22 +19,49 @@ export const router = createBrowserRouter([
     element: <App />,
     errorElement: <Errorpage />,
     children: [
-      { path: "/", element: <Homepage /> },
-      { path: "/about", element: <Aboutpage /> },
+      {
+        path: "/",
+        element: <Homepage />,
+      },
+      {
+        path: "/about",
+        element: <Aboutpage />,
+      },
       {
         path: "/project",
         element: <Projectpage />,
         errorElement: <Errorpage />,
         children: [
-          { path: "kitchens-bootstrap", element: <ItsGravyKitchen /> },
-          { path: "projects", element: <ProjetAllPage /> },
-          { path: "plant-clicker-js", element: <PlantClicker /> },
-          { path: "sora-cine", element: <SoraCine /> },
-          { path: "bookface", element: <BookFace /> },
-          { path: "fresh-shop", element: <FreshSHop /> },
+          {
+            path: "kitchens-bootstrap",
+            element: <ItsGravyKitchen />,
+          },
+          {
+            path: "projects",
+            element: <ProjetAllPage />,
+          },
+          {
+            path: "plant-clicker-js",
+            element: <PlantClicker />,
+          },
+          {
+            path: "sora-cine",
+            element: <SoraCine />,
+          },
+          {
+            path: "bookface",
+            element: <BookFace />,
+          },
+          {
+            path: "fresh-shop",
+            element: <FreshSHop />,
+          },
         ],
       },
-      { path: "/contact", element: <Contactpage /> },
+      {
+        path: "/contact",
+        element: <Contactpage />,
+      },
     ],
   },
 ]);
