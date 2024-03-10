@@ -4,9 +4,15 @@ import Heading from "../../components/blocs/Heading";
 import Paragraphe from "../../components/blocs/Paragraphe";
 import Article from "../../components/blocs/Article";
 import { useNavigate } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contactpage = () => {
   const navigate = useNavigate();
+
+  const handleRecaptcha = (value) => {
+    // `value` est le jeton de réponse du reCAPTCHA ou null si le reCAPTCHA a expiré ou a été réinitialisé
+    console.log(value);
+  };
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
       .min(2, "Trop court !")
@@ -91,6 +97,7 @@ const Contactpage = () => {
         }
       />
       <hr />
+      {/*<ReCAPTCHA sitekey="votre-clé-de-site" onChange={handleRecaptcha}> */}
       <Formik
         initialValues={{
           nom: "",
@@ -222,6 +229,7 @@ const Contactpage = () => {
           </Form>
         )}
       </Formik>
+      {/*</ReCAPTCHA>*/}
     </>
   );
 };
