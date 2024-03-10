@@ -3,8 +3,10 @@ import * as Yup from "yup";
 import Heading from "../../components/blocs/Heading";
 import Paragraphe from "../../components/blocs/Paragraphe";
 import Article from "../../components/blocs/Article";
+import { useNavigate } from "react-router-dom";
 
 const Contactpage = () => {
+  const navigate = useNavigate();
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
       .min(2, "Trop court !")
@@ -47,17 +49,18 @@ const Contactpage = () => {
   const submitForm = async (values, { setSubmitting }) => {
     try {
       const response = await fetch("http://localhost:4700/contact", {
-        method: "POST", // ou 'PUT'
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values), // convertit les valeurs du formulaire en JSON
+        body: JSON.stringify(values),
       });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
       const data = await response.json();
+      navigate("/");
     } catch (error) {
       console.error(
         "Il y a eu un problème avec votre fetch opération: ",
