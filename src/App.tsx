@@ -12,15 +12,18 @@ function App() {
     exit: { opacity: 0 },
     transition: { duration: 0.5 },
   };
+
   return (
     <>
-      <Topnav />
-      <motion.main className={styeMain} {...pageTransition}>
-        <Outlet />
-      </motion.main>
-      <hr />
-      <Footer />
-      <ScrollRestoration />
+      <section className="min-h-[100vh] bg-zinc-800 w-full">
+        <Topnav />
+        <motion.main className={styeMain} {...pageTransition}>
+          <Outlet />
+        </motion.main>
+        <hr />
+        <Footer />
+        <ScrollRestoration />
+      </section>
     </>
   );
 }
