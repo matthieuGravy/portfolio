@@ -35,10 +35,10 @@ const Scroller = () => {
     liste: React.ReactNode[];
   }
 
-  const ListeScroller: FC<ListeScrollerProps> = ({ liste }) => {
+  const ListeScroller: React.FC<ListeScrollerProps> = ({ liste }) => {
     return (
       <ul className="flex flex-row align-center animate animate-scroll-right gap-x-16 px-8 justify-between whitespace-nowrap group-hover:paused">
-        {liste.map((tech, index) => (
+        {liste.map((tech: string, index: number) => (
           <li key={index} className="w-16 h-16">
             {tech}
           </li>

@@ -3,7 +3,7 @@ import Showcode from "../fr/Showcode";
 import { Buttonext } from "../blocs/Buttons";
 
 interface CopyrightProps {
-  author: string;
+  author: React.ReactNode;
 }
 const Copyright: React.FC<CopyrightProps> = ({ author }) => {
   return <a href="https://www.linkedin.com/in/matthieugravy/">{author}</a>;

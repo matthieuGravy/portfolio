@@ -39,7 +39,7 @@ const Topnav = () => {
 
   useMotionValueEvent(scrollY, "change", (latest: number) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 50) {
+    if (previous !== undefined && latest > previous && latest > 50) {
       setIsHidden(true);
     } else {
       setIsHidden(false);
