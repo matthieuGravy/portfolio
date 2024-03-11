@@ -13,7 +13,7 @@ const ItsGravyKitchen = () => {
       head: "It's Gravy Kitchens",
       role: "Front-end",
       description:
-        "Ce projet est un site web statique d'une franchise de restaurant fictive. C'était un projet à réaliser seul. J'ai été en charge de la partie front-end. J'ai utilisé le framework Bootstrap pour le design et j'ai codé en HTML, CSS et JavaScript. J'ai aussi utilisé Git pour le versionning. Puis Github pour le déploiement.",
+        "Ce projet est un site web statique pour une franchise de restaurant fictive. Il s'agissait d'un projet à réaliser seul, pour lequel j'ai assumé la responsabilité du développement front-end. J'ai utilisé le framework Bootstrap pour le design, et j'ai programmé en HTML, CSS et JavaScript. Git a été utilisé pour la gestion de version, et le déploiement a été effectué via GitHub.",
       tech: ["html - ", "bootstrap - ", "JavaScript"],
       deploie: "Déployé avec Github",
       tonext: "project/plant-clicker-js",

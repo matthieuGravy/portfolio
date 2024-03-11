@@ -5,9 +5,9 @@ import FlechTo from "../icons/FlechetoIcon";
 const textcenter = "text-justify px-2";
 const Whatstage = () => {
   const whatstage =
-    "Actuellement, je participe au Bootcamp intensif de Developpeur Web chez BeCode.org.";
+    "Actuellement, je participe au Bootcamp intensif de Développeur Web chez BeCode.org.";
   const whatstage2 =
-    " à présent, le bootcamp arrive à terme et c'est l'opportunité pour moi de mettre en pratique mes compétences acquises.";
+    "À présent, le bootcamp arrive à terme et c'est l'opportunité pour moi de mettre en pratique mes compétences acquises.";
   return (
     <>
       <article className={textcenter}>
@@ -31,7 +31,7 @@ const Whatstage = () => {
 
 const Duree = () => {
   const duree =
-    "Il est possible de mofiier la durée de stage, jusqu'à 3 mois maximum.";
+    "Il est possible de modifier la durée de stage, jusqu'à 3 mois maximum.";
   const possible =
     "Si vous avez besoin de plus de temps, nous pouvons explorer les solutions ensemble.";
   const avancer =
@@ -62,7 +62,7 @@ const Whyme = () => {
   const whyme =
     "Pendant ces derniers mois, j'ai acquis de nouvelles compétences, notamment en codage, en création de sites web, et en utilisation d'outils de développement.";
   const whyme2 =
-    "En parallèle, j'ai développé des qualités essentielles telles que le travail en équipe, la résolution de problèmes, et l'adaptabilité.";
+    "En parallèle, j'ai développé des qualités essentielles telles que le travail en équipe, la résolution de problèmes et l'adaptabilité.";
   return (
     <>
       <article className={textcenter}>

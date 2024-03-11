@@ -6,7 +6,7 @@ const FreshShop = () => {
       head: "Fresh Shop",
       role: "Full-stack",
       description:
-        "Ce projet est un site web statique d'une franchise de restaurant fictive. C'était un projet à réaliser seul. J'ai été en charge de la partie front-end. J'ai utilisé le framework Bootstrap pour le design et j'ai codé en HTML, CSS et JavaScript. J'ai aussi utilisé Git pour le versionning. Puis Github pour le déploiement.",
+        "Ce projet est un site de vente en ligne de produits alimentaires dynamique. Il s'agissait d'un projet individuel pour lequel j'étais responsable du développement front-end et back-end. J'ai utilisé le framework Tailwind pour le design et j'ai programmé en React, Redux, Express et TypeScript. Git a été utilisé pour la gestion de version. Le déploiement n'est pas encore prévu, le projet est toujours en cours de développement.",
       tech: [
         "typescript",
         "react - ",

@@ -12,7 +12,7 @@ const SoraCine = () => {
       head: "SoraCine",
       role: "Front-end & chef de projet",
       description:
-        "Ce projet a été réalisé en groupe de 4 : 2 développeurs back-end et 2 développeurs front-end. Notre rôle était de créer un site web de streaming de film. Nous avons utilisé une API pour la partie back-end. Nous avons utilisé React pour la partie front-end. Nous avons utilisé Git pour le versionning. Puis Vercel pour le déploiement.",
+        "Ce projet a été réalisé en groupe de 4 personnes : 2 développeurs back-end et 2 développeurs front-end. Notre rôle était de créer un site web de streaming de films. Pour la partie back-end, nous avons utilisé une API, tandis que React a été utilisé pour la partie front-end. Git a été utilisé pour la gestion de version, et le déploiement a été effectué via Vercel.",
       tech: [
         "HTML - ",
         "TAILWIND CSS - ",

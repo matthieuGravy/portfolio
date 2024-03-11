@@ -14,7 +14,7 @@ const ProjetAllPage = () => {
       name: "Its Gravy Kitchen's",
       role: "Front-end",
       description:
-        "Site statique pour un restaurant fictif. Développé en autonomie en respectant les consignes (pas de framework).",
+        "Site statique pour un restaurant fictif. Développé en autonomie en respectant les consignes.",
       tech: ["HTML", "JavaScript", "bootstrap"],
       to: "kitchens-bootstrap",
     },
@@ -24,7 +24,7 @@ const ProjetAllPage = () => {
       name: "Plant Clicker",
       role: "Front-end ",
       description:
-        "Jeu de click en vanilla JavaScript. Il a été développé en groupe de 3 personnes. Pour ce projet nous avons utilisé pixi.js pour la partie graphique. Au clic, vous faites poussez un arbre.",
+        "Jeu de clic en vanilla JavaScript. Il a été développé en groupe de 3 personnes. Pour ce projet, nous avons utilisé pixi.js pour la partie graphique. Au clic, vous faites pousser un arbre.",
       tech: ["HTML", "JavaScript", "CSS", "pixi.js"],
       to: "plant-clicker-js",
     },
@@ -34,7 +34,7 @@ const ProjetAllPage = () => {
       src: "https://via.placeholder.com/150",
       name: "Sora cine",
       description:
-        "Site de streaming pour la diffusion d'anime. Réalisé en groupe de 4, utilisant une API externe pour les données. Le site rencontre quelques problèmes comme le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
+        "Site de streaming pour la diffusion d'anime. Réalisé en groupe de 4 personnes, utilisant une API externe pour les données. Le site rencontre quelques problèmes tels que le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
       role: "Front-end - chef de projet",
       tech: [
         "React",
@@ -61,7 +61,7 @@ const ProjetAllPage = () => {
       src: "https://via.placeholder.com/150",
       name: "Bookface",
       description:
-        "C'est un réseau socal fictif, développé en groupe de 3 personnes. L'idée de départ est de recevoir un mail qui nous invite à donner notre avis lorsqu'on reçoit une notification, par mail et contribuer à la création de contenu. Ici malheureusment une grande partie de l'architecture React est à revoir avant la publication.",
+        "C'est un réseau social fictif, développé en groupe de 3 personnes. L'idée de départ est de recevoir un mail qui nous invite à donner notre avis lorsqu'on reçoit une notification, par mail et contribuer à la création de contenu. Ici malheureusement une grande partie de l'architecture React est à revoir avant la publication.",
       role: "back-end ",
       tech: [
         "typescript",
@@ -88,7 +88,7 @@ const ProjetAllPage = () => {
       name: "Fresh shop",
       role: "fullstack",
       description:
-        "Site de vente de produit pour une entreprise fictive. Le projet est en fin de construction sur les fonctionalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
+        "Site de vente de produits pour une entreprise fictive. Le projet est en fin de construction sur les fonctionnalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
       tech: [
         "typescript",
         "react",

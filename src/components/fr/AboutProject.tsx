@@ -17,7 +17,7 @@ const AboutProject = () => {
       j'ai accompli.
       <br />
       <br />
-      évidement tous mes projets sont visible sur mon compte github.
+      Évidemment, tous mes projets sont visibles sur mon compte GitHub.
     </>
   );
 };
