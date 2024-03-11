@@ -1,5 +1,5 @@
 import { ButtonextTwo } from "../../components/blocs/Buttons";
-import FlecheToIcon from "../../components/Icons/FlecheToIcon";
+import FlecheToIcon from "../../components/icons/FlecheToIcon";
 
 import Photo from "../../components/blocs/Photo";
 import Scroller from "../../components/blocs/Scroller";
@@ -22,7 +22,7 @@ const Aboutpage = () => {
             className="justify-between w-full md:flex-col"
             children1={
               <Heading
-                title={titre}
+                title={titre.toString()}
                 level="h1"
                 className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
               />

@@ -1,19 +1,27 @@
-import { Formik, Field, Form } from "formik";
+import { Formik, Field, Form, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import ReCAPTCHA from "react-google-recaptcha";
+//import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 
 import Heading from "../../components/blocs/Heading";
 import Paragraphe from "../../components/blocs/Paragraphe";
 import Article from "../../components/blocs/Article";
 
+interface MyFormValues {
+  prenom: string;
+  nom: string;
+  email: string;
+  entreprise: string;
+  sujet: string;
+  message: string;
+}
+
 const Contactpage = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-
+  /*
   const handleRecaptcha = (value) => {
-    // `value` est le jeton de réponse du reCAPTCHA ou null si le reCAPTCHA a expiré ou a été réinitialisé
     console.log(value);
-  };
+  };*/
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
       .min(2, "Trop court !")
@@ -53,7 +61,10 @@ const Contactpage = () => {
       )
       .required("Requis"),
   });
-  const submitForm = async (values, { setSubmitting }) => {
+  const submitForm = async (
+    values: MyFormValues,
+    { setSubmitting }: FormikHelpers<MyFormValues>
+  ) => {
     try {
       const response = await fetch("http://localhost:4700/contact", {
         method: "POST",
@@ -66,7 +77,7 @@ const Contactpage = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const data = await response.json();
+      //const data = await response.json();
       setFormSubmitted(true);
     } catch (error) {
       console.error(

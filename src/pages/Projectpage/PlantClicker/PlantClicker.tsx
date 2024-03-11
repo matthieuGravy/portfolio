@@ -2,7 +2,7 @@ import { ProjetUnitaire, Figure } from "../../../components/blocs/Project.tsx";
 import plantclicker from "../../../assets/plantclicker.png";
 import plantclickerpanel from "../../../assets/plantclicker-panel.png";
 import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
-import FlecheToIcon from "../../../components/Icons/FlecheToIcon";
+import FlecheToIcon from "../../../components/icons/FlecheToIcon";
 
 const PlantClicker = () => {
   const pc = [

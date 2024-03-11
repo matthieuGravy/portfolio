@@ -1,14 +1,14 @@
 import Hello from "../../components/fr/Hello";
 import Heading from "../../components/blocs/Heading";
 import Jumbo from "../../components/blocs/Jumbo";
-import InternshipIn from "../../components/fr/internshipIn";
-import InternshipOff from "../../components/fr/internshipOff";
-import Job from "../../components/fr/job";
-import Slog from "../../components/blocs/slog";
+import InternshipIn from "../../components/fr/InternshipIn";
+import InternshipOff from "../../components/fr/InternshipOff";
+import Job from "../../components/fr/Job";
+import Slog from "../../components/blocs/Slog";
 import { ButtonTwo } from "../../components/blocs/Buttons";
-import FlecheToIcon from "../../components/icons/FlechetoIcon";
+import FlecheToIcon from "../../components/icons/FlecheToIcon";
 import Ads from "../../components/blocs/Ads";
-import Stage from "../../components/fr/stage";
+import Stage from "../../components/fr/Stage";
 import Article from "../../components/blocs/Article";
 import { Whatstage, Duree, Whyme } from "../../components/fr/AboutStage";
 

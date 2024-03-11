@@ -4,7 +4,7 @@ import soralogin from "../../../assets/sora-login.png";
 import soralogged from "../../../assets/sora-logged.png";
 import soramovie from "../../../assets/sora-movies.png";
 import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
-import FlecheToIcon from "../../../components/Icons/FlecheToIcon";
+import FlecheToIcon from "../../../components/icons/FlecheToIcon";
 
 const SoraCine = () => {
   const sc = [

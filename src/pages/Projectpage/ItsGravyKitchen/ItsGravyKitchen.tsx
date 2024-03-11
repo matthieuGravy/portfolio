@@ -5,7 +5,7 @@ import IGKPictures from "../../../assets/IGK-Pictures.png";
 import IGKRestaurant from "../../../assets/IGK-Restaurants.png";
 import { ProjetUnitaire, Figure } from "../../../components/blocs/Project.tsx";
 import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
-import FlecheToIcon from "../../../components/Icons/FlecheToIcon";
+import FlecheToIcon from "../../../components/icons/FlecheToIcon";
 
 const ItsGravyKitchen = () => {
   const itg = [

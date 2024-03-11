@@ -50,7 +50,7 @@ const Topnav = () => {
   });
 
   useEffect(() => {
-    if (scrollYProgress > 0.1) {
+    if (scrollYProgress.get() > 0.1) {
       setIsNavVisible(true);
     } else {
       setIsNavVisible(false);
@@ -75,9 +75,7 @@ const Topnav = () => {
       <motion.header
         variants={{ isVisible: { y: 0 }, isHidden: { y: -100 } }}
         initial={{ y: -100 }}
-        animate={
-          ({ y: 0, isHidden: { y: -100 } }, isHidden ? "isHidden" : "isVisible")
-        }
+        animate={isHidden ? { y: -100 } : { y: 0 }}
         transition={{ duration: 0.3 }}
         className={`fixed flex px-4 justify-between items-center fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-fuchsia-700`}
       >
@@ -104,7 +102,7 @@ const Topnav = () => {
             animate={controls}
           >
             {navFr.map((nav) => (
-              <li
+              <motion.li
                 key={nav.to}
                 className="w-full py-4  md:py-2 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
                 initial={{ opacity: 1, scale: 0.5 }}
@@ -115,7 +113,7 @@ const Topnav = () => {
                   content={nav.content}
                   className="px-8 md:px-2 w-full"
                 />
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
         </nav>

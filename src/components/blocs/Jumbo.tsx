@@ -2,7 +2,7 @@ import Heading from "./Heading";
 
 interface JumboProps {
   children: React.ReactNode;
-  title: string;
+  title: string | JSX.Element;
   className?: string;
 }
 

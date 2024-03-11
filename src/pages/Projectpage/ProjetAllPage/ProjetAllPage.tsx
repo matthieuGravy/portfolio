@@ -156,7 +156,6 @@ const ProjetAllPage = () => {
             key={projet.id}
             id={projet.id}
             to={projet.to}
-            src={projet.src}
             name={projet.name}
             content={projet.description}
             role={projet.role}

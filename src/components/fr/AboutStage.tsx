@@ -1,6 +1,6 @@
 import Paragraphe from "../blocs/Paragraphe";
 import { ButtonOne } from "../blocs/Buttons";
-import FlechTo from "../icons/FlechetoIcon";
+import FlecheToIcon from "../icons/FlecheToIcon";
 
 const textcenter = "text-justify px-2";
 const Whatstage = () => {
@@ -19,7 +19,7 @@ const Whatstage = () => {
             <>
               Voir les projets
               <span className="ps-2">
-                <FlechTo />
+                <FlecheToIcon />
               </span>
             </>
           }
@@ -48,7 +48,7 @@ const Duree = () => {
             <>
               Contactez moi
               <span className="ps-2">
-                <FlechTo />
+                <FlecheToIcon />
               </span>
             </>
           }
@@ -74,7 +74,7 @@ const Whyme = () => {
             <>
               En savoir plus sur moi
               <span className="ps-2">
-                <FlechTo />
+                <FlecheToIcon />
               </span>
             </>
           }
