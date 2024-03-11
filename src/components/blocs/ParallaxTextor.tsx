@@ -30,7 +30,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   const x = useTransform(baseX, (v) => `${wrap(90, -100, v)}%`);
 
   const directionFactor = useRef<number>(2);
-  useAnimationFrame((t, delta) => {
+  useAnimationFrame((_, delta) => {
     let moveBy = directionFactor.current * baseVelocity * (delta / 3000);
 
     if (velocityFactor.get() < 0) {
@@ -55,7 +55,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   );
 }
 
-export default function ParallaxTextor() {
+function ParallaxTextor() {
   const text =
     "JAVASCRIPT • TYPESCRIT • REACT • REDUX • VUE 3 • VITE • BOOTSRAP • TAILWINDCSS • DAISY UI • FRAMER-MOTION • GSAP • NODEJS • EXPRESS • POSTMAN • INSOMNIA • MONGOOSE • SEQUELIZE • BASH • PHP • CHARTJS • GIT • GITHUB • GITLAB • JIRA • TRELLO • NPM • PNPM • UBUNTU ";
   return (
@@ -65,3 +65,5 @@ export default function ParallaxTextor() {
     </section>
   );
 }
+
+export default ParallaxTextor;

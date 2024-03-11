@@ -9,14 +9,14 @@ import FlecheToIcon from "../icons/FlecheToIcon";
 
 interface PorjectCardProps {
   id: string;
-  name: React.ReactNode;
+  name: string;
   content: React.ReactNode;
   liste: React.ReactNode;
   role?: string;
   to?: string;
 }
 
-const PorjectCard: React.F<PorjectCardProps> = ({
+const PorjectCard: React.FC<PorjectCardProps> = ({
   name,
   role,
   content,

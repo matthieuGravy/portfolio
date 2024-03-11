@@ -2,7 +2,10 @@ import Hello from "../fr/Hello";
 import Showcode from "../fr/Showcode";
 import { Buttonext } from "../blocs/Buttons";
 
-const Copyright = ({ author }) => {
+interface CopyrightProps {
+  author: string;
+}
+const Copyright: React.FC<CopyrightProps> = ({ author }) => {
   return <a href="https://www.linkedin.com/in/matthieugravy/">{author}</a>;
 };
 
