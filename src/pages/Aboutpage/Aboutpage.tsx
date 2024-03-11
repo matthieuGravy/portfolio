@@ -22,7 +22,7 @@ const Aboutpage = () => {
             className="justify-between w-full md:flex-col"
             children1={
               <Heading
-                title={titre.toString()}
+                title={titre}
                 level="h1"
                 className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
               />

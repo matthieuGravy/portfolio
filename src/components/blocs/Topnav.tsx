@@ -102,10 +102,9 @@ const Topnav = () => {
             animate={controls}
           >
             {navFr.map((nav) => (
-              <motion.li
+              <li
                 key={nav.to}
                 className="w-full py-4  md:py-2 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
-                initial={{ opacity: 1, scale: 0.5 }}
               >
                 <ButtonNav
                   to={nav.to}
@@ -113,7 +112,7 @@ const Topnav = () => {
                   content={nav.content}
                   className="px-8 md:px-2 w-full"
                 />
-              </motion.li>
+              </li>
             ))}
           </motion.ul>
         </nav>
