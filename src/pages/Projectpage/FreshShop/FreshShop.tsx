@@ -9,22 +9,22 @@ const FreshShop = () => {
         "Ce projet est un site de vente en ligne de produits alimentaires dynamique. Il s'agissait d'un projet individuel pour lequel j'étais responsable du développement front-end et back-end. J'ai utilisé le framework Tailwind pour le design et j'ai programmé en React, Redux, Express et TypeScript. Git a été utilisé pour la gestion de version. Le déploiement n'est pas encore prévu, le projet est toujours en cours de développement.",
       tech: [
         "typescript",
-        "react - ",
-        "redux - ",
-        "redux-persist - ",
-        "react-router - ",
-        "framer-motion - ",
-        "tailwindcss - ",
-        "Node.js - ",
-        "Express - ",
-        "mongoose - ",
-        "bcrypt - ",
-        "cors - ",
-        "dotenv - ",
-        "nodemailer - ",
-        "mjml - ",
-        "winston  - ",
-        "JWT (jose) - ",
+        "react",
+        "redux",
+        "redux-persist",
+        "react-router",
+        "framer-motion",
+        "tailwindcss",
+        "Node.js",
+        "Express",
+        "mongoose",
+        "bcrypt",
+        "cors",
+        "dotenv",
+        "nodemailer",
+        "mjml",
+        "winston",
+        "JWT (jose)",
         "pnpm",
       ],
       deploie: "Non déployé",
@@ -41,7 +41,7 @@ const FreshShop = () => {
           role={project.role}
           title={project.head}
           paragraphe={project.description}
-          ptech={project.tech}
+          ptech={project.tech.join(" -")}
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}

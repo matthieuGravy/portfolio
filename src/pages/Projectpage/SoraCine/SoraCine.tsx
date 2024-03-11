@@ -15,21 +15,21 @@ const SoraCine = () => {
         "Ce projet a été réalisé en groupe de 4 personnes : 2 développeurs back-end et 2 développeurs front-end. Notre rôle était de créer un site web de streaming de films. Pour la partie back-end, nous avons utilisé une API, tandis que React a été utilisé pour la partie front-end. Git a été utilisé pour la gestion de version, et le déploiement a été effectué via Vercel.",
       tech: [
         "HTML - ",
-        "TAILWIND CSS - ",
-        "Javascript - ",
-        "React - ",
-        "Node.js - ",
-        "Express - ",
-        "MongoDB - ",
-        "bcrypt - ",
-        "cors - ",
-        "dotenv - ",
-        "nodemailer - ",
-        "body-parser - ",
-        "cookie-parser - ",
-        "express-session - ",
-        "jsonwebtoken - ",
-        "mongoose -",
+        "TAILWIND CSS",
+        "Javascript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "bcrypt",
+        "cors",
+        "dotenv",
+        "nodemailer",
+        "body-parser",
+        "cookie-parser",
+        "express-session",
+        "jsonwebtoken",
+        "mongoose",
       ],
       deploie: "Déployé avec Vercel",
       tonext: "project/bookface",
@@ -69,7 +69,7 @@ const SoraCine = () => {
           role={project.role}
           title={project.head}
           paragraphe={project.description}
-          ptech={project.tech}
+          ptech={project.tech.join(" -")}
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}

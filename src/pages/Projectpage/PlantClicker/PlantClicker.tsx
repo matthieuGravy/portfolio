@@ -11,7 +11,7 @@ const PlantClicker = () => {
       role: "Front-end ",
       description:
         "Ce projet a été réalisé en groupe de 3 personnes. Notre objectif était de créer un jeu en JavaScript basé sur des clics. Nous avons utilisé PIXI.js pour la partie graphique. Dans le jeu, chaque clic permet de faire pousser un arbre, et les scores sont affichés via un tableau des scores.",
-      tech: ["html - ", "css - ", "JavaScript - ", "pixi.js"],
+      tech: ["html", "css", "JavaScript", "pixi.js"],
       deploie: "Déployé avec Github",
       toprev: "project/kitchens-bootstrap",
       tonext: "project/sora-cine",
@@ -39,7 +39,7 @@ const PlantClicker = () => {
           role={project.role}
           title={project.head}
           paragraphe={project.description}
-          ptech={project.tech}
+          ptech={project.tech.join(" -")}
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}

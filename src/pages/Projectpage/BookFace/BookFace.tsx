@@ -9,20 +9,20 @@ const BookFace = () => {
         "Ce projet a été réalisé en groupe de 3 personnes : 1 développeur back-end et 2 développeurs front-end. Notre rôle était de créer un réseau social fictif. Nous avons utilisé React pour la partie front-end et Node.js pour la partie back-end. Git a été utilisé pour la gestion de version. Bien que la majorité des routes back-end aient été mises en place, la quasi-totalité n'est pas utilisée dans le front-end. Le projet nécessite une révision afin d'ajouter un store Redux pour la gestion des états.",
 
       tech: [
-        "typescript - ",
-        "React - ",
-        "react-router - ",
-        "Node.js - ",
-        "Express - ",
-        "mongoose - ",
-        "bcrypt - ",
-        "cors - ",
-        "dotenv - ",
-        "nodemailer - ",
-        "mjml - ",
-        "winston - ",
-        "JWT (jose) - ",
-        "multer - ",
+        "typescript",
+        "React",
+        "react-router",
+        "Node.js",
+        "Express",
+        "mongoose",
+        "bcrypt",
+        "cors",
+        "dotenv",
+        "nodemailer",
+        "mjml",
+        "winston",
+        "JWT (jose)",
+        "multer",
         "pnpm",
       ],
       deploie: "Non déployé",
@@ -46,7 +46,7 @@ const BookFace = () => {
           role={project.role}
           title={project.head}
           paragraphe={project.description}
-          ptech={project.tech}
+          ptech={project.tech.join(" -")}
           pversion={project.deploie}
           tonext={project.tonext}
           toprev={project.toprev}
