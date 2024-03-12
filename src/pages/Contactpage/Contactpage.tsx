@@ -66,13 +66,16 @@ const Contactpage = () => {
     { setSubmitting }: FormikHelpers<MyFormValues>
   ) => {
     try {
-      const response = await fetch("http://localhost:4700/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
+      const response = await fetch(
+        "https://itg-back-625046c3ea20.herokuapp.com/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        }
+      );
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
