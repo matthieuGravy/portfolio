@@ -20,8 +20,6 @@ Ce projet représente mon portfolio personnel développé en utilisant React. Il
 - **Yup :** Intégré avec Formik pour la validation des données du formulaire, garantissant que les informations saisies par les utilisateurs sont correctes et complètes.
 - **TailwindCSS :** Utilisé pour la conception et le stylage rapide et efficace des composants, offrant une approche basée sur les classes pour créer une interface utilisateur cohérente et esthétique.
 
-D'accord, voici une mise à jour de la liste des fonctionnalités futures pour inclure ces points :
-
 ## Fonctionnalités futures :
 
 - **Intégration de react-i18next :** Réorganiser les composants de manière à utiliser react-i18next pour la traduction du site en anglais et en néerlandais. Cette fonctionnalité permettra d'offrir une expérience utilisateur multilingue et d'atteindre un public plus large.
