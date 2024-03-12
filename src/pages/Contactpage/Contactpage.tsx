@@ -67,7 +67,7 @@ const Contactpage = () => {
   ) => {
     try {
       const response = await fetch(
-        "https://itg-back-625046c3ea20.herokuapp.com/",
+        "https://itg-back-625046c3ea20.herokuapp.com/contact",
         {
           method: "POST",
           headers: {
