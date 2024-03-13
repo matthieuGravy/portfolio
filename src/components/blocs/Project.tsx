@@ -29,7 +29,7 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
         to={`/project/${to}`}
         content={
           <>
-            <article className="w-full px-2">
+            <article className="w-full">
               <Heading
                 title={name}
                 level="h3"

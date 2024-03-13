@@ -141,12 +141,12 @@ const Contactpage = () => {
           >
             {({ errors, touched, values }) => (
               <Form className="md:w-3/5 lg:w-2/5 mx-auto py-24">
-                <section className="grid md:grid-cols-2  grid-rows-3 gap-8 py-8">
+                <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 py-8">
                   <label className="relative">
                     <Field
                       name="nom"
                       placeholder="Nom"
-                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
                         errors.nom && touched.nom
                           ? "border-red-500"
                           : values.nom === ""
@@ -160,11 +160,11 @@ const Contactpage = () => {
                       </p>
                     ) : null}
                   </label>
-                  <label className="relative md:place-self-end">
+                  <label className="relative md:place-self-end md:w-full">
                     <Field
                       name="prenom"
                       placeholder="Prénom"
-                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none md:w-full  ${
                         errors.prenom && touched.prenom
                           ? "border-red-500"
                           : values.prenom === ""
@@ -183,7 +183,7 @@ const Contactpage = () => {
                       name="email"
                       type="email"
                       placeholder="Email"
-                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
                         errors.email && touched.email
                           ? "border-red-500"
                           : values.email === ""
@@ -197,11 +197,11 @@ const Contactpage = () => {
                       </p>
                     ) : null}
                   </label>
-                  <label className="relative md:place-self-end">
+                  <label className="relative md:place-self-end md:w-full">
                     <Field
                       name="entreprise"
                       placeholder="Entreprise"
-                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
                         errors.entreprise && touched.entreprise
                           ? "border-red-500"
                           : values.entreprise === ""
@@ -219,7 +219,7 @@ const Contactpage = () => {
                     <Field
                       name="sujet"
                       placeholder="Sujet"
-                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none ${
+                      className={`bg-zinc-800 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
                         errors.sujet && touched.sujet
                           ? "border-red-500"
                           : values.sujet === ""

@@ -150,7 +150,8 @@ const ProjetAllPage = () => {
       />
 
       <hr />
-      <section className="grid lg:grid-cols-2 gap-y-16 gap-x-16 py-24 ">
+
+      <section className="grid lg:grid-cols-2 gap-y-16 gap-x-16 py-24 place-content-stretch">
         {Projets.map((projet) => (
           <PorjectCard
             key={projet.id}
