@@ -15,22 +15,13 @@ const Footer = () => {
   const author = <Hello />;
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-zinc-800 text-xs px-4 py-8 text-white uppercase font-extralight  text-zinc-400 flex flex-col gap-y-4">
-      <section className="flex md:flex-row flex-col text-center gap-y-2 md:gap-y-0">
-        <Buttonext
-          title="Voir le code source"
-          link={"https://github.com/matthieuGravy/portfolio"}
-          content={<Showcode />}
-        />
-        <article className="flex flex-row md:justify-end justify-center pe-2 flex-1 w-full md:text-right">
-          <p className="pe-2 ">
-            {signe}
-            {year}
-          </p>
-          <Copyright author={author} />
-        </article>
-      </section>
-      <section className="flex justify-center gap-x-4">
+    <footer className="grid-cols-3 grid px-4 py-8 uppercase text-zinc-500 text-xs">
+      <Buttonext
+        title="Voir le code source"
+        link={"https://github.com/matthieuGravy/portfolio"}
+        content={<Showcode />}
+      />
+      <section className="flex flex-col gap-y-2">
         <NavLink to="/contact" className="text-center">
           Contact
         </NavLink>
@@ -41,6 +32,14 @@ const Footer = () => {
           RGPD
         </NavLink>
       </section>
+
+      <article className="flex flex-row justify-end gap-x-2">
+        <p className=" ">
+          {signe}
+          {year}
+        </p>
+        <Copyright author={author} />
+      </article>
     </footer>
   );
 };

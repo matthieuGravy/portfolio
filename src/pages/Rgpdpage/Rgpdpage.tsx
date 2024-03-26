@@ -18,7 +18,7 @@ const Rgpdpage = () => {
                 </>
               }
               level="h1"
-              className="text-4xl font-extralight uppercase tracking-wide py-24 "
+              className="text-4xl lg:text-7xl font-extralight uppercase tracking-wide py-24 "
             />
             <hr />
             <Ol

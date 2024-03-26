@@ -10,7 +10,7 @@ const Mensionspage = () => {
             <Heading
               title={<>Mentions légales</>}
               level="h1"
-              className="text-4xl font-extralight uppercase tracking-wide py-24 "
+              className="text-4xl lg:text-7xl font-extralight uppercase tracking-wide py-24 "
             />
             <hr />
             <Ol
@@ -20,13 +20,8 @@ const Mensionspage = () => {
                     titre="1. Editeur du site"
                     paragraphe={
                       <>
-                        Matthieu Gravy <br />
-                        <br />
-                        Rue Longue Vie, 49 <br />
-                        1050 Bruxelles <br />
-                        Belgique <br />
-                        <br />
-                        matthieugravy@gmail.com <br />
+                        Matthieu Gravy, domicilié à l’adresse suivante : Rue
+                        Longue Vie, 49 à 1050 Bruxelles.
                       </>
                     }
                   />
@@ -34,14 +29,12 @@ const Mensionspage = () => {
                     titre="2. Hébergeur du site"
                     paragraphe={
                       <>
-                        Heroku Europe <br />
-                        (Heroku Inc., 650 7th Street, <br /> San Francisco, CA)
-                        sur les serveurs d’Amazon Web Services (AWS) Europe.
-                        <br />
+                        Heroku Europe : (Heroku Inc., 650 7th Street, San
+                        Francisco, CA) sur les serveurs d’Amazon Web Services
+                        (AWS) Europe.
                         <br />
                         MongoDB Atlas (MongoDB Inc., 1633 Broadway, New York,
                         NY) sur les serveurs d’Amazon Web Services (AWS) Europe.
-                        <br />
                         <br />
                         Render (Render, 77 Geary Street, Suite 500, San
                         Francisco, CA) sur les serveurs situés en Europe.
