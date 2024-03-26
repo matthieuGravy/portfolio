@@ -93,6 +93,7 @@ const Homepage = () => {
           children2={<Duree />}
         ></Article>
       </section>
+      <Jumbo title="title" children="children" className="className" />
     </>
   );
 };

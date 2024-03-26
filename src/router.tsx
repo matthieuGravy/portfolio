@@ -12,6 +12,8 @@ import SoraCine from "./pages/Projectpage/SoraCine/SoraCine";
 import BookFace from "./pages/Projectpage/BookFace/BookFace";
 import FreshSHop from "./pages/Projectpage/FreshShop/FreshShop";
 import Errorpage from "./pages/Errorpage/Errorpage";
+import Rgpdpage from "./pages/Rgpdpage/Rgpdpage";
+import Mentionspage from "./pages/Mentionspage/Mentionspage";
 
 export const router = createBrowserRouter([
   {
@@ -62,6 +64,11 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <Contactpage />,
       },
+      {
+        path: "/rgpd",
+        element: <Rgpdpage />,
+      },
+      { path: "/mentions-legales", element: <Mentionspage /> },
     ],
   },
 ]);

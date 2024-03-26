@@ -3,6 +3,8 @@ import * as Yup from "yup";
 //import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 
+//ajouter un champ d'acceptation des conditions générales
+
 import Heading from "../../components/blocs/Heading";
 import Paragraphe from "../../components/blocs/Paragraphe";
 import Article from "../../components/blocs/Article";
