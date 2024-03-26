@@ -38,9 +38,10 @@ const Rgpdpage = () => {
                     paragraphe={
                       <>
                         Les données collectées via le formulaire de contact de
-                        votre site web https://itsgravy.dev sont utilisées pour
-                        : Faciliter la prise de contact avec vous en cas de
-                        problème sur le site web. Démarrer une conversation et
+                        sur le site web https://itsgravy.dev sont utilisées pour
+                        : Faciliter la prise de contact entre l'utlisateur et le
+                        responsable du site web en cas de problème sur le site
+                        web. Mais tout aussi bien, démarrer une conversation et
                         échanger des informations avec les utilisateurs
                         intéressés par les services.
                       </>
@@ -51,7 +52,7 @@ const Rgpdpage = () => {
                     paragraphe={
                       <>
                         Le formulaire de contact collecte les données suivantes
-                        : nom; prénom; adresse; email; entreprise; sujet;
+                        : nom, prénom, adresse, email, entreprise, sujet,
                         message.
                       </>
                     }
