@@ -1,4 +1,5 @@
 import Heading from "./Heading";
+import Paragraphe from "./Paragraphe";
 
 interface BlocCenterProps {
   children: React.ReactNode;
@@ -12,7 +13,7 @@ interface OlProps {
   children: React.ReactNode;
 }
 const Ol: React.FC<OlProps> = ({ children }) => {
-  return <ol className="flex flex-col gap-y-8 py-8">{children}</ol>;
+  return <ol className="flex flex-col gap-y-8 py-16">{children}</ol>;
 };
 
 interface LiProps {
@@ -28,7 +29,7 @@ const Li: React.FC<LiProps> = ({ paragraphe, titre }) => {
           title={titre}
           className="text-3xl font-extralight uppercase tracking-wide pb-2"
         />
-        <p>{paragraphe}</p>
+        <Paragraphe children={paragraphe} className="ps-8 pe-2 pb-4 text-sm" />
       </li>
     </>
   );

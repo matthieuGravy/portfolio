@@ -1,6 +1,6 @@
 import Hello from "../../components/fr/Hello";
 import Heading from "../../components/blocs/Heading";
-import Jumbo from "../../components/blocs/Jumbo";
+import { Jumbo, JumboPrincipal } from "../../components/blocs/Jumbo";
 import InternshipIn from "../../components/fr/InternshipIn";
 import InternshipOff from "../../components/fr/InternshipOff";
 import Job from "../../components/fr/Job";
@@ -19,20 +19,16 @@ const Homepage = () => {
   const titre = (
     <>
       <Hello /> <br /> <Job /> <br />
-      <ButtonTwo to="/about" content={<FlecheToIcon />} />
+      <ButtonTwo
+        to="/about"
+        content={<FlecheToIcon className="h-12 w-12 " />}
+      />
     </>
   );
 
   return (
     <>
-      <section className="py-24 flex flex-row justify-between">
-        <Heading
-          title={titre}
-          level="h1"
-          className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
-        />
-      </section>
-      <hr />
+      <JumboPrincipal title={titre} />
 
       <Jumbo
         title={

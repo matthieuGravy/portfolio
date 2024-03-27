@@ -3,11 +3,8 @@ import * as Yup from "yup";
 //import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 
-//ajouter un champ d'acceptation des conditions générales
-
-import Heading from "../../components/blocs/Heading";
+import { JumboPrincipal } from "../../components/blocs/Jumbo";
 import Paragraphe from "../../components/blocs/Paragraphe";
-import Article from "../../components/blocs/Article";
 
 interface MyFormValues {
   prenom: string;
@@ -95,25 +92,14 @@ const Contactpage = () => {
   };
   return (
     <>
-      <Article
-        className="py-24 md:w-3/5"
-        children1={
-          <Heading
-            title="Contactez-moi"
-            level="h2"
-            className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
-          />
-        }
-        children2={
+      <JumboPrincipal
+        title="Contactez-moi"
+        children={
           <>
-            <Paragraphe
-              className=""
-              children="Vous avez une question, un projet ou une idée ? N'hésitez pas à me contacter via le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais."
-            />
+            <Paragraphe children="Vous avez une question, un projet ou une idée ? N'hésitez pas à me contacter via le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais." />
           </>
         }
       />
-      <hr />
       {formSubmitted ? (
         <>
           <Paragraphe

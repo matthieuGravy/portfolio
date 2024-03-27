@@ -131,8 +131,8 @@ const Rgpdpage = () => {
                         Pour toute question relative à la protection des données
                         personnelles, les utilisateurs peuvent contacter
                         l'Autorité de Protection des Données (APD) : Site web :
-                        https://www.dataprotectionauthority.be/ Adresse : Rue de
-                        la Presse 35, 1000 Bruxelles Téléphone : +32 2 274 48 00
+                        https://dataprotectionauthority.be/ Adresse : Rue de la
+                        Presse 35, 1000 Bruxelles Téléphone : +32 2 274 48 00
                       </>
                     }
                   />

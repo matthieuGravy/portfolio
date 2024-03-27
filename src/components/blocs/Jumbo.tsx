@@ -15,4 +15,24 @@ const Jumbo: React.FC<JumboProps> = ({ children, title, className }) => {
   );
 };
 
-export default Jumbo;
+interface JumboPrincipalProps {
+  children?: React.ReactNode | JSX.Element;
+  title: string | JSX.Element;
+}
+const JumboPrincipal: React.FC<JumboPrincipalProps> = ({ title, children }) => {
+  return (
+    <>
+      <section className="py-24 flex flex-col md:w-3/5 gap-y-8">
+        <Heading
+          title={title}
+          level="h1"
+          className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
+        />
+        <>{children}</>
+      </section>
+      <hr />
+    </>
+  );
+};
+
+export { Jumbo, JumboPrincipal };

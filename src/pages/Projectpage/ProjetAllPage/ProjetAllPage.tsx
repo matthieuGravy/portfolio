@@ -1,10 +1,9 @@
 import { PorjectCard } from "../../../components/blocs/Project";
-import Heading from "../../../components/blocs/Heading";
 import Paragraphe from "../../../components/blocs/Paragraphe";
 import AboutProject from "../../../components/fr/AboutProject";
-import Article from "../../../components/blocs/Article";
 import { ButtonextTwo } from "../../../components/blocs/Buttons";
 import FlecheToIcon from "../../../components/icons/FlecheToIcon";
+import { JumboPrincipal } from "../../../components/blocs/Jumbo";
 
 const ProjetAllPage = () => {
   const Projets = [
@@ -115,41 +114,34 @@ const ProjetAllPage = () => {
 
   return (
     <>
-      <Article
-        className="py-24 md:w-3/5"
-        children1={
-          <Heading
-            title="Projets"
-            level="h2"
-            className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
-          />
-        }
-        children2={
-          <Paragraphe
-            className="text-justify"
-            children={
-              <>
-                <AboutProject />
-                <span className="pt-8 flex">
-                  <ButtonextTwo
-                    link="https://github.com/matthieuGravy"
-                    title="lien github"
-                    content={
-                      <>
-                        <span className="pe-2">Voir mon github</span>
-                        <FlecheToIcon />
-                      </>
-                    }
-                    className="px-2"
-                  />
-                </span>
-              </>
-            }
-          />
+      <JumboPrincipal
+        title="Projets"
+        children={
+          <>
+            <Paragraphe
+              className="text-justify"
+              children={
+                <>
+                  <AboutProject />
+                  <span className="pt-8 flex">
+                    <ButtonextTwo
+                      link="https://github.com/matthieuGravy"
+                      title="lien github"
+                      content={
+                        <>
+                          <span className="pe-2">Voir mon github</span>
+                          <FlecheToIcon />
+                        </>
+                      }
+                      className="px-2"
+                    />
+                  </span>
+                </>
+              }
+            />
+          </>
         }
       />
-
-      <hr />
 
       <section className="grid lg:grid-cols-2 gap-y-16 gap-x-16 py-24 place-content-stretch">
         {Projets.map((projet) => (

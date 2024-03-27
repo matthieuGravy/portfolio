@@ -21,13 +21,14 @@ const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
 interface ButtonTwoProps {
   to: string;
   content: React.ReactNode;
+  className?: string;
 }
-const ButtonTwo: React.FC<ButtonTwoProps> = ({ to, content }) => {
+const ButtonTwo: React.FC<ButtonTwoProps> = ({ to, content, className }) => {
   return (
     <>
       <NavLink
         to={to}
-        className="inline-block scale-110 hover:scale-90 transition-all"
+        className={`inline-block scale-110 hover:scale-90 transition-all ${className}`}
       >
         {content}
       </NavLink>
