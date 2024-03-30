@@ -12,14 +12,14 @@ import typescript from "../../assets/typescript.svg";
 import vscode from "../../assets/vscode.svg";
 import vue from "../../assets/vue.svg";
 
+const classnameP = `text-center uppercase text-xs py-4 cursor-default`;
+const classnameImg = "w-20";
+
 const Html = () => {
   return (
     <>
-      <img
-        src={html}
-        alt="html"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={html} alt="html" className={classnameImg} />
+      <p className={classnameP}>HTML</p>
     </>
   );
 };
@@ -27,11 +27,8 @@ const Html = () => {
 const Sass = () => {
   return (
     <>
-      <img
-        src={sass}
-        alt="Sass"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={sass} alt="Sass" className={classnameImg} />
+      <p className={classnameP}>sass</p>
     </>
   );
 };
@@ -39,11 +36,8 @@ const Sass = () => {
 const Css = () => {
   return (
     <>
-      <img
-        src={css}
-        alt="css"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={css} alt="css" className={classnameImg} />
+      <p className={classnameP}>css</p>
     </>
   );
 };
@@ -51,11 +45,8 @@ const Css = () => {
 const Bootstrap = () => {
   return (
     <>
-      <img
-        src={bootstrap}
-        alt="Bootstrap"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={bootstrap} alt="Bootstrap" className={classnameImg} />
+      <p className={classnameP}>Bootstrap</p>
     </>
   );
 };
@@ -63,44 +54,32 @@ const Bootstrap = () => {
 const Git = () => {
   return (
     <>
-      <img
-        src={git}
-        alt="git"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={git} alt="git" className={classnameImg} />
+      <p className={classnameP}>git</p>
     </>
   );
 };
 const Javascript = () => {
   return (
     <>
-      <img
-        src={javascript}
-        alt="Javascript"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={javascript} alt="Javascript" className={classnameImg} />
+      <p className={classnameP}>javascript</p>
     </>
   );
 };
 const Mongo = () => {
   return (
     <>
-      <img
-        src={mongo}
-        alt="mongodb"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={mongo} alt="mongodb" className={classnameImg} />
+      <p className={classnameP}>mongodb</p>
     </>
   );
 };
 const Nodejs = () => {
   return (
     <>
-      <img
-        src={nodejs}
-        alt="nodejs"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={nodejs} alt="nodejs" className={classnameImg} />
+      <p className={classnameP}>Node.js</p>
     </>
   );
 };
@@ -108,11 +87,8 @@ const Nodejs = () => {
 const Reactjs = () => {
   return (
     <>
-      <img
-        src={react}
-        alt="react"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={react} alt="react" className={classnameImg} />
+      <p className={classnameP}>React</p>
     </>
   );
 };
@@ -120,11 +96,8 @@ const Reactjs = () => {
 const Tailwind = () => {
   return (
     <>
-      <img
-        src={tailwind}
-        alt="tailwind"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={tailwind} alt="tailwind" className={classnameImg} />
+      <p className={classnameP}>tailwind</p>
     </>
   );
 };
@@ -132,11 +105,8 @@ const Tailwind = () => {
 const Typescript = () => {
   return (
     <>
-      <img
-        src={typescript}
-        alt="typescript"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={typescript} alt="typescript" className={classnameImg} />
+      <p className={classnameP}>typescript</p>
     </>
   );
 };
@@ -144,22 +114,16 @@ const Typescript = () => {
 const Vscode = () => {
   return (
     <>
-      <img
-        src={vscode}
-        alt="vscode"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={vscode} alt="vscode" className={classnameImg} />
+      <p className={classnameP}>vs code</p>
     </>
   );
 };
 const Vue = () => {
   return (
     <>
-      <img
-        src={vue}
-        alt="vue"
-        className="grayscale hover:grayscale-0 transition-all"
-      />
+      <img src={vue} alt="vue" className={classnameImg} />
+      <p className={classnameP}>vue</p>
     </>
   );
 };

@@ -1,4 +1,3 @@
-import Itsgravy from "./Itsgravy";
 import { ButtonNav } from "./Buttons";
 import { useState, useEffect } from "react";
 import {
@@ -61,7 +60,6 @@ const Topnav = () => {
     { to: "/", content: "Home" },
     { to: "/project/projects", content: "projets" },
     { to: "/about", content: "à propos" },
-    { to: "/contact", content: "contact" },
   ];
   const { scrollYProgress: scrollYProgress1 } = useScroll();
   const scaleX = useSpring(scrollYProgress1, {
@@ -77,52 +75,52 @@ const Topnav = () => {
         initial={{ y: -100 }}
         animate={isHidden ? { y: -100 } : { y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`fixed flex px-4 justify-between items-center fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-fuchsia-700`}
+        className={`fixed fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-zinc-800`}
       >
-        <motion.div whileTap={{ scale: 0.8 }}>
-          <NavLink to="/">
-            <Itsgravy />
-          </NavLink>
-        </motion.div>
-        <nav className="text-right w-auto pointer-events-auto ">
-          <motion.button
-            onClick={toggleNav}
-            className="md:hidden uppercase"
-            aria-label="Menu"
-            whileTap={{ scale: 0.8 }}
-          >
-            <HamburgerIcon />
-          </motion.button>
-          <motion.ul
-            className={`pointer-events-auto ${
-              isNavVisible
-                ? "top-0 py-4 absolute top-14 right-0 gap-y-4  bg-fuchsia-700 text-center"
-                : "md:flex md:flex-row md:gap-x-4 md:flex hidden md:justify-center md:items-center"
-            }`}
-            animate={controls}
-          >
-            {navFr.map((nav) => (
-              <li
-                key={nav.to}
-                className="w-full py-4  md:py-2 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
-              >
-                <ButtonNav
-                  to={nav.to}
-                  onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  content={nav.content}
-                  className="px-8 md:px-2 w-full"
-                />
-              </li>
-            ))}
-          </motion.ul>
-        </nav>
+        <section className="flex justify-between px-8 md:w-4/5 md:m-auto">
+          <motion.div whileTap={{ scale: 0.8 }}>
+            <NavLink to="/">{"itsgravy"}</NavLink>
+          </motion.div>
+          <nav className="text-right w-auto pointer-events-auto ">
+            <motion.button
+              onClick={toggleNav}
+              className="md:hidden uppercase"
+              aria-label="Menu"
+              whileTap={{ scale: 0.8 }}
+            >
+              <HamburgerIcon />
+            </motion.button>
+            <motion.ul
+              className={`pointer-events-auto ${
+                isNavVisible
+                  ? "top-0 py-4 absolute top-14 right-0 gap-y-4  bg-zinc-800 text-center"
+                  : "md:flex md:flex-row md:gap-x-4 md:flex hidden md:justify-center md:items-center"
+              }`}
+              animate={controls}
+            >
+              {navFr.map((nav) => (
+                <li
+                  key={nav.to}
+                  className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
+                >
+                  <ButtonNav
+                    to={nav.to}
+                    onClick={window.innerWidth < 768 ? closeNav : undefined}
+                    content={nav.content}
+                    className="px-8 md:px-2 w-full"
+                  />
+                </li>
+              ))}
+            </motion.ul>
+          </nav>
+        </section>
         <motion.div
-          className="h-1 w-full fixed top-0 left-0 bg-neutral-100 opacity-75 z-50"
+          className="h-1 w-full fixed top-0 left-0 bg-neutral-100  z-50"
           style={{ scaleX, originX: 0 }}
         />
       </motion.header>
       <motion.div
-        className="h-1 w-full fixed top-0 left-0 bg-fuchsia-700 opacity-75 z-50"
+        className="h-1 w-full fixed top-0 left-0 bg-fuchsia-700 z-50"
         style={{ scaleX, originX: 0 }}
       />
     </>

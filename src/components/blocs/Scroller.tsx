@@ -41,7 +41,10 @@ const Scroller = () => {
         {liste.map((tech: React.ReactNode, index: number) => {
           if (typeof tech === "object") {
             return (
-              <li key={index} className="w-16 h-16">
+              <li
+                key={index}
+                className="w-20 hover:text-zinc-200 text-zinc-500 transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-2xl grayscale hover:grayscale-0"
+              >
                 {tech}
               </li>
             );

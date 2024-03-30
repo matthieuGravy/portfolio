@@ -1,16 +1,11 @@
-import { PorjectCard } from "../../../components/blocs/Project";
-import Paragraphe from "../../../components/blocs/Paragraphe";
-import AboutProject from "../../../components/fr/AboutProject";
-import { ButtonextTwo } from "../../../components/blocs/Buttons";
-import FlecheToIcon from "../../../components/icons/FlecheToIcon";
-import { JumboPrincipal } from "../../../components/blocs/Jumbo";
+import { PorjectCard } from "../blocs/Project";
 
-const ProjetAllPage = () => {
+const ProjectDetail = () => {
   const Projets = [
     {
       id: "1",
       src: "https://via.placeholder.com/150",
-      name: "Its Gravy Kitchen's",
+      name: "Restaurant Project",
       role: "Front-end",
       description:
         "Site statique pour un restaurant fictif. Développé en autonomie en respectant les consignes.",
@@ -20,7 +15,7 @@ const ProjetAllPage = () => {
     {
       id: "2",
       src: "https://via.placeholder.com/150",
-      name: "Plant Clicker",
+      name: "Clicker Game",
       role: "Front-end ",
       description:
         "Jeu de clic en vanilla JavaScript. Il a été développé en groupe de 3 personnes. Pour ce projet, nous avons utilisé pixi.js pour la partie graphique. Au clic, vous faites pousser un arbre.",
@@ -31,10 +26,10 @@ const ProjetAllPage = () => {
       id: "3",
       to: "sora-cine",
       src: "https://via.placeholder.com/150",
-      name: "Sora cine",
+      name: "Stream APP",
       description:
         "Site de streaming pour la diffusion d'anime. Réalisé en groupe de 4 personnes, utilisant une API externe pour les données. Le site rencontre quelques problèmes tels que le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
-      role: "Front-end - chef de projet",
+      role: "Front-end",
       tech: [
         "React",
         "react-router",
@@ -58,7 +53,7 @@ const ProjetAllPage = () => {
     {
       id: "4",
       src: "https://via.placeholder.com/150",
-      name: "Bookface",
+      name: "Social Network",
       description:
         "C'est un réseau social fictif, développé en groupe de 3 personnes. L'idée de départ est de recevoir un mail qui nous invite à donner notre avis lorsqu'on reçoit une notification, par mail et contribuer à la création de contenu. Ici malheureusement une grande partie de l'architecture React est à revoir avant la publication.",
       role: "back-end ",
@@ -84,7 +79,7 @@ const ProjetAllPage = () => {
     {
       id: "5",
       src: "https://via.placeholder.com/150",
-      name: "Fresh shop",
+      name: "e-commerce site",
       role: "fullstack",
       description:
         "Site de vente de produits pour une entreprise fictive. Le projet est en fin de construction sur les fonctionnalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
@@ -109,41 +104,13 @@ const ProjetAllPage = () => {
         "pnpm",
       ],
       to: "fresh-shop",
+      source: "",
     },
   ];
 
   return (
     <>
-      <JumboPrincipal
-        title="Projets"
-        children={
-          <>
-            <Paragraphe
-              className="text-justify"
-              children={
-                <>
-                  <AboutProject />
-                  <span className="pt-8 flex">
-                    <ButtonextTwo
-                      link="https://github.com/matthieuGravy"
-                      title="lien github"
-                      content={
-                        <>
-                          <span className="pe-2">Voir mon github</span>
-                          <FlecheToIcon />
-                        </>
-                      }
-                      className="px-2"
-                    />
-                  </span>
-                </>
-              }
-            />
-          </>
-        }
-      />
-
-      <section className="grid lg:grid-cols-2 gap-y-16 gap-x-16 py-24 place-content-stretch">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-y-8 md:gap-y-16  md:gap-x-16 md:py-24">
         {Projets.map((projet) => (
           <PorjectCard
             key={projet.id}
@@ -155,7 +122,7 @@ const ProjetAllPage = () => {
             liste={projet.tech.map((tech) => (
               <li
                 key={tech}
-                className="bg-fuchsia-700 p-2 rounded-lg uppercase text-xs"
+                className="border-[1px] border-zinc-500 text-zinc-500 px-4 py-2 uppercase text-xs"
               >
                 {tech}
               </li>
@@ -167,4 +134,4 @@ const ProjetAllPage = () => {
   );
 };
 
-export default ProjetAllPage;
+export default ProjectDetail;

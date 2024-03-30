@@ -15,19 +15,19 @@ interface ParallaxProps {
   baseVelocity: number;
 }
 
-function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
-    stiffness: 200,
+    stiffness: 400,
   });
-  const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 4], {
+  const velocityFactor = useTransform(smoothVelocity, [0, 200], [0, 5], {
     clamp: false,
   });
 
-  const x = useTransform(baseX, (v) => `${wrap(90, -100, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-20, -45, v)}%`);
 
   const directionFactor = useRef<number>(2);
   useAnimationFrame((_, delta) => {
@@ -45,10 +45,22 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   });
 
   return (
-    <div className="text-center overflow-hidden m-0">
+    <div className="text-center overflow-hidden m-0 bg-stone-900">
       <motion.div className=" w-max" style={{ x }}>
-        <span className="inline text-3xl font-extralight uppercase tracking-wide">
-          {children}{" "}
+        <span className="inline text-xl font-extralight uppercase tracking-wide">
+          {children}
+
+          {children}
+
+          {children}
+
+          {children}
+
+          {children}
+
+          {children}
+
+          {children}
         </span>
       </motion.div>
     </div>
@@ -56,12 +68,13 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 }
 
 function ParallaxTextor() {
-  const text =
-    "JAVASCRIPT • TYPESCRIT • REACT • REDUX • VUE 3 • VITE • BOOTSRAP • TAILWINDCSS • DAISY UI • FRAMER-MOTION • GSAP • NODEJS • EXPRESS • POSTMAN • INSOMNIA • MONGOOSE • SEQUELIZE • BASH • PHP • CHARTJS • GIT • GITHUB • GITLAB • JIRA • TRELLO • NPM • PNPM • UBUNTU ";
+  const phrase = "available to work • ";
+  const text = phrase.repeat(2);
+
   return (
     <section className="transition-all">
-      <ParallaxText baseVelocity={-15}>{text}</ParallaxText>
-      <ParallaxText baseVelocity={15}>{text}</ParallaxText>
+      <ParallaxText baseVelocity={-5}>{text}</ParallaxText>
+      <ParallaxText baseVelocity={5}>{text}</ParallaxText>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import Heading from "./Heading";
-
+import Hr from "./Hr";
 interface JumboProps {
   children: React.ReactNode;
   title: string | JSX.Element;
@@ -22,15 +22,15 @@ interface JumboPrincipalProps {
 const JumboPrincipal: React.FC<JumboPrincipalProps> = ({ title, children }) => {
   return (
     <>
-      <section className="py-24 flex flex-col md:w-3/5 gap-y-8">
+      <section className="py-24 flex flex-col gap-y-8 xl:w-4/5 xl:m-auto border-[1px] border-zinc-700 py-24 px-16">
         <Heading
           title={title}
           level="h1"
           className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
         />
+        <Hr />
         <>{children}</>
       </section>
-      <hr />
     </>
   );
 };

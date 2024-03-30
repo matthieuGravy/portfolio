@@ -6,6 +6,7 @@ import { ButtonOne, ButtonextTwo } from "./Buttons";
 import FlecheRightIcon from "../icons/FlecheRightIcon";
 import FlecheLeftIcon from "../icons/FlecheLeftIcon";
 import FlecheToIcon from "../icons/FlecheToIcon";
+import Hr from "./Hr";
 
 interface PorjectCardProps {
   id: string;
@@ -14,6 +15,7 @@ interface PorjectCardProps {
   liste: React.ReactNode;
   role?: string;
   to?: string;
+  source?: string;
 }
 
 const PorjectCard: React.FC<PorjectCardProps> = ({
@@ -22,38 +24,40 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
   content,
   liste,
   to,
+  source,
 }) => {
   return (
     <>
-      <ButtonCards
-        to={`/project/${to}`}
-        content={
-          <>
-            <article className="w-full">
-              <Heading
-                title={name}
-                level="h3"
-                className="text-4xl font-extralight uppercase tracking-wide pb-4"
-              />
-              <hr />
-              <Heading
-                title={role}
-                level="h4"
-                className="text-xl font-extralight uppercase tracking-wide py-4"
-              />
-              <Paragraphe className="text-justify pt-4" children={content} />
-              <section className="pt-4 pb-8">
-                <Heading
-                  title="Technologies"
-                  level="h4"
-                  className="text-xl font-extralight uppercase tracking-wide py-4"
-                />
-                <ul className="flex flex-wrap gap-2">{liste}</ul>
-              </section>
-            </article>
-          </>
-        }
-      />
+      <>
+        <article className="w-full border-[1px] border-zinc-700 md:py-24 md:px-16 py-16 px-8">
+          <header className="flex row justify-between w-full ">
+            <ButtonCards
+              to={`/project/${to}`}
+              content={<Heading title={name} level="h3" />}
+            />
+            <section className="">
+              <p className="border-[1px] border-zinc-500 text-zinc-500 px-4 py-2 uppercase text-xs  bg-zinc-900">
+                {role}
+              </p>
+            </section>
+          </header>
+          <Hr />
+
+          <Paragraphe className="text-justify pt-4" children={content} />
+          <section className="pt-4 pb-8">
+            <Heading title="Technologies" level="h4" className="" />
+            <ul className="flex flex-wrap gap-2">{liste}</ul>
+          </section>
+          <section className="flex flex-col gap-y-4 ">
+            <ButtonOne to={`project/${to}`} content={<>Découvrir</>} />
+            <ButtonextTwo
+              link={source}
+              title="lien github"
+              content={<>Voir le code source</>}
+            />
+          </section>
+        </article>
+      </>
     </>
   );
 };
@@ -91,20 +95,10 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
           <>
             <Article
               className="py-24"
-              children1={
-                <Heading
-                  title={title}
-                  level="h2"
-                  className="md:text-7xl text-5xl font-extralight uppercase tracking-wide"
-                />
-              }
+              children1={<Heading title={title} level="h2" className="" />}
               children2={
                 <>
-                  <Heading
-                    level="h3"
-                    className="text-4xl font-extralight uppercase tracking-wide"
-                    title={role}
-                  />
+                  <Heading level="h3" className="" title={role} />
                   <figure className="pt-8 flex">
                     <ButtonextTwo
                       link={source}
@@ -130,7 +124,7 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
           <>
             <article className="md:grid md:grid-cols-2 flex flex-col  place-content-between relative gap-x-8">
               <section className="">
-                <section className="sticky top-14 flex flex-col gap-y-8 pb-24">
+                <section className="sticky top-24 flex flex-col gap-y-8 pb-24">
                   <Paragraphe className="text-justify" children={paragraphe} />
                   <article>
                     <Heading

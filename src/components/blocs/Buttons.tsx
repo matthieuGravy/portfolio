@@ -1,4 +1,7 @@
 import { NavLink, useMatch } from "react-router-dom";
+import { useState } from "react";
+import FlecheToIcon from "../icons/FlecheToIcon";
+import { GrSend } from "react-icons/gr";
 
 interface ButtonOneProps {
   to: string;
@@ -6,13 +9,58 @@ interface ButtonOneProps {
 }
 
 const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <NavLink
         to={to}
-        className="uppercase bg-neutral-50 text-zinc-800 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors px-2"
+        className={`uppercase bg-teal-300 text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2   ${
+          isHovered ? "hover:bg-fuchsia-700 hover:text-neutral-50 " : ""
+        }`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <>
+          {content}
+          <span
+            className={` transition-all duration-500 relative left-2 opacity-50 ${
+              isHovered ? "left-6 rotate-45 opacity-100" : "rotate-0"
+            }`}
+          >
+            <FlecheToIcon />
+          </span>
+        </>
+      </NavLink>
+    </>
+  );
+};
+
+interface ButtonOneSecondaireProps {
+  to: string;
+  content: React.ReactNode;
+}
+const ButtonOneSecondaire: React.FC<ButtonOneSecondaireProps> = ({
+  to,
+  content,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <>
+      <NavLink
+        to={to}
+        className="uppercase bg-zinc-700 text-neutral-50 flex justify-center py-2 hover:bg-fuchsia-700 transition-colors duration-500 px-2"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         {content}
+        <span
+          className={` transition-all duration-500 relative left-2 opacity-50 ${
+            isHovered ? "left-6 rotate-45 opacity-100" : "rotate-0"
+          }`}
+        >
+          <FlecheToIcon />
+        </span>
       </NavLink>
     </>
   );
@@ -77,9 +125,9 @@ const ButtonextTwo: React.FC<ButtonextProps> = ({
         title={title}
         rel="noreferrer"
         target="_blank"
-        className={`bg-neutral-50 text-zinc-800 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors ${className}`}
+        className={`bg-zinc-700 text-neutral-50 flex uppercase justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500 ${className}`}
       >
-        {content}
+        <>{content}</>
       </a>
     </>
   );
@@ -127,11 +175,37 @@ const ButtonCards: React.FC<ButtonCardsProps> = ({ to, content }) => {
   );
 };
 
+interface ButtonSubmitProps {
+  content: string;
+}
+const ButtonSubmit: React.FC<ButtonSubmitProps> = ({ content }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <button
+      type="submit"
+      className="uppercase w-full bg-teal-300 text-zinc-700 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {content}
+      <span
+        className={`relative -left-32 duration-500 transition-all overflow-hidden ${
+          isHovered ? "left-10 opacity-1" : "opacity-0"
+        }`}
+      >
+        <GrSend size={22} />
+      </span>
+    </button>
+  );
+};
+
 export {
   ButtonOne,
+  ButtonOneSecondaire,
   ButtonTwo,
   Buttonext,
   ButtonextTwo,
   ButtonNav,
   ButtonCards,
+  ButtonSubmit,
 };

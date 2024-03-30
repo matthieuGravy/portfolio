@@ -6,6 +6,9 @@ export default {
       animation: {
         "scroll-right": "animate-scroll-right 20s linear infinite",
       },
+      backgroundImage: {
+        matthieu: "url('/assets/Matthieu.svg')",
+      },
       keyframes: {
         "animate-scroll-right": {
           "0%": { transform: "translateX(0%)" },

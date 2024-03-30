@@ -1,10 +1,16 @@
 import Matthieu from "../../assets/Matthieu.svg";
 
-const Photo = () => {
+interface PhotoProps {
+  className?: string;
+}
+
+const Photo: React.FC<PhotoProps> = ({ className }) => {
   return (
-    <figure className=" h-auto overflow-hidden">
-      <img src={Matthieu} alt="Matthieu Gravy" />
-    </figure>
+    <div className="relative">
+      <figure className={`h-auto overflow-hidden opacity-80 ${className} z-0`}>
+        <img src={Matthieu} alt="Matthieu Gravy" />
+      </figure>
+    </div>
   );
 };
 
