@@ -17,61 +17,44 @@ import Section from "../../components/blocs/Section";
 const Homepage = () => {
   return (
     <>
-      <section className="py-24 flex flex-col md:gap-24 gap-12">
+      <section className="py-24 flex flex-col gap-12  md:gap-24 lg:gap-y-40">
         <Socials />
         <Landing />
+        <article className="overflow-hidden flex flex-row group ">
+          <Scroller />
+        </article>
         <Section
+          className="bg-yellow-200 border-yellow-200"
           children={
             <>
-              <Heading title="Skills" level="h2" />
-              <Hr />
-              <article className="overflow-hidden flex flex-row group ">
-                <Scroller />
-              </article>
-            </>
-          }
-        />
-        <Section
-          children={
-            <>
-              <Heading title="Projets" level="h2" className="" />
+              <Heading title="Projets" level="h2" className="text-zinc-800" />
               <Hr />
               <ProjectDetail />
             </>
           }
         />
-        <ArticleHorizontal
-          className="md:border-[1px] md:border-zinc-700 md:py-24 md:px-16  py-16 px-8"
-          children1={
-            <>
-              <section className="flex flex-col gap-y-16">
-                <header>
-                  <Heading title={<Hello />} level="h2" className="pb-16" />
-                  <Hr />
-                </header>
-                <article>
-                  <Paragraphe
-                    className="text-justify flex flex-col "
-                    children={
-                      <>
-                        <Accroche />
-                      </>
-                    }
-                  />
-                  <figure className="flex flex-col gap-y-4 pt-8">
-                    <ButtonOne to="/contact" content={<>Contactez moi</>} />
-                    <ButtonOneSecondaire to="/about" content={<>About me</>} />
-                  </figure>
-                </article>
-              </section>
-            </>
-          }
-          children2={
-            <>
-              <Photo className=" place-self-end" />
-            </>
-          }
-        />
+        <section className="bg-zinc-700">
+          <figure className="flex flex-col gap-y-16 bg-matthieu h-[50rem]">
+            <header>
+              <Heading title={<Hello />} level="h2" className="pb-16" />
+              <Hr />
+            </header>
+            <article>
+              <Paragraphe
+                className="text-justify flex flex-col "
+                children={
+                  <>
+                    <Accroche />
+                  </>
+                }
+              />
+              <article className="flex flex-col gap-y-4 pt-8">
+                <ButtonOne to="/contact" content={<>Contactez moi</>} />
+                <ButtonOneSecondaire to="/about" content={<>About me</>} />
+              </article>
+            </article>
+          </figure>
+        </section>
       </section>
     </>
   );

@@ -110,10 +110,15 @@ const ContactForm = () => {
           </>
         ) : (
           <>
-            <Section
-              children={
-                <>
-                  <Heading title="Contactez-moi" level="h2" className="" />
+            <>
+              <section className="relative">
+                <section className="absolute bg-yellow-200 w-full h-full skew-y-2 -top-6"></section>
+                <section className="relative pt-8">
+                  <Heading
+                    title="get in touch"
+                    level="h2"
+                    className="text-center text-zinc-800 px-12 pb-24"
+                  />
                   {/*<ReCAPTCHA sitekey="votre-clé-de-site" onChange={handleRecaptcha}> */}
                   <Formik
                     initialValues={{
@@ -129,12 +134,12 @@ const ContactForm = () => {
                   >
                     {({ errors, touched, values }) => (
                       <Form className="">
-                        <section className="grid md:grid-cols-2 grid-rows-3 gap-y-4 md:gap-x-12 py-8">
+                        <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 px-12 py-8">
                           <label className="relative">
                             <Field
                               name="nom"
                               placeholder="Nom"
-                              className={`bg-zinc-900 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500  py-2 uppercase focus:outline-none md:w-full ${
                                 errors.nom && touched.nom
                                   ? "border-red-500"
                                   : values.nom === ""
@@ -152,7 +157,7 @@ const ContactForm = () => {
                             <Field
                               name="prenom"
                               placeholder="Prénom"
-                              className={`bg-zinc-900 border-b-[1px] py-2 uppercase focus:outline-none md:w-full  ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full  ${
                                 errors.prenom && touched.prenom
                                   ? "border-red-500"
                                   : values.prenom === ""
@@ -171,7 +176,7 @@ const ContactForm = () => {
                               name="email"
                               type="email"
                               placeholder="Email"
-                              className={`bg-zinc-900 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.email && touched.email
                                   ? "border-red-500"
                                   : values.email === ""
@@ -189,7 +194,7 @@ const ContactForm = () => {
                             <Field
                               name="entreprise"
                               placeholder="Entreprise"
-                              className={`bg-zinc-900 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.entreprise && touched.entreprise
                                   ? "border-red-500"
                                   : values.entreprise === ""
@@ -207,7 +212,7 @@ const ContactForm = () => {
                             <Field
                               name="sujet"
                               placeholder="Sujet"
-                              className={`bg-zinc-900 border-b-[1px] py-2 uppercase focus:outline-none md:w-full ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.sujet && touched.sujet
                                   ? "border-red-500"
                                   : values.sujet === ""
@@ -222,13 +227,13 @@ const ContactForm = () => {
                             ) : null}
                           </label>
                         </section>
-                        <section className="flex flex-col gap-y-8">
+                        <section className="flex flex-col gap-y-8 px-12 pb-8">
                           <label className="relative">
                             <Field
                               as="textarea"
                               name="message"
                               placeholder="Message"
-                              className={`bg-zinc-900 border-b-[1px] py-2 uppercase focus:outline-none w-full ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none w-full ${
                                 errors.message && touched.message
                                   ? "border-red-500"
                                   : values.message === ""
@@ -242,15 +247,15 @@ const ContactForm = () => {
                               </p>
                             ) : null}
                           </label>
-                          <ButtonSubmit content="Envoyer" />
                         </section>
+                        <ButtonSubmit content="Envoyer" />
                       </Form>
                     )}
                   </Formik>
                   {/*</ReCAPTCHA>*/}
-                </>
-              }
-            />
+                </section>
+              </section>
+            </>
           </>
         )}
       </>

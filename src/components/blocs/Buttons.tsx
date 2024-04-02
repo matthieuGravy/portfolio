@@ -14,7 +14,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
     <>
       <NavLink
         to={to}
-        className={`uppercase bg-teal-300 text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2   ${
+        className={`uppercase bg-zinc-100 text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2   ${
           isHovered ? "hover:bg-fuchsia-700 hover:text-neutral-50 " : ""
         }`}
         onMouseEnter={() => setIsHovered(true)}
@@ -49,7 +49,7 @@ const ButtonOneSecondaire: React.FC<ButtonOneSecondaireProps> = ({
     <>
       <NavLink
         to={to}
-        className="uppercase bg-zinc-700 text-neutral-50 flex justify-center py-2 hover:bg-fuchsia-700 transition-colors duration-500 px-2"
+        className="uppercase border-[1px] border-zinc-500 text-neutral-50 flex justify-center py-2 hover:border-fuchsia-700 transition-colors duration-500 hover:bg-clip-content px-2"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -183,7 +183,7 @@ const ButtonSubmit: React.FC<ButtonSubmitProps> = ({ content }) => {
   return (
     <button
       type="submit"
-      className="uppercase w-full bg-teal-300 text-zinc-700 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500"
+      className="uppercase w-full bg-zinc-100 text-zinc-700 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

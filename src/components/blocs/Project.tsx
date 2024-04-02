@@ -29,23 +29,27 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
   return (
     <>
       <>
-        <article className="w-full border-[1px] border-zinc-700 md:py-24 md:px-16 py-16 px-8">
+        <article className="w-full border-[1px] border-zinc-700 md:py-24 md:px-16 py-16 px-8 relative">
+          <section className="absolute -top-4">
+            <p className="border-[1px] border-zinc-800 text-zinc-200 px-4 py-2 uppercase text-xs  bg-zinc-900">
+              {role}
+            </p>
+          </section>
           <header className="flex row justify-between w-full ">
             <ButtonCards
               to={`/project/${to}`}
-              content={<Heading title={name} level="h3" />}
+              content={
+                <Heading title={name} level="h3" className="text-zinc-800" />
+              }
             />
-            <section className="">
-              <p className="border-[1px] border-zinc-500 text-zinc-500 px-4 py-2 uppercase text-xs  bg-zinc-900">
-                {role}
-              </p>
-            </section>
           </header>
-          <Hr />
-
-          <Paragraphe className="text-justify pt-4" children={content} />
+          <Paragraphe className="text-zinc-600 pt-2" children={content} />
           <section className="pt-4 pb-8">
-            <Heading title="Technologies" level="h4" className="" />
+            <Heading
+              title="Technologies"
+              level="h4"
+              className="text-zinc-700"
+            />
             <ul className="flex flex-wrap gap-2">{liste}</ul>
           </section>
           <section className="flex flex-col gap-y-4 ">
