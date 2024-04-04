@@ -21,7 +21,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
-    stiffness: 400,
+    stiffness: 300,
   });
   const velocityFactor = useTransform(smoothVelocity, [0, 200], [0, 5], {
     clamp: false,
@@ -69,7 +69,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
 
 function ParallaxTextor() {
   const phrase = "available to work • ";
-  const text = phrase.repeat(2);
+  const text = phrase.repeat(4);
 
   return (
     <section className="transition-all">

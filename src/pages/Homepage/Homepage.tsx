@@ -1,18 +1,11 @@
-import Hello from "../../components/fr/Hello";
 import Heading from "../../components/blocs/Heading";
 import Photo from "../../components/blocs/Photo";
-import Paragraphe from "../../components/blocs/Paragraphe";
-
-import ArticleHorizontal from "../../components/blocs/ArticleHorizontal";
-import Accroche from "../../components/fr/Accroche";
 
 import Scroller from "../../components/blocs/Scroller";
 import Socials from "../../components/blocs/Socials";
-import { ButtonOne, ButtonOneSecondaire } from "../../components/blocs/Buttons";
-import Hr from "../../components/blocs/Hr";
+import { ButtonOne } from "../../components/blocs/Buttons";
 import ProjectDetail from "../../components/fr/ProjectDetail";
 import Landing from "../../components/blocs/Landing";
-import Section from "../../components/blocs/Section";
 
 const Homepage = () => {
   return (
@@ -23,14 +16,14 @@ const Homepage = () => {
         <article className="overflow-hidden flex flex-row group ">
           <Scroller />
         </article>
-        <section className="bg-yellow-200 md:w-4/5 md:m-auto pt-24  lg:px-0">
+        <section className="bg-yellow-200 md:w-4/5 md:m-auto pt-24 px lg:px-0">
           <>
             <Heading
               title="Projets"
               level="h2"
-              className="text-zinc-800 text-center lg:text-left"
+              className="text-zinc-800 text-center lg:text-left ps-8"
             />
-            <section className="pt-16 pb-16 md:pb-0 md:pt-0 px-4 md:px-8">
+            <section className="py-16 md:pb-0 md:pt-0 px-4 md:px-8">
               <ProjectDetail />
             </section>
           </>
