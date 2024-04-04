@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Hr from "./components/blocs/Hr";
 
 function App() {
-  const styeMain = "bg-zinc-900 text-neutral-50 pt-10 min-h-[100vh] ";
+  const styeMain = "bg-zinc-900 text-neutral-50 pt-28 min-h-[100vh] ";
   const pageTransition = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
