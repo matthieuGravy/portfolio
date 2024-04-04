@@ -49,7 +49,7 @@ const ButtonOneSecondaire: React.FC<ButtonOneSecondaireProps> = ({
     <>
       <NavLink
         to={to}
-        className="uppercase border-[1px] border-zinc-500 text-neutral-50 flex justify-center py-2 hover:border-fuchsia-700 transition-colors duration-500 hover:bg-clip-content px-2"
+        className="uppercase bg-zinc-700 text-neutral-50 flex justify-center py-2 hover:border-fuchsia-700 transition-colors duration-500 hover:bg-clip-content px-2"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

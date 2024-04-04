@@ -23,48 +23,47 @@ const Homepage = () => {
         <article className="overflow-hidden flex flex-row group ">
           <Scroller />
         </article>
-        <Section
-          className="bg-yellow-200 border-yellow-200"
-          children={
-            <>
-              <Heading title="Projets" level="h2" className="text-zinc-800" />
-              <Hr />
+        <section className="bg-yellow-200 md:w-4/5 md:m-auto pt-24  lg:px-0">
+          <>
+            <Heading
+              title="Projets"
+              level="h2"
+              className="text-zinc-800 text-center lg:text-left"
+            />
+            <section className="pt-16 pb-16 md:pb-0 md:pt-0 px-4 md:px-8">
               <ProjectDetail />
-            </>
-          }
-        />
-        <section className="bg-zinc-100 text-zinc-800 h-[100vh] w-full ">
-          <section className="md:w-4/5 md:m-auto py-24">
-            <h1 className="text-5xl">Matthieu Gravy</h1>
-            <section className="grid grid-cols-2 ">
-              <article className="col-start-2">
-                <p className="tracking-widest text-2xl ">
-                  Vous recherchez un développeur web capable de créer des
-                  projets web rapidement et facilement ? <br />
-                  Je suis votre homme !
-                </p>
-              </article>
-
-              <ul className="col-start-2 gap-y-8 flex flex-col col-start-1">
-                <li className="tracking-widest  ">
-                  Les avantage de travailler avec moi ? Je suis rempli de
-                  résilience et de détermination. Je suis reparti plus d'une
-                  fois à zéro et je ne lâche jamais l'affaire.
-                </li>
-                <li className="tracking-widest  ">
-                  Je déborde d'expérience pro variée, ce qui me permet
-                  d'apporter des solutions à des problèmes variées. Je suis un
-                  développeur web, mais je suis aussi un ancien responsable de
-                  restaurant (5 ans) et agent de sécurité (7 ans) qui adore
-                  voyager.
-                </li>
-                <li className="tracking-widest ">
-                  La plus belle chose dans le code, c'est le partage. Et c'est
-                  une valeur que je porte en moi. J'aime partager mes projets,
-                  et j'aime aider les autres à réaliser les leurs.
-                </li>
-              </ul>
             </section>
+          </>
+        </section>
+        <section className="bg-zinc-100 text-zinc-800 pt-24 pb-52 w-full">
+          <section className="md:w-4/5 md:m-auto px-2 lg:px-0 lg:grid lg:grid-cols-2">
+            <article className="pb-8 lg:pb-0 text-center lg:text-left">
+              <h2 className="text-5xl uppercase">Matthieu Gravy</h2>
+            </article>
+            <article>
+              <p className="tracking-widest text-2xl text-center lg:text-left">
+                Vous recherchez un développeur web capable de créer des projets
+                web rapidement et facilement ?
+              </p>
+              <article className="pt-16 w-4/5 m-auto">
+                <ul className="gap-y-8 flex flex-col md:bg-yellow-200 py-4 px-4">
+                  <h2 className="text-3xl text-center">Each words</h2>
+                  <li className="tracking-widest ">
+                    L'un des avantages de travailler avec moi ? Je suis doté de
+                    résilience et de détermination. J'ai repris à zéro plus
+                    d'une fois et je ne lâche jamais l'affaire.
+                  </li>
+                  <li className="tracking-widest  ">
+                    J'ai une expérience professionnelle riche et variée, ce qui
+                    me permet d'apporter des solutions à des problèmes variés.
+                  </li>
+                  <li className="tracking-widest ">
+                    Je suis précis et rigoureux. Je développe un code de
+                    qualité, facile à faire évoluer et réutilisable.
+                  </li>
+                </ul>
+              </article>
+            </article>
           </section>
         </section>
       </section>

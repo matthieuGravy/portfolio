@@ -59,7 +59,7 @@ export default {
         ],
       },
       animation: {
-        "scroll-right": "animate-scroll-right 20s linear infinite",
+        "scroll-right": "animate-scroll-right 30s linear infinite",
       },
       backgroundImage: {
         matthieu: "url('/assets/Matthieu.svg')",
