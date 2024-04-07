@@ -165,10 +165,14 @@ interface ButtonCardsProps {
   content: React.ReactNode;
 }
 
-const ButtonCards: React.FC<ButtonCardsProps> = ({ to, content }) => {
+const ButtonCards: React.FC<ButtonCardsProps> = ({
+  to,
+  content,
+  className,
+}) => {
   return (
     <>
-      <NavLink to={to} className="hover:opacity-75	">
+      <NavLink to={to} className={`${className}`}>
         {content}
       </NavLink>
     </>

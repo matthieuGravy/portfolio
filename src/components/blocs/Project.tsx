@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Heading from "./Heading";
 import { ButtonCards } from "./Buttons";
 import Paragraphe from "./Paragraphe";
@@ -6,59 +8,55 @@ import { ButtonOne, ButtonextTwo } from "./Buttons";
 import FlecheRightIcon from "../icons/FlecheRightIcon";
 import FlecheLeftIcon from "../icons/FlecheLeftIcon";
 import FlecheToIcon from "../icons/FlecheToIcon";
-import Hr from "./Hr";
 
 interface PorjectCardProps {
   id: string;
   name: string;
-  content: React.ReactNode;
   liste: React.ReactNode;
   role?: string;
   to?: string;
-  source?: string;
+  className?: string;
 }
 
 const PorjectCard: React.FC<PorjectCardProps> = ({
   name,
   role,
-  content,
   liste,
   to,
-  source,
+  className,
 }) => {
+  const [isHover, setIsHover] = useState(false);
+
   return (
     <>
       <>
-        <article className="w-full border-[1px] border-zinc-700 md:py-24 md:px-16 py-16 px-8 relative">
-          <section className="absolute -top-4">
-            <p className="border-[1px] border-zinc-800 text-zinc-200 px-4 py-2 uppercase text-xs  bg-zinc-900">
+        <article
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
+          className={`w-full relative bg-zinc-100 transition-all ease-in-out duration-500 flex flex-col justify-between
+          ${className} ${isHover ? "shadow-xl bg-zinc-800" : ""}`}
+        >
+          <article className="pb-8 pt-12 px-6">
+            <p className="absolute top-0 right-0 text-zinc-400 px-4 py-2 uppercase text-xs transition-colors duration-500">
               {role}
             </p>
-          </section>
-          <header className="flex row justify-between w-full ">
             <ButtonCards
               to={`/project/${to}`}
               content={
-                <Heading title={name} level="h3" className="text-zinc-800" />
+                <Heading
+                  title={name}
+                  level="h3"
+                  className={`text-zinc-800 hover:text-fuchsia-700 transition-colors duration-500 ${
+                    isHover ? "text-zinc-200" : ""
+                  }`}
+                />
               }
             />
-          </header>
-          <Paragraphe className="text-zinc-600 pt-2" children={content} />
-          <section className="pt-4 pb-8">
-            <Heading
-              title="Technologies"
-              level="h4"
-              className="text-zinc-700"
-            />
-            <ul className="flex flex-wrap gap-2">{liste}</ul>
-          </section>
-          <section className="flex flex-col gap-y-4 ">
+
+            <ul className="flex flex-wrap gap-x-4 gap-y-2">{liste}</ul>
+          </article>
+          <section className="">
             <ButtonOne to={`project/${to}`} content={<>Découvrir</>} />
-            <ButtonextTwo
-              link={source}
-              title="lien github"
-              content={<>Voir le code source</>}
-            />
           </section>
         </article>
       </>

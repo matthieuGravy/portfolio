@@ -13,6 +13,7 @@ const Homepage = () => {
       <section className="pt-24 flex flex-col gap-12 md:gap-24 lg:gap-y-40">
         <Socials />
         <Landing />
+
         <article className="overflow-hidden flex flex-row group ">
           <Scroller />
         </article>
@@ -30,7 +31,7 @@ const Homepage = () => {
         </section>
         <section className="bg-zinc-100 text-zinc-800 pt-24 pb-16 w-full">
           <section className="md:w-4/5 md:m-auto px-2 lg:px-0 lg:grid lg:grid-cols-2 gap-x-8">
-            <article className="pb-8 lg:pb-0 text-center lg:text-left flex flex-col justify-center w-4/5">
+            <article className="pb-8 lg:pb-0 text-center lg:text-left flex flex-col justify-center w-4/5 m-auto lg:margin-0">
               <h2 className="text-5xl uppercase">
                 Je suis <br />
                 Matthieu Gravy

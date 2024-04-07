@@ -113,7 +113,7 @@ const ContactForm = () => {
             <>
               <section className="relative">
                 <section className="absolute bg-yellow-200 w-full h-full skew-y-2 -top-6"></section>
-                <section className="relative pt-8">
+                <section className="relative pt-8 ">
                   <Heading
                     title="get in touch"
                     level="h2"
@@ -134,12 +134,12 @@ const ContactForm = () => {
                   >
                     {({ errors, touched, values }) => (
                       <Form className="">
-                        <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 px-12 py-8">
+                        <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 py-8 px-12">
                           <label className="relative">
                             <Field
                               name="nom"
                               placeholder="Nom"
-                              className={`bg-yellow-200 border-b-[1px] border-zinc-500  py-2 uppercase focus:outline-none md:w-full ${
+                              className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.nom && touched.nom
                                   ? "border-red-500"
                                   : values.nom === ""
@@ -227,7 +227,7 @@ const ContactForm = () => {
                             ) : null}
                           </label>
                         </section>
-                        <section className="flex flex-col gap-y-8 px-12 pb-8">
+                        <section className="flex flex-col pb-8 px-12">
                           <label className="relative">
                             <Field
                               as="textarea"

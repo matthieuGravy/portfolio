@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Hr from "./components/blocs/Hr";
 
 function App() {
-  const styeMain = "bg-zinc-900 text-neutral-50 pt-28 min-h-[100vh] ";
+  const styeMain = "bg-zinc-900 text-neutral-50 pt-28 ";
   const pageTransition = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <section className="min-h-[100vh] bg-zinc-900 w-full ">
+      <section className=" bg-zinc-900">
         <Topnav />
         <motion.main className={styeMain} {...pageTransition}>
           <Outlet />

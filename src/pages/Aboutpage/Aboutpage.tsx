@@ -1,8 +1,6 @@
 import ParallaxTextor from "../../components/blocs/ParallaxTextor";
 
 const Aboutpage = () => {
-  const titre = <>Matthieu</>;
-
   return (
     <>
       <section className="h-[100vh] flex flex-col justify-center relative">
