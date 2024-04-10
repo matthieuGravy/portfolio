@@ -9,7 +9,7 @@ const ProjectDetail = () => {
       role: "Front-end",
       description:
         "Site statique pour un restaurant fictif. Développé en autonomie en respectant les consignes.",
-      tech: ["HTML", "JavaScript", "bootstrap"],
+      tech: ["JavaScript", "bootstrap"],
       to: "kitchens-bootstrap",
     },
     {
@@ -19,7 +19,7 @@ const ProjectDetail = () => {
       role: "Front-end ",
       description:
         "Jeu de clic en vanilla JavaScript. Il a été développé en groupe de 3 personnes. Pour ce projet, nous avons utilisé pixi.js pour la partie graphique. Au clic, vous faites pousser un arbre.",
-      tech: ["HTML", "JavaScript", "CSS", "pixi.js"],
+      tech: ["JavaScript", "CSS", "pixi.js"],
       to: "plant-clicker-js",
     },
     {

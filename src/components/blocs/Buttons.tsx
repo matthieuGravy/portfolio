@@ -6,24 +6,43 @@ import { GrSend } from "react-icons/gr";
 interface ButtonOneProps {
   to: string;
   content: React.ReactNode;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+  className?: string;
 }
 
-const ButtonOne: React.FC<ButtonOneProps> = ({ to, content }) => {
+const ButtonOne: React.FC<ButtonOneProps> = ({
+  to,
+  content,
+  onMouseEnter,
+  onMouseLeave,
+  className,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <NavLink
         to={to}
-        className={`uppercase bg-zinc-100 text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2   ${
+        className={`uppercase text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2 ${className}  ${
           isHovered ? "hover:bg-fuchsia-700 hover:text-neutral-50 " : ""
         }`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => {
+          setIsHovered(true);
+          if (onMouseEnter) {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          if (onMouseLeave) {
+            onMouseLeave();
+          }
+        }}
       >
         <>
           {content}
           <span
-            className={` transition-all duration-500 relative left-2 opacity-50 ${
+            className={`duration-100 relative left-2 opacity-50 ${
               isHovered ? "left-6 rotate-45 opacity-100" : "rotate-0"
             }`}
           >
@@ -70,12 +89,22 @@ interface ButtonTwoProps {
   to: string;
   content: React.ReactNode;
   className?: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
-const ButtonTwo: React.FC<ButtonTwoProps> = ({ to, content, className }) => {
+const ButtonTwo: React.FC<ButtonTwoProps> = ({
+  to,
+  content,
+  className,
+  onMouseEnter,
+  onMouseLeave,
+}) => {
   return (
     <>
       <NavLink
         to={to}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
         className={`inline-block scale-110 hover:scale-90 transition-all ${className}`}
       >
         {content}
@@ -163,16 +192,25 @@ const ButtonNav: React.FC<ButtonNavProps> = ({
 interface ButtonCardsProps {
   to: string;
   content: React.ReactNode;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const ButtonCards: React.FC<ButtonCardsProps> = ({
   to,
   content,
   className,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   return (
     <>
-      <NavLink to={to} className={`${className}`}>
+      <NavLink
+        to={to}
+        className={`${className}`}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
         {content}
       </NavLink>
     </>

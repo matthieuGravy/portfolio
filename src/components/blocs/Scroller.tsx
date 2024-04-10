@@ -37,13 +37,13 @@ const Scroller = () => {
 
   const ListeScroller: React.FC<ListeScrollerProps> = ({ liste }) => {
     return (
-      <ul className="flex flex-row align-center animate animate-scroll-right gap-x-16 px-8 justify-between whitespace-nowrap group-hover:paused">
+      <ul className="flex flex-row justify-between px-8 align-center animate animate-scroll-right gap-x-16 whitespace-nowrap group-hover:paused">
         {liste.map((tech: React.ReactNode, index: number) => {
           if (typeof tech === "object") {
             return (
               <li
                 key={index}
-                className="w-20 hover:text-zinc-200 text-zinc-500 transition-all duration-500 ease-in-out transform hover:scale-95 hover:shadow-2xl grayscale hover:grayscale-0"
+                className="w-24 transition-all duration-500 ease-in-out transform hover:text-zinc-200 text-zinc-500 hover:scale-95 hover:shadow-2xl grayscale hover:grayscale-0"
               >
                 {tech}
               </li>

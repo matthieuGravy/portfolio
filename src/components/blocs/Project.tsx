@@ -26,6 +26,7 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
   className,
 }) => {
   const [isHover, setIsHover] = useState(false);
+  const [isTitleHover, setIsTitleHover] = useState(false);
 
   return (
     <>
@@ -34,20 +35,23 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
           className={`w-full relative bg-zinc-100 transition-all ease-in-out duration-500 flex flex-col justify-between
-          ${className} ${isHover ? "shadow-xl bg-zinc-800" : ""}`}
+          ${className} ${isHover ? "shadow-xl " : ""}`}
         >
-          <article className="pb-8 pt-12 px-6">
-            <p className="absolute top-0 right-0 text-zinc-400 px-4 py-2 uppercase text-xs transition-colors duration-500">
+          {/* modifier l'intérieur de la card au hover*/}
+          <article className={`pb-8 pt-12 px-6  ${isHover ? "" : ""}}`}>
+            <p className="absolute top-0 right-0 text-zinc-400 px-4 py-2 uppercase text-xs">
               {role}
             </p>
             <ButtonCards
               to={`/project/${to}`}
+              onMouseEnter={() => setIsTitleHover(true)}
+              onMouseLeave={() => setIsTitleHover(false)}
               content={
                 <Heading
                   title={name}
                   level="h3"
-                  className={`text-zinc-800 hover:text-fuchsia-700 transition-colors duration-500 ${
-                    isHover ? "text-zinc-200" : ""
+                  className={` hover:text-fuchsia-700 transition-colors duration-500 ${
+                    isHover ? "text-zinc-200" : "text-zinc-800"
                   }`}
                 />
               }
@@ -56,7 +60,11 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
             <ul className="flex flex-wrap gap-x-4 gap-y-2">{liste}</ul>
           </article>
           <section className="">
-            <ButtonOne to={`project/${to}`} content={<>Découvrir</>} />
+            <ButtonOne
+              to={`project/${to}`}
+              content={<>Découvrir</>}
+              className={`${isTitleHover ? "text-zinc-300" : ""}`}
+            />{" "}
           </section>
         </article>
       </>

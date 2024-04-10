@@ -12,8 +12,8 @@ import typescript from "../../assets/typescript.svg";
 import vscode from "../../assets/vscode.svg";
 import vue from "../../assets/vue.svg";
 
-const classnameP = `text-center uppercase text-xs py-4 cursor-default`;
-const classnameImg = "w-20";
+const classnameP = `text-center uppercase text-xs py-4 cursor-default `;
+const classnameImg = "";
 
 const Html = () => {
   return (

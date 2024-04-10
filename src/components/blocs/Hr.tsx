@@ -3,7 +3,7 @@ interface HrProps {
 }
 
 const Hr: React.FC<HrProps> = (className) => {
-  return <hr className={`border-zinc-700 ${className}`} />;
+  return <hr className={`border-zinc-200 ${className}`} />;
 };
 
 export default Hr;
