@@ -2,7 +2,6 @@ import { Outlet, ScrollRestoration } from "react-router-dom";
 import Topnav from "./components/blocs/Topnav";
 import Footer from "./components/blocs/Footer";
 import { motion } from "framer-motion";
-import Hr from "./components/blocs/Hr";
 
 function App() {
   const styeMain = "bg-zinc-100 text-neutral-50 ";

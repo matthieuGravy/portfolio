@@ -4,7 +4,6 @@ import { ButtonSubmit } from "../../components/blocs/Buttons";
 //import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 import Heading from "../../components/blocs/Heading";
-import Section from "../../components/blocs/Section";
 import Paragraphe from "../../components/blocs/Paragraphe";
 
 interface MyFormValues {

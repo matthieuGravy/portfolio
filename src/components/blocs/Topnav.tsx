@@ -1,4 +1,5 @@
 import { ButtonNav } from "./Buttons";
+import Socials from "./Socials";
 import { useState, useEffect } from "react";
 import {
   useSpring,
@@ -71,11 +72,11 @@ const Topnav = () => {
   return (
     <>
       <motion.header
-        variants={{ isVisible: { y: 0 }, isHidden: { y: -100 } }}
-        initial={{ y: -100 }}
-        animate={isHidden ? { y: -100 } : { y: 0 }}
+        variants={{ isVisible: { y: 0 }, isHidden: { y: -72 } }}
+        initial={{ y: -72 }}
+        animate={isHidden ? { y: -72 } : { y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`fixed fixed w-full top-0 py-4 text-neutral-50 uppercase z-50 bg-zinc-800`}
+        className={`fixed fixed w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
       >
         <section className="flex justify-between px-8 md:w-4/5 md:m-auto">
           <motion.div whileTap={{ scale: 0.8 }}>
@@ -101,7 +102,7 @@ const Topnav = () => {
               {navFr.map((nav) => (
                 <li
                   key={nav.to}
-                  className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden hover:opacity-75 hover:bg-fuchsia-600"
+                  className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color hover:text-neutral-50 hover:bg-fuchsia-700"
                 >
                   <ButtonNav
                     to={nav.to}
@@ -114,6 +115,7 @@ const Topnav = () => {
             </motion.ul>
           </nav>
         </section>
+        <Socials />
         <motion.div
           className="h-1 w-full fixed top-0 left-0 bg-neutral-100  z-50"
           style={{ scaleX, originX: 0 }}
