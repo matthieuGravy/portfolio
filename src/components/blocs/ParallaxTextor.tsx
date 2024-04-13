@@ -31,7 +31,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
 
   const directionFactor = useRef<number>(2);
   useAnimationFrame((_, delta) => {
-    let moveBy = directionFactor.current * baseVelocity * (delta / 3000);
+    let moveBy = directionFactor.current * baseVelocity * (delta / 8000);
 
     if (velocityFactor.get() < 0) {
       directionFactor.current = -1;
@@ -47,7 +47,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   return (
     <div className="text-center overflow-hidden m-0 bg-stone-900">
       <motion.div className=" w-max" style={{ x }}>
-        <span className="inline text-xl font-extralight uppercase tracking-wide">
+        <span className="inline text-xl font-extralight uppercase tracking-wide text-6xl">
           {children}
 
           {children}

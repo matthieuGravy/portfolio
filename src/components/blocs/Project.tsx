@@ -35,11 +35,19 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
           className={`w-full relative bg-zinc-100 transition-all ease-in-out duration-500 flex flex-col justify-between
-          ${className} ${isHover ? "shadow-xl " : ""}`}
+         `}
         >
           {/* modifier l'intérieur de la card au hover*/}
-          <article className={`pb-8 pt-12 px-6  ${isHover ? "" : ""}}`}>
-            <p className="absolute top-0 right-0 text-zinc-400 px-4 py-2 uppercase text-xs">
+          <article
+            className={`pb-8 pt-12 px-6 h-full flex flex-col justify-between ${className} ${
+              isHover ? "shadow-xl " : ""
+            }`}
+          >
+            <p
+              className={`absolute top-0 right-0  px-4 py-2 uppercase text-xs ${
+                isHover ? "text-teal-500" : "text-zinc-400"
+              }`}
+            >
               {role}
             </p>
             <ButtonCards
@@ -51,12 +59,11 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
                   title={name}
                   level="h3"
                   className={` hover:text-fuchsia-700 transition-colors duration-500 ${
-                    isHover ? "text-zinc-200" : "text-zinc-800"
+                    isHover ? "text-fuchsia-700" : "text-zinc-800"
                   }`}
                 />
               }
             />
-
             <ul className="flex flex-wrap gap-x-4 gap-y-2">{liste}</ul>
           </article>
           <section className="">
@@ -64,7 +71,7 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
               to={`project/${to}`}
               content={<>Découvrir</>}
               className={`${isTitleHover ? "text-zinc-300" : ""}`}
-            />{" "}
+            />
           </section>
         </article>
       </>

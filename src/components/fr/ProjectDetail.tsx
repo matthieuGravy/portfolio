@@ -65,6 +65,7 @@ const ProjectDetail = () => {
             to={projet.to}
             name={projet.name}
             role={projet.role}
+            className=""
             liste={projet.tech.map((tech) => (
               <li
                 key={tech}
