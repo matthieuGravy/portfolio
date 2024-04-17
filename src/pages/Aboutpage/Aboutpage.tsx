@@ -4,7 +4,7 @@ import Heading from "../../components/blocs/Heading";
 const Aboutpage = () => {
   return (
     <>
-      <section className="h-[100vh] flex flex-col pt-24">
+      <section className=" flex flex-col pt-24">
         <section>
           <Heading
             title={<>About me</>}

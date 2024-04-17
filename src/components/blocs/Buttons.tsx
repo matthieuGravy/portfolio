@@ -57,16 +57,19 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
 interface ButtonOneSecondaireProps {
   to: string;
   content: React.ReactNode;
+  onClick?: () => void;
 }
 const ButtonOneSecondaire: React.FC<ButtonOneSecondaireProps> = ({
   to,
   content,
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
       <NavLink
+        onClick={onClick}
         to={to}
         className="uppercase bg-zinc-700 text-neutral-50 flex justify-center py-2 hover:border-fuchsia-700 transition-colors duration-500 hover:bg-clip-content px-2"
         onMouseEnter={() => setIsHovered(true)}
@@ -154,7 +157,7 @@ const ButtonextTwo: React.FC<ButtonextProps> = ({
         title={title}
         rel="noreferrer"
         target="_blank"
-        className={`bg-zinc-700 text-neutral-50 flex uppercase justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500 ${className}`}
+        className={`hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500 ${className}`}
       >
         <>{content}</>
       </a>
@@ -194,6 +197,7 @@ interface ButtonCardsProps {
   content: React.ReactNode;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  onClick?: () => void;
 }
 
 const ButtonCards: React.FC<ButtonCardsProps> = ({
@@ -202,6 +206,7 @@ const ButtonCards: React.FC<ButtonCardsProps> = ({
   className,
   onMouseEnter,
   onMouseLeave,
+  onClick,
 }) => {
   return (
     <>
@@ -210,6 +215,7 @@ const ButtonCards: React.FC<ButtonCardsProps> = ({
         className={`${className}`}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
+        onClick={onClick}
       >
         {content}
       </NavLink>

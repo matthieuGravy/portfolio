@@ -16,6 +16,7 @@ interface PorjectCardProps {
   role?: string;
   to?: string;
   className?: string;
+  onClick?: () => void;
 }
 
 const PorjectCard: React.FC<PorjectCardProps> = ({
@@ -24,6 +25,8 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
   liste,
   to,
   className,
+  buttonCardsonClick,
+  buttonOneClick,
 }) => {
   const [isHover, setIsHover] = useState(false);
   const [isTitleHover, setIsTitleHover] = useState(false);
@@ -51,9 +54,10 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
               {role}
             </p>
             <ButtonCards
-              to={`/project/${to}`}
+              to={`/${to}`}
               onMouseEnter={() => setIsTitleHover(true)}
               onMouseLeave={() => setIsTitleHover(false)}
+              onclick={buttonCardsonClick}
               content={
                 <Heading
                   title={name}
@@ -68,8 +72,9 @@ const PorjectCard: React.FC<PorjectCardProps> = ({
           </article>
           <section className="">
             <ButtonOne
-              to={`project/${to}`}
+              to={`${to}`}
               content={<>Découvrir</>}
+              onclick={buttonOneClick}
               className={`${isTitleHover ? "text-zinc-300" : ""}`}
             />
           </section>
@@ -107,59 +112,61 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
   return (
     <>
       <Article
-        className="py-24  lg:w-full"
+        className="px-2 md:w-4/5 md:m-auto lg:px-0 "
         children1={
           <>
+            <section className="flex justify-between">
+              <ButtonOne
+                to={`/${toprev}`}
+                content={
+                  <>
+                    <FlecheLeftIcon /> <span className="ps-2">retour</span>
+                  </>
+                }
+              />
+              <ButtonOne
+                to={`/${tonext}`}
+                content={
+                  <>
+                    <span className="pe-2">Suivant</span>
+                    <FlecheRightIcon />
+                  </>
+                }
+              />
+            </section>
             <Article
-              className="py-24"
+              className=""
               children1={<Heading title={title} level="h2" className="" />}
               children2={
                 <>
-                  <Heading level="h3" className="" title={role} />
-                  <figure className="pt-8 flex">
-                    <ButtonextTwo
-                      link={source}
-                      title="lien github"
-                      content={
-                        <>
-                          <span className="pe-2 uppercase">
-                            Voir le code source
-                          </span>
-                          <FlecheToIcon />
-                        </>
-                      }
-                      className="px-2"
-                    />
-                  </figure>
+                  <figure className="pt-8 flex"></figure>
                 </>
               }
             />
-            <hr className="pb-8" />
           </>
         }
         children2={
           <>
             <article className="md:grid md:grid-cols-2 flex flex-col  place-content-between relative gap-x-8">
               <section className="">
-                <section className="sticky top-24 flex flex-col gap-y-8 pb-24">
-                  <Paragraphe className="text-justify" children={paragraphe} />
-                  <article>
-                    <Heading
-                      title="Développement"
-                      level="h3"
-                      className="text-2xl font-extralight uppercase tracking-wide pb-2"
-                    />
-                    <p className="uppercase text-zinc-400">{ptech}</p>
-                  </article>
-                  <article>
-                    <Heading
-                      title="Déploiement et versionning"
-                      level="h3"
-                      className="text-2xl font-extralight uppercase tracking-wide pb-2"
-                    />
-                    <p className="uppercase text-zinc-400">{pversion}</p>
-                    {button}
-                  </article>
+                <Paragraphe className="text-justify" children={paragraphe} />
+                <section className="grid grid-cols-2 gap-y-8 w-4/5 m-auto">
+                  <Heading level="h6" className="" title="role" />
+                  <p className="uppercase text-zinc-400">{role}</p>
+
+                  <Heading title="Stack" level="h6" className="" />
+                  <p className="uppercase text-zinc-400">{ptech}</p>
+
+                  <Heading title="Website" level="h6" className="" />
+                  <p className="uppercase text-zinc-400">{pversion}</p>
+                  {button}
+                  <Heading title="Github" level="h6" className="" />
+                  <ButtonextTwo
+                    link={source}
+                    title="lien github"
+                    content="link"
+                    className="uppercase text-zinc-400"
+                  />
                 </section>
               </section>
               <section className="grid grid-cols-1 gap-x-8 gap-y-16">
@@ -169,25 +176,6 @@ const ProjetUnitaire: React.FC<ProjetUnitaireProps> = ({
           </>
         }
       />
-      <section className="flex justify-between pb-24">
-        <ButtonOne
-          to={`/${toprev}`}
-          content={
-            <>
-              <FlecheLeftIcon /> <span className="ps-2">retour</span>
-            </>
-          }
-        />
-        <ButtonOne
-          to={`/${tonext}`}
-          content={
-            <>
-              <span className="pe-2">Suivant</span>
-              <FlecheRightIcon />
-            </>
-          }
-        />
-      </section>
     </>
   );
 };
