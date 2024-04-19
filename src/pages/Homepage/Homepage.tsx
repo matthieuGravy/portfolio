@@ -20,7 +20,7 @@ const Homepage = () => {
           type="section-large"
           className="px-2 md:w-4/5 md:m-auto lg:px-0 lg:grid lg:grid-cols-2 gap-x-8 relative"
         >
-          <article className="">
+          <article className="m-auto">
             <Heading
               title={
                 <>
@@ -32,7 +32,7 @@ const Homepage = () => {
               level="h1"
               className="text-4xl lg:text-5xl"
             />
-            <p className="text-2xl tracking-widest text-center lg:text-left">
+            <p className="text-2xl tracking-widest text-center  lg:text-left">
               A web developer capable of creating web projects quickly and
               easily.
             </p>
@@ -40,7 +40,9 @@ const Homepage = () => {
               <ButtonOne content="more" to="/about" />
             </section>
           </article>
-          <figure className={`h-auto overflow-hidden opacity-60  z-0`}>
+          <figure
+            className={`h-auto overflow-hidden opacity-60 flex justify-end z-0`}
+          >
             <img src={MatthieuGravyDeveloperWeb} alt="Matthieu Gravy" />
           </figure>
         </Containers>
