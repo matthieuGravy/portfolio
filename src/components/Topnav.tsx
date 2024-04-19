@@ -1,5 +1,4 @@
-import { ButtonNav } from "./Buttons";
-import Socials from "./Socials";
+import { ButtonNav } from "./blocs/Buttons";
 import { useState, useEffect } from "react";
 import {
   useSpring,
@@ -8,7 +7,7 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import HamburgerIcon from "../icons/HamburgerIcon";
+import HamburgerIcon from "./icons/HamburgerIcon";
 import { NavLink } from "react-router-dom";
 const Topnav = () => {
   const [isNavVisible, setIsNavVisible] = useState<boolean>(false);
@@ -115,7 +114,7 @@ const Topnav = () => {
             </motion.ul>
           </nav>
         </section>
-        <Socials />
+
         <motion.div
           className="h-1 w-full fixed top-0 left-0 bg-neutral-100  z-50"
           style={{ scaleX, originX: 0 }}

@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import Topnav from "./components/blocs/Topnav";
-import Footer from "./components/blocs/Footer";
+import Topnav from "./components/Topnav";
+import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 
 function App() {

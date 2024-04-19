@@ -1,6 +1,4 @@
-import Hello from "../fr/Hello";
-import Showcode from "../fr/Showcode";
-import { Buttonext } from "../blocs/Buttons";
+import { Buttonext } from "./blocs/Buttons";
 import { NavLink } from "react-router-dom";
 
 interface CopyrightProps {
@@ -12,7 +10,7 @@ const Copyright: React.FC<CopyrightProps> = ({ author }) => {
 
 const Footer = () => {
   const signe = "©";
-  const author = <Hello />;
+  const author = "Matthieu Gravy";
   const year = new Date().getFullYear();
   return (
     <footer className=" bg-zinc-100">
@@ -40,8 +38,8 @@ const Footer = () => {
           <Buttonext
             title="Voir le code source"
             link={"https://github.com/matthieuGravy/portfolio"}
-            content={<Showcode />}
-            className="text-center lg:text-left lg:bg-red-200"
+            content="⚡️ Le code de ce site est visible ici"
+            className="text-center lg:text-left"
           />
         </article>
       </article>

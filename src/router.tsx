@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
             element: <Bookfacepage />,
           },
           {
-            path: "/clickergame",
+            path: "/clicker-game",
             element: <Clickergamepage />,
           },
         ],

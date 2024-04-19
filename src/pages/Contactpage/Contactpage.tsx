@@ -3,7 +3,6 @@ import * as Yup from "yup";
 //import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 
-import { JumboPrincipal } from "../../components/blocs/Jumbo";
 import Paragraphe from "../../components/blocs/Paragraphe";
 
 interface MyFormValues {
@@ -92,14 +91,10 @@ const Contactpage = () => {
   };
   return (
     <>
-      <JumboPrincipal
-        title="Contactez-moi"
-        children={
-          <>
-            <Paragraphe children="Vous avez une question, un projet ou une idée ? N'hésitez pas à me contacter via le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais." />
-          </>
-        }
-      />
+      <>
+        <Paragraphe children="Vous avez une question, un projet ou une idée ? N'hésitez pas à me contacter via le formulaire ci-dessous. Je vous répondrai dans les plus brefs délais." />
+      </>
+
       {formSubmitted ? (
         <>
           <Paragraphe
