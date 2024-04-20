@@ -25,11 +25,11 @@ const ListeScroller: React.FC = () => {
 
 const Scroller: React.FC = () => {
   return (
-    <>
+    <section className="flex flex-row overflow-hidden group">
       <ListeScroller />
       <ListeScroller />
       <ListeScroller />
-    </>
+    </section>
   );
 };
 

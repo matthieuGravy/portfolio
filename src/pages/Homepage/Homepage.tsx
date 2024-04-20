@@ -46,11 +46,10 @@ const Homepage = () => {
             <img src={MatthieuGravyDeveloperWeb} alt="Matthieu Gravy" />
           </figure>
         </Containers>
-        <article className="flex flex-row overflow-hidden group">
-          <Scroller />
-        </article>
 
-        <section className="md:w-4/5 md:m-auto px lg:px-0">
+        <Scroller />
+
+        <Containers>
           <>
             <Heading
               title={<>Personal Projects</>}
@@ -80,7 +79,7 @@ const Homepage = () => {
               ))}
             </section>
           </>
-        </section>
+        </Containers>
         <Getintouch />
       </main>
     </>
