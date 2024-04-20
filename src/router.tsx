@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Homepage from "./pages/Homepage/Homepage.tsx";
 //children
+import Landingpage from "./pages/Homepage/childrens/Landingpage/Landingpage";
 import Bookfacepage from "./pages/Homepage/childrens/Bookfacepage/Bookfacepage";
 import Clickergamepage from "./pages/Homepage/childrens/Clickergamepage/Clickergamepage";
 
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Homepage />,
         children: [
+          {
+            path: "/",
+            element: <Landingpage />,
+          },
           {
             path: "/bookface",
             element: <Bookfacepage />,
