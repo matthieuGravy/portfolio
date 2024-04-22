@@ -2,22 +2,20 @@ import { Outlet } from "react-router-dom";
 import Containers from "../../components/Containers";
 import Heading from "../../components/blocs/Heading";
 import { CardProject } from "../../components/Cards";
-import Projets from "../../components/fr/projets";
+import projet from "../../components/fr/projets";
 
 import Getintouch from "../../components/Getintouch/Getintouch";
 
 const Homepage = () => {
   return (
     <>
-      <main className="text-zinc-800 flex flex-col gap-12 md:gap-24 lg:gap-y-64 pt-24 pb-24">
+      <main className="text-zinc-800 flex flex-col gap-12 md:gap-24 lg:gap-y-24">
         <Outlet />
-        <Containers type="section-large">
-          <Heading title="Personal Projects" level="h2" className="lg:w-1/2" />
+        <Containers type="section-large" id="projects">
+          <Heading title="Projects" level="h2" className="lg:w-1/2" />
           <section className="grid grid-cols-1 lg:grid-cols-3 gap-y-8 md:gap-y-16 md:gap-x-16 md:py-24">
-            {Projets.map((projet) => (
+            {projet.map((projet) => (
               <CardProject
-                buttonCardsonClick={() => setIsOutlet(true)}
-                buttonOneClick={() => setIsOutlet(true)}
                 key={projet.id}
                 id={projet.id}
                 to={projet.to}

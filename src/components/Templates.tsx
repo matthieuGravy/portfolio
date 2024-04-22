@@ -1,8 +1,9 @@
 import Heading from "./blocs/Heading";
 import Containers from "./Containers";
-import { ButtonOne, ButtonextTwo } from "./blocs/Buttons";
+import { ButtonextTwo } from "./blocs/Buttons";
 import FlecheRightIcon from "./icons/FlecheRightIcon";
 import FlecheLeftIcon from "./icons/FlecheLeftIcon";
+import { NavLink } from "react-router-dom";
 
 interface TemplatesProps {
   title: string;
@@ -31,29 +32,34 @@ const Templates: React.FC<TemplatesProps> = ({
 }) => {
   return (
     <>
-      <Containers type="section-large" className="justify-between">
-        <ButtonOne
-          to={`/${toprev}`}
-          content={
-            <>
-              <FlecheLeftIcon /> <span className="ps-2">retour</span>
-            </>
-          }
-        />
-        <ButtonOne
-          to={`/${tonext}`}
-          content={
-            <>
-              <span className="pe-2">Suivant</span>
-              <FlecheRightIcon />
-            </>
-          }
-        />
-      </Containers>
       <Containers
         type="jumbo-vertical"
+        className="pt-24"
         children={
           <>
+            <section className=" flex  flex-row justify-between py-16">
+              <NavLink
+                to={`/${toprev}`}
+                className="hover:text-fuchsia-700 flex flex-row"
+              >
+                {
+                  <>
+                    <FlecheLeftIcon />{" "}
+                    <span className="ps-2">previous project</span>
+                  </>
+                }
+              </NavLink>
+
+              <NavLink
+                to={`/${tonext}`}
+                className="hover:text-fuchsia-700 flex flex-row"
+              >
+                <>
+                  <span className="pe-2">next project</span>
+                  <FlecheRightIcon />
+                </>
+              </NavLink>
+            </section>
             <Heading title={title} level="h2" className="lg:w-1/2" />
           </>
         }
@@ -61,7 +67,7 @@ const Templates: React.FC<TemplatesProps> = ({
           <>
             <article className="md:grid md:grid-cols-2 flex flex-col  place-content-between relative gap-x-8">
               <section className="">
-                <Paragraphe className="text-justify" children={paragraphe} />
+                <p className="text-justify">{paragraphe}</p>
                 <section className="grid grid-cols-2 gap-y-8 w-4/5 ">
                   <Heading level="h6" className="" title="role" />
                   <p className="uppercase text-zinc-400">{role}</p>

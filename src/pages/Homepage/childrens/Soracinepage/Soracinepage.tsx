@@ -1,12 +1,11 @@
-import { ProjetUnitaire, Figure } from "../../../components/blocs/Project.tsx";
-import sorahome from "../../../assets/sora-home.png";
-import soralogin from "../../../assets/sora-login.png";
-import soralogged from "../../../assets/sora-logged.png";
-import soramovie from "../../../assets/sora-movies.png";
-import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
-import FlecheToIcon from "../../../components/icons/FlecheToIcon";
+import { Figure } from "../../../../components/blocs/Project.tsx";
+import sorahome from "../../../../assets/sora-home.png";
+import soralogin from "../../../../assets/sora-login.png";
+import soralogged from "../../../../assets/sora-logged.png";
+import soramovie from "../../../../assets/sora-movies.png";
+import Templates from "../../../../components/Templates.tsx";
 
-const SoraCine = () => {
+const Soracinepage = () => {
   const sc = [
     {
       head: "SoraCine",
@@ -32,8 +31,8 @@ const SoraCine = () => {
         "mongoose",
       ],
       deploie: "Déployé avec Vercel",
-      tonext: "project/bookface",
-      toprev: "project/plant-clicker-js",
+      toprev: "plant-clicker",
+      tonext: "bookface",
       source: "https://github.com/matthieuGravy/sora-cine",
       link: "https://sora-cine.vercel.app/",
     },
@@ -64,7 +63,7 @@ const SoraCine = () => {
   return (
     <>
       {sc.map((project, index) => (
-        <ProjetUnitaire
+        <Templates
           key={index}
           role={project.role}
           title={project.head}
@@ -74,21 +73,6 @@ const SoraCine = () => {
           tonext={project.tonext}
           toprev={project.toprev}
           source={project.source}
-          button={
-            <figure className="pt-8 flex">
-              <ButtonextTwo
-                link={project.link}
-                title="lien github"
-                content={
-                  <>
-                    <span className="pe-2 uppercase">Voir le site</span>
-                    <FlecheToIcon />
-                  </>
-                }
-                className="px-2"
-              />
-            </figure>
-          }
           figure={gallery.map((img, index) => (
             <Figure
               key={index}
@@ -102,4 +86,4 @@ const SoraCine = () => {
     </>
   );
 };
-export default SoraCine;
+export default Soracinepage;

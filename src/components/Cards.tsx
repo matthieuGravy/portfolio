@@ -64,7 +64,7 @@ const CardProject: React.FC<CardProjectProps> = ({
             />
             <ul
               className={`flex flex-wrap gap-x-4 gap-y-2 ${
-                isHover ? "text-zinc-500 " : "text-zinc-400"
+                isHover ? "text-zinc-500" : "text-zinc-400"
               }`}
             >
               {liste}

@@ -1,6 +1,6 @@
-import { ProjetUnitaire } from "../../../components/blocs/Project.tsx";
+import Templates from "../../../../components/Templates.tsx";
 
-const FreshShop = () => {
+const Shoppage = () => {
   const fs = [
     {
       head: "Fresh Shop",
@@ -28,15 +28,15 @@ const FreshShop = () => {
         "pnpm",
       ],
       deploie: "Non déployé",
-      tonext: "project/projects",
-      toprev: "project/bookface",
+      toprev: "bookface",
+      tonext: "itg-kitchens",
       source: "https://github.com/matthieuGravy/freshshop",
     },
   ];
   return (
     <>
       {fs.map((project, index) => (
-        <ProjetUnitaire
+        <Templates
           key={index}
           role={project.role}
           title={project.head}
@@ -52,4 +52,4 @@ const FreshShop = () => {
   );
 };
 
-export default FreshShop;
+export default Shoppage;

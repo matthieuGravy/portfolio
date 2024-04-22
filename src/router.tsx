@@ -2,10 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import Homepage from "./pages/Homepage/Homepage.tsx";
-//children
+//childrens
 import Landingpage from "./pages/Homepage/childrens/Landingpage/Landingpage";
+import Itsgravykitchenpage from "./pages/Homepage/childrens/Itsgravykitchenpage/Itsgravykitchenpage";
 import Bookfacepage from "./pages/Homepage/childrens/Bookfacepage/Bookfacepage";
 import Clickergamepage from "./pages/Homepage/childrens/Clickergamepage/Clickergamepage";
+import Soracinepage from "./pages/Homepage/childrens/Soracinepage/Soracinepage";
+import Shoppage from "./pages/Homepage/childrens/Shoppage/Shoppage";
 
 import Aboutpage from "./pages/Aboutpage/Aboutpage";
 import Contactpage from "./pages/Contactpage/Contactpage";
@@ -28,12 +31,24 @@ export const router = createBrowserRouter([
             element: <Landingpage />,
           },
           {
+            path: "/itg-kitchens",
+            element: <Itsgravykitchenpage />,
+          },
+          {
+            path: "/plant-clicker",
+            element: <Clickergamepage />,
+          },
+          {
+            path: "/sora-cine",
+            element: <Soracinepage />,
+          },
+          {
             path: "/bookface",
             element: <Bookfacepage />,
           },
           {
-            path: "/clicker-game",
-            element: <Clickergamepage />,
+            path: "/shop",
+            element: <Shoppage />,
           },
         ],
       },

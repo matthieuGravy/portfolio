@@ -58,8 +58,8 @@ const Topnav = () => {
 
   const navFr = [
     { to: "/", content: "Home" },
-    { to: "/project/projects", content: "projets" },
-    { to: "/about", content: "à propos" },
+    { to: "/#projects", content: "Projects" },
+    { to: "/about", content: "About" },
   ];
   const { scrollYProgress: scrollYProgress1 } = useScroll();
   const scaleX = useSpring(scrollYProgress1, {

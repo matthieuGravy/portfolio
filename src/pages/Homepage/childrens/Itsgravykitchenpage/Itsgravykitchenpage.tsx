@@ -1,12 +1,10 @@
-import IGKWelcome from "../../../assets/IGK-Welcome.png";
-import IGKMenu from "../../../assets/IGK-Menu.png";
-import IGKContact from "../../../assets/IGK-Contact.png";
-import IGKPictures from "../../../assets/IGK-Pictures.png";
-import IGKRestaurant from "../../../assets/IGK-Restaurants.png";
-import { ProjetUnitaire, Figure } from "../../../components/blocs/Project.tsx";
-import { ButtonextTwo } from "../../../components/blocs/Buttons.tsx";
-import FlecheToIcon from "../../../components/icons/FlecheToIcon";
-
+import IGKWelcome from "../../../../assets/IGK-Welcome.png";
+import IGKMenu from "../../../../assets/IGK-Menu.png";
+import IGKContact from "../../../../assets/IGK-Contact.png";
+import IGKPictures from "../../../../assets/IGK-Pictures.png";
+import IGKRestaurant from "../../../../assets/IGK-Restaurants.png";
+import { Figure } from "../../../../components/blocs/Project.tsx";
+import Templates from "../../../../components/Templates.tsx";
 const ItsGravyKitchen = () => {
   const itg = [
     {
@@ -16,8 +14,8 @@ const ItsGravyKitchen = () => {
         "Ce projet est un site web statique pour une franchise de restaurant fictive. Il s'agissait d'un projet à réaliser seul, pour lequel j'ai assumé la responsabilité du développement front-end. J'ai utilisé le framework Bootstrap pour le design, et j'ai programmé en HTML, CSS et JavaScript. Git a été utilisé pour la gestion de version, et le déploiement a été effectué via GitHub.",
       tech: ["html", "bootstrap", "JavaScript"],
       deploie: "Déployé avec Github",
-      tonext: "project/plant-clicker-js",
-      toprev: "project/projects",
+      toprev: "shop",
+      tonext: "plant-clicker",
       link: "https://matthieugravy.github.io/restaurant-css-framework/index.html",
       source: "https://github.com/matthieuGravy/restaurant-css-framework",
     },
@@ -52,7 +50,7 @@ const ItsGravyKitchen = () => {
   return (
     <>
       {itg.map((project, index) => (
-        <ProjetUnitaire
+        <Templates
           key={index}
           role={project.role}
           title={project.head}
@@ -62,21 +60,6 @@ const ItsGravyKitchen = () => {
           tonext={project.tonext}
           toprev={project.toprev}
           source={project.source}
-          button={
-            <figure className="pt-8 flex">
-              <ButtonextTwo
-                link={project.link}
-                title="lien github"
-                content={
-                  <>
-                    <span className="pe-2 uppercase">Voir le site</span>
-                    <FlecheToIcon />
-                  </>
-                }
-                className="px-2"
-              />
-            </figure>
-          }
           figure={gallery.map((img, index) => (
             <Figure
               key={index}

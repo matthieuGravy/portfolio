@@ -1,4 +1,4 @@
-const projets = [
+const projects = [
   {
     id: "1",
     src: "https://via.placeholder.com/150",
@@ -6,7 +6,7 @@ const projets = [
     role: "Front-end",
     description: "Projet de site statique réalisé avec bootrsap.",
     tech: ["JavaScript", "bootstrap"],
-    to: "kitchens-bootstrap",
+    to: "itg-kitchens",
   },
   {
     id: "2",
@@ -50,4 +50,4 @@ const projets = [
   },
 ];
 
-export default projets;
+export default projects;

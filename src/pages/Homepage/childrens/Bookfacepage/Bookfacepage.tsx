@@ -1,8 +1,8 @@
-import {
-  ProjetUnitaire,
-  Figure,
-} from "../../../../components/blocs/Project.tsx";
+import { Figure } from "../../../../components/blocs/Project.tsx";
+import Templates from "../../../../components/Templates.tsx";
+
 import bookface from "../../../../assets/bookface.png";
+
 const BookFace = () => {
   const bf = [
     {
@@ -11,8 +11,8 @@ const BookFace = () => {
       description: "",
       tech: ["typescript", "Express", "MongoDB", "React", "taiwind"],
       deploie: "Non déployé",
-      tonext: "project/fresh-shop",
-      toprev: "project/sora-cine",
+      tonext: "shop",
+      toprev: "sora-cine",
       source: "https://github.com/matthieuGravy/book-face",
     },
   ];
@@ -26,7 +26,7 @@ const BookFace = () => {
   return (
     <>
       {bf.map((project, index) => (
-        <ProjetUnitaire
+        <Templates
           key={index}
           role={project.role}
           title={project.head}
