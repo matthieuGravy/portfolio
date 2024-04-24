@@ -13,19 +13,19 @@ import vscode from "../assets/vscode.svg";
 import vue from "../assets/vue.svg";
 
 const technologies = [
+  { name: "html", image: html },
   { name: "css", image: css },
   { name: "sass", image: sass },
-  { name: "html", image: html },
   { name: "bootstrap", image: bootstrap },
+  { name: "tailwind", image: tailwind },
   { name: "git", image: git },
   { name: "javascript", image: javascript },
-  { name: "mongo", image: mongo },
-  { name: "nodejs", image: nodejs },
-  { name: "react", image: react },
-  { name: "tailwind", image: tailwind },
   { name: "typescript", image: typescript },
-  { name: "vscode", image: vscode },
+  { name: "react", image: react },
   { name: "vue", image: vue },
+  { name: "nodejs", image: nodejs },
+  { name: "mongo", image: mongo },
+  { name: "vscode", image: vscode },
 ];
 
 export default technologies;

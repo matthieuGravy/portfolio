@@ -1,4 +1,3 @@
-import { ButtonNav } from "./blocs/Buttons";
 import { useState, useEffect } from "react";
 import {
   useSpring,
@@ -56,11 +55,6 @@ const Topnav = () => {
     }
   }, [scrollYProgress]);
 
-  const navFr = [
-    { to: "/", content: "Home" },
-    { to: "/#projects", content: "Projects" },
-    { to: "/about", content: "About" },
-  ];
   const { scrollYProgress: scrollYProgress1 } = useScroll();
   const scaleX = useSpring(scrollYProgress1, {
     stiffness: 100,
@@ -77,10 +71,7 @@ const Topnav = () => {
         transition={{ duration: 0.3 }}
         className={`fixed fixed w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
       >
-        <section className="flex justify-between px-8 md:w-4/5 md:m-auto">
-          <motion.div whileTap={{ scale: 0.8 }}>
-            <NavLink to="/">{"itsgravy"}</NavLink>
-          </motion.div>
+        <section className="flex justify-between md:w-4/5 md:m-auto">
           <nav className="text-right w-auto pointer-events-auto ">
             <motion.button
               onClick={toggleNav}
@@ -93,32 +84,41 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto ${
                 isNavVisible
-                  ? "top-0 py-4 absolute top-14 right-0 gap-y-4  bg-zinc-800 text-center"
+                  ? "top-0 py-4 absolute top-14 left-0 gap-y-4  bg-zinc-100 text-center w-full"
                   : "md:flex md:flex-row md:gap-x-4 md:flex hidden md:justify-center md:items-center"
               }`}
               animate={controls}
             >
-              {navFr.map((nav) => (
-                <li
-                  key={nav.to}
-                  className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color hover:text-neutral-50 hover:bg-fuchsia-700"
+              <li className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color hover:text-neutral-50 hover:bg-fuchsia-700">
+                <NavLink
+                  to="/"
+                  onClick={window.innerWidth < 768 ? closeNav : undefined}
+                  className="px-8 md:px-2 w-full"
                 >
-                  <ButtonNav
-                    to={nav.to}
-                    onClick={window.innerWidth < 768 ? closeNav : undefined}
-                    content={nav.content}
-                    className="px-8 md:px-2 w-full"
-                  />
-                </li>
-              ))}
+                  Home
+                </NavLink>
+              </li>
+              <li className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color hover:text-neutral-50 hover:bg-teal-400">
+                <NavLink
+                  to="/#projects"
+                  onClick={window.innerWidth < 768 ? closeNav : undefined}
+                  className="px-8 md:px-2 w-full"
+                >
+                  Projects
+                </NavLink>
+              </li>
+              <li className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color  hover:bg-yellow-200">
+                <NavLink
+                  to="/about"
+                  onClick={window.innerWidth < 768 ? closeNav : undefined}
+                  className="px-8 md:px-2 w-full"
+                >
+                  About
+                </NavLink>
+              </li>
             </motion.ul>
           </nav>
         </section>
-
-        <motion.div
-          className="h-1 w-full fixed top-0 left-0 bg-neutral-100  z-50"
-          style={{ scaleX, originX: 0 }}
-        />
       </motion.header>
       <motion.div
         className="h-1 w-full fixed top-0 left-0 bg-fuchsia-700 z-50"

@@ -50,8 +50,13 @@ export const router = createBrowserRouter([
             path: "/shop",
             element: <Shoppage />,
           },
+          {
+            path: "/#projects",
+            element: <Landingpage />,
+          },
         ],
       },
+
       {
         path: "/about",
         element: <Aboutpage />,

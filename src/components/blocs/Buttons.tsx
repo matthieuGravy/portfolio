@@ -1,4 +1,4 @@
-import { NavLink, useMatch } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import FlecheToIcon from "../icons/FlecheToIcon";
 import { GrSend } from "react-icons/gr";
@@ -165,33 +165,6 @@ const ButtonextTwo: React.FC<ButtonextProps> = ({
   );
 };
 
-interface ButtonNavProps {
-  to: string;
-  content: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-}
-const ButtonNav: React.FC<ButtonNavProps> = ({
-  to,
-  content,
-  className,
-  onClick,
-}) => {
-  const match = useMatch(to);
-
-  return (
-    <>
-      <NavLink
-        to={to}
-        className={`font-extralight ${className} ${match ? "opacity-75" : ""} `}
-        onClick={onClick}
-      >
-        {content}
-      </NavLink>
-    </>
-  );
-};
-
 interface ButtonCardsProps {
   to: string;
   content: React.ReactNode;
@@ -253,7 +226,6 @@ export {
   ButtonTwo,
   Buttonext,
   ButtonextTwo,
-  ButtonNav,
   ButtonCards,
   ButtonSubmit,
 };
