@@ -45,7 +45,7 @@ const projects = [
     description:
       "Site de vente de produits pour une entreprise fictive. Le projet est en fin de construction sur les fonctionnalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
     tech: ["typescript", "react", "redux", "tailwindcss", "Express"],
-    to: "fresh-shop",
+    to: "shop",
     source: "",
   },
 ];

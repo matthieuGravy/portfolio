@@ -4,7 +4,6 @@ import { ButtonSubmit } from "../../components/blocs/Buttons";
 //import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from "react";
 import Heading from "../../components/blocs/Heading";
-import Paragraphe from "../../components/blocs/Paragraphe";
 
 interface MyFormValues {
   prenom: string;
@@ -23,42 +22,42 @@ const ContactForm = () => {
   };*/
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
-      .min(2, "Trop court !")
-      .max(50, "Trop long !")
-      .matches(/^[A-Za-z ]+$/, "Seuls les lettres, les espaces sont autorisés")
-      .required("Requis"),
+      .min(2, "Too short !")
+      .max(50, "Too long !")
+      .matches(/^[A-Za-z ]+$/, "Only letters, spaces are allowed")
+      .required("Eequired"),
     prenom: Yup.string()
-      .min(2, "Trop court !")
-      .max(50, "Trop long !")
-      .matches(/^[A-Za-z ]+$/, "Seuls les lettres, les espaces sont autorisés")
-      .required("Requis"),
+      .min(2, "Too short !")
+      .max(50, "Too long !")
+      .matches(/^[A-Za-z ]+$/, "Only letters, spaces are allowed")
+      .required("Required"),
     email: Yup.string().email("Email invalide").required("Requis"),
     entreprise: Yup.string()
-      .min(2, "Trop court !")
-      .max(50, "Trop long !")
+      .min(2, "Too short !")
+      .max(50, "Too long !")
       .matches(
         /^[A-Za-z0-9 ]+$/,
-        "Seuls les lettres, les chiffres et les espaces sont autorisés"
+        "Only letters, numbers and spaces are allowed"
       )
       .notRequired(),
 
     sujet: Yup.string()
-      .min(2, "Trop court !")
-      .max(50, "Trop long !")
+      .min(2, "Too short !")
+      .max(50, "Too long !")
       .matches(
         /^[A-Za-z0-9 !,;.?:]+$/,
-        "Seuls les lettres, les chiffres, les espaces et les caractères spécifiques sont autorisés"
+        "Only letters, numbers, spaces and specific characters are allowed"
       )
-      .required("Requis"),
+      .required("Required"),
 
     message: Yup.string()
-      .min(2, "Trop court !")
-      .max(500, "Trop long !")
+      .min(2, "Too short !")
+      .max(500, "Too long !")
       .matches(
         /^[A-Za-z0-9 !,;.?:]+$/,
-        "Seuls les lettres, les chiffres, les espaces et les caractères spécifiques sont autorisés"
+        "Only letters, numbers, spaces and specific characters are allowed"
       )
-      .required("Requis"),
+      .required("Required"),
   });
   const submitForm = async (
     values: MyFormValues,
@@ -96,15 +95,8 @@ const ContactForm = () => {
         {formSubmitted ? (
           <>
             <section className="text-center py-24">
-              <Heading title="Merci !" level="h2" className="" />
-              <Paragraphe
-                className=""
-                children={
-                  <>
-                    <>Votre message a bien été envoyé.</>
-                  </>
-                }
-              />
+              <Heading title="Thank you !" level="h2" className="" />
+              <p className="text-center">Message Sent</p>
             </section>
           </>
         ) : (
@@ -112,11 +104,11 @@ const ContactForm = () => {
             <>
               <section className="relative">
                 <section className="absolute bg-yellow-200 w-full h-full skew-y-2 -top-6"></section>
-                <section className="relative pt-8 ">
+                <section className="relative pt-8 max-w-[700px] ">
                   <Heading
                     title="get in touch"
                     level="h2"
-                    className="text-center text-zinc-800 px-12 pb-24"
+                    className="text-center text-zinc-800 md:px-12 pb-24"
                   />
                   {/*<ReCAPTCHA sitekey="votre-clé-de-site" onChange={handleRecaptcha}> */}
                   <Formik
@@ -133,11 +125,11 @@ const ContactForm = () => {
                   >
                     {({ errors, touched, values }) => (
                       <Form className="">
-                        <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 py-8 px-12">
+                        <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 py-8 px-8">
                           <label className="relative">
                             <Field
                               name="nom"
-                              placeholder="Nom"
+                              placeholder="Name"
                               className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.nom && touched.nom
                                   ? "border-red-500"
@@ -155,7 +147,7 @@ const ContactForm = () => {
                           <label className="relative md:place-self-end md:w-full">
                             <Field
                               name="prenom"
-                              placeholder="Prénom"
+                              placeholder="Firstname"
                               className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full  ${
                                 errors.prenom && touched.prenom
                                   ? "border-red-500"
@@ -192,7 +184,7 @@ const ContactForm = () => {
                           <label className="relative md:place-self-end md:w-full">
                             <Field
                               name="entreprise"
-                              placeholder="Entreprise"
+                              placeholder="Company"
                               className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.entreprise && touched.entreprise
                                   ? "border-red-500"
@@ -210,7 +202,7 @@ const ContactForm = () => {
                           <label className="relative">
                             <Field
                               name="sujet"
-                              placeholder="Sujet"
+                              placeholder="Subject"
                               className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
                                 errors.sujet && touched.sujet
                                   ? "border-red-500"
@@ -226,7 +218,7 @@ const ContactForm = () => {
                             ) : null}
                           </label>
                         </section>
-                        <section className="flex flex-col pb-8 px-12">
+                        <section className="flex flex-col pb-8 px-8">
                           <label className="relative">
                             <Field
                               as="textarea"
@@ -247,7 +239,7 @@ const ContactForm = () => {
                             ) : null}
                           </label>
                         </section>
-                        <ButtonSubmit content="Envoyer" />
+                        <ButtonSubmit content="Send" />
                       </Form>
                     )}
                   </Formik>

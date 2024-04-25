@@ -9,6 +9,7 @@ interface ButtonOneProps {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   className?: string;
+  onClick?: () => void;
 }
 
 const ButtonOne: React.FC<ButtonOneProps> = ({
@@ -17,6 +18,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
   onMouseEnter,
   onMouseLeave,
   className,
+  onClick,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -26,6 +28,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
         className={`uppercase text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2 ${className}  ${
           isHovered ? "hover:bg-fuchsia-700 hover:text-neutral-50 " : ""
         }`}
+        onClick={onClick}
         onMouseEnter={() => {
           setIsHovered(true);
           if (onMouseEnter) {
@@ -171,6 +174,7 @@ interface ButtonCardsProps {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
   onClick?: () => void;
+  className?: string;
 }
 
 const ButtonCards: React.FC<ButtonCardsProps> = ({

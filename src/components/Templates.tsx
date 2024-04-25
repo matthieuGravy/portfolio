@@ -37,7 +37,7 @@ const Templates: React.FC<TemplatesProps> = ({
         className="pt-24"
         children={
           <>
-            <section className=" flex  flex-row justify-between py-16">
+            <section className=" flex flex-row justify-between py-16">
               <NavLink
                 to={`/${toprev}`}
                 className="hover:text-fuchsia-700 flex flex-row"
@@ -87,7 +87,7 @@ const Templates: React.FC<TemplatesProps> = ({
                   />
                 </section>
               </section>
-              <section className="grid grid-cols-1 gap-x-8 gap-y-16">
+              <section className="grid grid-cols-2 gap-x-8 gap-y-16">
                 {figure}
               </section>
             </article>

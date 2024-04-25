@@ -1,4 +1,4 @@
-import { Buttonext } from "./Buttons";
+import { Buttonext } from "./blocs/Buttons";
 
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 

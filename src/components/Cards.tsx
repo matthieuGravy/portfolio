@@ -11,6 +11,8 @@ interface CardProjectProps {
   to?: string;
   className?: string;
   onClick?: () => void;
+  buttonCardsonClick?: () => void;
+  buttonOneClick?: () => void;
 }
 
 const CardProject: React.FC<CardProjectProps> = ({
@@ -41,7 +43,7 @@ const CardProject: React.FC<CardProjectProps> = ({
             }`}
           >
             <p
-              className={`absolute top-0 right-0  px-4 py-2 uppercase text-xs ${
+              className={`invisible md:visible absolute top-0 right-0  px-4 py-2 uppercase text-xs ${
                 isHover ? "text-teal-500" : "text-zinc-400"
               }`}
             >
@@ -51,7 +53,7 @@ const CardProject: React.FC<CardProjectProps> = ({
               to={`/${to}`}
               onMouseEnter={() => setIsTitleHover(true)}
               onMouseLeave={() => setIsTitleHover(false)}
-              onclick={buttonCardsonClick}
+              onClick={buttonCardsonClick}
               content={
                 <Heading
                   title={name}
@@ -74,7 +76,7 @@ const CardProject: React.FC<CardProjectProps> = ({
             <ButtonOne
               to={`${to}`}
               content={<>Découvrir</>}
-              onclick={buttonOneClick}
+              onClick={buttonOneClick}
               className={`${isTitleHover ? "text-zinc-300" : ""}`}
             />
           </section>

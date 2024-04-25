@@ -1,6 +1,5 @@
 import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
-
 import bookface from "../../../../assets/bookface.png";
 
 const BookFace = () => {

@@ -7,10 +7,18 @@ const Landing = () => {
   return (
     <Containers
       type="section-large"
-      className="px-2 md:w-4/5 md:m-auto lg:px-0 lg:grid lg:grid-cols-2 gap-x-8 relative gap-y-24 pt-24"
+      className="grid lg:grid-cols-2 gap-x-12 relative gap-y-12 pt-24 place-items-center"
     >
-      <article className="m-auto">
-        <Heading title={<>I'M Matthieu Gravy</>} level="h2" className="" />
+      <article className="">
+        <Heading
+          title={
+            <>
+              I'M <br className="lg:hidden" /> Matthieu Gravy
+            </>
+          }
+          level="h2"
+          className="text-center lg:text-left pb-4 lg:pb-8"
+        />
         <p className="text-2xl tracking-widest text-center pt-12 pb-8 lg:text-left">
           A web developer capable of creating web projects {""}
           <mark className="bg-teal-200 text-zinc-600 font-semibold ps-2 pb-4">
@@ -27,12 +35,12 @@ const Landing = () => {
         </section>
       </article>
       <figure
-        className={`h-auto overflow-hidden opacity-60 flex justify-end items-center z-0  `}
+        className={`overflow-hidden opacity-60 flex justify-center lg:justify-end items-center z-0  `}
       >
         <img
           src={MatthieuGravyDeveloperWeb}
           alt="Matthieu Gravy"
-          className="h-4/5 w-auto border-t-8 border-top border-teal-400"
+          className=" w-4/5 border-t-8 border-top border-teal-400"
         />
       </figure>
     </Containers>
