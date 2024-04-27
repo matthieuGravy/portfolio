@@ -2,7 +2,6 @@ import Heading from "./blocs/Heading";
 import Containers from "./Containers";
 import { ButtonextTwo } from "./blocs/Buttons";
 import FlecheRightIcon from "./icons/FlecheRightIcon";
-import FlecheLeftIcon from "./icons/FlecheLeftIcon";
 import { NavLink } from "react-router-dom";
 
 interface TemplatesProps {
@@ -44,7 +43,6 @@ const Templates: React.FC<TemplatesProps> = ({
               >
                 {
                   <>
-                    <FlecheLeftIcon />{" "}
                     <span className="ps-2">previous project</span>
                   </>
                 }

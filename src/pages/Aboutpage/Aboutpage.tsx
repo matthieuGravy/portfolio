@@ -3,7 +3,7 @@ import ParallaxTextor from "../../components/blocs/ParallaxTextor";
 const Aboutpage = () => {
   return (
     <>
-      <main className="min-h-screen bg-zinc-100">
+      <section className="min-h-screen bg-zinc-100">
         <article>
           <p>
             I would like to inform you that this website is currently undergoing
@@ -19,7 +19,7 @@ const Aboutpage = () => {
         <section className="py-48">
           <ParallaxTextor />
         </section>
-      </main>
+      </section>
     </>
   );
 };

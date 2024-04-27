@@ -2,6 +2,7 @@ import MatthieuGravyDeveloperWeb from "../assets/matthieu.svg";
 import { ButtonOne } from "../components/blocs/Buttons";
 import Heading from "../components/blocs/Heading";
 import Containers from "../components/Containers";
+import ParallaxTextor from "../components/blocs/ParallaxTextor";
 
 const Landing = () => {
   return (
@@ -35,13 +36,16 @@ const Landing = () => {
         </section>
       </article>
       <figure
-        className={`overflow-hidden opacity-60 flex justify-center lg:justify-end items-center z-0  `}
+        className={`overflow-hidden opacity-60 flex justify-center lg:justify-end items-center z-0 relative`}
       >
         <img
           src={MatthieuGravyDeveloperWeb}
           alt="Matthieu Gravy"
-          className=" w-4/5 border-t-8 border-top border-teal-400"
+          className=""
         />
+        <article className="absolute h-[100vh]">
+          <ParallaxTextor />
+        </article>
       </figure>
     </Containers>
   );
