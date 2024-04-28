@@ -9,7 +9,7 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
-import { ParallaxProps } from "../../types/types";
+import { ParallaxProps } from "../types/types";
 
 function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   const baseX = useMotionValue(0);
