@@ -1,25 +1,17 @@
-import ParallaxTextor from "../../components/blocs/ParallaxTextor";
+import Containers from "../../components/Containers";
+import Heading from "../../components/blocs/Heading";
 
 const Aboutpage = () => {
   return (
     <>
-      <section className="min-h-screen bg-zinc-100">
-        <article>
-          <p>
-            I would like to inform you that this website is currently undergoing
-            a redesign. I am actively working to improve your user experience
-            and provide you with exciting new features.
-          </p>
-          <p>
-            Thank you for your understanding and patience during this transition
-            period.
-          </p>
-        </article>
-
-        <section className="py-48">
-          <ParallaxTextor />
-        </section>
-      </section>
+      <Containers type="section-large" className="flex flex-col gap-y-12 pt-36">
+        <Heading
+          title="About"
+          level="h2"
+          className="lg:w-1/2 text-center md:text-start"
+        />
+        <p>En 2013, je suis agent de gardiennage.</p>
+      </Containers>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import {
   useSpring,
   motion,
@@ -6,8 +7,10 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
+
 import HamburgerIcon from "./icons/HamburgerIcon";
-import { NavLink } from "react-router-dom";
+import itsGravyLogo from "../assets/logo/its-gravy-logo.svg";
+
 const Topnav = () => {
   const [isNavVisible, setIsNavVisible] = useState<boolean>(false);
   const [isHidden, setIsHidden] = useState<boolean>(false);
@@ -72,6 +75,15 @@ const Topnav = () => {
         className={`fixed fixed w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
       >
         <section className="flex justify-between md:w-4/5 md:m-auto">
+          <NavLink to="/" className="hidden md:block">
+            <motion.img
+              whileTap={{ scale: 0.8 }}
+              src={itsGravyLogo}
+              className="h-10"
+              alt=""
+            />
+          </NavLink>
+
           <nav className="text-right w-auto pointer-events-auto ">
             <motion.button
               onClick={toggleNav}
@@ -84,44 +96,68 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto ${
                 isNavVisible
-                  ? "top-0 py-4 absolute top-14 left-0 gap-y-4  bg-zinc-100 text-center w-full"
+                  ? "top-0 py-4 absolute top-14 left-0 gap-y-4 bg-zinc-100 text-center w-full"
                   : "md:flex md:flex-row md:gap-x-4 md:flex hidden md:justify-center md:items-center"
               }`}
               animate={controls}
             >
-              <li className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color hover:text-neutral-50 hover:bg-fuchsia-700">
+              <motion.li
+                whileTap={{ scale: 0.8 }}
+                className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
+              >
                 <NavLink
                   to="/"
                   onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className="px-8 md:px-2 w-full"
+                  className={({ isActive }) =>
+                    `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
+                      isActive ? "font-bold " : ""
+                    }
+                    `
+                  }
                 >
                   Home
                 </NavLink>
-              </li>
-              <li className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color hover:text-neutral-50 hover:bg-teal-400">
+              </motion.li>
+              <motion.li
+                whileTap={{ scale: 0.8 }}
+                className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
+              >
                 <NavLink
-                  to="/#projects"
+                  to="/projects"
                   onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className="px-8 md:px-2 w-full"
+                  className={({ isActive }) =>
+                    `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
+                      isActive ? "font-bold " : ""
+                    }
+                    `
+                  }
                 >
                   Projects
                 </NavLink>
-              </li>
-              <li className="w-full py-4 md:py-2 md:block md:w-auto overflow-hidden transition duration-500 transition-color  hover:bg-yellow-200">
+              </motion.li>
+              <motion.li
+                whileTap={{ scale: 0.8 }}
+                className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
+              >
                 <NavLink
                   to="/about"
                   onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className="px-8 md:px-2 w-full"
+                  className={({ isActive }) =>
+                    `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
+                      isActive ? "font-bold " : ""
+                    }
+                    `
+                  }
                 >
                   About
                 </NavLink>
-              </li>
+              </motion.li>
             </motion.ul>
           </nav>
         </section>
       </motion.header>
       <motion.div
-        className="h-1 w-full fixed top-0 left-0 bg-fuchsia-700 z-50"
+        className="h-1 w-full fixed top-0 left-0 bg-yellow-200 z-50"
         style={{ scaleX, originX: 0 }}
       />
     </>

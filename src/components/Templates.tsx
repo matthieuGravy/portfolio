@@ -3,19 +3,7 @@ import Containers from "./Containers";
 import { ButtonextTwo } from "./blocs/Buttons";
 import FlecheRightIcon from "./icons/FlecheRightIcon";
 import { NavLink } from "react-router-dom";
-
-interface TemplatesProps {
-  title: string;
-  paragraphe?: string;
-  ptech?: string;
-  pversion?: string;
-  figure?: React.ReactNode;
-  role?: string;
-  tonext: string;
-  toprev: string;
-  source: string;
-  button?: React.ReactNode;
-}
+import { TemplatesProps } from "../types/types";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,

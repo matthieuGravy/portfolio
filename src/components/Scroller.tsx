@@ -1,9 +1,6 @@
 import liste from "../data/technologies";
 
-interface Tech {
-  name: string;
-  image: string;
-}
+import { Tech } from "../types/types";
 
 const ListeScroller: React.FC = () => {
   return (

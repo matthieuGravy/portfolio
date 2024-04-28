@@ -25,8 +25,8 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
     <>
       <NavLink
         to={to}
-        className={`uppercase text-zinc-700 flex justify-center py-2 transition-colors duration-500 px-2 ${className}  ${
-          isHovered ? "hover:bg-fuchsia-700 hover:text-neutral-50 " : ""
+        className={`uppercase text-zinc-600 flex justify-center py-2 transition-colors duration-500 px-2 ${className}  ${
+          isHovered ? "hover:bg-fuchsia-600 hover:text-neutral-50 " : ""
         }`}
         onClick={onClick}
         onMouseEnter={() => {

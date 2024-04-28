@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 
 function App() {
-  const styeMain = "bg-zinc-100 text-zinc-800 ";
+  const styeMain = "bg-zinc-100 ";
   const pageTransition = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },

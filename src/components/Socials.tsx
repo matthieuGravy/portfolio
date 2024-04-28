@@ -6,7 +6,7 @@ const Socials = () => {
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
   return (
-    <figure className="flex flex-col gap-y-4 bg-zinc-100 fixed mt-6 z-50 px-2 py-4 ">
+    <figure className="flex flex-col gap-y-4 bg-red-100 fixed mt-6 z-50 px-2 py-4 ">
       <Buttonext
         link="https://www.linkedin.com/in/matthieuGravy"
         title="Linkedin"
