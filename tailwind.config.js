@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1rem", letterSpacing: ".1rem" }],
         sm: ["0.875rem", { lineHeight: "1.25rem", letterSpacing: ".1rem" }],
@@ -63,6 +66,7 @@ export default {
       },
       backgroundImage: {
         matthieu: "url('/assets/Matthieu.svg')",
+        elipseTeal: "url('/assets/backgrounds/elipse-teal-items.svg')",
       },
       keyframes: {
         "animate-scroll-right": {

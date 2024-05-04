@@ -1,9 +1,9 @@
 import Heading from "./blocs/Heading";
 import Containers from "./Containers";
 import { ButtonextTwo } from "./blocs/Buttons";
-import FlecheRightIcon from "./icons/FlecheRightIcon";
 import { NavLink } from "react-router-dom";
 import { TemplatesProps } from "../types/types";
+import ArrowRigths from "./dynamic-icons/ArrowRigths";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
@@ -26,7 +26,7 @@ const Templates: React.FC<TemplatesProps> = ({
           <>
             <section className=" flex flex-row justify-between py-16">
               <NavLink
-                to={`/${toprev}`}
+                to={`${toprev}`}
                 className="hover:text-fuchsia-700 flex flex-row"
               >
                 {
@@ -37,12 +37,12 @@ const Templates: React.FC<TemplatesProps> = ({
               </NavLink>
 
               <NavLink
-                to={`/${tonext}`}
+                to={`${tonext}`}
                 className="hover:text-fuchsia-700 flex flex-row"
               >
                 <>
                   <span className="pe-2">next project</span>
-                  <FlecheRightIcon />
+                  <ArrowRigths />
                 </>
               </NavLink>
             </section>

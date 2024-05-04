@@ -3,6 +3,9 @@ import MatthieuGravyDeveloperWeb from "../../../../assets/pictures/matthieu-grav
 import { ButtonOne } from "../../../../components/blocs/Buttons";
 import Heading from "../../../../components/blocs/Heading";
 import Containers from "../../../../components/Containers";
+import Elipseproject from "../../../../components/dynamics/Eipseproject.tsx";
+import triangleZinc from "../../../../assets/backgrounds/triangle-zinc.svg";
+import triangleZincFlip from "../../../../assets/backgrounds/triangle-zinc-flip.svg";
 
 const Landingpage = () => {
   return (
@@ -48,39 +51,40 @@ const Landingpage = () => {
         </article>
       </Containers>
       <Scroller />
+      <article>
+        <img src={triangleZinc} alt="" />
+
+        <section className="flex flex-row items-center pe-12 bg-zinc-900">
+          <Elipseproject />
+
+          <article className="w-[600px] space-y-4 ">
+            <Heading
+              title="Discover my projects"
+              level="h3"
+              className="text-center lg:text-left text-zinc-200"
+            />
+            <article className="space-y-2 text-zinc-400">
+              <p className="">
+                These projects are initially test projects to help me understand
+                certain technologies. They are currently under review to propose
+                something more elegant.
+              </p>
+              <ButtonOne content="Discover" to="/projects" />
+            </article>
+          </article>
+        </section>
+        <img src={triangleZincFlip} alt="" />
+      </article>
       <Containers type="section-large" className="flex flex-col">
-        <article>
-          <Heading
-            title="Discover my projects"
-            level="h3"
-            className="text-center lg:text-left "
-          />
-          <p className=" pb-8">
-            These projects are initially test projects to help me understand
-            certain technologies. They are currently under review to propose
-            something more elegant.
-          </p>
-          <ButtonOne content="Discover" to="/projects" />
-        </article>
         <article>
           <Heading
             title="Discover my articles"
             level="h3"
             className="text-center lg:text-left "
           />
-          <p>
-            J'ai un parcours atypique et en réalisant ce portfolio pour la
-            première fois, je me suis rendu compte que j'avais introduis trop de
-            texte. J'ai donc réduit le texte pour que vous puissiez mieux me
-            connaître, mais aussi pour que vous puissiez mieux comprendre mes
-            projets et mes compétences.
-          </p>
-          <p>
-            Mais j'ai réalisé que je pouvais peut-être ajouté simplement des
-            articles sous forme de blog. Cela me permettrait de vous partager
-            mes expériences, mes découvertes et mes réflexions.
-          </p>
-          <ButtonOne content="Read more" to="/contact" />
+          <p>trop de texte par rapport à un parcours comme le miens atypique</p>
+          <p>Envie de partager via des articles</p>
+          <ButtonOne content="Read more" to="/blog" />
         </article>
       </Containers>
     </>

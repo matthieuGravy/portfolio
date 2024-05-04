@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import FlecheToIcon from "../icons/FlecheToIcon";
+import customIconUpto from "../../assets/icons/custom-arrow-upto.svg";
 import { GrSend } from "react-icons/gr";
 
 interface ButtonOneProps {
@@ -44,13 +44,14 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
       >
         <>
           {content}
-          <span
+
+          <img
+            src={customIconUpto}
             className={`duration-100 relative left-2 opacity-50 ${
               isHovered ? "left-6 rotate-45 opacity-100" : "rotate-0"
             }`}
-          >
-            <FlecheToIcon />
-          </span>
+            alt=""
+          />
         </>
       </NavLink>
     </>
@@ -84,7 +85,7 @@ const ButtonOneSecondaire: React.FC<ButtonOneSecondaireProps> = ({
             isHovered ? "left-6 rotate-45 opacity-100" : "rotate-0"
           }`}
         >
-          <FlecheToIcon />
+          <img src="" alt="" />
         </span>
       </NavLink>
     </>

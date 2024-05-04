@@ -37,7 +37,9 @@ const Aboutpage = () => {
           <ul className="flex space-x-8">
             {Object.keys(carousel).map((key) => (
               <li key={key} className="flex flex-col gap-y-4">
-                <button>{carousel[key].year}</button>
+                <button>
+                  {carousel[key as unknown as keyof typeof carousel].year}
+                </button>{" "}
               </li>
             ))}
           </ul>

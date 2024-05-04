@@ -50,7 +50,7 @@ const CardProject: React.FC<CardProjectProps> = ({
               {role}
             </p>
             <ButtonCards
-              to={`/${to}`}
+              to={`${to}`}
               onMouseEnter={() => setIsTitleHover(true)}
               onMouseLeave={() => setIsTitleHover(false)}
               onClick={buttonCardsonClick}

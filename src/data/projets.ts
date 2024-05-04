@@ -19,13 +19,13 @@ const projects = [
   },
   {
     id: "3",
-    to: "sora-cine",
     src: "https://via.placeholder.com/150",
     name: "Sora Cine",
     description:
       "Site de streaming pour la diffusion d'anime. Réalisé en groupe de 4 personnes, utilisant une API externe pour les données. Le site rencontre quelques problèmes tels que le chargement des vidéos, le design et la gestion des utilisateurs. Le projet est en cours de révision pour corriger ces problèmes.",
     role: "Front-end",
     tech: ["React", "tailwindcss", "Express", "mongoose"],
+    to: "sora-cine",
   },
   {
     id: "4",
@@ -36,17 +36,6 @@ const projects = [
     role: "back-end ",
     tech: ["typescript", "tailwindcss", "Express", "mongoose"],
     to: "bookface",
-  },
-  {
-    id: "5",
-    src: "https://via.placeholder.com/150",
-    name: "e-commerce site",
-    role: "fullstack",
-    description:
-      "Site de vente de produits pour une entreprise fictive. Le projet est en fin de construction sur les fonctionnalités : filtre, panier. L'authentification est déjà mise en place de manière dynamique.",
-    tech: ["typescript", "react", "redux", "tailwindcss", "Express"],
-    to: "shop",
-    source: "",
   },
 ];
 
