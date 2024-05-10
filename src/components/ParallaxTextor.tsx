@@ -41,7 +41,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   });
 
   return (
-    <article className="text-center overflow-hidden m-0 bg-teal-200 text-zinc-500 py-4">
+    <article className="text-center overflow-hidden m-0 bg-yellow-200 text-zinc-500 py-4">
       <motion.section className=" w-max" style={{ x }}>
         <span className="inline text-xl font-extralight uppercase tracking-wide text-6xl">
           {children}
@@ -63,18 +63,13 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   );
 }
 
-function ParallaxTextor() {
+function ParallaxTextor({ velocity }) {
   const phrase = "available to work • ";
   const text = phrase.repeat(4);
 
   return (
     <section className="transition-all flex flex-col gap-y-8 ">
-      <article className="-rotate-3 transform">
-        <ParallaxText baseVelocity={-5}>{text}</ParallaxText>
-      </article>
-      <article className="rotate-3">
-        <ParallaxText baseVelocity={5}>{text}</ParallaxText>
-      </article>
+      <ParallaxText baseVelocity={velocity}>{text}</ParallaxText>
     </section>
   );
 }

@@ -6,7 +6,7 @@ import Containers from "../../../../components/Containers";
 import Elipseproject from "../../../../components/dynamics/Eipseproject.tsx";
 import triangleZinc from "../../../../assets/backgrounds/triangle-zinc.svg";
 import triangleZincFlip from "../../../../assets/backgrounds/triangle-zinc-flip.svg";
-
+import ParallaxTextor from "../../../../components/ParallaxTextor";
 const Landingpage = () => {
   return (
     <>
@@ -52,13 +52,19 @@ const Landingpage = () => {
       </Containers>
       <Scroller />
       <article>
-        <img src={triangleZinc} alt="" className="-mb-1 w-full" />
+        <figure>
+          <section className="relative transform -rotate-[4deg]">
+            <ParallaxTextor velocity={5} />
+          </section>
+          <img src={triangleZinc} alt="" className="-mb-1 w-full" />
+        </figure>
 
-        <section className="grid md:grid-cols-2 bg-zinc-900 items-center overflow-hidden">
-          <figure className="relative">
+        <section className="grid grid-rows-2 grid-cols-1 md:grid-rows-1 md:grid-cols-2 bg-zinc-900 items-center overflow-hidden">
+          <figure className="relative ">
             <Elipseproject />
-            <article className="absolute top-0 left-0 h-full flex items-center   ">
-              <figcaption className="flex flex-col w-3/5 md:w-[500px] xl:w-[600px] space-y-4 ps-4">
+
+            <article className="absolute top-0 left-0 h-full flex items-center z-10  ">
+              <figcaption className="flex flex-col w-[320px] sm:w-3/5 md:w-[500px] xl:w-[600px] space-y-4 ps-2 md:ps-4">
                 <Heading
                   title="Discover my projects"
                   level="h3"
@@ -76,7 +82,9 @@ const Landingpage = () => {
             </article>
           </figure>
         </section>
-        <img src={triangleZincFlip} alt="" className="-mt-1 w-full" />
+        <figure>
+          <img src={triangleZincFlip} alt="" className="-mt-1 w-full" />
+        </figure>
       </article>
     </>
   );

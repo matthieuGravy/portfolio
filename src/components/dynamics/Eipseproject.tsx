@@ -1,6 +1,6 @@
 const Elipseproject = () => {
   return (
-    <figure className="w-[500px] md:w-[700px] xl:w-[800px]">
+    <figure className="w-[500px] md:w-[700px]">
       <svg
         width="auto"
         height="836"
