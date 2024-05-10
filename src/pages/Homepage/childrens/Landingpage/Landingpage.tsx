@@ -52,41 +52,32 @@ const Landingpage = () => {
       </Containers>
       <Scroller />
       <article>
-        <img src={triangleZinc} alt="" />
+        <img src={triangleZinc} alt="" className="-mb-1 w-full" />
 
-        <section className="flex flex-row items-center pe-12 bg-zinc-900">
-          <Elipseproject />
-
-          <article className="w-[600px] space-y-4 ">
-            <Heading
-              title="Discover my projects"
-              level="h3"
-              className="text-center lg:text-left text-zinc-200"
-            />
-            <article className="space-y-2 text-zinc-400">
-              <p className="">
-                These projects are initially test projects to help me understand
-                certain technologies. They are currently under review to propose
-                something more elegant.
-              </p>
-              <ButtonOne content="Discover" to="/projects" />
+        <section className="grid md:grid-cols-2 bg-zinc-900 items-center overflow-hidden">
+          <figure className="relative">
+            <Elipseproject />
+            <article className="absolute top-0 left-0 h-full flex items-center   ">
+              <figcaption className="flex flex-col w-3/5 md:w-[500px] xl:w-[600px] space-y-4 ps-4">
+                <Heading
+                  title="Discover my projects"
+                  level="h3"
+                  className="text-left lg:text-left text-zinc-800"
+                />
+                <article className="space-y-2 text-zinc-700">
+                  <p className="">
+                    These projects are initially test projects to help me
+                    understand certain technologies. They are currently under
+                    review to propose something more elegant.
+                  </p>
+                  <ButtonOne content="Discover" to="/projects" />
+                </article>
+              </figcaption>
             </article>
-          </article>
+          </figure>
         </section>
-        <img src={triangleZincFlip} alt="" />
+        <img src={triangleZincFlip} alt="" className="-mt-1 w-full" />
       </article>
-      <Containers type="section-large" className="flex flex-col">
-        <article>
-          <Heading
-            title="Discover my articles"
-            level="h3"
-            className="text-center lg:text-left "
-          />
-          <p>trop de texte par rapport à un parcours comme le miens atypique</p>
-          <p>Envie de partager via des articles</p>
-          <ButtonOne content="Read more" to="/blog" />
-        </article>
-      </Containers>
     </>
   );
 };

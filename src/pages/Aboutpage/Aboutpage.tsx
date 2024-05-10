@@ -40,7 +40,7 @@ const Aboutpage = () => {
                 <button>
                   {carousel[key as unknown as keyof typeof carousel].year}
                 </button>{" "}
-              </li>
+               </li>
             ))}
           </ul>
         </article>
