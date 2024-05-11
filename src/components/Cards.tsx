@@ -17,7 +17,6 @@ interface CardProjectProps {
 
 const CardProject: React.FC<CardProjectProps> = ({
   name,
-  role,
   liste,
   to,
   className,
@@ -33,7 +32,7 @@ const CardProject: React.FC<CardProjectProps> = ({
         <article
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          className={`w-full relative bg-zinc-100 transition-all ease-in-out duration-500 flex flex-col justify-between
+          className={`w-full w-[500px] relative bg-zinc-100 transition-all ease-in-out duration-500 flex flex-col justify-between
            `}
         >
           {/* modifier l'intérieur de la card au hover ? ou pas ..*/}
@@ -42,13 +41,6 @@ const CardProject: React.FC<CardProjectProps> = ({
               isHover ? "shadow-xl " : ""
             }`}
           >
-            <p
-              className={`invisible md:visible absolute top-0 right-0  px-4 py-2 uppercase text-xs ${
-                isHover ? "text-teal-500" : "text-zinc-400"
-              }`}
-            >
-              {role}
-            </p>
             <ButtonCards
               to={`${to}`}
               onMouseEnter={() => setIsTitleHover(true)}

@@ -1,4 +1,4 @@
-const about = {
+const aboutContent = {
   title: "About",
   description: "This is the about page",
 };
@@ -49,6 +49,7 @@ const carousel = {
   },
   2014: {
     year: "2014",
+    title: "",
     description: [
       "Je reviens à l'école dans la même année que j'ai quitté. Je suis content de reprendre les études, je suis motivé et je veux réussir.",
       "Je suis devenu un extra terrestre pour mes collègues. Je suis le seul à avoir un travail et à suivre des cours en même temps. Je suis content de moi, je suis fier de moi.",
@@ -56,14 +57,17 @@ const carousel = {
   },
   2015: {
     year: "2015",
+    title: "",
     description: "J'obiens un CESI en Sciences Sociales et Histoire",
   },
   2016: {
     year: "2016",
+    title: "",
     description: "This is the year 2016",
   },
   2017: {
     year: "2017",
+    title: "",
     description: [
       "J'obtiens enfin mon CESS en Sciences Sociales et Histoire. C'est une belle revenche pour moi.",
       "Je m'oriente vers des études en Sociologie et Anthropologie à l'ULB, mais ça né répond pas à mes attentes professionnelles.",
@@ -80,6 +84,7 @@ const carousel = {
   },
   2020: {
     year: "2020",
+    title: "",
     description: [
       "Nous sommes en crise du Covid et je travaille intensivement en dehors de mes études. Je suis fatigué de me partager en deux. Je ne me sens pas en phase avec mes études et je décide de les arrêter.",
       "Je deviens shift leader chez Pizza Hut, je suis super content parce que je suis un travailleur engagé et je suis reconnu pour mon travail.",
@@ -87,6 +92,7 @@ const carousel = {
   },
   2023: {
     year: "2023",
+    title: "",
     description: [
       "C'est la fin pour moi chez Pizza Hut, j'ai eu des réussites et j'en suis fier",
       "Durant mon temps libre, j'ai continué à apprendre le développement web. Mais j'ai le sentiment de ne pas arriver à atteindre certains objectifs seul.",
@@ -96,4 +102,9 @@ const carousel = {
     ],
   },
 };
-export { about, carousel };
+const carouselArray = Object.entries(carousel).map(([key, value], index) => ({
+  id: index + 1,
+  ...value,
+  year: key,
+}));
+export { aboutContent, carousel, carouselArray };

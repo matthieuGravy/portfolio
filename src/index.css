@@ -2,28 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer utilities {
     .paused {
         animation-play-state: paused;
     }
 }
 
-@font-face {
-    font-family: 'Montserrat';
-    src: url('/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Rubik-regular';
-    src: url('/assets/fonts/Rubik/Rubik-VariableFont_wght.ttf');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Rubik-italic';
-    src: url('/assets/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf');
-    font-weight: 400;
-    font-style: italic;
-}
 
+@font-face {
+    font-family: 'Cairo';
+    src: url('./assets/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Sintony';
+    src: url('./assets/fonts/Sintony/Sintony-Regular.ttf') format('truetype');
+  }

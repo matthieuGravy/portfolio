@@ -2,6 +2,9 @@ export interface ParallaxProps {
   children: string;
   baseVelocity: number;
 }
+export interface ParallaxTextorProps {
+  velocity: number;
+}
 
 export interface TemplatesProps {
   title: string;

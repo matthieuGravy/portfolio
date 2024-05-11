@@ -9,7 +9,7 @@ import {
   useAnimationFrame,
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
-import { ParallaxProps } from "../types/types";
+import { ParallaxProps, ParallaxTextorProps } from "../types/types";
 
 function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   const baseX = useMotionValue(0);
@@ -41,9 +41,9 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   });
 
   return (
-    <article className="text-center overflow-hidden m-0 bg-yellow-200 text-zinc-500 py-4">
+    <article className="text-center overflow-hidden m-0 bg-teal-200 text-zinc-500 py-4">
       <motion.section className=" w-max" style={{ x }}>
-        <span className="inline text-xl font-extralight uppercase tracking-wide text-6xl">
+        <span className="uppercase tracking-wide text-4xl">
           {children}
 
           {children}
@@ -63,15 +63,11 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   );
 }
 
-function ParallaxTextor({ velocity }) {
-  const phrase = "available to work • ";
+function ParallaxTextor({ velocity }: ParallaxTextorProps) {
+  const phrase = "available to work • Brussels • Belgium • Europe • ";
   const text = phrase.repeat(4);
 
-  return (
-    <section className="transition-all flex flex-col gap-y-8 ">
-      <ParallaxText baseVelocity={velocity}>{text}</ParallaxText>
-    </section>
-  );
+  return <ParallaxText baseVelocity={velocity}>{text}</ParallaxText>;
 }
 
 export default ParallaxTextor;

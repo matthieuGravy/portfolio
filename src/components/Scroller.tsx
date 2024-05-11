@@ -8,7 +8,7 @@ const ListeScroller: React.FC = () => {
       {liste.map((tech: Tech, index: number) => (
         <li
           key={index}
-          className="w-24 transition-all duration-500 ease-in-out transform hover:text-zinc-200 text-zinc-500 hover:scale-95 hover:shadow-2xl grayscale hover:grayscale-0"
+          className="font-Sintony w-24 transition-all duration-500 ease-in-out transform hover:text-teal-500 text-zinc-500 hover:scale-95 hover:shadow-2xl grayscale hover:grayscale-0"
         >
           <img src={tech.image} alt={tech.name} className="" />
           <p className="text-center uppercase text-xs py-4 cursor-default">

@@ -14,16 +14,15 @@ const Projectpage = () => {
         <Heading
           title="Projects"
           level="h2"
-          className="lg:w-1/2 text-center md:text-start"
+          className="text-center md:text-start"
         />
-        <section className=" grid place-items-center md:place-items-start md:grid-cols-2 gap-y-16 md:gap-y-16 md:gap-x-16 md:py-24">
+        <section className="grid place-items-center md:place-items-start lg:grid-cols-2 gap-y-16 md:gap-y-16 md:gap-x-16 md:py-24">
           {projet.map((projet) => (
             <CardProject
               key={projet.id}
               id={projet.id}
               to={projet.to}
               name={projet.name}
-              role={projet.role}
               liste={projet.tech.map((tech) => (
                 <li
                   key={tech}
