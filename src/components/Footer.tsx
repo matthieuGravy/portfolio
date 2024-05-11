@@ -13,7 +13,7 @@ const Footer = () => {
   const author = "Matthieu Gravy";
   const year = new Date().getFullYear();
   return (
-    <footer className=" bg-zinc-100">
+    <footer className="bg-zinc-50">
       <article className="grid-cols-1 md:grid-cols-2 grid px-4 md:px-0 md:w-4/5 md:m-auto py-8 uppercase text-zinc-500 text-xs gap-y-2">
         <ul className="flex items-center md:items-start flex-col gap-y-2">
           <li className="hover:text-fuchsia-700">

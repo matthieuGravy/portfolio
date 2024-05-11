@@ -6,6 +6,8 @@ import Containers from "../../../../components/Containers";
 import ParallaxTextor from "../../../../components/ParallaxTextor";
 import triangle from "../../../../assets/backgrounds/triangle-zinc.svg";
 import triangleFlip from "../../../../assets/backgrounds/triangle-zinc-flip.svg";
+import matthieuFocus from "../../../../assets/pictures/en-tête-matthieu.png";
+
 const Landingpage = () => {
   const hourRange = new Date().getHours();
   const greeting =
@@ -19,30 +21,35 @@ const Landingpage = () => {
     <>
       <Containers
         type="section-large"
-        className="grid lg:grid-cols-2 gap-x-24 gap-y-12 pt-36 place-items-center"
+        className="grid grid-cols-2 gap-x-24 gap-y-12  rounded-xl"
       >
         <article className="p-24">
+          <Heading title={greeting} level="h3" className="" />
           <Heading
             title={<>I'M Matthieu Gravy</>}
             level="h2"
             className="w-[400px]"
           />
           <p className="text-2xl tracking-widest text-center pt-12 pb-8 lg:text-left font-sintony">
-            A web developer capable of creating web projects {""}
-            <mark className="bg-teal-200 font-semibold ps-2 pb-4">
-              quickly
-            </mark>{" "}
-            and {""}
-            <mark className="bg-teal-200 font-semibold ps-2 pb-4">easily</mark>.
+            A web developer based in Brussels, specializing in modern web
+            technologies. I am capable of creating web projects quickly and
+            easily .
           </p>
           <section className="">
-            <ButtonOne content="more" to="/about" />
+            <ButtonOne content="more" to="/about" className="" />{" "}
           </section>
         </article>
-        <article>
-          <Heading title={greeting} level="h3" className="col-span-2" />
+        <article className="flex justify-center items-center bg-zinc-100 lg:bg-zinc-300 xl:bg-yellow-200 2xl:bg-red-200 rounded-xl">
+          <figure className="">
+            <img
+              src={matthieuFocus}
+              alt="Illustration"
+              className="max-h-900px"
+            />
+          </figure>
         </article>
       </Containers>
+
       <Containers
         type="section-large"
         className="grid lg:grid-cols-2 gap-y-12 "
