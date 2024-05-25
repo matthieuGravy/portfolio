@@ -32,12 +32,12 @@ const CardProject: React.FC<CardProjectProps> = ({
         <article
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          className={`w-full w-[500px] relative transition-all ease-in-out duration-500 flex flex-col justify-between
+          className={` relative transition-all ease-in-out duration-500 flex flex-col justify-between
            `}
         >
           {/* modifier l'intérieur de la card au hover ? ou pas ..*/}
           <article
-            className={`pb-8 pt-12 px-6 h-full flex flex-col justify-between ${className} ${
+            className={`h-full flex flex-col justify-between ${className} ${
               isHover ? "shadow-xl " : ""
             }`}
           >

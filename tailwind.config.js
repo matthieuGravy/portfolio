@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         cairo: ["Cairo", "sans-serif"],
         sintony: ["Sintony", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
       animation: {
         "scroll-right": "animate-scroll-right 30s linear infinite",

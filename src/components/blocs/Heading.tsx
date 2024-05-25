@@ -1,13 +1,15 @@
 import { HeadingProps } from "../../types/types";
 
 const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
-  const font = "font-cairo";
-  const color = "text-zinc-700";
+  const fontCairo = "font-cairo";
+  const colorRubik = "text-zinc-700";
+  const fontRubik = "font-rubik ";
+  const colorCairo = "text-fuchsia-600";
   switch (level) {
     case "h1":
       return (
         <h1
-          className={`${font} ${color} text-8xl pb-8 tracking-wider uppercase ${className}`}
+          className={`${fontRubik} ${colorRubik} text-4xl xl:text-8xl tracking-wider uppercase ${className}`}
         >
           {title}
         </h1>
@@ -15,7 +17,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h2":
       return (
         <h2
-          className={`${font} ${color} text-8xl pb-8 tracking-wider uppercase  ${className}`}
+          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider uppercase  ${className}`}
         >
           {title}
         </h2>
@@ -23,7 +25,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h3":
       return (
         <h3
-          className={`${font} ${color} text-4xl font-extralight uppercase tracking-wide pb-4 ${className}`}
+          className={`${fontRubik} ${colorRubik} text-2xl xl:text-4xl font-extralight uppercase tracking-wide  ${className}`}
         >
           {title}
         </h3>
@@ -31,7 +33,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h4":
       return (
         <h4
-          className={`${font} ${color} text-3xl font-extralight uppercase tracking-wide py-4  ${className}`}
+          className={`${fontRubik} ${colorCairo} text-3xl font-extralight uppercase tracking-wide   ${className}`}
         >
           {title}
         </h4>
@@ -39,7 +41,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h5":
       return (
         <h5
-          className={`${font} ${color} text-2xl font-extralight uppercase ${className}`}
+          className={`${fontCairo} ${colorRubik} text-2xl font-extralight uppercase ${className}`}
         >
           {title}
         </h5>
@@ -47,7 +49,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h6":
       return (
         <h6
-          className={`${font} ${color} text-xl font-extralight uppercase ${className}`}
+          className={`${fontCairo} ${colorRubik} text-xl font-extralight uppercase ${className}`}
         >
           {title}
         </h6>

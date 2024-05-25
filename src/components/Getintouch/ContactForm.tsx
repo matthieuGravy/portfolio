@@ -102,7 +102,7 @@ const ContactForm = () => {
         ) : (
           <>
             <>
-              <section className=" max-w-[700px] p-24 rounded-xl bg-yellow-200 space-y-8">
+              <section className=" max-w-[700px] md:p-24 rounded-xl bg-yellow-200 space-y-8">
                 <Heading title="get in touch" level="h4" className="" />
                 {/*<ReCAPTCHA sitekey="votre-clé-de-site" onChange={handleRecaptcha}> */}
                 <Formik

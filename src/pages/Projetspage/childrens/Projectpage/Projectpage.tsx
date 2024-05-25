@@ -6,17 +6,22 @@ import projet from "../../../../data/projets";
 const Projectpage = () => {
   return (
     <>
-      <Containers
-        type="section-large"
-        id="projects"
-        className="flex flex-col gap-y-12 pt-36"
-      >
-        <Heading
-          title="Projects"
-          level="h2"
-          className="text-center md:text-start"
-        />
-        <section className="grid place-items-center md:place-items-start lg:grid-cols-2 gap-y-16 md:gap-y-16 md:gap-x-16 md:py-24">
+      <Containers type="section-large" id="projects" className="">
+        <article className="bg-red-200 relative grid grid-cols-4 grid-rows-4">
+          <div className="cols-span-2 row-span-2 col-start-2 row-start-2 bg-yellow-200 w-[700px] h-[700px] rounded-[40vh] flex justify-center items-center">
+            {" "}
+            <Heading
+              level="h2"
+              className="text-center md:text-start"
+              title={
+                <>
+                  Learning
+                  <br /> Projects
+                </>
+              }
+            />
+          </div>
+
           {projet.map((projet) => (
             <CardProject
               key={projet.id}
@@ -28,12 +33,12 @@ const Projectpage = () => {
                   key={tech}
                   className="border-[1px] border-zinc-200 px-4 py-2 uppercase text-xs "
                 >
-                  {tech}
+                  {tech}e
                 </li>
               ))}
             />
           ))}
-        </section>
+        </article>
       </Containers>
     </>
   );

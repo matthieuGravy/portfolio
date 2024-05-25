@@ -2,10 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import Homepage from "./pages/Homepage/Homepage.tsx";
-//childrens homepage
-import Landingpage from "./pages/Homepage/childrens/Landingpage/Landingpage";
+// childrens homepage
 import ProjetOutletpage from "./pages/Projetspage/ProjetOutletpage.tsx";
-//childrens projectpage
+// childrens projectpage
 import Projectpage from "./pages/Projetspage/childrens/Projectpage/Projectpage.tsx";
 import Itsgravykitchenpage from "./pages/Projetspage/childrens/Itsgravykitchenpage/Itsgravykitchenpage.tsx";
 import Bookfacepage from "./pages/Projetspage/childrens/Bookfacepage/Bookfacepage.tsx";
@@ -28,54 +27,50 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "projects",
+        element: <ProjetOutletpage />,
         children: [
+          { path: "", element: <Projectpage /> },
           {
-            path: "/",
-            element: <Landingpage />,
+            path: "itg-kitchens",
+            element: <Itsgravykitchenpage />,
           },
           {
-            path: "/projects",
-            element: <ProjetOutletpage />,
-            children: [
-              { path: "/projects", element: <Projectpage /> },
-              {
-                path: "itg-kitchens",
-                element: <Itsgravykitchenpage />,
-              },
-              {
-                path: "plant-clicker",
-                element: <Clickergamepage />,
-              },
-              {
-                path: "sora-cine",
-                element: <Soracinepage />,
-              },
-              {
-                path: "bookface",
-                element: <Bookfacepage />,
-              },
-              {
-                path: "shop",
-                element: <Shoppage />,
-              },
-            ],
+            path: "plant-clicker",
+            element: <Clickergamepage />,
+          },
+          {
+            path: "sora-cine",
+            element: <Soracinepage />,
+          },
+          {
+            path: "bookface",
+            element: <Bookfacepage />,
+          },
+          {
+            path: "shop",
+            element: <Shoppage />,
           },
         ],
       },
-
       {
-        path: "/about",
+        path: "about",
         element: <Aboutpage />,
       },
       {
-        path: "/contact",
+        path: "contact",
         element: <Contactpage />,
       },
       {
-        path: "/rgpd",
+        path: "rgpd",
         element: <Rgpdpage />,
       },
-      { path: "/mentions-legales", element: <Mentionspage /> },
+      {
+        path: "mentions-legales",
+        element: <Mentionspage />,
+      },
     ],
   },
 ]);

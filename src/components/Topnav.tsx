@@ -72,7 +72,7 @@ const Topnav = () => {
         initial={{ y: -72 }}
         animate={isHidden ? { y: -72 } : { y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`sticky w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-50`}
+        className={`sticky w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
       >
         <section className="flex justify-between md:w-4/5 md:m-auto">
           <NavLink to="/" className="hidden md:block">
