@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage/Homepage.tsx";
 // childrens homepage
 import ProjetOutletpage from "./pages/Projetspage/ProjetOutletpage.tsx";
 // childrens projectpage
+import Htmlportfoliopage from "./pages/Projetspage/childrens/Htmlportfolio/Htmlportfolio.tsx";
 import Projectpage from "./pages/Projetspage/childrens/Projectpage/Projectpage.tsx";
 import Itsgravykitchenpage from "./pages/Projetspage/childrens/Itsgravykitchenpage/Itsgravykitchenpage.tsx";
 import Bookfacepage from "./pages/Projetspage/childrens/Bookfacepage/Bookfacepage.tsx";
@@ -33,6 +34,7 @@ export const router = createBrowserRouter([
         element: <ProjetOutletpage />,
         children: [
           { path: "", element: <Projectpage /> },
+          { path: "html-portfolio", element: <Htmlportfoliopage /> },
           {
             path: "itg-kitchens",
             element: <Itsgravykitchenpage />,

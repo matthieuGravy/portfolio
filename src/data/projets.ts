@@ -19,7 +19,7 @@ import soramovie from "../assets/projects/sora/sora-movies.png";
 //10
 import bookface from "../assets/projects/bookface/bookface.png";
 
-const projects = [
+const learnings = [
   {
     id: "1",
     src: "https://via.placeholder.com/150",
@@ -30,7 +30,7 @@ const projects = [
     tech: ["JavaScript", "Sass", "webpack"],
     link: "https://template-html-portfolio.vercel.app/",
     github: "https://github.com/matthieuGravy/template-html-portfolio",
-    button: "html-portfolio",
+    to: "html-portfolio",
     preview: "bookface",
     next: "pomme-patate",
   },
@@ -69,8 +69,8 @@ const projects = [
     gallery: [IGKWelcome, IGKMenu, IGKContact, IGKPictures, IGKRestaurant],
     role: "Front-end",
     description:
-      "HTML/Bootstrap project without using JavaScript or frameworks, with a lot of code repetition. This allowed me to work with constraints and improve my HTML and CSS skills.",
-    tech: ["JavaScript", "bootstrap"],
+      "HTML/Bootstrap project without using JavaScript frameworks, with a lot of code repetition. This allowed me to work with constraints and improve my HTML and CSS skills.",
+    tech: ["JavaScript", "bootstrap", "vite"],
     link: "https://matthieugravy.github.io/restaurant-css-framework/index.html",
     github: "https://github.com/matthieuGravy/restaurant-css-framework",
     to: "itg-kitchens",
@@ -85,7 +85,7 @@ const projects = [
     role: "Front-end",
     description:
       "A clicker game made in a remote group setting to practice using Git. Good communication and organization were essential. A debrief at the end of the project helped evaluate strengths and areas for improvement.",
-    tech: ["JavaScript", "CSS", "pixi.js"],
+    tech: ["JavaScript", "CSS", "pixi.js", "vite"],
     link: "https://matthieugravy.github.io/plant-clicker/",
     github: "https://github.com/matthieuGravy/plant-clicker",
     to: "plant-clicker",
@@ -149,7 +149,7 @@ const projects = [
   {
     id: "10",
     src: "https://via.placeholder.com/150",
-    name: "BookFace",
+    name: "Bookface",
     gallery: [bookface],
     description:
       "After an unfinished previous project, I decided to create a backend with Express and TypeScript. Although the front-end was not completed by the team, this experience taught me to be more autonomous.",
@@ -162,4 +162,31 @@ const projects = [
   },
 ];
 
-export default projects;
+const professionals = [
+  {
+    id: 1,
+    src: "https://via.placeholder.com/150",
+    name: "akwanza.com",
+    description: "",
+    role: "Front-end",
+    tech: ["React", "tailwindcss", "vite"],
+    link: "https://www.akwanza.com/",
+    to: "akwanza",
+    preview: "afitpilot",
+    next: "afitpilot",
+  },
+  {
+    id: 2,
+    src: "https://via.placeholder.com/150",
+    name: "afitpilot.com",
+    description: "",
+    role: "back-end",
+    tech: ["MERN", "Mui", "TypeScript"],
+    github: "https://www.afitpilot.com/",
+    to: "afitpilot",
+    preview: "akwanza",
+    next: "akwanza",
+  },
+];
+
+export { learnings, professionals };

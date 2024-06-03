@@ -37,7 +37,7 @@ const CardProject: React.FC<CardProjectProps> = ({
         >
           {/* modifier l'intérieur de la card au hover ? ou pas ..*/}
           <article
-            className={`h-full flex flex-col justify-between px-4 py-4 ${className} ${
+            className={`h-full flex flex-col justify-between px-4 py-4 space-y-4 ${className} ${
               isHover ? "shadow-xl " : ""
             }`}
           >
@@ -50,15 +50,15 @@ const CardProject: React.FC<CardProjectProps> = ({
                 <Heading
                   title={name}
                   level="h3"
-                  className={` hover:text-fuchsia-700 transition-colors duration-500 ${
-                    isHover ? "text-fuchsia-700" : "text-zinc-700"
+                  className={` hover:text-teal-400 transition-colors duration-500 ${
+                    isHover ? "text-teal-400" : "text-zinc-400"
                   }`}
                 />
               }
             />
             <ul
               className={`flex flex-wrap gap-x-4 gap-y-2 ${
-                isHover ? "text-teal-500" : "text-zinc-400"
+                isHover ? "text-fuchsia-600" : "text-zinc-400"
               }`}
             >
               {liste}
