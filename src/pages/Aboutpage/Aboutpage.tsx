@@ -20,27 +20,71 @@ const Aboutpage = () => {
         />
         <article>
           <p>
-            Ce qui est vraiment important pour moi c'est des êtres dans un
-            environnement challengeant. J'aime apprendre, je suis curieux et je
-            veux toujours aller plus loin.
+            Ce qui est vraiment important pour moi, c'est d'évoluer dans un
+            environnement stimulant. J'aime apprendre, comprendre et partager
+            mes connaissances.
           </p>
           <p>
-            Quand je regarde mon parcours, je sais à quel point j'ai changé.
-            J'étais celui qui ne voulait absoluement rien faire et je suis
-            devenu le gars qui à du mal à s'arreter de travailler.
-          </p>
-          <p>
-            Le code c'est vraiment quelque chsoe que j'aime car je peux toujours
-            l'optimisiser.
-          </p>
-          <p>
-            A côté de ça, je suis un vrai revenchard. Je ne laisse pas les gens
-            me dire là où je devrais être. Je choisis où je veux aller.
+            J'ai remarqué que le travail en groupe peut parfois ralentir ma
+            vitesse de production. Cependant, il me permet de m'améliorer
+            constamment, car l'environnement collaboratif me pousse à me
+            comparer, à me dépasser, et surtout à apprendre des meilleurs.
           </p>
         </article>
 
+        <article>my personality : architect</article>
         <article>
-          <section></section>
+          <h2>Mes Objectifs d'Apprentissage </h2>
+          <h3>en Technologie</h3>
+          <ul>
+            <li>
+              <strong>Next.js, Turbo, and Vercel</strong>
+              <p>
+                I recently discovered Turbo, and its documentation has inspired
+                me to try everything: React with Remix, Next.js, and more. I've
+                decided to start a project with it in June.
+              </p>
+            </li>
+            <li>
+              <strong>Vue with Vuetify</strong>
+              <p>
+                I've found that I can help others, even in a limited capacity,
+                to create projects when they start developing and to understand
+                tools. Hearing a developer tell me months later, "I'm really
+                glad I did this project with you, it's still useful to me now!"
+                motivates me to create content through a blog. I think Vue is
+                ideal for this purpose.
+              </p>
+            </li>
+            <li>
+              <strong>The World of Python and AI</strong>
+              <p>
+                As a third step, I want to learn more about Python. A few months
+                ago, I discovered Django without really knowing Python in depth.
+                I enjoyed the dynamism it brings. Why not go further with tools
+                like Pandas, for example?
+              </p>
+            </li>
+          </ul>
+
+          <h3>en Soft Skills</h3>
+          <ul>
+            <li>
+              <strong>Languages</strong>
+              <p>
+                I used to think that having a low level of technical English
+                would be a barrier in IT because resources are often in English.
+                However, error codes and documentation are quite similar across
+                languages. But communicating verbally, especially understanding
+                different accents, is still challenging and can be a barrier to
+                effective communication. That's why I'm committed to improving
+                my English skills.
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <article>
           <nav>
             <ul className="flex space-x-8">
               {carouselArray.map((item) => (
@@ -56,7 +100,6 @@ const Aboutpage = () => {
             {selectedYear && (
               <>
                 <h3>
-                  {" "}
                   {
                     carouselArray.find((item) => item.year === selectedYear)
                       ?.title

@@ -9,7 +9,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h1":
       return (
         <h1
-          className={`${fontRubik} ${colorRubik} text-4xl xl:text-8xl tracking-wider uppercase ${className}`}
+          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider font-regular uppercase ${className}`}
         >
           {title}
         </h1>
@@ -17,7 +17,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h2":
       return (
         <h2
-          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider uppercase  ${className}`}
+          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider font-regular  uppercase   ${className}`}
         >
           {title}
         </h2>
@@ -25,7 +25,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h3":
       return (
         <h3
-          className={`${fontRubik} ${colorRubik} text-2xl xl:text-4xl font-extralight uppercase tracking-wide  ${className}`}
+          className={`${fontRubik} ${colorRubik} text-4xl xl:text-4xl  uppercase tracking-wide  ${className}`}
         >
           {title}
         </h3>
@@ -33,7 +33,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h4":
       return (
         <h4
-          className={`${fontRubik} ${colorCairo} text-3xl font-extralight uppercase tracking-wide   ${className}`}
+          className={`${fontRubik} ${colorCairo} text-4xl font-regular uppercase tracking-wide   ${className}`}
         >
           {title}
         </h4>
@@ -41,7 +41,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h5":
       return (
         <h5
-          className={`${fontCairo} ${colorRubik} text-2xl font-extralight uppercase ${className}`}
+          className={`${fontCairo} ${colorRubik} text-2xl xl:text-4xl font-extralight uppercase tracking-wide  ${className}`}
         >
           {title}
         </h5>

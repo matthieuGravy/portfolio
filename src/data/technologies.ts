@@ -1,16 +1,17 @@
-import css from "../assets/css.svg";
-import sass from "../assets/sass.svg";
-import html from "../assets/html.svg";
-import bootstrap from "../assets/bootstrap.svg";
-import git from "../assets/git.svg";
-import javascript from "../assets/javascript.svg";
-import mongo from "../assets/mongodb.svg";
-import nodejs from "../assets/nodejs.svg";
-import react from "../assets/react.svg";
-import tailwind from "../assets/tailwind.svg";
-import typescript from "../assets/typescript.svg";
-import vscode from "../assets/vscode.svg";
-import vue from "../assets/vue.svg";
+import css from "../assets/carousel/css.svg";
+
+import sass from "../assets/carousel/sass.svg";
+import html from "../assets/carousel/html.svg";
+import bootstrap from "../assets/carousel/bootstrap.svg";
+import git from "../assets/carousel/git.svg";
+import javascript from "../assets/carousel/javascript.svg";
+import mongo from "../assets/carousel/mongodb.svg";
+import nodejs from "../assets/carousel/nodejs.svg";
+import react from "../assets/carousel/react.svg";
+import tailwind from "../assets/carousel/tailwind.svg";
+import typescript from "../assets/carousel/typescript.svg";
+import vscode from "../assets/carousel/vscode.svg";
+import vue from "../assets/carousel/vue.svg";
 
 const technologies = [
   { name: "html", image: html },

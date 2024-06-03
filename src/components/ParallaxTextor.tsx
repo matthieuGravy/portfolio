@@ -43,7 +43,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   return (
     <article className="text-center overflow-hidden m-0 bg-teal-200 text-zinc-500 py-4">
       <motion.section className=" w-max" style={{ x }}>
-        <span className="uppercase tracking-wide text-4xl">
+        <span className="uppercase tracking-wide text-4xl font-cairo">
           {children}
 
           {children}
@@ -64,7 +64,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
 }
 
 function ParallaxTextor({ velocity }: ParallaxTextorProps) {
-  const phrase = "available to work • Brussels • Belgium • Europe • ";
+  const phrase = "available to work • Brussels • Belgium • Europe • Remote • ";
   const text = phrase.repeat(4);
 
   return <ParallaxText baseVelocity={velocity}>{text}</ParallaxText>;

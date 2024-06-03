@@ -1,8 +1,8 @@
 import { Figure } from "../../../../components/blocs/Project.tsx";
-import sorahome from "../../../../assets/sora-home.png";
-import soralogin from "../../../../assets/sora-login.png";
-import soralogged from "../../../../assets/sora-logged.png";
-import soramovie from "../../../../assets/sora-movies.png";
+import sorahome from "../../../../assets/projects/sora/sora-home.png";
+import soralogin from "../../../../assets/projects/sora/sora-login.png";
+import soralogged from "../../../../assets/projects/sora/sora-logged.png";
+import soramovie from "../../../../assets/projects/sora/sora-movies.png";
 import Templates from "../../../../components/Templates.tsx";
 
 const Soracinepage = () => {

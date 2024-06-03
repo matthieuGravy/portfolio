@@ -1,8 +1,8 @@
-import IGKWelcome from "../../../../assets/IGK-Welcome.png";
-import IGKMenu from "../../../../assets/IGK-Menu.png";
-import IGKContact from "../../../../assets/IGK-Contact.png";
-import IGKPictures from "../../../../assets/IGK-Pictures.png";
-import IGKRestaurant from "../../../../assets/IGK-Restaurants.png";
+import IGKWelcome from "../../../../assets/projects/kitchen/IGK-Welcome.png";
+import IGKMenu from "../../../../assets/projects/kitchen/IGK-Menu.png";
+import IGKContact from "../../../../assets/projects/kitchen/IGK-Contact.png";
+import IGKPictures from "../../../../assets/projects/kitchen/IGK-Pictures.png";
+import IGKRestaurant from "../../../../assets/projects/kitchen/IGK-Restaurants.png";
 import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
 const ItsGravyKitchen = () => {

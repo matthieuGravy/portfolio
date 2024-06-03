@@ -1,6 +1,6 @@
 import { Figure } from "../../../../components/blocs/Project.tsx";
-import plantclicker from "../.././../../assets/plantclicker.png";
-import plantclickerpanel from "../../../../assets/plantclicker-panel.png";
+import plantclicker from "../.././../../assets/projects/plant/plantclicker.png";
+import plantclickerpanel from "../../../../assets/projects/plant/plantclicker-panel.png";
 import Templates from "../../../../components/Templates.tsx";
 
 const PlantClicker = () => {

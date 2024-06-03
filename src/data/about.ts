@@ -101,6 +101,11 @@ const carousel = {
       "C'était aussi super agréable, parce que je codais pas seul et j'avais la sensation de progresser dans un cadre startup.",
     ],
   },
+  2024: {
+    year: "2024",
+    title: "",
+    description: ["stage Walter Clayon : akwanza and afitpilot"],
+  },
 };
 const carouselArray = Object.entries(carousel).map(([key, value], index) => ({
   id: index + 1,

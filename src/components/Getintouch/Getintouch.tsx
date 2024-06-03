@@ -1,14 +1,14 @@
 import ContactForm from "./ContactForm";
-import Containers from "./../Containers";
+import triangle from "./../../assets/backgrounds/triangle-yellow.svg";
 
 const Getintouch = () => {
   return (
-    <Containers
-      type="section-large"
-      className="grid grid-rows xl:grid-cols-2 gap-y-12 xl:gap-y-0 gap-x-8 xl:gap-x-16   relative place-items-center xl:place-items-between"
-    >
-      <ContactForm />
-    </Containers>
+    <>
+      <img src={triangle} alt="" className="w-full" />
+      <div className="w-full bg-yellow-200 flex justify-center">
+        <ContactForm />
+      </div>
+    </>
   );
 };
 

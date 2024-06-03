@@ -28,10 +28,11 @@ const Homepage = () => {
       ? "Good afternoon"
       : "Good evening";
 
-  const styleP = "text-2xl tracking-widest font-sintony";
+  const styleP = "text-2xl tracking-widest text-center font-sintony ";
   const styleRow = "lg:row-span-2 flex flex-col justify-center space-y-4 z-20";
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
+  const strong = "text-teal-400";
 
   const title = "Specialized in front-end";
   const titleAnimation = title.split("").map((char, index) => (
@@ -46,17 +47,17 @@ const Homepage = () => {
   ));
   return (
     <>
-      <main className="overflow-hidden">
+      <main className="overflow-hidden bg-zinc-100 ">
         <Containers
           type="section-large"
-          className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-8 rounded-xl gap-y-24 lg:gap-y-16 xl:gap-y-0 gap-x-16 relative"
+          className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-7 rounded-xl gap-y-24 lg:gap-y-16 xl:gap-y-0 gap-x-16 relative"
         >
           <article className={`${styleRow}`}>
             <Heading title="Web developer" level="h1" />
-            <section className="relative">
+            <section className="">
               <Heading title={titleAnimation} level="h3" className="" />
             </section>
-            <section className="flex gap-x-8 justify-center">
+            <section className="flex gap-x-8 lg:justify-center">
               <Buttonext
                 link="https://www.linkedin.com/in/matthieuGravy"
                 title="Linkedin"
@@ -109,9 +110,8 @@ const Homepage = () => {
               />
             </section>
           </article>
-          <header className={styleRow}>
+          <header className={`text-right ${styleRow}`}>
             <Heading title={greeting} level="h4" className={``} />
-            <ScrollHeading level="h3" className="" title="Matthieu Gravy" />
           </header>
 
           <figure
@@ -123,33 +123,33 @@ const Homepage = () => {
               className="max-h-900px w-4/5 mx-auto rounded-xl"
             />
           </figure>
-          <ScrollTextRight className={styleRow}>
-            <p className={styleP}>
-              A web developer based in Brussels, specializing in modern web
-              technologies. I am capable of creating web projects quickly and
-              easily.
-            </p>
-            <section className="">
-              <ButtonOne content="more" to="/about" className="" />{" "}
-            </section>
-          </ScrollTextRight>
+          <article className={styleRow}>
+            <ScrollHeading
+              level="h3"
+              className={` text-center ${styleRow}`}
+              title="I'am Matthieu Gravy"
+            />{" "}
+            <ScrollTextRight>
+              <p className={styleP}>
+                A web developer based in Brussels, specializing in modern web
+                technologies. I am capable of creating web projects{" "}
+                <strong className={strong}>quickly</strong> and{" "}
+                <strong className={strong}>easily</strong>.
+              </p>
+            </ScrollTextRight>
+          </article>
           <figure className={`flex items-center row-span-2 `}>
             <Scroller />
           </figure>
-
-          <article className={styleRow}>
-            <ScrollHeading
-              level="h2"
-              className="md:w-[400px]"
-              title="My Skills"
-            />
-          </article>
-          <ScrollTextLeft className={styleRow}>
-            <p className={styleP}>
-              I specialize in React, Javascript, and Tailwind CSS. I also have
-              experience with Typescript, Vue.js, Node.js, Express, and MongoDB.
+          <ScrollTextRight className={styleRow}>
+            <p className={` ${styleP}`}>
+              I <strong className={strong}>specialize</strong> in React,
+              Javascript, and Tailwind CSS. I also have{" "}
+              <strong className={strong}>experience</strong> with Typescript,
+              Vue.js, Node.js, Express, and MongoDB.
             </p>
-          </ScrollTextLeft>
+            <ButtonOne content="more" to="/about" className="" />{" "}
+          </ScrollTextRight>
         </Containers>
 
         <figure className="py-24 lg:py-16 xl:py-0">
@@ -169,17 +169,28 @@ const Homepage = () => {
               className="max-h-900px w-4/5 mx-auto rounded-xl"
             />
           </figure>
-          <article
-            className={`lg:col-start-1 lg:row-span-2 bg-red-300 ${styleRow}`}
-          >
-            <ScrollHeading level="h2" className="" title="My projects" />
+          <article className={`${styleRow}`}>
+            {" "}
+            <ScrollHeading
+              level="h3"
+              className={` text-center ${styleRow}`}
+              title="Projects"
+            />{" "}
+            <ScrollTextLeft>
+              <p className={styleP}>
+                These projects include initial{" "}
+                <strong className={strong}>test projects</strong> aimed at
+                helping me understand various technologies. They are currently
+                being refined to present more elegant solutions.
+              </p>
+            </ScrollTextLeft>
           </article>
 
-          <ScrollTextLeft className={`${styleRow} bg-red-200`}>
+          <ScrollTextLeft className={`${styleRow}`}>
             <p className={styleP}>
-              These projects are initially test projects to help me understand
-              certain technologies. They are currently under review to propose
-              something more elegant.
+              In addition, these projects also showcase the results of my{" "}
+              <strong className={strong}>professional experiences</strong>. I am
+              proud of them and excited to share them with you.
             </p>
             <ButtonOne content="Discover" to="/projects" />
           </ScrollTextLeft>

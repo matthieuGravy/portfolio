@@ -9,7 +9,7 @@ import Heading from "../blocs/Heading";
 
 const ScrollHeading: React.FC<ScrollHeadingProps> = ({
   className,
-  title = "titre", // use title from props, default to "titre" if undefined
+  title = "titre",
   level,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ const ScrollHeading: React.FC<ScrollHeadingProps> = ({
       ref={ref}
       key={index}
       initial={{ opacity: 0 }}
-      animate={{ opacity: inView ? 1 : 0 }} // use inView to control opacity
+      animate={{ opacity: inView ? 1 : 0 }}
       transition={{ delay: index * 0.1 }}
     >
       {char}
