@@ -3,11 +3,11 @@ import Templates from "../../../../components/Templates.tsx";
 
 import { learnings } from "../../../../data/projets.ts";
 
-const Htmlportfolio = () => {
+const Itgnightspage = () => {
   return (
     <>
       {learnings
-        .filter((learning) => learning.id === "1")
+        .filter((learning) => learning.id === "8")
         .map((learning, index) => (
           <Templates
             key={index}
@@ -28,4 +28,4 @@ const Htmlportfolio = () => {
     </>
   );
 };
-export default Htmlportfolio;
+export default Itgnightspage;

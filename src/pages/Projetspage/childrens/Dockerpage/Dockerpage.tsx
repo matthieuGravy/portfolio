@@ -1,13 +1,12 @@
-import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
 
 import { learnings } from "../../../../data/projets.ts";
 
-const Htmlportfolio = () => {
+const Dockerpage = () => {
   return (
     <>
       {learnings
-        .filter((learning) => learning.id === "1")
+        .filter((learning) => learning.id === "7")
         .map((learning, index) => (
           <Templates
             key={index}
@@ -18,14 +17,11 @@ const Htmlportfolio = () => {
             pversion={learning.link}
             tonext={learning.tonext}
             toprev={learning.toprev}
-            link={learning.link}
             source={learning.github}
-            figure={learning.gallery.map((gallery, index) => (
-              <Figure key={index} src={gallery.src} alt={gallery.alt} />
-            ))}
           />
         ))}
     </>
   );
 };
-export default Htmlportfolio;
+
+export default Dockerpage;

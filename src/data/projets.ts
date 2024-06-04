@@ -1,3 +1,16 @@
+//1
+import htmlSass from "../assets/projects/html-sass/html-sass.png";
+
+//2
+import pommepatateHome from "../assets/projects/pomme-patate/pomme-patate-home.png";
+import pommepatateAchievement from "../assets/projects/pomme-patate/pomme-patate-achievement.png";
+import pommepatateAbout from "../assets/projects/pomme-patate/pomme-patate-about.png";
+
+//3
+import gsapTop from "../assets/projects/gsap-project/gsap-bot.png";
+import gsapBottom from "../assets/projects/gsap-project/gsap-top.png";
+
+//4
 import IGKWelcome from "../assets/projects/kitchen/IGK-Welcome.png";
 import IGKMenu from "../assets/projects/kitchen/IGK-Menu.png";
 import IGKContact from "../assets/projects/kitchen/IGK-Contact.png";
@@ -9,6 +22,14 @@ import plantclicker from "../assets/projects/plant/plantclicker.png";
 import plantclickerPanel from "../assets/projects/plant/plantclicker-panel.png";
 
 //6
+//need to add images
+
+//7
+//need to add images
+
+//8
+import nightHome from "../assets/projects/night/night-home.png";
+import nightProducts from "../assets/projects/night/night-products.png";
 
 //9
 import sorahome from "../assets/projects/sora/sora-home.png";
@@ -19,12 +40,21 @@ import soramovie from "../assets/projects/sora/sora-movies.png";
 //10
 import bookface from "../assets/projects/bookface/bookface.png";
 
+//Professionals
+//1
+import akwanzaHome from "../assets/projects/akwanza/akwanza-home.png";
+import akwanzaHomeMobile from "../assets/projects/akwanza/akwanza-home-mobile.png";
+
+//2
+import afitpilotHome from "../assets/projects/afitpilot/afitpilot.png";
+
 const learnings = [
   {
     id: "1",
     src: "https://via.placeholder.com/150",
     name: "HTML/Sass Portfolio",
     role: "Front-end",
+    gallery: [{ id: 1, src: htmlSass, alt: "HTML/Sass Portfolio" }],
     description:
       "A portfolio no responsive to understand the basics of web development, including the use of Sass, webpack, and some simple CSS animations.",
     tech: ["JavaScript", "Sass", "webpack"],
@@ -37,6 +67,11 @@ const learnings = [
   {
     id: "2",
     src: "https://via.placeholder.com/150",
+    gallery: [
+      { id: 1, src: pommepatateHome, alt: "pommepate homepage" },
+      { id: 2, src: pommepatateAchievement, alt: "pommepate achievement" },
+      { id: 3, src: pommepatateAbout, alt: "pommepate about" },
+    ],
     name: "Pomme Patate",
     role: "Front-end",
     description:
@@ -51,10 +86,14 @@ const learnings = [
   {
     id: "3",
     src: "https://via.placeholder.com/150",
+    gallery: [
+      { id: 1, src: gsapTop, alt: "gsap top" },
+      { id: 2, src: gsapBottom, alt: "gsap bottom" },
+    ],
     name: "GSAP Project",
     role: "Front-end",
     description:
-      "A portfolio project using Vue3 and GSAP, started after a GSAP training before joining BeCode.",
+      "A portfolio project using Vue3 and GSAP, started after a GSAP training and to understand the basics of this library. I added a multilingual feature to practice Vue Router.",
     tech: ["Vue3", "GSAP", "Sass", "Bootstrap", "vite"],
     link: "https://matthieugravy.github.io/Multilingual-HomePage/",
     github: "https://github.com/matthieuGravy/Multilingual-HomePage",
@@ -66,7 +105,13 @@ const learnings = [
     id: "4",
     src: "https://via.placeholder.com/150",
     name: "ITG Kitchens",
-    gallery: [IGKWelcome, IGKMenu, IGKContact, IGKPictures, IGKRestaurant],
+    gallery: [
+      { id: 1, src: IGKWelcome, alt: "itg kitchens welcome" },
+      { id: 2, src: IGKMenu, alt: "itg kitchens menu" },
+      { id: 3, src: IGKContact, alt: "itg kitchens contact" },
+      { id: 4, src: IGKPictures, alt: "itg kitchens pictures" },
+      { id: 5, src: IGKRestaurant, alt: "itg kitchens restaurant" },
+    ],
     role: "Front-end",
     description:
       "HTML/Bootstrap project without using JavaScript frameworks, with a lot of code repetition. This allowed me to work with constraints and improve my HTML and CSS skills.",
@@ -80,7 +125,10 @@ const learnings = [
   {
     id: "5",
     src: "https://via.placeholder.com/150",
-    gallery: [plantclicker, plantclickerPanel],
+    gallery: [
+      { id: 1, src: plantclicker, alt: "plant clicker" },
+      { id: 2, src: plantclickerPanel, alt: "plant clicker panel" },
+    ],
     name: "Plant Clicker",
     role: "Front-end",
     description:
@@ -112,7 +160,7 @@ const learnings = [
     role: "Back-end",
     description:
       "Introductory project on PHP, Docker, and Nginx. I already had some PHP basics and introduced Docker and Nginx to deepen my skills.",
-    tech: ["Php", "Docker", "nginx"],
+    tech: ["Php", "Docker", "Nginx"],
     github: "https://github.com/matthieuGravy/my-docker-php",
     to: "docker-project",
     preview: "express-pug",
@@ -121,6 +169,10 @@ const learnings = [
   {
     id: "8",
     src: "https://via.placeholder.com/150",
+    gallery: [
+      { id: 1, src: nightHome, alt: "night home" },
+      { id: 2, src: nightProducts, alt: "night products" },
+    ],
     name: "ITG Nights",
     role: "Front-end",
     description:
@@ -134,7 +186,12 @@ const learnings = [
   {
     id: "9",
     src: "https://via.placeholder.com/150",
-    gallery: [sorahome, soralogin, soralogged, soramovie],
+    gallery: [
+      { id: 1, src: sorahome, alt: "sora home" },
+      { id: 2, src: soralogin, alt: "sora login" },
+      { id: 3, src: soralogged, alt: "sora logged" },
+      { id: 4, src: soramovie, alt: "sora movie" },
+    ],
     name: "Sora Cine",
     description:
       "First project with a backend. I collaborated with other developers, which helped me understand how APIs work and how to communicate between front-end and back-end.",
@@ -150,7 +207,7 @@ const learnings = [
     id: "10",
     src: "https://via.placeholder.com/150",
     name: "Bookface",
-    gallery: [bookface],
+    gallery: [{ id: 1, src: bookface, alt: "bookface" }],
     description:
       "After an unfinished previous project, I decided to create a backend with Express and TypeScript. Although the front-end was not completed by the team, this experience taught me to be more autonomous.",
     role: "Back-end",
@@ -164,26 +221,33 @@ const learnings = [
 
 const professionals = [
   {
-    id: 1,
+    id: "1",
     src: "https://via.placeholder.com/150",
-    name: "akwanza.com",
-    description: "",
-    role: "Front-end",
-    tech: ["React", "tailwindcss", "vite"],
-    link: "https://www.akwanza.com/",
+    name: "Akwanza",
+    gallery: [
+      { id: 1, src: akwanzaHome, alt: "akwanza home" },
+      { id: 2, src: akwanzaHomeMobile, alt: "akwanza home mobile" },
+    ],
+    description:
+      "For my first professional team project, I was responsible for the front-end. I participated in designing the front-end with Figma and created product designs for the shop.",
+    role: "Front-end, Design",
+    tech: ["MERN stack", "Framer", "tailwindcss", "vite"],
     to: "akwanza",
+    link: "https://www.akwanza.com/",
     preview: "afitpilot",
     next: "afitpilot",
   },
   {
-    id: 2,
+    id: "2",
     src: "https://via.placeholder.com/150",
-    name: "afitpilot.com",
-    description: "",
-    role: "back-end",
-    tech: ["MERN", "Mui", "TypeScript"],
-    github: "https://www.afitpilot.com/",
+    name: "Afitpilot",
+    gallery: [{ id: 1, src: afitpilotHome, alt: "afitpilot home" }],
+    description:
+      "For my second professional team project, I was responsible for debugging the sign-up system and researching a new architecture suitable for a micro-environment.",
+    role: "Back-end, DevOps",
+    tech: ["MERN stack", "TypeScript", "MUI"],
     to: "afitpilot",
+    link: "https://www.afitpilot.com/",
     preview: "akwanza",
     next: "akwanza",
   },

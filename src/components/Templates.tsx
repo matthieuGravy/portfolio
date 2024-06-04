@@ -17,11 +17,13 @@ const Templates: React.FC<TemplatesProps> = ({
   button,
   source,
 }) => {
+  const styleP = "text-xl tracking-widest font-sintony";
+  const styleAnsword = "font-sintony text-lg text-zinc-400";
   return (
     <>
       <Containers
         type="jumbo-vertical"
-        className="pt-24"
+        className="py-24"
         children={
           <>
             <section className=" flex flex-row justify-between py-16">
@@ -52,24 +54,28 @@ const Templates: React.FC<TemplatesProps> = ({
         childrentwo={
           <>
             <article className="md:grid md:grid-cols-2 flex flex-col  place-content-between relative gap-x-8">
-              <section className="">
-                <p className="text-justify">{paragraphe}</p>
+              <section className="space-y-12">
+                <p className={styleP}>{paragraphe}</p>
                 <section className="grid grid-cols-2 gap-y-8 w-4/5 ">
                   <Heading level="h6" className="" title="role" />
-                  <p className="uppercase text-zinc-400">{role}</p>
+                  <p className={styleAnsword}>{role}</p>
 
                   <Heading title="Stack" level="h6" className="" />
-                  <p className="uppercase text-zinc-400">{ptech}</p>
+                  <p className={styleAnsword}>{ptech}</p>
 
                   <Heading title="Website" level="h6" className="" />
-                  <p className="uppercase text-zinc-400">{pversion}</p>
+                  <ButtonextTwo
+                    link={pversion}
+                    title={`View live ${title}`}
+                    content={pversion}
+                  />
+
                   {button}
                   <Heading title="Github" level="h6" className="" />
                   <ButtonextTwo
                     link={source}
-                    title="lien github"
-                    content="link"
-                    className="uppercase text-zinc-400"
+                    title={`${title} source code`}
+                    content="View source code"
                   />
                 </section>
               </section>

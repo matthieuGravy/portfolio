@@ -1,76 +1,31 @@
-import IGKWelcome from "../../../../assets/projects/kitchen/IGK-Welcome.png";
-import IGKMenu from "../../../../assets/projects/kitchen/IGK-Menu.png";
-import IGKContact from "../../../../assets/projects/kitchen/IGK-Contact.png";
-import IGKPictures from "../../../../assets/projects/kitchen/IGK-Pictures.png";
-import IGKRestaurant from "../../../../assets/projects/kitchen/IGK-Restaurants.png";
 import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
-const ItsGravyKitchen = () => {
-  const itg = [
-    {
-      head: "It's Gravy Kitchens",
-      role: "Front-end",
-      description:
-        "Ce projet est un site web statique pour une franchise de restaurant fictive. Il s'agissait d'un projet à réaliser seul, pour lequel j'ai assumé la responsabilité du développement front-end. J'ai utilisé le framework Bootstrap pour le design, et j'ai programmé en HTML, CSS et JavaScript. Git a été utilisé pour la gestion de version, et le déploiement a été effectué via GitHub.",
-      tech: ["html", "bootstrap", "JavaScript"],
-      deploie: "Déployé avec Github",
-      toprev: "shop",
-      tonext: "plant-clicker",
-      link: "https://matthieugravy.github.io/restaurant-css-framework/index.html",
-      source: "https://github.com/matthieuGravy/restaurant-css-framework",
-    },
-  ];
-  const gallery = [
-    {
-      src: IGKWelcome,
-      alt: "It's Gravy Kitchens",
-      figcaption: "",
-    },
-    {
-      src: IGKMenu,
-      alt: "It's Gravy Kitchens",
-      figcaption: "",
-    },
-    {
-      src: IGKContact,
-      alt: "It's Gravy Kitchens",
-      figcaption: "",
-    },
-    {
-      src: IGKPictures,
-      alt: "It's Gravy Kitchens",
-      figcaption: "",
-    },
-    {
-      src: IGKRestaurant,
-      alt: "It's Gravy Kitchens",
-      figcaption: "",
-    },
-  ];
+
+import { learnings } from "../../../../data/projets.ts";
+
+const Itsgravykitchenpage = () => {
   return (
     <>
-      {itg.map((project, index) => (
-        <Templates
-          key={index}
-          role={project.role}
-          title={project.head}
-          paragraphe={project.description}
-          ptech={project.tech.join(" -")}
-          pversion={project.deploie}
-          tonext={project.tonext}
-          toprev={project.toprev}
-          source={project.source}
-          figure={gallery.map((img, index) => (
-            <Figure
-              key={index}
-              src={img.src}
-              alt={img.alt}
-              figcaption={img.figcaption}
-            />
-          ))}
-        />
-      ))}
+      {learnings
+        .filter((learning) => learning.id === "4")
+        .map((learning, index) => (
+          <Templates
+            key={index}
+            role={learning.role}
+            title={learning.name}
+            paragraphe={learning.description}
+            ptech={learning.tech.join(" - ")}
+            pversion={learning.link}
+            tonext={learning.tonext}
+            toprev={learning.toprev}
+            link={learning.link}
+            source={learning.github}
+            figure={learning.gallery.map((gallery, index) => (
+              <Figure key={index} src={gallery.src} alt={gallery.alt} />
+            ))}
+          />
+        ))}
     </>
   );
 };
-export default ItsGravyKitchen;
+export default Itsgravykitchenpage;

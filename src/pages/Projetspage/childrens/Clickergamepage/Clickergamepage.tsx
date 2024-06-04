@@ -1,59 +1,31 @@
 import { Figure } from "../../../../components/blocs/Project.tsx";
-import plantclicker from "../.././../../assets/projects/plant/plantclicker.png";
-import plantclickerpanel from "../../../../assets/projects/plant/plantclicker-panel.png";
 import Templates from "../../../../components/Templates.tsx";
 
-const PlantClicker = () => {
-  const pc = [
-    {
-      head: "Plant Clicker",
-      role: "Front-end ",
-      description:
-        "Ce projet a été réalisé en groupe de 3 personnes. Notre objectif était de créer un jeu en JavaScript basé sur des clics. Nous avons utilisé PIXI.js pour la partie graphique. Dans le jeu, chaque clic permet de faire pousser un arbre, et les scores sont affichés via un tableau des scores.",
-      tech: ["html", "css", "JavaScript", "pixi.js"],
-      deploie: "Déployé avec Github",
-      toprev: "itg-kitchens",
-      tonext: "sora-cine",
-      source: "https://github.com/matthieuGravy/plant-clicker",
-      link: "https://matthieugravy.github.io/plant-clicker/",
-    },
-  ];
-  const gallery = [
-    {
-      src: plantclicker,
-      alt: "Plant Clicker",
-      figcaption: "",
-    },
-    {
-      src: plantclickerpanel,
-      alt: "Plant Clicker",
-      figcaption: "",
-    },
-  ];
+import { learnings } from "../../../../data/projets.ts";
+
+const Clickergamepage = () => {
   return (
     <>
-      {pc.map((project, index) => (
-        <Templates
-          key={index}
-          role={project.role}
-          title={project.head}
-          paragraphe={project.description}
-          ptech={project.tech.join(" -")}
-          pversion={project.deploie}
-          tonext={project.tonext}
-          toprev={project.toprev}
-          source={project.source}
-          figure={gallery.map((img, index) => (
-            <Figure
-              key={index}
-              src={img.src}
-              alt={img.alt}
-              figcaption={img.figcaption}
-            />
-          ))}
-        />
-      ))}
+      {learnings
+        .filter((learning) => learning.id === "5")
+        .map((learning, index) => (
+          <Templates
+            key={index}
+            role={learning.role}
+            title={learning.name}
+            paragraphe={learning.description}
+            ptech={learning.tech.join(" - ")}
+            pversion={learning.link}
+            tonext={learning.tonext}
+            toprev={learning.toprev}
+            link={learning.link}
+            source={learning.github}
+            figure={learning.gallery.map((gallery, index) => (
+              <Figure key={index} src={gallery.src} alt={gallery.alt} />
+            ))}
+          />
+        ))}
     </>
   );
 };
-export default PlantClicker;
+export default Clickergamepage;
