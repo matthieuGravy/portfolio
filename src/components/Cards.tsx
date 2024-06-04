@@ -47,13 +47,14 @@ const CardProject: React.FC<CardProjectProps> = ({
               onMouseLeave={() => setIsTitleHover(false)}
               onClick={buttonCardsonClick}
               content={
-                <Heading
-                  title={name}
-                  level="h3"
-                  className={` hover:text-teal-400 transition-colors duration-500 ${
-                    isHover ? "text-teal-400" : "text-zinc-400"
-                  }`}
-                />
+                <>
+                  <Heading
+                    title={name}
+                    level="h3"
+                    className={`
+                    `}
+                  />
+                </>
               }
             />
             <ul

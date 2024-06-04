@@ -15,8 +15,8 @@ const Dockerpage = () => {
             paragraphe={learning.description}
             ptech={learning.tech.join(" - ")}
             pversion={learning.link}
-            tonext={learning.tonext}
-            toprev={learning.toprev}
+            next={learning.next}
+            preview={learning.preview}
             source={learning.github}
           />
         ))}

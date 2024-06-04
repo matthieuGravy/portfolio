@@ -140,7 +140,7 @@ const Buttonext: React.FC<ButtonextProps> = ({
         title={title}
         target="_blank"
         rel="noreferrer"
-        className={`transition-all ${className}"`}
+        className={`transition-all text-zinc-400 hover:text-fuchsia-600 ${className}"`}
       >
         {content}
       </a>

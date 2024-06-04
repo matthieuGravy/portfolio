@@ -5,18 +5,23 @@ export interface ParallaxProps {
 export interface ParallaxTextorProps {
   velocity: number;
 }
+export interface ScrollHeadingProps {
+  className?: string;
+  title?: string;
+  level: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+}
 
 export interface TemplatesProps {
   title: string;
   paragraphe?: string;
   ptech?: string;
   pversion?: string;
-  figure?: React.ReactNode;
+  figure?: React.ReactNode[];
   role?: string;
-  tonext: string;
-  toprev: string;
-  source: string;
-  button?: React.ReactNode;
+  next: string;
+  preview: string;
+  source?: string;
+  link?: string;
 }
 
 export interface HeadingProps {

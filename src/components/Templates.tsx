@@ -1,6 +1,6 @@
 import Heading from "./blocs/Heading";
 import Containers from "./Containers";
-import { ButtonextTwo } from "./blocs/Buttons";
+import { Buttonext } from "./blocs/Buttons";
 import { NavLink } from "react-router-dom";
 import { TemplatesProps } from "../types/types";
 import ArrowRigths from "./dynamic-icons/ArrowRigths";
@@ -9,12 +9,11 @@ const Templates: React.FC<TemplatesProps> = ({
   title,
   paragraphe,
   ptech,
-  pversion,
+  link,
   figure,
   role,
-  tonext,
-  toprev,
-  button,
+  next,
+  preview,
   source,
 }) => {
   const styleP = "text-xl tracking-widest font-sintony";
@@ -26,9 +25,9 @@ const Templates: React.FC<TemplatesProps> = ({
         className="py-24"
         children={
           <>
-            <section className=" flex flex-row justify-between py-16">
+            <section className=" flex flex-row justify-between pb-16">
               <NavLink
-                to={`${toprev}`}
+                to={`${preview}`}
                 className="hover:text-fuchsia-700 flex flex-row"
               >
                 {
@@ -39,7 +38,7 @@ const Templates: React.FC<TemplatesProps> = ({
               </NavLink>
 
               <NavLink
-                to={`${tonext}`}
+                to={`${next}`}
                 className="hover:text-fuchsia-700 flex flex-row"
               >
                 <>
@@ -63,25 +62,37 @@ const Templates: React.FC<TemplatesProps> = ({
                   <Heading title="Stack" level="h6" className="" />
                   <p className={styleAnsword}>{ptech}</p>
 
-                  <Heading title="Website" level="h6" className="" />
-                  <ButtonextTwo
-                    link={pversion}
-                    title={`View live ${title}`}
-                    content={pversion}
-                  />
+                  {link && (
+                    <>
+                      <Heading title="Website" level="h6" className="" />
 
-                  {button}
-                  <Heading title="Github" level="h6" className="" />
-                  <ButtonextTwo
-                    link={source}
-                    title={`${title} source code`}
-                    content="View source code"
-                  />
+                      <Buttonext
+                        link={link}
+                        title={`View live ${title}`}
+                        content={link}
+                        className={`${styleAnsword}`}
+                      />
+                    </>
+                  )}
+
+                  {source && (
+                    <>
+                      <Heading title="Github" level="h6" className="" />
+                      <Buttonext
+                        link={source}
+                        title={`${title} source code`}
+                        content="View source code"
+                        className={`${styleAnsword}`}
+                      />
+                    </>
+                  )}
                 </section>
               </section>
-              <section className="grid grid-cols-2 gap-x-8 gap-y-16">
-                {figure}
-              </section>
+              {figure && (
+                <section className="grid grid-cols-2 gap-x-8 gap-y-16">
+                  {figure}
+                </section>
+              )}
             </article>
           </>
         }

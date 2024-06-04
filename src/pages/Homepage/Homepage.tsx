@@ -55,7 +55,7 @@ const Homepage = () => {
           <article className={`${styleRow}`}>
             <Heading title="Web developer" level="h1" />
             <section className="">
-              <Heading title={titleAnimation} level="h3" className="" />
+              <Heading title={<>{titleAnimation}</>} level="h3" className="" />
             </section>
             <section className="flex gap-x-8 lg:justify-center">
               <Buttonext
@@ -66,8 +66,8 @@ const Homepage = () => {
                   <>
                     <motion.figure
                       className="hover:shadow-2xl transition-all duration-500 hover:bg-teal-200 rounded-full p-2 "
-                      initial={({ y: 0 }, { opacity: 0 })}
-                      animate={({ y: 16 }, { opacity: 1 })}
+                      initial={{ y: 0, opacity: 0 }}
+                      animate={{ y: 4, opacity: 1 }}
                       transition={{
                         duration: 1,
                         delay: 3,
@@ -91,8 +91,8 @@ const Homepage = () => {
                   <>
                     <motion.figure
                       className="hover:shadow-2xl transition-all duration-500 hover:bg-teal-200 rounded-full p-2"
-                      initial={({ y: 0 }, { opacity: 0 })}
-                      animate={({ y: 16 }, { opacity: 1 })}
+                      initial={{ y: 0, opacity: 0 }}
+                      animate={{ y: 4, opacity: 1 }}
                       transition={{
                         duration: 1,
                         delay: 3.5,
@@ -111,7 +111,7 @@ const Homepage = () => {
             </section>
           </article>
           <header className={`text-right ${styleRow}`}>
-            <Heading title={greeting} level="h4" className={``} />
+            <Heading title={<>{greeting}</>} level="h4" className={``} />
           </header>
 
           <figure

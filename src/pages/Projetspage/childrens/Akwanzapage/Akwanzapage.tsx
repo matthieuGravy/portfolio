@@ -16,8 +16,8 @@ const Akwanzapage = () => {
             paragraphe={professional.description}
             ptech={professional.tech.join(" - ")}
             pversion={professional.link}
-            tonext={professional.tonext}
-            toprev={professional.toprev}
+            next={professional.next}
+            preview={professional.preview}
             link={professional.link}
             figure={professional.gallery.map((gallery, index) => (
               <Figure key={index} src={gallery.src} alt={gallery.alt} />

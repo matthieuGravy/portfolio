@@ -16,11 +16,11 @@ const Htmlportfolio = () => {
             paragraphe={learning.description}
             ptech={learning.tech.join(" - ")}
             pversion={learning.link}
-            tonext={learning.tonext}
-            toprev={learning.toprev}
+            next={learning.next}
+            preview={learning.preview}
             link={learning.link}
             source={learning.github}
-            figure={learning.gallery.map((gallery, index) => (
+            figure={learning.gallery?.map((gallery, index) => (
               <Figure key={index} src={gallery.src} alt={gallery.alt} />
             ))}
           />
