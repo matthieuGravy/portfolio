@@ -4,7 +4,7 @@ import Templates from "../../../../components/Templates.tsx";
 
 import { learnings } from "../../../../data/projets.ts";
 
-const Templatepage = () => {
+const Learningpage = () => {
   const { id } = useParams<{ id: string }>();
 
   return (
@@ -31,4 +31,4 @@ const Templatepage = () => {
     </>
   );
 };
-export default Templatepage;
+export default Learningpage;

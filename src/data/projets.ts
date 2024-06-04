@@ -48,6 +48,19 @@ import akwanzaHomeMobile from "../assets/projects/akwanza/akwanza-home-mobile.pn
 //2
 import afitpilotHome from "../assets/projects/afitpilot/afitpilot.png";
 
+const content = {
+  learnings: {
+    title: "Learnings",
+    text: [
+      "I participated in a bootcamp with BeCode. I had already started developing on my own, but I needed more structure and guidance. I found JavaScript difficult to get a handle on. So, I decided to take this course to learn how to work in a team, use Git, manage constraints, and collaborate with back-end developers.",
+      "All these projects may not be visually or technically amazing, but they taught me a lot in their context. I am still happy to share them because it is partly thanks to them that I was able to progress.",
+    ],
+  },
+  professionals: {
+    title: "Professional",
+  },
+};
+
 const learnings = [
   {
     id: "1",
@@ -242,4 +255,4 @@ const professionals = [
   },
 ];
 
-export { learnings, professionals };
+export { learnings, professionals, content };
