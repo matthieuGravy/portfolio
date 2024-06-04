@@ -6,7 +6,8 @@ import Homepage from "./pages/Homepage/Homepage.tsx";
 import ProjetOutletpage from "./pages/Projetspage/ProjetOutletpage.tsx";
 
 import Projectpage from "./pages/Projetspage/childrens/Projectpage/Projectpage.tsx";
-import Templatepage from "./pages/Projetspage/childrens/Templatepage/Templatepage.tsx";
+import Learningpage from "./pages/Projetspage/childrens/Learningpage/Learningpage.tsx";
+import Professionalpage from "./pages/Projetspage/childrens/Professionalpage/Professionalpage.tsx";
 
 import Aboutpage from "./pages/Aboutpage/Aboutpage";
 import Contactpage from "./pages/Contactpage/Contactpage";
@@ -29,8 +30,8 @@ export const router = createBrowserRouter([
         element: <ProjetOutletpage />,
         children: [
           { path: "", element: <Projectpage /> },
-          { path: "learning/:id", element: <Templatepage /> },
-          { path: "professional/:id", element: <Templatepage /> },
+          { path: "learning/:id", element: <Learningpage /> },
+          { path: "professional/:id", element: <Professionalpage /> },
         ],
       },
       {
