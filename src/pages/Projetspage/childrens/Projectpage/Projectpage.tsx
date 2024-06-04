@@ -49,7 +49,7 @@ const Projectpage = () => {
               <CardProject
                 key={projet.id}
                 id={projet.id}
-                to={projet.to}
+                to={`learning/${projet.id}`}
                 name={projet.name}
                 liste={projet.tech.map((tech) => (
                   <li
@@ -73,7 +73,7 @@ const Projectpage = () => {
               <CardProject
                 key={projet.id}
                 id={projet.id}
-                to={projet.to}
+                to={`professional/${projet.id}`}
                 name={projet.name}
                 liste={projet.tech.map((tech) => (
                   <li
