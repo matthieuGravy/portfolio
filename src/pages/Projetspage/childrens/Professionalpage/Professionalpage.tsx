@@ -22,7 +22,6 @@ const Professionalpage = () => {
             next={professional.next}
             preview={professional.preview}
             link={professional.link}
-            source={professional.github}
             figure={professional.gallery?.map((gallery, index) => (
               <Figure key={index} src={gallery.src} alt={gallery.alt} />
             ))}
