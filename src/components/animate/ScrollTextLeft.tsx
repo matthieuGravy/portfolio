@@ -17,7 +17,7 @@ const ScrollTextLeft: React.FC<ScrollScrollTextLeftProps> = ({
     <article
       className={`${className} ${
         inView ? "opacity-100" : "opacity-0"
-      } transition-all duration-1000 ease-in-out delay-500 text-right`}
+      } transition-all duration-1000 ease-in-out delay-500 `}
       ref={ref}
       style={{
         transform: inView ? "none" : "translateX(-200px)",

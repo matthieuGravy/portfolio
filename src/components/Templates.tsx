@@ -1,9 +1,11 @@
 import Heading from "./blocs/Heading";
-import Containers from "./Containers";
 import { Buttonext } from "./blocs/Buttons";
 import { NavLink } from "react-router-dom";
 import { TemplatesProps } from "../types/types";
-import ArrowRigths from "./dynamic-icons/ArrowRigths";
+
+import ScrollTextLeft from "./animate/ScrollTextLeft";
+import ScrollTextRight from "./animate/ScrollTextRight";
+import ScrollHeading from "./animate/ScollHeading";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
@@ -17,22 +19,62 @@ const Templates: React.FC<TemplatesProps> = ({
   source,
 }) => {
   const styleP = "text-xl tracking-widest font-sintony";
-  const styleAnsword = "font-sintony text-lg text-zinc-400";
+  const styleAnsword = styleP + " text-zinc-400";
   return (
     <>
-      <Containers
-        type="jumbo-vertical"
-        className="py-24"
-        children={
-          <>
-            <section className=" flex flex-row justify-between pb-16">
+      <article className=" flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto">
+        <section className="">
+          <article className="top-40 sticky space-y-12">
+            <Heading title={title} level="h2" className="lg:w-1/2" />
+            <ScrollTextLeft className={styleP}>{paragraphe}</ScrollTextLeft>
+            <article className="grid grid-cols-2 gap-y-8 w-4/5 ">
+              <ScrollHeading level="h6" title="role" />
+
+              <ScrollTextRight>
+                <p className={styleAnsword}>{role}</p>
+              </ScrollTextRight>
+
+              <ScrollHeading level="h6" className="" title="stack" />
+              <ScrollTextRight>
+                <p className={styleAnsword}>{ptech}</p>
+              </ScrollTextRight>
+
+              {link && (
+                <>
+                  <ScrollHeading level="h6" className="" title="website" />
+                  <ScrollTextRight>
+                    <Buttonext
+                      link={link}
+                      title={`View live ${title}`}
+                      content="View live website"
+                      className={`${styleAnsword}`}
+                    />
+                  </ScrollTextRight>
+                </>
+              )}
+
+              {source && (
+                <>
+                  <ScrollHeading level="h6" className="" title="Git" />
+                  <ScrollTextRight>
+                    <Buttonext
+                      link={source}
+                      title={`${title} source code`}
+                      content="View source code"
+                      className={`${styleAnsword}`}
+                    />
+                  </ScrollTextRight>
+                </>
+              )}
+            </article>
+            <nav className=" flex flex-row justify-between  ">
               <NavLink
                 to={`${preview}`}
                 className="hover:text-fuchsia-700 flex flex-row"
               >
                 {
                   <>
-                    <span className="ps-2">previous project</span>
+                    <span className="">previous project</span>
                   </>
                 }
               </NavLink>
@@ -41,62 +83,15 @@ const Templates: React.FC<TemplatesProps> = ({
                 to={`${next}`}
                 className="hover:text-fuchsia-700 flex flex-row"
               >
-                <>
-                  <span className="pe-2">next project</span>
-                  <ArrowRigths />
-                </>
+                <>Next project</>
               </NavLink>
-            </section>
-            <Heading title={title} level="h2" className="lg:w-1/2" />
-          </>
-        }
-        childrentwo={
-          <>
-            <article className="md:grid md:grid-cols-2 flex flex-col  place-content-between relative gap-x-8">
-              <section className="space-y-12">
-                <p className={styleP}>{paragraphe}</p>
-                <section className="grid grid-cols-2 gap-y-8 w-4/5 ">
-                  <Heading level="h6" className="" title="role" />
-                  <p className={styleAnsword}>{role}</p>
-
-                  <Heading title="Stack" level="h6" className="" />
-                  <p className={styleAnsword}>{ptech}</p>
-
-                  {link && (
-                    <>
-                      <Heading title="Website" level="h6" className="" />
-
-                      <Buttonext
-                        link={link}
-                        title={`View live ${title}`}
-                        content={link}
-                        className={`${styleAnsword}`}
-                      />
-                    </>
-                  )}
-
-                  {source && (
-                    <>
-                      <Heading title="Github" level="h6" className="" />
-                      <Buttonext
-                        link={source}
-                        title={`${title} source code`}
-                        content="View source code"
-                        className={`${styleAnsword}`}
-                      />
-                    </>
-                  )}
-                </section>
-              </section>
-              {figure && (
-                <section className="grid grid-cols-2 gap-x-8 gap-y-16">
-                  {figure}
-                </section>
-              )}
-            </article>
-          </>
-        }
-      />
+            </nav>
+          </article>
+        </section>
+        {figure && (
+          <section className="grid gap-x-8 gap-y-16">{figure}</section>
+        )}
+      </article>
     </>
   );
 };
