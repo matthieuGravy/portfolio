@@ -1,16 +1,6 @@
 import Heading from "./Heading";
 import Paragraphe from "./Paragraphe";
-
-interface BlocCenterProps {
-  children: React.ReactNode;
-}
-interface OlProps {
-  children: React.ReactNode;
-}
-interface LiProps {
-  paragraphe: React.ReactNode;
-  titre: string;
-}
+import { BlocCenterProps, OlProps, LiProps } from "../../types/types";
 
 const BlocCenter: React.FC<BlocCenterProps> = ({ children }) => {
   return <article className="lg:w-2/3 m-auto py-24">{children}</article>;

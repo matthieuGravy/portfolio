@@ -54,3 +54,14 @@ export interface Tech {
 export interface CopyrightProps {
   author: React.ReactNode;
 }
+
+export interface BlocCenterProps {
+  children: React.ReactNode;
+}
+export interface OlProps {
+  children: React.ReactNode;
+}
+export interface LiProps {
+  paragraphe: React.ReactNode;
+  titre: string;
+}
