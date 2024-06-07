@@ -11,13 +11,23 @@ import {
 import HamburgerIcon from "./icons/HamburgerIcon";
 import itsGravyLogo from "../assets/logo/its-gravy-logo.svg";
 
+import { toplinksEn } from "../data/en/navEn";
+
 const Topnav = () => {
   const [isNavVisible, setIsNavVisible] = useState<boolean>(false);
   const [isHidden, setIsHidden] = useState<boolean>(false);
   const controls = useAnimation();
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
-    if (isNavVisible || window.innerWidth > 768) {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isNavVisible || windowWidth > 768) {
       controls.start((i) => ({
         opacity: 1,
         scale: 1,
@@ -26,7 +36,7 @@ const Topnav = () => {
     } else {
       controls.start({ opacity: 0, scale: 0.3 });
     }
-  }, [isNavVisible, controls]);
+  }, [isNavVisible, controls, windowWidth]);
 
   const { scrollYProgress } = useScroll();
   const { scrollY } = useScroll();
@@ -75,6 +85,7 @@ const Topnav = () => {
         className={`sticky w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
       >
         <section className="flex justify-between md:w-4/5 md:m-auto">
+          {/* logo */}
           <NavLink to="/" className="hidden md:block">
             <motion.img
               whileTap={{ scale: 0.8 }}
@@ -84,7 +95,8 @@ const Topnav = () => {
             />
           </NavLink>
 
-          <nav className="text-right w-auto pointer-events-auto ">
+          {/* nav mobile*/}
+          <nav className="text-right w-auto pointer-events-auto md:hidden ">
             <motion.button
               onClick={toggleNav}
               className="md:hidden uppercase"
@@ -96,62 +108,57 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto ${
                 isNavVisible
-                  ? "top-0 py-4 absolute top-14 left-0 gap-y-4 bg-zinc-100 text-center w-full"
-                  : "md:flex md:flex-row md:gap-x-4 md:flex hidden md:justify-center md:items-center"
+                  ? " py-4 absolute top-14 left-0 gap-y-4 bg-zinc-100 text-center w-full"
+                  : "md:flex md:flex-row md:gap-x-4 hidden md:justify-center md:items-center"
               }`}
               animate={controls}
             >
-              <motion.li
-                whileTap={{ scale: 0.8 }}
-                className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
-              >
-                <NavLink
-                  to="/"
-                  onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className={({ isActive }) =>
-                    `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
-                      isActive ? "font-bold " : ""
-                    }
-                    `
-                  }
+              {toplinksEn.map((link) => (
+                <motion.li
+                  whileTap={{ scale: 0.8 }}
+                  className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
                 >
-                  Home
-                </NavLink>
-              </motion.li>
-              <motion.li
-                whileTap={{ scale: 0.8 }}
-                className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
-              >
-                <NavLink
-                  to="/projects"
-                  onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className={({ isActive }) =>
-                    `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
-                      isActive ? "font-bold " : ""
+                  <NavLink
+                    to={link.link}
+                    onClick={closeNav}
+                    className={({ isActive }) =>
+                      `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
+                        isActive ? "font-bold " : ""
+                      }
+                        `
                     }
-                    `
-                  }
+                  >
+                    {link.name}
+                  </NavLink>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </nav>
+
+          {/* nav desktop*/}
+          <nav className="hidden md:block text-right w-auto pointer-events-auto ">
+            <motion.ul
+              className={`pointer-events-auto md:flex md:flex-row md:gap-x-4 hidden md:justify-center md:items-center`}
+              animate={controls}
+            >
+              {toplinksEn.map((link) => (
+                <motion.li
+                  whileTap={{ scale: 0.8 }}
+                  className="py-4 md:py-2 md:block md:w-auto overflow-hidden px-8 md:px-2"
                 >
-                  Projects
-                </NavLink>
-              </motion.li>
-              <motion.li
-                whileTap={{ scale: 0.8 }}
-                className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
-              >
-                <NavLink
-                  to="/about"
-                  onClick={window.innerWidth < 768 ? closeNav : undefined}
-                  className={({ isActive }) =>
-                    `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
-                      isActive ? "font-bold " : ""
+                  <NavLink
+                    to={link.link}
+                    className={({ isActive }) =>
+                      `w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
+                        isActive ? "font-bold " : ""
+                      }
+                        `
                     }
-                    `
-                  }
-                >
-                  About
-                </NavLink>
-              </motion.li>
+                  >
+                    {link.name}
+                  </NavLink>
+                </motion.li>
+              ))}
             </motion.ul>
           </nav>
         </section>
