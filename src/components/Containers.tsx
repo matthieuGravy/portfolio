@@ -1,10 +1,4 @@
-interface ContainersProps {
-  id?: string;
-  className?: string;
-  type: "section-large" | "jumbo-vertical";
-  children: React.ReactNode;
-  childrentwo?: React.ReactNode;
-}
+import { ContainersProps } from "../types/types";
 
 const Containers: React.FC<ContainersProps> = ({
   id,

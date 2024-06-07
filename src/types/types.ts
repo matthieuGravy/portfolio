@@ -19,6 +19,14 @@ export interface MissionDownEnProps {
   className: string;
 }
 
+export interface ContainersProps {
+  id?: string;
+  className?: string;
+  type: "section-large" | "jumbo-vertical";
+  children: React.ReactNode;
+  childrentwo?: React.ReactNode;
+}
+
 export interface TemplatesProps {
   title: string;
   paragraphe?: string;

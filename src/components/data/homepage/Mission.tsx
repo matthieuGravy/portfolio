@@ -1,4 +1,4 @@
-import { MissionUpEnProps, MissionDownEnProps } from "../../../types";
+import { MissionUpEnProps, MissionDownEnProps } from "../../../types/types";
 
 const MissionUpEn: React.FC<MissionUpEnProps> = ({ className }) => {
   const strong = "text-teal-400";
