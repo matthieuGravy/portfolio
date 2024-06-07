@@ -16,7 +16,7 @@ const Aboutpage = () => {
         <Heading
           title="About"
           level="h2"
-          className="lg:w-1/2 text-center md:text-start"
+          className="text-center md:text-start"
         />
         <article>
           <p>

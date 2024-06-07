@@ -209,7 +209,7 @@ const ButtonSubmit: React.FC<ButtonSubmitProps> = ({ content }) => {
   return (
     <button
       type="submit"
-      className="uppercase w-full bg-zinc-100 text-zinc-700 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500"
+      className="uppercase w-full  text-zinc-400 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

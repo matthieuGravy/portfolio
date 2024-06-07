@@ -20,18 +20,21 @@ const ContactForm = () => {
   const handleRecaptcha = (value) => {
     console.log(value);
   };*/
+
+  const styleField = `bg-yellow-200 text-zinc-700 tracking-widest font-sintony border-b-[1px] py-2 focus:outline-fuchsia-600 md:w-full`;
+
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
       .min(2, "Too short !")
       .max(50, "Too long !")
       .matches(/^[A-Za-z ]+$/, "Only letters, spaces are allowed")
-      .required("Eequired"),
+      .required("Required"),
     prenom: Yup.string()
       .min(2, "Too short !")
       .max(50, "Too long !")
       .matches(/^[A-Za-z ]+$/, "Only letters, spaces are allowed")
       .required("Required"),
-    email: Yup.string().email("Email invalide").required("Requis"),
+    email: Yup.string().email("Email invalide").required("Required"),
     entreprise: Yup.string()
       .min(2, "Too short !")
       .max(50, "Too long !")
@@ -118,17 +121,17 @@ const ContactForm = () => {
                   onSubmit={submitForm}
                 >
                   {({ errors, touched, values }) => (
-                    <Form className="">
-                      <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 md:gap-x-12 ">
+                    <Form className="space-y-8">
+                      <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 xl:gap-y-12 md:gap-x-12 ">
                         <label className="relative">
                           <Field
                             name="nom"
                             placeholder="Name"
-                            className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
+                            className={` ${styleField} ${
                               errors.nom && touched.nom
                                 ? "border-red-500"
                                 : values.nom === ""
-                                ? "border-natural-50"
+                                ? "border-fuchsia-600"
                                 : "border-green-500"
                             }`}
                           />
@@ -142,11 +145,11 @@ const ContactForm = () => {
                           <Field
                             name="prenom"
                             placeholder="Firstname"
-                            className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full  ${
+                            className={` ${styleField} ${
                               errors.prenom && touched.prenom
                                 ? "border-red-500"
                                 : values.prenom === ""
-                                ? "border-natural-50"
+                                ? "border-fuchsia-600"
                                 : "border-green-500"
                             }`}
                           />
@@ -161,11 +164,11 @@ const ContactForm = () => {
                             name="email"
                             type="email"
                             placeholder="Email"
-                            className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
+                            className={` ${styleField} ${
                               errors.email && touched.email
-                                ? "border-red-500"
+                                ? "border-red-500 "
                                 : values.email === ""
-                                ? "border-natural-50"
+                                ? "border-fuchsia-600"
                                 : "border-green-500"
                             }`}
                           />
@@ -179,11 +182,11 @@ const ContactForm = () => {
                           <Field
                             name="entreprise"
                             placeholder="Company"
-                            className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
+                            className={` ${styleField} ${
                               errors.entreprise && touched.entreprise
                                 ? "border-red-500"
                                 : values.entreprise === ""
-                                ? "border-natural-50"
+                                ? "border-fuchsia-600"
                                 : "border-green-500"
                             }`}
                           />
@@ -197,11 +200,11 @@ const ContactForm = () => {
                           <Field
                             name="sujet"
                             placeholder="Subject"
-                            className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none md:w-full ${
+                            className={` ${styleField} ${
                               errors.sujet && touched.sujet
                                 ? "border-red-500"
                                 : values.sujet === ""
-                                ? "border-natural-50"
+                                ? "border-fuchsia-600"
                                 : "border-green-500"
                             }`}
                           />
@@ -211,18 +214,17 @@ const ContactForm = () => {
                             </p>
                           ) : null}
                         </label>
-                      </section>
-                      <section className="flex flex-col ">
-                        <label className="relative">
+
+                        <label className="relative md:col-span-2">
                           <Field
                             as="textarea"
                             name="message"
                             placeholder="Message"
-                            className={`bg-yellow-200 border-b-[1px] border-zinc-500 py-2 uppercase focus:outline-none w-full ${
+                            className={` ${styleField} ${
                               errors.message && touched.message
                                 ? "border-red-500"
                                 : values.message === ""
-                                ? "border-natural-50"
+                                ? "border-fuchsia-600"
                                 : "border-green-500"
                             }`}
                           />
@@ -233,6 +235,7 @@ const ContactForm = () => {
                           ) : null}
                         </label>
                       </section>
+
                       <ButtonSubmit content="Send" />
                     </Form>
                   )}

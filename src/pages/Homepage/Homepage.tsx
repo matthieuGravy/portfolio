@@ -17,24 +17,33 @@ import ScrollHeading from "../../components/animate/ScollHeading";
 import Getintouch from "../../components/Getintouch/Getintouch";
 import Scroller from "../../components/Scroller";
 
+import { jumbo, greetingWords, mission, projects } from "../../data/home";
+import {
+  MissionDownEn,
+  MissionUpEn,
+} from "../../components/data/homepage/Mission";
+import {
+  ProjetDownEn,
+  ProjetUpEn,
+} from "../../components/data/homepage/Projects";
+
 const Homepage = () => {
   //parallax effect
 
   const hourRange = new Date().getHours();
   const greeting =
     hourRange < 12
-      ? "Good morning"
+      ? greetingWords.morning
       : hourRange < 18
-      ? "Good afternoon"
-      : "Good evening";
+      ? greetingWords.afternoon
+      : greetingWords.evening;
 
   const styleP = "text-2xl tracking-widest text-center font-sintony ";
   const styleRow = "lg:row-span-2 flex flex-col justify-center space-y-4 z-20";
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
-  const strong = "text-teal-400";
 
-  const title = "Specialized in front-end";
+  const title = jumbo.subtitle;
   const titleAnimation = title.split("").map((char, index) => (
     <motion.span
       key={index}
@@ -53,7 +62,7 @@ const Homepage = () => {
           className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-7 rounded-xl gap-y-24 lg:gap-y-16 xl:gap-y-0 gap-x-16 relative"
         >
           <article className={`${styleRow}`}>
-            <Heading title="Web developer" level="h1" />
+            <Heading title={jumbo.title} level="h1" />
             <section className="">
               <Heading title={<>{titleAnimation}</>} level="h3" className="" />
             </section>
@@ -127,27 +136,17 @@ const Homepage = () => {
             <ScrollHeading
               level="h3"
               className={` text-center ${styleRow}`}
-              title="I'am Matthieu Gravy"
+              title={mission.title}
             />{" "}
             <ScrollTextRight>
-              <p className={styleP}>
-                A web developer based in Brussels, specializing in modern web
-                technologies. I am capable of creating web projects{" "}
-                <strong className={strong}>quickly</strong> and{" "}
-                <strong className={strong}>easily</strong>.
-              </p>
+              <MissionUpEn className={styleP} />
             </ScrollTextRight>
           </article>
           <figure className={`flex items-center row-span-2 `}>
             <Scroller />
           </figure>
           <ScrollTextRight className={styleRow}>
-            <p className={` ${styleP}`}>
-              I <strong className={strong}>specialize</strong> in React,
-              Javascript, and Tailwind CSS. I also have{" "}
-              <strong className={strong}>experience</strong> with Typescript,
-              Vue.js, Node.js, Express, and MongoDB.
-            </p>
+            <MissionDownEn className={styleP} />
             <ButtonOne content="more" to="/about" className="" />{" "}
           </ScrollTextRight>
         </Containers>
@@ -174,24 +173,15 @@ const Homepage = () => {
             <ScrollHeading
               level="h3"
               className={` text-center ${styleRow}`}
-              title="Projects"
+              title={projects.title}
             />{" "}
             <ScrollTextLeft>
-              <p className={styleP}>
-                These projects include initial{" "}
-                <strong className={strong}>test projects</strong> aimed at
-                helping me understand various technologies. They are currently
-                being refined to present more elegant solutions.
-              </p>
+              <ProjetUpEn className={styleP} />
             </ScrollTextLeft>
           </article>
 
           <ScrollTextLeft className={`${styleRow}`}>
-            <p className={styleP}>
-              In addition, these projects also showcase the results of my{" "}
-              <strong className={strong}>professional experiences</strong>. I am
-              proud of them and excited to share them with you.
-            </p>
+            <ProjetDownEn className={styleP} />
             <ButtonOne content="Discover" to="/projects" />
           </ScrollTextLeft>
         </Containers>
