@@ -43,11 +43,11 @@ export const router = createBrowserRouter([
         element: <Contactpage />,
       },
       {
-        path: "rgpd",
+        path: "privacy-policy",
         element: <Rgpdpage />,
       },
       {
-        path: "mentions-legales",
+        path: "legal-notice",
         element: <Mentionspage />,
       },
     ],

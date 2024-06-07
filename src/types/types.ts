@@ -50,3 +50,7 @@ export interface Tech {
   name: string;
   image: string;
 }
+
+export interface CopyrightProps {
+  author: React.ReactNode;
+}
