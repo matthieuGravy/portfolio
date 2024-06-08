@@ -16,16 +16,14 @@ const Templates: React.FC<TemplatesProps> = ({
   figure,
   role,
   next,
-  preview,
+
   source,
 }) => {
   const styleP = "text-xl tracking-widest font-sintony";
   const styleAnsword = styleP + " text-zinc-400";
-  const styleLink = "bg-fuchsia-600 py-2 px-4 text-zinc-100 hover:opacity-90";
   return (
     <>
-      <ArrowRigths />
-      <article className=" flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto xl:gap-y-12">
+      <article className="px-3.5 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 overflow-hidden">
         <section className="">
           <article className="top-40 sticky space-y-12">
             <Heading title={title} level="h2" className="lg:w-1/2" />
@@ -79,7 +77,7 @@ const Templates: React.FC<TemplatesProps> = ({
           <NavLink
             to={"/projects"}
             className={
-              "flex h-20 items-center bg-fuchsia-600 hover:opacity-80 transition-all duration-300 ease-in-out"
+              "flex h-20 items-center bg-teal-200 hover:bg-teal-300 transition-all duration-300 ease-in-out"
             }
           >
             {
@@ -87,7 +85,7 @@ const Templates: React.FC<TemplatesProps> = ({
                 <Heading
                   level="h5"
                   title="all projects"
-                  className="flex text-zinc-200 ps-4"
+                  className="flex text-zinc-700 ps-4"
                 />
                 <ArrowRigths />
               </>

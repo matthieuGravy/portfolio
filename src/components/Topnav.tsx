@@ -144,12 +144,12 @@ const Topnav = () => {
               {toplinksEn.map((link) => (
                 <motion.li
                   whileTap={{ scale: 0.8 }}
-                  className="py-4 md:py-2 md:block md:w-auto overflow-hidden px-8 md:px-2"
+                  className="md:flex md:w-auto overflow-hidden "
                 >
                   <NavLink
                     to={link.link}
                     className={({ isActive }) =>
-                      `w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
+                      `flex hover:text-fuchsia-600 transition duration-500 transition-color ${
                         isActive ? "font-bold " : ""
                       }
                         `
