@@ -11,7 +11,10 @@ const Projectpage = () => {
 
   return (
     <>
-      <Containers type="section-large" className="py-24 flex flex-col">
+      <Containers
+        type="section-large"
+        className="py-24 flex flex-col overflow-hidden"
+      >
         <article>
           <Heading
             title={content.heading}
@@ -21,17 +24,21 @@ const Projectpage = () => {
         </article>
         <article className="">
           <header className=" grid md:grid-cols-2 md:grid-rows-4 gap-y-12 md:gap-y-0 gap-x-16 pb-24 md:pb-0 ">
-            <ScrollTextLeft className={`md:row-span-2 md:row-start-2`}>
-              <p className={`  ${styleP}`}>{content.learnings.textOne}</p>
-            </ScrollTextLeft>
+            <section className={`md:row-span-2 md:row-start-2`}>
+              <ScrollTextLeft>
+                <p className={`  ${styleP}`}>{content.learnings.textOne}</p>
+              </ScrollTextLeft>
+            </section>
             <ScrollHeading
               level="h4"
               className="md:row-span-2 md:self-center"
               title={content.learnings.title}
             />{" "}
-            <ScrollTextRight className={`md:row-span-2 `}>
-              <p className={`${styleP}`}>{content.learnings.textTwo}</p>
-            </ScrollTextRight>
+            <section className={`md:row-span-2 `}>
+              <ScrollTextRight className={`md:row-span-2 `}>
+                <p className={`${styleP}`}>{content.learnings.textTwo}</p>
+              </ScrollTextRight>
+            </section>
           </header>
           <section className="grid md:grid-cols-2 xl:grid-cols-3">
             {learnings.map((projet) => (
