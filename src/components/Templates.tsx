@@ -4,9 +4,10 @@ import { NavLink } from "react-router-dom";
 import { TemplatesProps } from "../types/types";
 
 import ScrollTextLeft from "./animate/ScrollTextLeft";
-import ScrollTextRight from "./animate/ScrollTextRight";
 import ScrollHeading from "./animate/ScollHeading";
 import ArrowRigths from "./animate/ArrowRigths";
+
+import { motion } from "framer-motion";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
@@ -23,52 +24,52 @@ const Templates: React.FC<TemplatesProps> = ({
   const styleAnsword = styleP + " text-zinc-400";
   return (
     <>
-      <article className="px-3.5 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 overflow-hidden">
-        <section className="">
-          <article className="top-40 sticky space-y-12">
+      <article className="px-3.5 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 ">
+        <section className="relative space-y-12">
+          <motion.article
+            className="sticky top-40 space-y-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Heading title={title} level="h2" className="lg:w-1/2" />
             <ScrollTextLeft className={styleP}>{paragraphe}</ScrollTextLeft>
             <article className="grid grid-cols-2 gap-y-8 w-4/5 ">
               <ScrollHeading level="h6" title="role" />
 
-              <ScrollTextRight>
-                <p className={styleAnsword}>{role}</p>
-              </ScrollTextRight>
+              <p className={styleAnsword}>{role}</p>
 
               <ScrollHeading level="h6" className="" title="stack" />
-              <ScrollTextRight>
-                <p className={styleAnsword}>{ptech}</p>
-              </ScrollTextRight>
+
+              <p className={styleAnsword}>{ptech}</p>
 
               {link && (
                 <>
                   <ScrollHeading level="h6" className="" title="website" />
-                  <ScrollTextRight>
-                    <Buttonext
-                      link={link}
-                      title={`View live ${title}`}
-                      content="View live website"
-                      className={`${styleAnsword}`}
-                    />
-                  </ScrollTextRight>
+
+                  <Buttonext
+                    link={link}
+                    title={`View live ${title}`}
+                    content="View live website"
+                    className={`${styleAnsword}`}
+                  />
                 </>
               )}
 
               {source && (
                 <>
                   <ScrollHeading level="h6" className="" title="Git" />
-                  <ScrollTextRight>
-                    <Buttonext
-                      link={source}
-                      title={`${title} source code`}
-                      content="View source code"
-                      className={`${styleAnsword}`}
-                    />
-                  </ScrollTextRight>
+
+                  <Buttonext
+                    link={source}
+                    title={`${title} source code`}
+                    content="View source code"
+                    className={`${styleAnsword}`}
+                  />
                 </>
               )}
             </article>
-          </article>
+          </motion.article>
         </section>
         {figure && (
           <section className="grid gap-x-8 gap-y-16">{figure}</section>
@@ -87,7 +88,6 @@ const Templates: React.FC<TemplatesProps> = ({
                   title="all projects"
                   className="flex text-zinc-700 ps-4"
                 />
-                <ArrowRigths />
               </>
             }
           </NavLink>
@@ -105,6 +105,7 @@ const Templates: React.FC<TemplatesProps> = ({
                   title="Next Project"
                   className="flex text-zinc-200 ps-4"
                 />
+                <ArrowRigths />
               </>
             }
           </NavLink>
