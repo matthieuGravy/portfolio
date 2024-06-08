@@ -40,7 +40,7 @@ const Projectpage = () => {
               </ScrollTextRight>
             </section>
           </header>
-          <section className="grid md:grid-cols-2 xl:grid-cols-3">
+          <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24 pt-14 pb-24">
             {learnings.map((projet) => (
               <CardProject
                 key={projet.id}
@@ -50,7 +50,7 @@ const Projectpage = () => {
                 liste={projet.tech.map((tech) => (
                   <li
                     key={tech}
-                    className="border-[1px] border-zinc-200 px-4 py-2 uppercase text-xs "
+                    className="border-[1px] border-teal-200 px-4 py-2 uppercase text-xs "
                   >
                     {tech}
                   </li>
@@ -63,7 +63,7 @@ const Projectpage = () => {
           <header className="pt-24 pb-12 ">
             <ScrollHeading level="h4" className="" title="Professional" />
           </header>
-          <section className="grid md:grid-cols-2 xl:grid-cols-3">
+          <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24 pt-14 pb-24">
             {professionals.map((projet) => (
               <CardProject
                 key={projet.id}
@@ -73,7 +73,7 @@ const Projectpage = () => {
                 liste={projet.tech.map((tech) => (
                   <li
                     key={tech}
-                    className="border-[1px] border-zinc-200 px-4 py-2 uppercase text-xs "
+                    className="border-[1px] border-teal-200 px-4 py-2 uppercase text-xs "
                   >
                     {tech}
                   </li>
