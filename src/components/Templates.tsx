@@ -97,7 +97,7 @@ const Templates: React.FC<TemplatesProps> = ({
           <NavLink
             to={next}
             className={
-              "flex h-20 items-center bg-fuchsia-600 hover:opacity-80 transition-all duration-300 ease-in-out"
+              "flex flex-col md:flex-row h-20 items-center bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 ease-in-out"
             }
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -112,6 +112,8 @@ const Templates: React.FC<TemplatesProps> = ({
                 <motion.div
                   initial={{ x: 0 }}
                   animate={{ x: isHovered ? 40 : 20 }}
+                  transition={{ duration: 0.4 }}
+                  className="hidden md:flex items-center"
                 >
                   <ArrowRigths />
                 </motion.div>
