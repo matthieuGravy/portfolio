@@ -1,6 +1,10 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const ArrowRigths = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref);
+
   const icon = {
     hidden: {
       opacity: 0,
@@ -15,6 +19,7 @@ const ArrowRigths = () => {
   };
   return (
     <motion.svg
+      ref={ref}
       width="40"
       height="40"
       viewBox="0 0 21 21"

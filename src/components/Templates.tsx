@@ -6,6 +6,7 @@ import { TemplatesProps } from "../types/types";
 import ScrollTextLeft from "./animate/ScrollTextLeft";
 import ScrollTextRight from "./animate/ScrollTextRight";
 import ScrollHeading from "./animate/ScollHeading";
+import ArrowRigths from "./animate/ArrowRigths";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
@@ -20,9 +21,11 @@ const Templates: React.FC<TemplatesProps> = ({
 }) => {
   const styleP = "text-xl tracking-widest font-sintony";
   const styleAnsword = styleP + " text-zinc-400";
+  const styleLink = "bg-fuchsia-600 py-2 px-4 text-zinc-100 hover:opacity-90";
   return (
     <>
-      <article className=" flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto">
+      <ArrowRigths />
+      <article className=" flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto xl:gap-y-12">
         <section className="">
           <article className="top-40 sticky space-y-12">
             <Heading title={title} level="h2" className="lg:w-1/2" />
@@ -67,30 +70,47 @@ const Templates: React.FC<TemplatesProps> = ({
                 </>
               )}
             </article>
-            <nav className=" flex flex-row justify-between  ">
-              <NavLink
-                to={`${preview}`}
-                className="hover:text-fuchsia-700 flex flex-row"
-              >
-                {
-                  <>
-                    <span className="">previous project</span>
-                  </>
-                }
-              </NavLink>
-
-              <NavLink
-                to={`${next}`}
-                className="hover:text-fuchsia-700 flex flex-row"
-              >
-                <>Next project</>
-              </NavLink>
-            </nav>
           </article>
         </section>
         {figure && (
           <section className="grid gap-x-8 gap-y-16">{figure}</section>
         )}
+        <nav className="md:col-span-2 h-20 grid grid-cols-2 md:gap-x-8 items-center ">
+          <NavLink
+            to={"/projects"}
+            className={
+              "flex h-20 items-center bg-fuchsia-600 hover:opacity-80 transition-all duration-300 ease-in-out"
+            }
+          >
+            {
+              <>
+                <Heading
+                  level="h5"
+                  title="all projects"
+                  className="flex text-zinc-200 ps-4"
+                />
+                <ArrowRigths />
+              </>
+            }
+          </NavLink>
+
+          <NavLink
+            to={next}
+            className={
+              "flex h-20 items-center bg-fuchsia-600 hover:opacity-80 transition-all duration-300 ease-in-out"
+            }
+          >
+            {
+              <>
+                <Heading
+                  level="h5"
+                  title="Next Project"
+                  className="flex text-zinc-200 ps-4"
+                />
+              </>
+            }
+          </NavLink>
+        </nav>
       </article>
     </>
   );
