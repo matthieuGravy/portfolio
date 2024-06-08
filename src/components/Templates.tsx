@@ -8,6 +8,7 @@ import ScrollHeading from "./animate/ScollHeading";
 import ArrowRigths from "./animate/ArrowRigths";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
@@ -22,6 +23,8 @@ const Templates: React.FC<TemplatesProps> = ({
 }) => {
   const styleP = "text-xl tracking-widest font-sintony";
   const styleAnsword = styleP + " text-zinc-400";
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <>
       <article className="px-3.5 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 ">
@@ -91,12 +94,13 @@ const Templates: React.FC<TemplatesProps> = ({
               </>
             }
           </NavLink>
-
           <NavLink
             to={next}
             className={
               "flex h-20 items-center bg-fuchsia-600 hover:opacity-80 transition-all duration-300 ease-in-out"
             }
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
             {
               <>
@@ -105,7 +109,12 @@ const Templates: React.FC<TemplatesProps> = ({
                   title="Next Project"
                   className="flex text-zinc-200 ps-4"
                 />
-                <ArrowRigths />
+                <motion.div
+                  initial={{ x: 0 }}
+                  animate={{ x: isHovered ? 40 : 20 }}
+                >
+                  <ArrowRigths />
+                </motion.div>
               </>
             }
           </NavLink>

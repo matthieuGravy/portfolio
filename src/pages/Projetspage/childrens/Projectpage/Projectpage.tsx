@@ -24,7 +24,9 @@ const Projectpage = () => {
         </article>
         <article className="">
           <header className=" grid md:grid-cols-2 md:grid-rows-4 gap-y-12 md:gap-y-0 gap-x-16 pb-24 md:pb-0 ">
-            <section className={`md:row-span-2 md:row-start-2`}>
+            <section
+              className={`md:row-span-2 md:row-start-2 md:py-12 lg:py-24`}
+            >
               <ScrollTextLeft>
                 <p className={`  ${styleP}`}>{content.learnings.textOne}</p>
               </ScrollTextLeft>
@@ -34,7 +36,7 @@ const Projectpage = () => {
               className="md:row-span-2 md:self-center"
               title={content.learnings.title}
             />{" "}
-            <section className={`md:row-span-2 `}>
+            <section className={`md:row-span-2 md:py-12 lg:py-24`}>
               <ScrollTextRight className={`md:row-span-2 `}>
                 <p className={`${styleP}`}>{content.learnings.textTwo}</p>
               </ScrollTextRight>
