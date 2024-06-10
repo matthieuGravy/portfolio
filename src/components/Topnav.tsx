@@ -81,9 +81,9 @@ const Topnav = () => {
         transition={{ duration: 0.3 }}
         className={`sticky w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
       >
-        <section className="flex justify-between md:w-4/5 md:m-auto">
+        <section className="flex justify-between md:w-4/5 md:m-auto px-3.5 md:px-0">
           {/* logo */}
-          <NavLink to="/" className="hidden md:block">
+          <NavLink to="/" className="block">
             <motion.img
               whileTap={{ scale: 0.8 }}
               src={itsGravyLogo}
@@ -93,17 +93,17 @@ const Topnav = () => {
           </NavLink>
 
           {/* nav mobile*/}
-          <nav className="text-right w-full pointer-events-auto md:hidden relative">
+          <nav className="text-right w-full pointer-events-auto relative">
             <motion.button
               onClick={toggleNav}
-              className="md:hidden uppercase pe-3.5"
+              className="md:hidden uppercase "
               aria-label="Menu"
               whileTap={{ scale: 0.8 }}
             >
               <HamburgerIcon />
             </motion.button>
             <motion.ul
-              className={`pointer-events-auto ${
+              className={`pointer-events-auto md:hidden  ${
                 isNavVisible
                   ? " absolute top-14 left-0 gap-y-4  py-4 bg-zinc-100 text-center w-full"
                   : "hidden"
@@ -131,13 +131,8 @@ const Topnav = () => {
                 </motion.li>
               ))}
             </motion.ul>
-          </nav>
-
-          {/* nav desktop*/}
-          <nav className="hidden md:block text-right w-auto pointer-events-auto ">
-            <motion.ul
-              className={`pointer-events-auto md:flex md:flex-row md:gap-x-4 hidden md:justify-center md:items-center`}
-              animate={controls}
+            <ul
+              className={`pointer-events-auto md:flex md:flex-row md:gap-x-4 hidden md:justify-end md:items-center `}
             >
               {toplinksEn.map((link) => (
                 <motion.li
@@ -158,8 +153,10 @@ const Topnav = () => {
                   </NavLink>
                 </motion.li>
               ))}
-            </motion.ul>
+            </ul>
           </nav>
+
+          {/* nav desktop*/}
         </section>
       </motion.header>
       <motion.div
