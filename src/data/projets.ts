@@ -67,7 +67,7 @@ const learnings = [
   {
     id: "1",
     src: "https://via.placeholder.com/150",
-    name: "HTML/Sass Portfolio",
+    name: "HTML Sass Portfolio",
     role: "Front-end",
     gallery: [{ id: 1, src: htmlSass, alt: "HTML/Sass Portfolio" }],
     description:
@@ -154,7 +154,7 @@ const learnings = [
     id: "6",
     src: "https://via.placeholder.com/150",
     name: "Express Pug",
-    role: "Front-end",
+    role: "Back-end",
     description:
       "Exploration of the backend with Express and Pug to understand template principles, complementing my knowledge of EJS.",
     tech: ["Express", "PUG", "Tailwindcss"],
@@ -182,7 +182,7 @@ const learnings = [
       { id: 2, src: nightProducts, alt: "night products" },
     ],
     name: "ITG Nights",
-    role: "Front-end",
+    role: "Full-stack",
     description:
       "Solo project to learn the MERN stack (MongoDB, Express, React, Node.js).",
     tech: ["MERN stack", "tailwindcss", "daisy-ui", "vite"],

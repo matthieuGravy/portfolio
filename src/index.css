@@ -24,3 +24,9 @@
     src: url('./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
     
   }
+
+
+  mark {
+    background-color: #f4f4f5;
+    color: #2dd4bf;
+  }

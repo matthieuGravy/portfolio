@@ -122,8 +122,8 @@ const Topnav = () => {
                     to={link.link}
                     onClick={closeNav}
                     className={({ isActive }) =>
-                      `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide ${
-                        isActive ? "font-bold " : "font-extralight"
+                      `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide font-extralight ${
+                        isActive ? "" : ""
                       }
                         `
                     }
@@ -147,8 +147,8 @@ const Topnav = () => {
                   <NavLink
                     to={link.link}
                     className={({ isActive }) =>
-                      `flex hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide ${
-                        isActive ? "font-bold " : "font-extralight"
+                      `flex hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide font-regular ${
+                        isActive ? " text-fuchsia-600" : ""
                       }
                         `
                     }

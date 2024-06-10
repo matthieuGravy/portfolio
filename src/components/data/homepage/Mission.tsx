@@ -6,8 +6,8 @@ const MissionUpEn: React.FC<MissionUpEnProps> = ({ className }) => {
     <p className={className}>
       A web developer based in Brussels, specializing in modern web
       technologies. I am capable of creating web projects{" "}
-      <strong className={strong}>quickly</strong> and{" "}
-      <strong className={strong}>easily</strong>.
+      <mark className={strong}>quickly</mark> and{" "}
+      <mark className={strong}>easily</mark>.
     </p>
   );
 };
@@ -15,9 +15,9 @@ const MissionDownEn: React.FC<MissionDownEnProps> = ({ className }) => {
   const strong = "text-teal-400";
   return (
     <p className={` ${className}`}>
-      I <strong className={strong}>specialize</strong> in React, Javascript, and
-      Tailwind CSS. I also have <strong className={strong}>experience</strong>{" "}
-      with Typescript, Vue.js, Node.js, Express, and MongoDB.
+      I <mark className={strong}>specialize</mark> in React, Javascript, and
+      Tailwind CSS. I also have <mark className={strong}>experience</mark> with
+      Typescript, Vue.js, Node.js, Express, and MongoDB.
     </p>
   );
 };
