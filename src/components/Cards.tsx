@@ -68,7 +68,7 @@ const CardProject: React.FC<CardProjectProps> = ({
           <section className="">
             <ButtonOne
               to={`${to}`}
-              content={<>Découvrir</>}
+              content={<>Discover</>}
               onClick={buttonOneClick}
               className={`${isTitleHover ? "text-zinc-300" : ""}`}
             />
