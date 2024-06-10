@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Heading from "./blocs/Heading";
-import { ButtonOne, ButtonCards } from "./blocs/Buttons";
+import { ButtonCards } from "./blocs/Buttons";
+import { NavLink } from "react-router-dom";
 
 interface CardProjectProps {
   id: string;
@@ -48,30 +48,33 @@ const CardProject: React.FC<CardProjectProps> = ({
               onClick={buttonCardsonClick}
               content={
                 <>
-                  <Heading
-                    title={name}
-                    level="h3"
-                    className={`
+                  <h3
+                    className={`font-rubik text-4xl xl:text-4xl  uppercase tracking-wide text-zinc-700 hover:text-fuchsia-600 transition-colors duration-500
                     `}
-                  />
+                  >
+                    {name}
+                  </h3>
                 </>
               }
             />
             <ul
-              className={`flex flex-wrap gap-x-4 gap-y-2 ${
-                isHover ? "text-fuchsia-600" : "text-zinc-400"
+              className={`flex flex-wrap gap-x-4 gap-y-2 font-sintony tracking-widest ${
+                isHover ? "text-teal-400" : "text-zinc-400"
               }`}
             >
               {liste}
             </ul>
           </article>
           <section className="">
-            <ButtonOne
+            <NavLink
               to={`${to}`}
-              content={<>Discover</>}
               onClick={buttonOneClick}
-              className={`${isTitleHover ? "text-zinc-300" : ""}`}
-            />
+              className={` uppercase  flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide ${
+                isTitleHover ? "text-zinc-300" : "invisible text-zinc-300"
+              }`}
+            >
+              Discover
+            </NavLink>
           </section>
         </article>
       </>
