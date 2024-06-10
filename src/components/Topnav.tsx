@@ -52,6 +52,7 @@ const Topnav = () => {
     const previous = scrollY.getPrevious();
     if (previous !== undefined && latest > previous && latest > 50) {
       setIsHidden(true);
+      closeNav();
     } else {
       setIsHidden(false);
     }
@@ -79,24 +80,25 @@ const Topnav = () => {
         initial={{ y: -72 }}
         animate={isHidden ? { y: -72 } : { y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`sticky w-full top-0 py-4 text-zinc-600 uppercase z-50 bg-zinc-100`}
+        className={`sticky w-full top-0 py-4 text-zinc-700 uppercase z-50 bg-zinc-100`}
       >
-        <section className="flex justify-between md:w-4/5 md:m-auto px-3.5 md:px-0">
+        <section className="md:w-4/5 md:m-auto relative">
           {/* logo */}
-          <NavLink to="/" className="block">
-            <motion.img
-              whileTap={{ scale: 0.8 }}
-              src={itsGravyLogo}
-              className="h-10"
-              alt=""
-            />
-          </NavLink>
 
           {/* nav mobile*/}
-          <nav className="text-right w-full pointer-events-auto relative">
+          <nav className="flex justify-between text-right w-full pointer-events-auto  ">
+            <NavLink to="/" className=" ">
+              <motion.img
+                whileTap={{ scale: 0.8 }}
+                src={itsGravyLogo}
+                className="h-10 ps-3.5 md:px-0"
+                alt="logo itsgravy"
+                onClick={closeNav}
+              />
+            </NavLink>
             <motion.button
               onClick={toggleNav}
-              className="md:hidden uppercase "
+              className="md:hidden uppercase pe-3.5 md:pe-0"
               aria-label="Menu"
               whileTap={{ scale: 0.8 }}
             >
@@ -105,7 +107,7 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto md:hidden  ${
                 isNavVisible
-                  ? " absolute top-14 left-0 gap-y-4  py-4 bg-zinc-100 text-center w-full"
+                  ? "absolute top-14 gap-y-4  py-4 bg-zinc-100 text-center w-screen"
                   : "hidden"
               }`}
               animate={controls}
@@ -114,14 +116,14 @@ const Topnav = () => {
                 <motion.li
                   key={link.id}
                   whileTap={{ scale: 0.8 }}
-                  className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
+                  className="py-4 md:py-2 md:block md:w-auto overflow-hidden "
                 >
                   <NavLink
                     to={link.link}
                     onClick={closeNav}
                     className={({ isActive }) =>
-                      `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color ${
-                        isActive ? "font-bold " : ""
+                      `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide ${
+                        isActive ? "font-bold " : "font-extralight"
                       }
                         `
                     }
@@ -131,8 +133,10 @@ const Topnav = () => {
                 </motion.li>
               ))}
             </motion.ul>
+
+            {/* nav desktop*/}
             <ul
-              className={`pointer-events-auto md:flex md:flex-row md:gap-x-4 hidden md:justify-end md:items-center `}
+              className={`pointer-events-auto md:flex md:flex-row md:gap-x-8 hidden md:justify-end md:items-center `}
             >
               {toplinksEn.map((link) => (
                 <motion.li
@@ -143,8 +147,8 @@ const Topnav = () => {
                   <NavLink
                     to={link.link}
                     className={({ isActive }) =>
-                      `flex hover:text-fuchsia-600 transition duration-500 transition-color ${
-                        isActive ? "font-bold " : ""
+                      `flex hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide ${
+                        isActive ? "font-bold " : "font-extralight"
                       }
                         `
                     }
@@ -155,8 +159,6 @@ const Topnav = () => {
               ))}
             </ul>
           </nav>
-
-          {/* nav desktop*/}
         </section>
       </motion.header>
       <motion.div

@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import customIconUpto from "../../assets/icons/custom-arrow-upto.svg";
 import { GrSend } from "react-icons/gr";
 
 interface ButtonOneProps {
@@ -25,8 +24,10 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
     <>
       <NavLink
         to={to}
-        className={`uppercase text-zinc-600 flex justify-center py-2 transition-colors duration-500 px-2 ${className}  ${
-          isHovered ? "hover:bg-fuchsia-600 hover:text-neutral-50 " : ""
+        className={`uppercase  flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide ${className}  ${
+          isHovered
+            ? "hover:bg-fuchsia-600 hover:text-neutral-50 "
+            : "text-fuchsia-600"
         }`}
         onClick={onClick}
         onMouseEnter={() => {
@@ -42,17 +43,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
           }
         }}
       >
-        <>
-          {content}
-
-          <img
-            src={customIconUpto}
-            className={`duration-100 relative left-2 opacity-50 ${
-              isHovered ? "left-6 rotate-45 opacity-100" : "rotate-0"
-            }`}
-            alt=""
-          />
-        </>
+        <>{content}</>
       </NavLink>
     </>
   );
