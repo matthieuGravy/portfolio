@@ -32,12 +32,11 @@ const CardProject: React.FC<CardProjectProps> = ({
         <article
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
-          className={`relative transition-all ease-in-out duration-500 flex flex-col justify-between rounded-xl
+          className={`relative  flex flex-col justify-between rounded-xl
            `}
         >
-          {/* modifier l'intérieur de la card au hover ? ou pas ..*/}
           <article
-            className={`h-full flex flex-col justify-between px-4 py-4 space-y-4 border-[1px] border-teal-200 ${className} ${
+            className={`h-full flex flex-col justify-between px-4 py-4 space-y-4 border-[1px] border-teal-200 transition-all ease-in-out duration-500 ${className} ${
               isHover ? "shadow-xl " : ""
             }`}
           >
@@ -70,7 +69,9 @@ const CardProject: React.FC<CardProjectProps> = ({
               to={`${to}`}
               onClick={buttonOneClick}
               className={` uppercase  flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide ${
-                isTitleHover ? "text-zinc-300" : "invisible text-zinc-300"
+                isTitleHover
+                  ? "md:text-zinc-300 text-fuchsia-600"
+                  : "md:invisible md:text-zinc-300 text-fuchsia-600"
               }`}
             >
               Discover
