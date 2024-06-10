@@ -7,7 +7,7 @@ const Aboutpage = () => {
   // const [selectedYear, setSelectedYear] = useState("");
 
   // const handleYearClick = (year: string) => {setSelectedYear(year);};
-
+  const styleP = "text-2xl tracking-widest font-sintony ";
   return (
     <>
       <Containers
@@ -19,7 +19,7 @@ const Aboutpage = () => {
           level="h2"
           className="text-center md:text-start"
         />
-        <p>This page is under development.</p>
+        <p className={styleP}>This page is under development.</p>
 
         {/*
         <article>
