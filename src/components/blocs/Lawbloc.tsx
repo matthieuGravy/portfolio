@@ -3,7 +3,11 @@ import Paragraphe from "./Paragraphe";
 import { BlocCenterProps, OlProps, LiProps } from "../../types/types";
 
 const BlocCenter: React.FC<BlocCenterProps> = ({ children }) => {
-  return <article className="lg:w-2/3 m-auto py-24">{children}</article>;
+  return (
+    <article className="px-3.5 md:px-0 lg:w-2/3 m-auto py-24">
+      {children}
+    </article>
+  );
 };
 
 const Ol: React.FC<OlProps> = ({ children }) => {
