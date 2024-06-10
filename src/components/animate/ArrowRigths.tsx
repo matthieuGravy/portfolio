@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const ArrowRigths = () => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<SVGSVGElement>(null);
   const inView = useInView(ref);
 
   const icon = {

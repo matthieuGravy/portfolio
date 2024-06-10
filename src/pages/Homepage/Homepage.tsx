@@ -122,7 +122,7 @@ const Homepage = () => {
           <img
             src={matthieuFocus}
             alt="Illustration"
-            className="max-h-900px w-4/5 mx-auto rounded-xl"
+            className="max-h-900px md:w-4/5 mx-auto rounded-xl"
           />
         </figure>
         <article className={styleRow}>

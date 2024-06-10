@@ -27,7 +27,7 @@ const Templates: React.FC<TemplatesProps> = ({
 
   return (
     <>
-      <article className="px-3.5 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 ">
+      <article className="px-3.5 md:px-0 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 ">
         <section className="relative space-y-12">
           <motion.article
             className="sticky top-40 space-y-12"
@@ -97,7 +97,7 @@ const Templates: React.FC<TemplatesProps> = ({
           <NavLink
             to={next}
             className={
-              "flex flex-col md:flex-row h-20 items-center bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 ease-in-out"
+              "flex flex-col md:flex-row h-20 items-center justify-center bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 ease-in-out"
             }
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -107,7 +107,7 @@ const Templates: React.FC<TemplatesProps> = ({
                 <Heading
                   level="h5"
                   title="Next Project"
-                  className="flex text-zinc-200 ps-4"
+                  className="flex text-zinc-200 ps-4  "
                 />
                 <motion.div
                   initial={{ x: 0 }}
