@@ -40,7 +40,7 @@ const rgpdEn = [
   {
     id: 8,
     title: "User Rights",
-    content: `In accordance with the French Data Protection Act of January 6, 1978, as amended, and the General Data Protection Regulation (GDPR) of April 27, 2016, users have the following rights: right of access, right of rectification, right to erasure (right to be forgotten), right to object, right to restrict processing, right to data portability. To exercise your rights, you can contact the data controller at the following address: matthieugravy@gmail.com`,
+    content: `In accordance with the French Data Protection Act of January 6, 1978, as amended, and the General Data Protection Regulation (GDPR) of April 27, 2016, users have the following rights: right of access, right of rectification, right to erasure (right to be forgotten), right to object, right to restrict processing, right to data portability. To exercise your rights, you can contact the data controller at the following address: Mr. Matthieu Gravy.`,
   },
   {
     id: 9,
@@ -58,8 +58,7 @@ const rgpdEn = [
     id: 11,
     title: "Contact",
     content: `For any questions regarding the protection of personal data, users can contact the Data Protection Authority (DPA):
-    Website: https://dataprotectionauthority.be/
-    Address: Rue de la Presse 35, 1000 Brussels
+    Address: Rue de la Presse 35, 1000 Brussels;
     Phone: +32 2 274 48 00`,
   },
 ];

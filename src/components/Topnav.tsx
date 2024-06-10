@@ -54,9 +54,6 @@ const Topnav = () => {
       setIsHidden(true);
     } else {
       setIsHidden(false);
-      if (window.innerWidth <= 768) {
-        setIsNavVisible(false);
-      }
     }
   });
 
@@ -96,10 +93,10 @@ const Topnav = () => {
           </NavLink>
 
           {/* nav mobile*/}
-          <nav className="text-right w-auto pointer-events-auto md:hidden ">
+          <nav className="text-right w-full pointer-events-auto md:hidden relative">
             <motion.button
               onClick={toggleNav}
-              className="md:hidden uppercase"
+              className="md:hidden uppercase pe-3.5"
               aria-label="Menu"
               whileTap={{ scale: 0.8 }}
             >
@@ -108,13 +105,14 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto ${
                 isNavVisible
-                  ? " py-4 absolute top-14 left-0 gap-y-4 bg-zinc-100 text-center w-full"
-                  : "md:flex md:flex-row md:gap-x-4 hidden md:justify-center md:items-center"
+                  ? " absolute top-14 left-0 gap-y-4  py-4 bg-zinc-100 text-center w-full"
+                  : "hidden"
               }`}
               animate={controls}
             >
               {toplinksEn.map((link) => (
                 <motion.li
+                  key={link.id}
                   whileTap={{ scale: 0.8 }}
                   className="py-4 md:py-2 md:block md:w-auto overflow-hidden   "
                 >
@@ -143,6 +141,7 @@ const Topnav = () => {
             >
               {toplinksEn.map((link) => (
                 <motion.li
+                  key={link.id}
                   whileTap={{ scale: 0.8 }}
                   className="md:flex md:w-auto overflow-hidden "
                 >

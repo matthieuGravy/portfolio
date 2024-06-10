@@ -50,7 +50,7 @@ const rgpdFr = [
   {
     id: 8,
     title: "Droits des utilisateurs",
-    content: `Conformément à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD) du 27 avril 2016, les utilisateurs disposent des droits suivants : droit d'accès, droit de rectification, droit à l'effacement (droit à l'oubli), droit d'opposition, droit à la limitation du traitement, droit à la portabilité. Pour exercer vos droits, vous pouvez contacter le responsable du traitement à l'adresse suivante : matthieugravy@gmail.com"`,
+    content: `Conformément à la loi "Informatique et Libertés" du 6 janvier 1978 modifiée et au Règlement Général sur la Protection des Données (RGPD) du 27 avril 2016, les utilisateurs disposent des droits suivants : droit d'accès, droit de rectification, droit à l'effacement (droit à l'oubli), droit d'opposition, droit à la limitation du traitement, droit à la portabilité. Pour exercer vos droits, vous pouvez contacter le responsable du traitement : Monsieur Matthieu Gravy `,
   },
   {
     id: 9,
@@ -67,7 +67,7 @@ const rgpdFr = [
   {
     id: 11,
     title: "Contact",
-    content: `Pour toute question relative à la protection des données personnelles, les utilisateurs peuvent contacter l'Autorité de Protection des Données (APD) : Site web : https://dataprotectionauthority.be/ Adresse : Rue de la Presse 35, 1000 Bruxelles Téléphone : +32 2 274 48 00`,
+    content: `Pour toute question relative à la protection des données personnelles, les utilisateurs peuvent contacter l'Autorité de Protection des Données (APD) : Adresse : Rue de la Presse 35, 1000 Bruxelles Téléphone : +32 2 274 48 00`,
   },
 ];
 
