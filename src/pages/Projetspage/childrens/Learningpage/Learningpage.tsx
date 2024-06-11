@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
+import { Suspense } from "react";
+
 import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
-
 import { learnings } from "../../../../data/projets.ts";
+import Loadingimage from "../../../../components/Loadingimage";
 
 const Learningpage = () => {
   const { id } = useParams<{ id: string }>();
@@ -24,7 +26,9 @@ const Learningpage = () => {
             link={learning.link}
             source={learning.github}
             figure={learning.gallery?.map((gallery, index) => (
-              <Figure key={index} src={gallery.src} alt={gallery.alt} />
+              <Suspense key={index} fallback={<Loadingimage />}>
+                <Figure src={gallery.src} alt={gallery.alt} />
+              </Suspense>
             ))}
           />
         ))}

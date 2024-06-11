@@ -1,15 +1,15 @@
-import Heading from "./blocs/Heading";
-import { Buttonext } from "./blocs/Buttons";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 import { TemplatesProps } from "../types/types";
 
 import ScrollTextLeft from "./animate/ScrollTextLeft";
 import ScrollHeading from "./animate/ScollHeading";
 import ArrowRigths from "./animate/ArrowRigths";
-
-import { motion } from "framer-motion";
-import { useState } from "react";
+import Heading from "./blocs/Heading";
 import Main from "./Main";
+import { Buttonext } from "./blocs/Buttons";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
