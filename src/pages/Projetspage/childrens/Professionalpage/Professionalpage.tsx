@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
+import { Suspense } from "react";
+
 import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
-
 import { professionals } from "../../../../data/projets.ts";
+import Loadingimage from "../../../../components/Loadingimage";
 
 const Professionalpage = () => {
   const { id } = useParams<{ id: string }>();
@@ -23,7 +25,9 @@ const Professionalpage = () => {
             preview={professional.preview}
             link={professional.link}
             figure={professional.gallery?.map((gallery, index) => (
-              <Figure key={index} src={gallery.src} alt={gallery.alt} />
+              <Suspense key={index} fallback={<Loadingimage />}>
+                <Figure key={index} src={gallery.src} alt={gallery.alt} />
+              </Suspense>
             ))}
           />
         ))}
