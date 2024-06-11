@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Suspense } from "react";
 
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 
@@ -27,6 +28,14 @@ import {
   ProjetUpEn,
 } from "../../components/data/homepage/Projects";
 
+const Loadingimage = () => (
+  <>
+    <div className="flex justify-center items-center h-96">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+    </div>
+  </>
+);
+
 const Homepage = () => {
   //parallax effect
 
@@ -54,11 +63,12 @@ const Homepage = () => {
       {char}
     </motion.span>
   ));
+
   return (
     <>
       <Containers
         type="section-large"
-        className="mt-24 md:pt-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-7 rounded-xl gap-y-24 lg:gap-y-16 xl:gap-y-0 gap-x-16 relative overflow-hidden"
+        className="md:pt-0 grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-7 rounded-xl gap-y-24 lg:gap-y-16 xl:gap-y-0 gap-x-16 relative overflow-hidden"
       >
         <article className={`${styleRow}`}>
           <Heading title={jumbo.title} level="h1" />
@@ -114,16 +124,21 @@ const Homepage = () => {
             />
           </section>
         </article>
-        <header className={`text-right ${styleRow}`}>
+
+        <header className={`text-right lg:col-start-1 ${styleRow}`}>
           <Heading title={<>{greeting}</>} level="h4" className={``} />
         </header>
 
         <figure className={`lg:row-start-2 lg:row-span-2 lg:col-start-2 z-20`}>
-          <img
-            src={matthieuFocus}
-            alt="Illustration"
-            className="max-h-900px md:w-4/5 mx-auto rounded-xl"
-          />
+          <Suspense fallback={<Loadingimage />}>
+            <>
+              <img
+                src={matthieuFocus}
+                alt="Illustration"
+                className="max-h-900px md:w-4/5 mx-auto rounded-xl"
+              />
+            </>
+          </Suspense>
         </figure>
         <article className={styleRow}>
           <ScrollHeading
