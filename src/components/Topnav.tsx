@@ -123,7 +123,7 @@ const Topnav = () => {
                     onClick={closeNav}
                     className={({ isActive }) =>
                       `px-8 md:px-2 w-full hover:text-fuchsia-600 transition duration-500 transition-color font-cairo text-2xl uppercase tracking-wide font-extralight ${
-                        isActive ? "" : ""
+                        isActive ? " text-fuchsia-600" : ""
                       }
                         `
                     }
