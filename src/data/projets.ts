@@ -91,7 +91,7 @@ const learnings = [
     description:
       "A portfolio made with Vue3 to understand the basics of this framework, including the use of slots, props, components, and transitions with Vue Router.",
     tech: ["JavaScript", "bootstrap", "Vue3", "vite"],
-    link: "https://pommepatate-v1.vercel.app/about",
+    link: "https://pommepatate-v1.vercel.app",
     github: "https://github.com/matthieuGravy/pommepatate-v1",
     preview: "/projects/learning/1",
     next: "/projects/learning/3",
