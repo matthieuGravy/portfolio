@@ -1,40 +1,3 @@
-const aboutContent = {
-  title: "About",
-  description: [
-    "For me, school was not well-adapted to my needs. For a period of my life, I thought I needed to follow a traditional academic path to be a good worker or to give value to what I do. But I was wrong. I have a lot of experience in different sectors, and I have acquired many skills over the years.",
-    "I tried to learn through formal education, of course, but I have always been more interested in the practical side of things. I have always been curious and eager to learn new things.",
-    "I don't begin to read the doc, I use the doc when I have a problem, I try to solve the problem and I learn with the doc. I have always been more interested in the practical side of things.",
-    "I don't start by reading the documentation; I use it when I encounter a problem. I try to solve the problem and learn from the documentation as I go. The practical approach has always interested me more.",
-    "I adapt to my environment, always driven by my curiosity and my desire to learn new things. For me, the most important factors are the environment, positive energy, and good vibes.",
-    "I have changed over time, just like my hobbies. It is important for me to understand the world and keep evolving. I'm not afraid of change; I am someone who likes to learn and discover new things.",
-  ],
-  personality: "architect",
-  objectifLearning: [
-    {
-      id: 1,
-      title: "Next.js, Turbo, and Vercel",
-      content:
-        "I recently discovered Turbo, and its documentation has inspired me to try everything: React with Remix, Next.js, and more. I've decided to start a project with it in June.",
-    },
-    {
-      id: 2,
-      title: "Vue.js and Vuetify",
-      content: `I've found that I can help others, even in a limited capacity, to create projects when they start developing and to understand tools. Hearing a developer tell me months later, "I'm really glad I did this project with you, it's still useful to me now!" motivates me to create content through a blog. I think Vue is ideal for this purpose.`,
-    },
-    {
-      id: 3,
-      title: "The World of Python and AI",
-      content:
-        "As a third step, I want to learn more about Python. A few months ago, I discovered Django without really knowing Python in depth. I enjoyed the dynamism it brings. Why not go further with tools like Pandas, for example?",
-    },
-    {
-      id: 4,
-      title: "English",
-      content:
-        "I used to think that having a low level of technical English would be a barrier in IT because resources are often in English. However, error codes and documentation are quite similar across languages. But communicating verbally, especially understanding different accents, is still challenging and can be a barrier to effective communication. That's why I'm committed to improving my English skills.",
-    },
-  ],
-};
 const carousel = {
   2009: {
     year: "2009",
@@ -419,4 +382,5 @@ const carouselArray = Object.entries(carousel).map(([key, value], index) => ({
   ...value,
   year: key,
 }));
-export { aboutContent, carousel, carouselArray };
+
+export { carousel, carouselArray };

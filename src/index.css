@@ -12,16 +12,31 @@
 @font-face {
     font-family: 'Cairo';
     src: url('./assets/fonts/Cairo/Cairo-VariableFont_slnt.ttf') format('truetype');
+    src: url('./assets/fonts/Cairo/Cairo-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./assets/fonts/Cairo/Cairo-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./assets/fonts/Cairo/Cairo-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./assets/fonts/Cairo/Cairo-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./assets/fonts/Cairo/Cairo-Regular.svg') format('svg'); /* Legacy iOS */
   }
 
   @font-face {
     font-family: 'Sintony';
     src: url('./assets/fonts/Sintony/Sintony-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Sintony/Sintony.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./assets/fonts/Sintony/Sintony.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./assets/fonts/Sintony/Sintony.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./assets/fonts/Sintony/Sintony.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./assets/fonts/Sintony/Sintony.svg') format('svg'); /* Legacy iOS */
   }
 
   @font-face {
     font-family: 'Rubik';
     src: url('./assets/fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/Rubik/Rubik-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./assets/fonts/Rubik/Rubik-Light.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./assets/fonts/Rubik/Rubik-Light.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./assets/fonts/Rubik/Rubik-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./assets/fonts/Rubik/Rubik-Light.svg') format('svg'); /* Legacy iOS */
     
   }
 

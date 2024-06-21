@@ -1,60 +1,40 @@
 //import { useState } from "react";
 import Containers from "../../components/Containers";
 import Heading from "../../components/blocs/Heading";
-//import { carouselArray } from "../../data/about";
+import about from "../../data/en/about.ts";
 
 const Aboutpage = () => {
-  // const [selectedYear, setSelectedYear] = useState("");
-
-  // const handleYearClick = (year: string) => {setSelectedYear(year);};
   const styleP = "text-2xl tracking-widest font-sintony ";
   return (
     <>
-      <Containers
-        type="section-large"
-        className="min-h-screen flex flex-col gap-y-12 pt-36"
-      >
-        <Heading
-          title="About"
-          level="h2"
-          className="text-center md:text-start"
-        />
-        <p className={styleP}>This page is under development.</p>
-
-        {/*
-        <article>
-          <nav>
-            <ul className="flex space-x-8">
-              {carouselArray.map((item) => (
-                <li key={item.id} className="flex flex-col gap-y-4">
-                  <button onClick={() => handleYearClick(item.year)}>
-                    {item.year}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-         
-          <article>
-            {selectedYear && (
-              <>
-                <h3>
-                  {
-                    carouselArray.find((item) => item.year === selectedYear)
-                      ?.title
-                  }
-                </h3>
-                <p>
-                  {
-                    carouselArray.find((item) => item.year === selectedYear)
-                      ?.description
-                  }
-                </p>
-              </>
-            )}
-          </article>
-        </article>
-        */}
+      <Containers type="section-large" className="min-h-screen py-24">
+        <p className={styleP}>{about.description}</p>
+        <section>
+          <Heading
+            title={about.titleValue}
+            level="h3"
+            className="text-center md:text-start"
+          />
+          <ul className="grid grid-cols-2">
+            {about.value.map((value) => (
+              <li key={value.id}>
+                <Heading title={value.title} level="h5" />
+                <p className={styleP}>{value.content}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section>
+          <Heading title="Objectif Learning" level="h3" />
+          <ul>
+            {about.objectifLearning.map((objectif) => (
+              <li key={objectif.id}>
+                <Heading title={objectif.title} level="h5" />
+                <p className={styleP}>{objectif.content}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
       </Containers>
     </>
   );
