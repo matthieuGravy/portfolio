@@ -106,7 +106,7 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto md:hidden  ${
                 isNavVisible
-                  ? "absolute top-14 gap-y-4  py-4 bg-zinc-900 text-center w-screen"
+                  ? "absolute top-12 gap-y-4  py-4 bg-zinc-900 text-center w-screen"
                   : "hidden"
               }`}
               animate={controls}
@@ -161,7 +161,7 @@ const Topnav = () => {
         </section>
       </motion.header>
       <motion.div
-        className="h-1 w-full fixed top-0 left-0 bg-zinc-200 z-50"
+        className="h-1 w-full fixed top-0 left-0 bg-zinc-700 z-50"
         style={{ scaleX, originX: 0 }}
       />
     </>

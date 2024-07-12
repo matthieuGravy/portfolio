@@ -3,8 +3,6 @@ import { Suspense, useState, useEffect } from "react";
 
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 
-import MatthieuGravyDeveloperWeb from "../../assets/pictures/matthieu-gravy-full-background-colors.svg";
-
 import MaskMatt from "../../assets/pictures/mask-matt.png";
 
 import { ButtonOne, Buttonext } from "../../components/blocs/Buttons";
@@ -19,15 +17,11 @@ import Scroller from "../../components/Scroller";
 import Loadingimage from "../../components/Loadingimage";
 import Main from "../../components/Main";
 
-import { jumbo, greetingWords, projects } from "../../data/home";
+import { jumbo, greetingWords } from "../../data/home";
 import {
   MissionDownEn,
   MissionUpEn,
 } from "../../components/data/homepage/Mission";
-import {
-  ProjetDownEn,
-  ProjetUpEn,
-} from "../../components/data/homepage/Projects";
 
 const Homepage = () => {
   const [contactButton, setContatButton] = useState(false);
@@ -80,7 +74,7 @@ const Homepage = () => {
       <AnimatePresence mode="wait">
         <motion.article
           key={key}
-          className={`pt-12 ps-8 space-y-4`}
+          className={`md:pt-12 md:ps-8 space-y-4`}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -104,7 +98,6 @@ const Homepage = () => {
 
   const styleP =
     "text-2xl text-zinc-400 tracking-widest text-center font-sintony ";
-  const styleRow = "flex flex-col justify-center space-y-4 z-20";
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
 
@@ -133,18 +126,18 @@ const Homepage = () => {
 
   return (
     <>
-      <Main className="flex flex-col gap-y-16">
+      <Main className="flex flex-col gap-y-8 md:gap-y-16 pb-16 overflow-hidden">
         <Containers
           type="section-large"
           className="mt-12 rounded-xl bg-[#131316] flex overflow-hidden"
         >
-          <section className="grid grid-cols-2 w-full ">
+          <section className="grid xl:grid-cols-2 w-full ">
             <article className="flex flex-col justify-between space-y-8">
               <ContactSection
                 contactButton={contactButton}
                 greeting={greeting}
               />
-              <header className="ps-8 space-y-8 pb-8">
+              <header className="md:ps-8 space-y-8 md:pb-8">
                 <Heading title={jumbo.title} level="h1" className="" />
                 <Heading
                   title={<>{titleAnimation}</>}
@@ -152,10 +145,10 @@ const Homepage = () => {
                   className=""
                 />
               </header>
-              <footer className="pb-12 ps-8 flex gap-x-8 lg:items-end justify-end  ">
+              <footer className="md:pb-12 md:ps-8 flex gap-x-8 lg:items-end justify-end flex-col-reverse md:flex-row-reverse xl:flex-row">
                 <motion.button
                   onClick={() => setContatButton(!contactButton)}
-                  className="transition-all duration-500 hover:bg-fuchsia-500  text-zinc-900 bg-zinc-700  px-4 py-2 rounded-lg font-sintony uppercase"
+                  className="transition-all duration-500 hover:bg-fuchsia-500  text-zinc-900 bg-zinc-700 px-4 py-2 rounded-lg font-sintony uppercase mt-8 md:mt-0"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   whileTap={{ scale: 0.8 }}
@@ -198,7 +191,7 @@ const Homepage = () => {
                   content={
                     <>
                       <motion.figure
-                        className="hover:shadow-2xl transition-all duration-500 hover:bg-teal-200 rounded-full p-2 "
+                        className="flex gap-x-2 text-zinc-700 hover:shadow-2xl transition-all duration-500 hover:bg-teal-200 rounded-full p-2 "
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{
@@ -210,8 +203,9 @@ const Homepage = () => {
                         <GrLinkedinOption
                           size={24}
                           color="#3f3f46"
-                          className={classname}
+                          className=""
                         />
+                        <span className="md:hidden">/matthieugravy</span>
                       </motion.figure>
                     </>
                   }
@@ -223,7 +217,7 @@ const Homepage = () => {
                   content={
                     <>
                       <motion.figure
-                        className="hover:shadow-2xl transition-all duration-500 hover:bg-teal-200 rounded-full p-2"
+                        className="font-cairo font-xl hover:shadow-2xl transition-all duration-500 hover:bg-teal-200 text-zinc-700 rounded-full p-2 flex gap-x-2"
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
                         transition={{
@@ -237,6 +231,7 @@ const Homepage = () => {
                           color="#3f3f46"
                           className={classname}
                         />
+                        <span className="md:hidden">/matthieuGravy</span>
                       </motion.figure>
                     </>
                   }
@@ -252,7 +247,7 @@ const Homepage = () => {
                   }}
                 >
                   <a
-                    className="space-x-2 flex transition-all duration-500 hover:text-[#131316] hover:bg-teal-200 px-2 py-1 rounded-xl  items-center"
+                    className="font-cairo space-x-2 flex transition-all duration-500 hover:text-[#131316] hover:bg-teal-200 px-2 py-1 rounded-xl  items-center"
                     href="tel:+32487217823"
                   >
                     <svg
@@ -277,10 +272,10 @@ const Homepage = () => {
             <article className="flex flex-col justify-between ">
               {contactButton === true ? (
                 <>
-                  <Getintouch className="min-h-[80vh] px-8 py-12" />
+                  <Getintouch className="xl:min-h-[80vh] md:px-8 py-12 " />
                 </>
               ) : (
-                <figure className="flex items-end min-h-[80vh]">
+                <figure className="flex items-end xl:min-h-[80vh]">
                   <Suspense fallback={<Loadingimage />}>
                     <motion.img
                       src={MaskMatt}
@@ -296,8 +291,16 @@ const Homepage = () => {
             </article>
           </section>
         </Containers>
-        <Containers type="section-large" className="py-12 space-y-8">
-          <article className="px-8 flex gap-x-12">
+
+        <figure className="overflow-hidden m-auto py-24 lg:py-16 xl:py-0">
+          <ParallaxTextor velocity={1} />
+        </figure>
+
+        <Containers
+          type="section-large"
+          className="py-12 space-y-8 bg-[#131316] rounded-xl"
+        >
+          <article className="md:px-8 flex flex-col lg:flex-row gap-x-12 gap-y-6">
             <ScrollTextLeft>
               <MissionUpEn className={styleP} />
             </ScrollTextLeft>
@@ -305,18 +308,14 @@ const Homepage = () => {
               <MissionDownEn className={styleP} />
             </ScrollTextRight>
           </article>
-          <div>
-            <ButtonOne content="more" to="/about" className="" />{" "}
+
+          <Scroller />
+
+          <div className="flex justify-center">
+            <ButtonOne content="more" to="/about" className="rounded-xl px-2" />{" "}
           </div>
         </Containers>
-        <Containers type="section-large" className="bg-[#131316] rounded-xl">
-          <Scroller />
-        </Containers>
-        <article className="flex h-40 ">
-          <figure className="overflow-hidden m-auto py-24 lg:py-16 xl:py-0">
-            <ParallaxTextor velocity={1} />
-          </figure>
-        </article>
+        <Containers type="section-large" className=" rounded-xl"></Containers>
       </Main>
     </>
   );
