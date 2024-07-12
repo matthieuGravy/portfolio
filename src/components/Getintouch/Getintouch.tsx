@@ -1,13 +1,14 @@
 import ContactForm from "./ContactForm";
-import triangle from "./../../assets/backgrounds/triangle-yellow.svg";
 
-const Getintouch = () => {
+interface GetintouchProps {
+  className?: string;
+}
+const Getintouch: React.FC<GetintouchProps> = ({ className }) => {
   return (
     <>
-      <img src={triangle} alt="" className="w-full" />
-      <div className="w-full bg-yellow-200 flex justify-center py-24 md:py-0">
+      <section className={className}>
         <ContactForm />
-      </div>
+      </section>
     </>
   );
 };

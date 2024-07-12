@@ -1,23 +1,23 @@
 import { MissionUpEnProps, MissionDownEnProps } from "../../../types/types";
 
 const MissionUpEn: React.FC<MissionUpEnProps> = ({ className }) => {
-  const strong = "text-teal-400";
+  const strong = "bg-zinc-900 text-zinc-100";
   return (
     <p className={className}>
-      A web developer based in Brussels, specializing in modern web
-      technologies. I am capable of creating web projects{" "}
-      <mark className={strong}>quickly</mark> and{" "}
-      <mark className={strong}>easily</mark>.
+      Innovative web developer based in Brussels, crafting cutting-edge digital
+      solutions. I transform complex ideas into sleek, user-friendly web
+      experiences with <mark className={strong}>speed</mark> and{" "}
+      <mark className={strong}>precision</mark>.
     </p>
   );
 };
 const MissionDownEn: React.FC<MissionDownEnProps> = ({ className }) => {
-  const strong = "text-teal-400";
+  const strong = "bg-zinc-900 text-zinc-100";
   return (
     <p className={` ${className}`}>
-      I <mark className={strong}>specialize</mark> in React, Javascript, and
-      Tailwind CSS. I also have <mark className={strong}>experience</mark> with
-      Typescript, Vue.js, Node.js, Express, and MongoDB.
+      My expertise lies in React, JavaScript, and Tailwind CSS, allowing me to
+      build responsive and dynamic web applications. I bring projects to life
+      with <mark className={strong}>clean code</mark> and intuitive design.
     </p>
   );
 };

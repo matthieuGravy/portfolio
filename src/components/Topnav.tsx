@@ -9,7 +9,6 @@ import {
 } from "framer-motion";
 
 import HamburgerIcon from "./icons/HamburgerIcon";
-import itsGravyLogo from "../assets/logo/its-gravy-logo.svg";
 
 import { toplinksEn } from "../data/en/navEn";
 
@@ -80,7 +79,7 @@ const Topnav = () => {
         initial={{ y: -72 }}
         animate={isHidden ? { y: -72 } : { y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`sticky w-full top-0 py-4 text-zinc-700 uppercase z-50 bg-zinc-100`}
+        className={`sticky w-full top-0 py-4 text-zinc-700 uppercase z-50 bg-zinc-900`}
       >
         <section className="md:w-4/5 md:m-auto relative">
           {/* logo */}
@@ -88,13 +87,13 @@ const Topnav = () => {
           {/* nav mobile*/}
           <nav className="flex justify-between text-right w-full pointer-events-auto  ">
             <NavLink to="/" className=" ">
-              <motion.img
+              <motion.h2
+                className="text-2xl tracking-wider font-regular uppercase text-zinc-700 font-rubik "
                 whileTap={{ scale: 0.8 }}
-                src={itsGravyLogo}
-                className="h-10 ps-3.5 md:px-0"
-                alt="logo itsgravy"
                 onClick={closeNav}
-              />
+              >
+                Matthieu Gravy
+              </motion.h2>
             </NavLink>
             <motion.button
               onClick={toggleNav}
@@ -107,7 +106,7 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto md:hidden  ${
                 isNavVisible
-                  ? "absolute top-14 gap-y-4  py-4 bg-zinc-100 text-center w-screen"
+                  ? "absolute top-14 gap-y-4  py-4 bg-zinc-900 text-center w-screen"
                   : "hidden"
               }`}
               animate={controls}
@@ -162,7 +161,7 @@ const Topnav = () => {
         </section>
       </motion.header>
       <motion.div
-        className="h-1 w-full fixed top-0 left-0 bg-yellow-200 z-50"
+        className="h-1 w-full fixed top-0 left-0 bg-zinc-200 z-50"
         style={{ scaleX, originX: 0 }}
       />
     </>

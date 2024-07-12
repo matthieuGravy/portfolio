@@ -1,4 +1,5 @@
 import { Formik, Field, Form, FormikHelpers } from "formik";
+import { motion, AnimatePresence } from "framer-motion";
 import * as Yup from "yup";
 import { ButtonSubmit } from "../../components/blocs/Buttons";
 //import ReCAPTCHA from "react-google-recaptcha";
@@ -21,7 +22,7 @@ const ContactForm = () => {
     console.log(value);
   };*/
 
-  const styleField = `bg-yellow-200 text-zinc-700 tracking-widest font-sintony border-b-[1px] py-2 focus:outline-fuchsia-600 md:w-full`;
+  const styleField = `bg-transparent text-zinc-200 tracking-widest font-sintony border-b-[1px] py-2 focus:outline-fuchsia-500 md:w-full`;
 
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
@@ -105,9 +106,8 @@ const ContactForm = () => {
         ) : (
           <>
             <>
-              <section className=" max-w-[700px] md:p-24 rounded-xl bg-yellow-200 space-y-8">
-                <Heading title="get in touch" level="h4" className="" />
-                {/*<ReCAPTCHA sitekey="votre-clé-de-site" onChange={handleRecaptcha}> */}
+              {/*<ReCAPTCHA sitekey="votre-clé-de-site" onChange={handleRecaptcha}> */}
+              <AnimatePresence mode="wait">
                 <Formik
                   initialValues={{
                     nom: "",
@@ -122,7 +122,12 @@ const ContactForm = () => {
                 >
                   {({ errors, touched, values }) => (
                     <Form className="space-y-8">
-                      <section className="grid md:grid-cols-2 grid-rows-3 gap-y-8 xl:gap-y-12 md:gap-x-12 ">
+                      <motion.section
+                        className="grid md:grid-cols-2 grid-rows-3 gap-y-8 xl:gap-y-12 md:gap-x-12"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                      >
                         <label className="relative">
                           <Field
                             name="nom"
@@ -131,7 +136,7 @@ const ContactForm = () => {
                               errors.nom && touched.nom
                                 ? "border-red-500"
                                 : values.nom === ""
-                                ? "border-fuchsia-600"
+                                ? "border-zinc-800"
                                 : "border-green-500"
                             }`}
                           />
@@ -149,7 +154,7 @@ const ContactForm = () => {
                               errors.prenom && touched.prenom
                                 ? "border-red-500"
                                 : values.prenom === ""
-                                ? "border-fuchsia-600"
+                                ? "border-zinc-800"
                                 : "border-green-500"
                             }`}
                           />
@@ -168,7 +173,7 @@ const ContactForm = () => {
                               errors.email && touched.email
                                 ? "border-red-500 "
                                 : values.email === ""
-                                ? "border-fuchsia-600"
+                                ? "border-zinc-800"
                                 : "border-green-500"
                             }`}
                           />
@@ -186,7 +191,7 @@ const ContactForm = () => {
                               errors.entreprise && touched.entreprise
                                 ? "border-red-500"
                                 : values.entreprise === ""
-                                ? "border-fuchsia-600"
+                                ? "border-zinc-800"
                                 : "border-green-500"
                             }`}
                           />
@@ -204,7 +209,7 @@ const ContactForm = () => {
                               errors.sujet && touched.sujet
                                 ? "border-red-500"
                                 : values.sujet === ""
-                                ? "border-fuchsia-600"
+                                ? "border-zinc-800"
                                 : "border-green-500"
                             }`}
                           />
@@ -224,7 +229,7 @@ const ContactForm = () => {
                               errors.message && touched.message
                                 ? "border-red-500"
                                 : values.message === ""
-                                ? "border-fuchsia-600"
+                                ? "border-zinc-800"
                                 : "border-green-500"
                             }`}
                           />
@@ -234,14 +239,15 @@ const ContactForm = () => {
                             </p>
                           ) : null}
                         </label>
-                      </section>
-
-                      <ButtonSubmit content="Send" />
+                        <section className="col-span-2">
+                          <ButtonSubmit content="Send" />
+                        </section>
+                      </motion.section>
                     </Form>
                   )}
                 </Formik>
                 {/*</ReCAPTCHA>*/}
-              </section>
+              </AnimatePresence>
             </>
           </>
         )}

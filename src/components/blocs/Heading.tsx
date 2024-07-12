@@ -2,14 +2,14 @@ import { HeadingProps } from "../../types/types";
 
 const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
   const fontCairo = "font-cairo";
-  const colorRubik = "text-zinc-700";
+  const colorRubik = "text-zinc-500";
   const fontRubik = "font-rubik ";
   const colorCairo = "text-fuchsia-600";
   switch (level) {
     case "h1":
       return (
         <h1
-          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider font-regular uppercase ${className}`}
+          className={`${fontRubik} text-zinc-300 text-5xl xl:text-5xl tracking-wider font-regular uppercase ${className}`}
         >
           {title}
         </h1>
@@ -17,7 +17,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h2":
       return (
         <h2
-          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider font-regular  uppercase   ${className}`}
+          className={`${fontRubik} ${colorRubik} text-5xl xl:text-8xl tracking-wider font-regular    ${className}`}
         >
           {title}
         </h2>

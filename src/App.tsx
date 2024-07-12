@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <section className="bg-zinc-100 min-h-screen">
+      <section className="bg-zinc-900 min-h-screen">
         <Topnav />
         <Outlet />
         <Footer />

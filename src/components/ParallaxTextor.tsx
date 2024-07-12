@@ -41,7 +41,7 @@ function ParallaxText({ children, baseVelocity = 10 }: ParallaxProps) {
   });
 
   return (
-    <article className="text-center overflow-hidden m-0 bg-teal-200 text-zinc-500 py-4">
+    <article className="text-center overflow-hidden m-0  text-fuchsia-500 py-4">
       <motion.section className=" w-max" style={{ x }}>
         <span className="uppercase tracking-wide text-4xl font-cairo">
           {children}

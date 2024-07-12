@@ -9,12 +9,8 @@ const greetingWords = {
   evening: "Good evening",
 };
 
-const mission = {
-  title: "I'am Matthieu Gravy",
-};
-
 const projects = {
   title: "Projects",
 };
 
-export { jumbo, greetingWords, mission, projects };
+export { jumbo, greetingWords, projects };

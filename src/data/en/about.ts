@@ -1,25 +1,20 @@
 const about = {
-  titleValue: "My values",
-  description:
-    "Traditional schooling did not meet my needs. For a while, I believed that a formal academic path was necessary to add value to my work, but I was wrong. I have gained extensive experience and skills across various sectors.",
-  value: [
-    {
-      id: 1,
-      title: "Collaborative Learning and Coding",
-      content:
-        "I learned to code through a combination of free and paid resources, as well as by collaborating with other developers. While our results weren't extraordinary, we collectively improved our coding skills. I chose to work with peers of varying skill levels because inclusion is important to me.",
-    },
-    {
-      id: 2,
-      title: "Approach to Challenges",
-      content: `I thrive on diving headfirst into the unknown and firmly believe in the adage, "We learn from our mistakes."`,
-    },
+  description: [
+    "My journey to web development has been unconventional but enriching. While traditional education wasn't my path, I've embraced continuous learning through self-study, practical experience, and professional development programs. This diverse background has equipped me with:",
+    "My non-traditional route has instilled in me a passion for lifelong learning and a drive to constantly improve. I've successfully translated my varied experiences into valuable assets for web development, combining technical skills with a broad understanding of different business needs.",
   ],
-  titleValue: "Objectif Learning",
+  values: [
+    "- Adaptability and resilience from navigating various industries",
+    "- Strong problem-solving skills honed through real-world challenges",
+    "- A unique perspective that brings innovation to technical solutions",
+    "- Proven ability to quickly acquire and apply new skills",
+  ],
+
+  titleLearning: "Objectif Learning",
   objectifLearning: [
     {
       id: 1,
-      title: "Next.js, Turbo, and Vercel",
+      title: "Next.js, Remix, Turbo, and Vercel",
       content:
         "I recently discovered Turbo, and its documentation has inspired me to try everything: React with Remix, Next.js, and more. I've decided to start a project with it in June.",
     },
@@ -30,15 +25,15 @@ const about = {
     },
     {
       id: 3,
-      title: "The World of Python and AI",
+      title: "Nest.js",
       content:
-        "As a third step, I want to learn more about Python. A few months ago, I discovered Django without really knowing Python in depth. I enjoyed the dynamism it brings. Why not go further with tools like Pandas, for example?",
+        "I've been working with Express.js for a while, but I want to try something new. I've heard good things about Nest.js, and I'm excited to try it.",
     },
     {
       id: 4,
       title: "English",
       content:
-        "I used to think that having a low level of technical English would be a barrier in IT because resources are often in English. However, error codes and documentation are quite similar across languages. But communicating verbally, especially understanding different accents, is still challenging and can be a barrier to effective communication. That's why I'm committed to improving my English skills.",
+        "I once believed that my basic technical English skills would serve as a roadblock in the IT industry, given the predominance of English resources. Surprisingly, I've found that error codes and documentation often share significant similarities across diverse languages. Nevertheless, verbal communication, especially understanding a variety of accents, presents a considerable challenge, potentially hindering effective communication. That's why I have enrolled in an English course starting this July, aiming for a swift attainment of B1 certification.",
     },
   ],
 };

@@ -131,7 +131,7 @@ const Buttonext: React.FC<ButtonextProps> = ({
         title={title}
         target="_blank"
         rel="noreferrer"
-        className={`transition-all text-zinc-400 hover:text-fuchsia-600 ${className}"`}
+        className={`transition-all text-zinc-500 hover:text-fuchsia-600 ${className}"`}
       >
         {content}
       </a>
@@ -152,7 +152,7 @@ const ButtonextTwo: React.FC<ButtonextProps> = ({
         title={title}
         rel="noreferrer"
         target="_blank"
-        className={`hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500 ${className}`}
+        className={`hover:bg-fuchsia-700 hover:text-zinc-50 transition-colors duration-500 ${className}`}
       >
         <>{content}</>
       </a>
@@ -194,13 +194,14 @@ const ButtonCards: React.FC<ButtonCardsProps> = ({
 
 interface ButtonSubmitProps {
   content: string;
+  className?: string;
 }
-const ButtonSubmit: React.FC<ButtonSubmitProps> = ({ content }) => {
+const ButtonSubmit: React.FC<ButtonSubmitProps> = ({ content, className }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <button
       type="submit"
-      className="uppercase w-full  text-zinc-400 flex justify-center py-2 hover:bg-fuchsia-700 hover:text-neutral-50 transition-colors duration-500"
+      className={`uppercase w-full  text-zinc-400 flex justify-center py-2 hover:bg-teal-200 hover:text-zinc-800 transition-colors duration-500" ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

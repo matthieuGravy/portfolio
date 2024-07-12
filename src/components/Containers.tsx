@@ -11,7 +11,7 @@ const Containers: React.FC<ContainersProps> = ({
       return (
         <section
           id={id}
-          className={`w-full px-3.5  md:px-24 lg:px-0 lg:m-auto lg:w-4/5 xl:max-w-screen-xl ${className}`}
+          className={`w-full px-3.5  md:px-24 lg:px-0 lg:mx-auto lg:w-4/5 xl:max-w-screen-xl ${className}`}
         >
           {children}
         </section>

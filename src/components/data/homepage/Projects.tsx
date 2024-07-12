@@ -6,7 +6,7 @@ interface ProjetDownEnprops {
 }
 
 const ProjetUpEn: React.FC<ProjetUpEnprops> = ({ className }) => {
-  const strong = "text-teal-400";
+  const strong = "bg-zinc-900 text-yellow-400";
   return (
     <p className={className}>
       These projects include initial{" "}
@@ -18,7 +18,7 @@ const ProjetUpEn: React.FC<ProjetUpEnprops> = ({ className }) => {
 };
 
 const ProjetDownEn: React.FC<ProjetDownEnprops> = ({ className }) => {
-  const strong = "text-teal-400";
+  const strong = "bg-zinc-900 text-yellow-400";
   return (
     <p className={` ${className}`}>
       In addition, these projects also showcase the results of my{" "}

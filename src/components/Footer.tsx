@@ -1,19 +1,14 @@
 import { NavLink } from "react-router-dom";
 
-import { CopyrightProps } from "../types/types";
 import { Buttonext } from "./blocs/Buttons";
 import { linksEn, sourceEn } from "../data/en/footer";
-
-const Copyright: React.FC<CopyrightProps> = ({ author }) => {
-  return <a href="https://www.linkedin.com/in/matthieugravy/">{author}</a>;
-};
 
 const Footer = () => {
   const signe = "©";
   const author = "Matthieu Gravy";
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-yellow-200">
+    <footer className="bg-[#131316]">
       <article className="grid-cols-1 md:grid-cols-2 grid px-4 md:px-0 md:w-4/5 md:m-auto py-8 uppercase text-zinc-500 text-xs gap-y-2">
         <ul className="flex items-center md:items-start flex-col gap-y-2">
           {linksEn.map((link) => (
@@ -29,7 +24,12 @@ const Footer = () => {
               {signe}
               {year}
             </p>
-            <Copyright author={author} />
+            <Buttonext
+              title="author"
+              link={"https://www.linkedin.com/in/matthieugravy/"}
+              content={"Matthieu Gravy"}
+              className=""
+            />
           </article>
           <Buttonext
             title={sourceEn}
