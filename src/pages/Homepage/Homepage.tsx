@@ -1,5 +1,10 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { Suspense, useState, useEffect } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { Suspense, useState, useEffect, useRef } from "react";
 
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 
@@ -11,7 +16,6 @@ import Containers from "../../components/Containers";
 import ParallaxTextor from "../../components/ParallaxTextor";
 import ScrollTextRight from "../../components/animate/ScrollTextRight";
 import ScrollTextLeft from "../../components/animate/ScrollTextLeft";
-import ScrollHeading from "../../components/animate/ScollHeading";
 import Getintouch from "../../components/Getintouch/Getintouch";
 import Scroller from "../../components/Scroller";
 import Loadingimage from "../../components/Loadingimage";
@@ -25,6 +29,13 @@ import {
 
 const Homepage = () => {
   const [contactButton, setContatButton] = useState(false);
+  const figureRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: figureRef,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+
   const hourRange = new Date().getHours();
   const greeting =
     hourRange < 12
@@ -145,10 +156,10 @@ const Homepage = () => {
                   className=""
                 />
               </header>
-              <footer className="md:pb-12 md:ps-8 flex gap-x-8 lg:items-end justify-end flex-col-reverse md:flex-row-reverse xl:flex-row">
+              <footer className="md:pb-12 md:ps-8 flex gap-x-8 lg:items-center justify-end flex-col-reverse md:flex-row-reverse xl:flex-row ">
                 <motion.button
                   onClick={() => setContatButton(!contactButton)}
-                  className="transition-all duration-500 hover:bg-fuchsia-500  text-zinc-900 bg-zinc-700 px-4 py-2 rounded-lg font-sintony uppercase mt-8 md:mt-0"
+                  className="text-fuchsia-500 hover:bg-fuchsia-500 hover:text-zinc-800 rounded-lg flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide uppercase mt-8 md:mt-0"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   whileTap={{ scale: 0.8 }}
@@ -275,14 +286,18 @@ const Homepage = () => {
                   <Getintouch className="xl:min-h-[80vh] md:px-8 py-12 " />
                 </>
               ) : (
-                <figure className="flex items-end xl:min-h-[80vh]">
+                <figure
+                  ref={figureRef}
+                  className="flex items-end xl:min-h-[80vh]"
+                >
                   <Suspense fallback={<Loadingimage />}>
                     <motion.img
                       src={MaskMatt}
                       alt=""
                       width="450px"
+                      style={{ y }}
                       initial={{ x: 50, y: 50, opacity: 0 }}
-                      animate={{ x: 0, y: 0, opacity: 1 }}
+                      animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.8, delay: 0.1 }}
                     />
                   </Suspense>
@@ -295,10 +310,9 @@ const Homepage = () => {
         <figure className="overflow-hidden m-auto py-24 lg:py-16 xl:py-0">
           <ParallaxTextor velocity={1} />
         </figure>
-
         <Containers
           type="section-large"
-          className="py-12 space-y-8 bg-[#131316] rounded-xl"
+          className="md:py-12 space-y-8 bg-[#131316] rounded-xl"
         >
           <article className="md:px-8 flex flex-col lg:flex-row gap-x-12 gap-y-6">
             <ScrollTextLeft>
@@ -312,7 +326,7 @@ const Homepage = () => {
           <Scroller />
 
           <div className="flex justify-center">
-            <ButtonOne content="more" to="/about" className="rounded-xl px-2" />{" "}
+            <ButtonOne content="more" to="/about" className="rounded-xl px-4" />{" "}
           </div>
         </Containers>
         <Containers type="section-large" className=" rounded-xl"></Containers>

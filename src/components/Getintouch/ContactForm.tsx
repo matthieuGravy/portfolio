@@ -22,7 +22,7 @@ const ContactForm = () => {
     console.log(value);
   };*/
 
-  const styleField = `bg-transparent text-zinc-200 tracking-widest font-sintony border-b-[1px] py-2 focus:outline-fuchsia-500 md:w-full`;
+  const styleField = `bg-transparent text-zinc-200 tracking-widest font-sintony border-b-[1px] py-2 focus:outline-fuchsia-500 w-full`;
 
   const SignupSchema = Yup.object().shape({
     nom: Yup.string()
@@ -99,8 +99,8 @@ const ContactForm = () => {
         {formSubmitted ? (
           <>
             <section className="text-center py-24">
-              <Heading title="Thank you !" level="h2" className="" />
-              <p className="text-center">Message Sent</p>
+              <Heading title="Thank you !" level="h3" className="" />
+              <p className="text-center text-zinc-400">Message Sent</p>
             </section>
           </>
         ) : (
@@ -123,7 +123,7 @@ const ContactForm = () => {
                   {({ errors, touched, values }) => (
                     <Form className="space-y-8">
                       <motion.section
-                        className="grid md:grid-cols-2 grid-rows-3 gap-y-8 xl:gap-y-12 md:gap-x-12"
+                        className="flex flex-col  md:grid md:grid-cols-2 grid-rows-3 gap-y-8 xl:gap-y-12 md:gap-x-12"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1, delay: 0.5 }}
@@ -239,7 +239,7 @@ const ContactForm = () => {
                             </p>
                           ) : null}
                         </label>
-                        <section className="col-span-2">
+                        <section className="md:col-span-2 mx-auto">
                           <ButtonSubmit content="Send" />
                         </section>
                       </motion.section>
