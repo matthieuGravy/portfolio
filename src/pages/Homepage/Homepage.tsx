@@ -323,7 +323,7 @@ const Homepage = () => {
         </figure>
         <Containers
           type="section-large"
-          className="md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
+          className="py-8 md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
         >
           <article className="md:px-8 flex flex-col lg:flex-row gap-x-12 gap-y-6">
             <ScrollTextLeft>
@@ -342,13 +342,13 @@ const Homepage = () => {
         </Containers>
         <Containers
           type="section-large"
-          className="md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
+          className="py-8 md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
         >
           <article className="space-y-12">
             <ScrollHeading
               title="Shared for developpers"
               level="h3"
-              className="ps-8"
+              className="md:ps-8"
             />
             <section className="flex flex-col lg:grid grid-cols-2 gap-8">
               <article className="md:ps-8 space-y-6">
