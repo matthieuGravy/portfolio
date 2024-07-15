@@ -53,17 +53,14 @@ const content = {
   learnings: {
     title: "Learnings",
     textOne:
-      "I participated in a bootcamp with BeCode. I had already started developing on my own, but I needed more structure and guidance. I found JavaScript difficult to get a handle on. So, I decided to take this course to learn how to work in a team, use Git, manage constraints, and collaborate with back-end developers.",
-
-    textTwo:
-      "All these projects may not be visually or technically amazing, but they taught me a lot in their context. I am still happy to share them because it is partly thanks to them that I was able to progress.",
+      "Bienvenue sur ma page de projets ! Ici, vous trouverez une sélection de mes travaux, incluant des templates de portfolio, des projets d'apprentissage et des projets professionnels.",
   },
   professionals: {
     title: "Professional",
   },
 };
 
-const learnings = [
+const shared = [
   {
     id: "1",
     src: "https://via.placeholder.com/150",
@@ -113,8 +110,10 @@ const learnings = [
     preview: "/projects/learning/2",
     next: "/projects/learning/4",
   },
+];
+const learnings = [
   {
-    id: "4",
+    id: "1",
     src: "https://via.placeholder.com/150",
     name: "ITG Kitchens",
     gallery: [
@@ -134,7 +133,7 @@ const learnings = [
     next: "/projects/learning/5",
   },
   {
-    id: "5",
+    id: "2",
     src: "https://via.placeholder.com/150",
     gallery: [
       { id: 1, src: plantclicker, alt: "plant clicker" },
@@ -151,7 +150,7 @@ const learnings = [
     next: "/projects/learning/6",
   },
   {
-    id: "6",
+    id: "3",
     src: "https://via.placeholder.com/150",
     name: "Express Pug",
     role: "Back-end",
@@ -163,7 +162,7 @@ const learnings = [
     next: "/projects/learning/7",
   },
   {
-    id: "7",
+    id: "4",
     src: "https://via.placeholder.com/150",
     name: "Docker Project",
     role: "Back-end",
@@ -175,7 +174,7 @@ const learnings = [
     next: "/projects/learning/8",
   },
   {
-    id: "8",
+    id: "5",
     src: "https://via.placeholder.com/150",
     gallery: [
       { id: 1, src: nightHome, alt: "night home" },
@@ -191,7 +190,7 @@ const learnings = [
     next: "/projects/learning/9",
   },
   {
-    id: "9",
+    id: "6",
     src: "https://via.placeholder.com/150",
     gallery: [
       { id: 1, src: sorahome, alt: "sora home" },
@@ -210,7 +209,7 @@ const learnings = [
     next: "/projects/learning/10",
   },
   {
-    id: "10",
+    id: "7",
     src: "https://via.placeholder.com/150",
     name: "Bookface",
     gallery: [{ id: 1, src: bookface, alt: "bookface" }],
@@ -257,4 +256,4 @@ const professionals = [
   },
 ];
 
-export { learnings, professionals, content };
+export { shared, learnings, professionals, content };

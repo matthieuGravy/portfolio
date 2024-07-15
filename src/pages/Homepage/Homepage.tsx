@@ -9,6 +9,9 @@ import { Suspense, useState, useEffect, useRef } from "react";
 import { GrGithub, GrLinkedinOption } from "react-icons/gr";
 
 import MaskMatt from "../../assets/pictures/mask-matt.png";
+import TemplateHtml from "../../assets/pictures/shine/template-html.png";
+import TemplateVue from "../../assets/pictures/shine/template-vue.png";
+import TemplateGsap from "../../assets/pictures/shine/template-vue-gsap.png";
 
 import { ButtonOne, Buttonext } from "../../components/blocs/Buttons";
 import Heading from "../../components/blocs/Heading";
@@ -16,10 +19,12 @@ import Containers from "../../components/Containers";
 import ParallaxTextor from "../../components/ParallaxTextor";
 import ScrollTextRight from "../../components/animate/ScrollTextRight";
 import ScrollTextLeft from "../../components/animate/ScrollTextLeft";
+import ScrollHeading from "../../components/animate/ScrollHeading";
 import Getintouch from "../../components/Getintouch/Getintouch";
 import Scroller from "../../components/Scroller";
 import Loadingimage from "../../components/Loadingimage";
 import Main from "../../components/Main";
+import CardCarousel from "../../components/CardCarousel";
 
 import { jumbo, greetingWords } from "../../data/home";
 import {
@@ -28,7 +33,14 @@ import {
 } from "../../components/data/homepage/Mission";
 
 const Homepage = () => {
+  const galleryTemplate = [TemplateHtml, TemplateVue, TemplateGsap];
+
   const [contactButton, setContatButton] = useState(false);
+  const [isImageVisible, setIsImageVisible] = useState(!contactButton);
+  useEffect(() => {
+    setIsImageVisible(!contactButton);
+  }, [contactButton]);
+
   const figureRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: figureRef,
@@ -107,8 +119,7 @@ const Homepage = () => {
     );
   };
 
-  const styleP =
-    "text-2xl text-zinc-400 tracking-widest text-center font-sintony ";
+  const styleP = "text-2xl text-zinc-400 tracking-wide text-left font-sintony ";
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
 
@@ -137,10 +148,10 @@ const Homepage = () => {
 
   return (
     <>
-      <Main className="flex flex-col gap-y-8 md:gap-y-16 pb-16 overflow-hidden">
+      <Main className="flex flex-col gap-y-12 md:gap-y-16 pb-16 overflow-hidden">
         <Containers
           type="section-large"
-          className="mt-12 rounded-xl bg-[#131316] flex overflow-hidden"
+          className="mt-12 rounded-xl bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] flex overflow-hidden"
         >
           <section className="grid xl:grid-cols-2 w-full ">
             <article className="flex flex-col justify-between space-y-8">
@@ -156,7 +167,7 @@ const Homepage = () => {
                   className=""
                 />
               </header>
-              <footer className="md:pb-12 md:ps-8 flex gap-x-8 lg:items-center justify-end flex-col-reverse md:flex-row-reverse xl:flex-row ">
+              <footer className="z-30 md:pb-12 md:ps-8 flex gap-x-8 lg:items-center justify-end flex-col-reverse md:flex-row-reverse xl:flex-row ">
                 <motion.button
                   onClick={() => setContatButton(!contactButton)}
                   className="text-fuchsia-500 hover:bg-fuchsia-500 hover:text-zinc-800 rounded-lg flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide uppercase mt-8 md:mt-0"
@@ -280,26 +291,26 @@ const Homepage = () => {
                 </motion.article>
               </footer>
             </article>
-            <article className="flex flex-col justify-between ">
-              {contactButton === true ? (
-                <>
-                  <Getintouch className="xl:min-h-[80vh] md:px-8 py-12 " />
-                </>
+            <article className="flex flex-col justify-between">
+              {contactButton ? (
+                <Getintouch className="xl:min-h-[80vh] md:px-8 py-12 " />
               ) : (
                 <figure
                   ref={figureRef}
                   className="flex items-end xl:min-h-[80vh]"
                 >
                   <Suspense fallback={<Loadingimage />}>
-                    <motion.img
-                      src={MaskMatt}
-                      alt=""
-                      width="450px"
-                      style={{ y }}
-                      initial={{ x: 50, y: 50, opacity: 0 }}
-                      animate={{ x: 0, opacity: 1 }}
-                      transition={{ duration: 0.8, delay: 0.1 }}
-                    />
+                    {isImageVisible && (
+                      <motion.img
+                        src={MaskMatt}
+                        alt=""
+                        width="450px"
+                        style={{ y }}
+                        initial={{ x: 50, y: 50, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.8, delay: 0.1 }}
+                      />
+                    )}
                   </Suspense>
                 </figure>
               )}
@@ -312,7 +323,7 @@ const Homepage = () => {
         </figure>
         <Containers
           type="section-large"
-          className="md:py-12 space-y-8 bg-[#131316] rounded-xl"
+          className="md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
         >
           <article className="md:px-8 flex flex-col lg:flex-row gap-x-12 gap-y-6">
             <ScrollTextLeft>
@@ -323,13 +334,56 @@ const Homepage = () => {
             </ScrollTextRight>
           </article>
 
-          <Scroller />
-
           <div className="flex justify-center">
             <ButtonOne content="more" to="/about" className="rounded-xl px-4" />{" "}
           </div>
+
+          <Scroller />
         </Containers>
-        <Containers type="section-large" className=" rounded-xl"></Containers>
+        <Containers
+          type="section-large"
+          className="md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
+        >
+          <article className="space-y-12">
+            <ScrollHeading
+              title="Shared for developpers"
+              level="h3"
+              className="ps-8"
+            />
+            <section className="flex flex-col lg:grid grid-cols-2 gap-8">
+              <article className="md:ps-8 space-y-6">
+                <ScrollTextLeft>
+                  <p className={`${styleP}`}>
+                    I've crafted three distinct portfolios, each a journey
+                    through modern web development with{" "}
+                    <mark className="text-[#dd4b25] bg-transparent">HTML</mark>,{" "}
+                    <mark className="text-[#c66393] bg-transparent">Sass</mark>,{" "}
+                    <mark className="text-[#8712f3] bg-transparent">
+                      Bootstrap
+                    </mark>
+                    , <mark className="text-[#3fb27f] bg-transparent">Vue</mark>
+                    ,{" "}
+                    <mark className="text-[#a5fd84] bg-transparent">GSAP</mark>.
+                    These projects are designed to be nearly ready-to-use,
+                    saving developers valuable time in creating their online
+                    presence.
+                  </p>
+                </ScrollTextLeft>
+                <ScrollTextLeft>
+                  <p className={`${styleP}`}>
+                    Need a professional portfolio but short on time? These
+                    templates are shared on GitHub, offering a quick solution to
+                    showcase your skills. Simply fork, customize, and deploy -
+                    your polished web presence is just a few clicks away.
+                  </p>
+                </ScrollTextLeft>
+              </article>
+              <figure className="max-w-[600px] overflow-hidden">
+                <CardCarousel images={galleryTemplate} />
+              </figure>
+            </section>
+          </article>
+        </Containers>
       </Main>
     </>
   );

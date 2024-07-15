@@ -26,7 +26,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
         to={to}
         className={`uppercase  flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide ${className}  ${
           isHovered
-            ? "hover:bg-fuchsia-600 hover:text-neutral-50 "
+            ? "hover:bg-fuchsia-600 hover:text-zinc-900 "
             : "text-fuchsia-600"
         }`}
         onClick={onClick}

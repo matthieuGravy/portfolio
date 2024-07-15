@@ -4,7 +4,7 @@ import { CardProject } from "../../../../components/Cards";
 import { learnings, professionals, content } from "../../../../data/projets";
 import ScrollTextLeft from "../../../../components/animate/ScrollTextLeft";
 import ScrollTextRight from "../../../../components/animate/ScrollTextRight";
-import ScrollHeading from "../../../../components/animate/ScollHeading";
+import ScrollHeading from "../../../../components/animate/ScrollHeading";
 import Main from "../../../../components/Main";
 
 const Projectpage = () => {

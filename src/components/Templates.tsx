@@ -5,7 +5,7 @@ import { useState } from "react";
 import { TemplatesProps } from "../types/types";
 
 import ScrollTextLeft from "./animate/ScrollTextLeft";
-import ScrollHeading from "./animate/ScollHeading";
+import ScrollHeading from "./animate/ScrollHeading";
 import ArrowRigths from "./animate/ArrowRigths";
 import Heading from "./blocs/Heading";
 import Main from "./Main";
