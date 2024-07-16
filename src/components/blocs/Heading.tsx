@@ -41,7 +41,7 @@ const Heading: React.FC<HeadingProps> = ({ title, className, level }) => {
     case "h5":
       return (
         <h5
-          className={`${fontCairo} text-2xl xl:text-4xl font-extralight uppercase tracking-wide  ${className}`}
+          className={`${fontCairo} ${colorRubik}  text-xl  font-extralight uppercase tracking-wide  ${className}`}
         >
           {title}
         </h5>

@@ -25,15 +25,25 @@ import Scroller from "../../components/Scroller";
 import Loadingimage from "../../components/Loadingimage";
 import Main from "../../components/Main";
 import CardCarousel from "../../components/CardCarousel";
+import RandomNumber from "../../components/RandomNumber";
 
 import { jumbo, greetingWords } from "../../data/home";
 import {
   MissionDownEn,
   MissionUpEn,
 } from "../../components/data/homepage/Mission";
+import { shared, learnings, professionals } from "../../data/projets";
 
 const Homepage = () => {
   const galleryTemplate = [TemplateHtml, TemplateVue, TemplateGsap];
+  const renderListItem = (finalNumber, title) => (
+    <li className="flex flex-col items-center gap-y-6">
+      <article className="space-y-6 px-8 text-center">
+        <RandomNumber finalNumber={finalNumber} />
+        <Heading level="h5" title={title} />
+      </article>
+    </li>
+  );
 
   const [contactButton, setContatButton] = useState(false);
   const [isImageVisible, setIsImageVisible] = useState(!contactButton);
@@ -119,7 +129,7 @@ const Homepage = () => {
     );
   };
 
-  const styleP = "text-2xl text-zinc-400 tracking-wide text-left font-sintony ";
+  const styleP = "text-2xl text-zinc-400 tracking-wide font-sintony ";
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
 
@@ -348,7 +358,7 @@ const Homepage = () => {
             <ScrollHeading
               title="Shared for developpers"
               level="h3"
-              className="md:ps-8"
+              className="md:ps-8 flex flex-col gap-y-16"
             />
             <section className="flex flex-col lg:grid grid-cols-2 gap-8">
               <article className="md:ps-8 space-y-6">
@@ -376,13 +386,32 @@ const Homepage = () => {
                     showcase your skills. Simply fork, customize, and deploy -
                     your polished web presence is just a few clicks away.
                   </p>
-                </ScrollTextLeft>
+                </ScrollTextLeft>{" "}
               </article>
               <figure className="max-w-[600px] overflow-hidden">
                 <CardCarousel images={galleryTemplate} />
               </figure>
             </section>
           </article>
+          <section className="bg-[#131316] space-y-12 pb-12">
+            <ScrollHeading
+              title="My projects"
+              level="h3"
+              className="text-center pt-16"
+            />
+            <ul className="grid grid-cols-3 pb-12">
+              {renderListItem(shared?.length || 0, "Shareds")}
+              {renderListItem(learnings?.length || 0, "Learnings")}
+              {renderListItem(professionals?.length || 0, "Pros")}
+            </ul>
+            <div className="flex justify-center">
+              <ButtonOne
+                content="View more"
+                to="/about"
+                className="rounded-xl px-4"
+              />{" "}
+            </div>
+          </section>
         </Containers>
       </Main>
     </>
