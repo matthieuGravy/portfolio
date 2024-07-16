@@ -86,26 +86,43 @@ const ButtonOneSecondaire: React.FC<ButtonOneSecondaireProps> = ({
 interface ButtonTwoProps {
   to: string;
   content: React.ReactNode;
-  className?: string;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  className?: string;
+  onClick?: () => void;
 }
+
 const ButtonTwo: React.FC<ButtonTwoProps> = ({
   to,
   content,
-  className,
   onMouseEnter,
   onMouseLeave,
+  className,
+  onClick,
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <NavLink
         to={to}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        className={`inline-block scale-110 hover:scale-90 transition-all ${className}`}
+        className={`uppercase  flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide ${className}  ${
+          isHovered ? "hover:bg-teal-400 hover:text-zinc-900 " : "text-teal-400"
+        }`}
+        onClick={onClick}
+        onMouseEnter={() => {
+          setIsHovered(true);
+          if (onMouseEnter) {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          if (onMouseLeave) {
+            onMouseLeave();
+          }
+        }}
       >
-        {content}
+        <>{content}</>
       </NavLink>
     </>
   );

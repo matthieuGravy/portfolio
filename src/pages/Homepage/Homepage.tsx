@@ -13,7 +13,11 @@ import TemplateHtml from "../../assets/pictures/shine/template-html.png";
 import TemplateVue from "../../assets/pictures/shine/template-vue.png";
 import TemplateGsap from "../../assets/pictures/shine/template-vue-gsap.png";
 
-import { ButtonOne, Buttonext } from "../../components/blocs/Buttons";
+import {
+  ButtonOne,
+  Buttonext,
+  ButtonTwo,
+} from "../../components/blocs/Buttons";
 import Heading from "../../components/blocs/Heading";
 import Containers from "../../components/Containers";
 import ParallaxTextor from "../../components/ParallaxTextor";
@@ -36,7 +40,7 @@ import { shared, learnings, professionals } from "../../data/projets";
 
 const Homepage = () => {
   const galleryTemplate = [TemplateHtml, TemplateVue, TemplateGsap];
-  const renderListItem = (finalNumber, title) => (
+  const renderListItem = (finalNumber: number, title: string) => (
     <li className="flex flex-col items-center gap-y-6">
       <article className="space-y-6 px-8 text-center">
         <RandomNumber finalNumber={finalNumber} />
@@ -95,8 +99,14 @@ const Homepage = () => {
       transition: { duration: 0.2 },
     },
   };
-
-  const ContactSection = ({ contactButton, greeting }) => {
+  interface ContactSectionProps {
+    contactButton: string | boolean;
+    greeting: string;
+  }
+  const ContactSection: React.FC<ContactSectionProps> = ({
+    contactButton,
+    greeting,
+  }) => {
     const [key, setKey] = useState(0);
 
     useEffect(() => {
@@ -113,7 +123,8 @@ const Homepage = () => {
           animate="visible"
           exit="exit"
         >
-          {contactButton ? (
+          {(typeof contactButton === "string" && contactButton.length > 0) ||
+          (typeof contactButton === "boolean" && contactButton) ? (
             <motion.div variants={itemVariants}>
               <motion.header>
                 <Heading title="Get in touch" level="h4" className={``} />
@@ -303,11 +314,11 @@ const Homepage = () => {
             </article>
             <article className="flex flex-col justify-between">
               {contactButton ? (
-                <Getintouch className="xl:min-h-[80vh] md:px-8 py-12 " />
+                <Getintouch className="xl:min-h-[700px] md:px-8 py-12 " />
               ) : (
                 <figure
                   ref={figureRef}
-                  className="flex items-end xl:min-h-[80vh]"
+                  className="flex items-end xl:min-h-[700px] "
                 >
                   <Suspense fallback={<Loadingimage />}>
                     {isImageVisible && (
@@ -345,16 +356,20 @@ const Homepage = () => {
           </article>
 
           <div className="flex justify-center">
-            <ButtonOne content="more" to="/about" className="rounded-xl px-4" />{" "}
+            <ButtonOne
+              content="Learn More"
+              to="/about"
+              className="rounded-xl px-4"
+            />{" "}
           </div>
 
           <Scroller />
         </Containers>
         <Containers
           type="section-large"
-          className="py-8 md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
+          className=" space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
         >
-          <article className="space-y-12">
+          <article className="space-y-12 py-8 md:py-12">
             <ScrollHeading
               title="Shared for developpers"
               level="h3"
@@ -393,21 +408,24 @@ const Homepage = () => {
               </figure>
             </section>
           </article>
-          <section className="bg-[#131316] space-y-12 pb-12">
+          <section className="bg-[#101013] space-y-12 pb-12 rounded-xl">
             <ScrollHeading
               title="My projects"
               level="h3"
               className="text-center pt-16"
             />
-            <ul className="grid grid-cols-3 pb-12">
-              {renderListItem(shared?.length || 0, "Shareds")}
+            <ul className="grid grid-rows-3 gap-y-8 md:grid-cols-3 md:grid-rows-1 pb-12">
+              {renderListItem(shared?.length || 0, "Shared Projects")}
               {renderListItem(learnings?.length || 0, "Learnings")}
-              {renderListItem(professionals?.length || 0, "Pros")}
+              {renderListItem(
+                professionals?.length || 0,
+                "Professional Projects"
+              )}
             </ul>
             <div className="flex justify-center">
-              <ButtonOne
+              <ButtonTwo
                 content="View more"
-                to="/about"
+                to="/projects"
                 className="rounded-xl px-4"
               />{" "}
             </div>

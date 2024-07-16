@@ -9,7 +9,6 @@ const about = {
     "- A unique perspective that brings innovation to technical solutions",
     "- Proven ability to quickly acquire and apply new skills",
   ],
-
   titleLearning: "Objectif Learning",
   objectifLearning: [
     {

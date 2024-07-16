@@ -1,9 +1,12 @@
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-const CardCarousel = ({ images }) => {
-  const desktopContainerRef = useRef(null);
-  const mobileContainerRef = useRef(null);
+interface CardCarouselProps {
+  images: string[];
+}
+const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
+  const desktopContainerRef = useRef<HTMLDivElement>(null);
+  const mobileContainerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
   const [mobileConstraints, setMobileConstraints] = useState({
@@ -21,7 +24,7 @@ const CardCarousel = ({ images }) => {
       const scrollWidth = mobileContainerRef.current.scrollWidth;
       setMobileConstraints({ left: 0, right: containerWidth - scrollWidth });
     }
-  }, []);
+  }, []); // Assurez-vous d'ajouter des dépendances ici si nécessaire
 
   const { scrollXProgress } = useScroll({ container: desktopContainerRef });
 

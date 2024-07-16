@@ -25,15 +25,11 @@ const Aboutpage = () => {
               >
                 {about.description[0]}
               </motion.p>
-              <motion.ul className="grid grid-cols-2 grid-flow-row  bg-red-400 w-2/3  ">
-                <>
-                  {about.values.map((value) => (
-                    <li key={value.id} className="relative">
-                      {value}
-                    </li>
-                  ))}
-                </>
-              </motion.ul>
+              <ul>
+                {about.values.map((value, index) => (
+                  <li key={index}>{value}</li>
+                ))}
+              </ul>
               <p className={`bg-red-200  w-2/3  ${styleP}`}>
                 {about.description[1]}
               </p>

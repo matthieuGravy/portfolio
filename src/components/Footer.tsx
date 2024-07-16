@@ -5,7 +5,6 @@ import { linksEn, sourceEn } from "../data/en/footer";
 
 const Footer = () => {
   const signe = "©";
-  const author = "Matthieu Gravy";
   const year = new Date().getFullYear();
   return (
     <footer className="bg-[#131316]">

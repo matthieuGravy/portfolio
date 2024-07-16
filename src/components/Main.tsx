@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 interface MainProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 const Main: React.FC<MainProps> = ({ children, className }) => {

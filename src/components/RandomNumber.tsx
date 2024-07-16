@@ -7,7 +7,11 @@ import {
   useInView,
 } from "framer-motion";
 
-function RandomNumber({ finalNumber }) {
+interface RandomNumberProps {
+  finalNumber: number;
+}
+
+const RandomNumber: React.FC<RandomNumberProps> = ({ finalNumber }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 1 });
   const count = useMotionValue(0);
@@ -29,6 +33,6 @@ function RandomNumber({ finalNumber }) {
       {rounded}
     </motion.h4>
   );
-}
+};
 
 export default RandomNumber;

@@ -3,7 +3,6 @@ import Containers from "../../../../components/Containers";
 import { CardProject } from "../../../../components/Cards";
 import { learnings, professionals, content } from "../../../../data/projets";
 import ScrollTextLeft from "../../../../components/animate/ScrollTextLeft";
-import ScrollTextRight from "../../../../components/animate/ScrollTextRight";
 import ScrollHeading from "../../../../components/animate/ScrollHeading";
 import Main from "../../../../components/Main";
 
@@ -29,11 +28,6 @@ const Projectpage = () => {
               <ScrollHeading level="h4" title={content.learnings.title} />
               <Heading title={content.heading} level="h2" className="" />
             </header>
-            <section className={`md:row-span-2 md:py-12 lg:py-24`}>
-              <ScrollTextRight className={`md:row-span-2 `}>
-                <p className={`${styleP}`}>{content.learnings.textTwo}</p>
-              </ScrollTextRight>
-            </section>
           </article>
           <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24 pt-14 pb-24">
             {learnings.map((projet) => (
