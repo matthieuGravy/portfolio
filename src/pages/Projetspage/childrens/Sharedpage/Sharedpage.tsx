@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
-import { learnings } from "../../../../data/projets.ts";
+import { shared } from "../../../../data/projets.ts";
 import Loadingimage from "../../../../components/Loadingimage";
 
 const Sharedpage = () => {
@@ -11,21 +11,21 @@ const Sharedpage = () => {
 
   return (
     <>
-      {learnings
-        .filter((learning) => learning.id === id)
-        .map((learning, index) => (
+      {shared
+        .filter((shared) => shared.id === id)
+        .map((shared, index) => (
           <Templates
             key={index}
-            role={learning.role}
-            title={learning.name}
-            paragraphe={learning.description}
-            ptech={learning.tech.join(" - ")}
-            pversion={learning.link}
-            next={learning.next}
-            preview={learning.preview}
-            link={learning.link}
-            source={learning.github}
-            figure={learning.gallery?.map((gallery, index) => (
+            role={shared.role}
+            title={shared.name}
+            paragraphe={shared.description}
+            ptech={shared.tech.join(" - ")}
+            pversion={shared.link}
+            next={shared.next}
+            preview={shared.preview}
+            link={shared.link}
+            source={shared.github}
+            figure={shared.gallery?.map((gallery, index) => (
               <Suspense key={index} fallback={<Loadingimage />}>
                 <Figure src={gallery.src} alt={gallery.alt} />
               </Suspense>

@@ -1,35 +1,63 @@
 import Heading from "../../../../components/blocs/Heading";
 import Containers from "../../../../components/Containers";
 import { CardProject } from "../../../../components/Cards";
-import { learnings, professionals, content } from "../../../../data/projets";
+import {
+  learnings,
+  professionals,
+  shared,
+  content,
+} from "../../../../data/projets";
 import ScrollTextLeft from "../../../../components/animate/ScrollTextLeft";
 import ScrollHeading from "../../../../components/animate/ScrollHeading";
 import Main from "../../../../components/Main";
 
 const Projectpage = () => {
   const styleP = "text-xl tracking-widest text-justify font-sintony ";
+  const styleContainer =
+    "grid md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-8 px-8 py-12";
 
   return (
     <>
-      <Main>
+      <Main className="flex flex-col gap-y-12">
         <Containers
           type="section-large"
-          className="py-24 flex flex-col overflow-hidden"
+          className="py-24 flex flex-col  overflow-hidden"
         >
-          <article className=" grid md:grid-cols-2 md:grid-rows-4 gap-y-12 md:gap-y-0 gap-x-16 pb-24 md:pb-0 ">
-            <section
-              className={`md:row-span-2 md:row-start-2 md:py-12 lg:py-24`}
-            >
+          <article className="">
+            <header className="">
+              <Heading title={content.heading} level="h2" className="" />
+            </header>
+            <section className={``}>
               <ScrollTextLeft>
                 <p className={`  ${styleP}`}>{content.learnings.textOne}</p>
               </ScrollTextLeft>
             </section>
-            <header className="md:row-span-2 md:self-center">
-              <ScrollHeading level="h4" title={content.learnings.title} />
-              <Heading title={content.heading} level="h2" className="" />
-            </header>
           </article>
-          <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24 pt-14 pb-24">
+        </Containers>
+        <Containers type="section-large">
+          <article className={`${styleContainer}`}>
+            <ScrollHeading level="h4" title={content.shared.title} />
+            {shared.map((projet) => (
+              <CardProject
+                key={projet.id}
+                id={projet.id}
+                to={`shared/${projet.id}`}
+                name={projet.name}
+                liste={projet.tech.map((tech) => (
+                  <li
+                    key={tech}
+                    className="border-[1px] border-teal-200 px-4 py-2 uppercase text-xs "
+                  >
+                    {tech}
+                  </li>
+                ))}
+              />
+            ))}
+          </article>
+        </Containers>
+        <Containers type="section-large">
+          <article className={`${styleContainer}`}>
+            <ScrollHeading level="h4" title={content.learnings.title} />
             {learnings.map((projet) => (
               <CardProject
                 key={projet.id}
@@ -46,30 +74,27 @@ const Projectpage = () => {
                 ))}
               />
             ))}
-          </section>
-
-          <article>
-            <header className="pt-24 pb-12 ">
-              <ScrollHeading level="h4" className="" title="Professional" />
-            </header>
-            <section className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-24 pt-14 pb-24">
-              {professionals.map((projet) => (
-                <CardProject
-                  key={projet.id}
-                  id={projet.id}
-                  to={`professional/${projet.id}`}
-                  name={projet.name}
-                  liste={projet.tech.map((tech) => (
-                    <li
-                      key={tech}
-                      className="border-[1px] border-teal-200 px-4 py-2 uppercase text-xs "
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                />
-              ))}
-            </section>
+          </article>
+        </Containers>
+        <Containers type="section-large">
+          <article className={`${styleContainer}`}>
+            <ScrollHeading level="h4" className="" title="Professional" />
+            {professionals.map((projet) => (
+              <CardProject
+                key={projet.id}
+                id={projet.id}
+                to={`professional/${projet.id}`}
+                name={projet.name}
+                liste={projet.tech.map((tech) => (
+                  <li
+                    key={tech}
+                    className="border-[1px] border-teal-200 px-4 py-2 uppercase text-xs "
+                  >
+                    {tech}
+                  </li>
+                ))}
+              />
+            ))}
           </article>
         </Containers>
       </Main>

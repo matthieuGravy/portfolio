@@ -79,7 +79,7 @@ const Topnav = () => {
         initial={{ y: -72 }}
         animate={isHidden ? { y: -72 } : { y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`sticky w-full top-0 py-4 text-zinc-700 uppercase z-50 bg-zinc-900`}
+        className={`sticky w-full top-0 py-4 text-zinc-700 uppercase z-50 bg-[#131316] md:bg-[#130e11]`}
       >
         <section className="md:w-4/5 md:m-auto relative">
           {/* logo */}

@@ -8,6 +8,7 @@ import ProjetOutletpage from "./pages/Projetspage/ProjetOutletpage.tsx";
 import Projectpage from "./pages/Projetspage/childrens/Projectpage/Projectpage.tsx";
 import Learningpage from "./pages/Projetspage/childrens/Learningpage/Learningpage.tsx";
 import Professionalpage from "./pages/Projetspage/childrens/Professionalpage/Professionalpage.tsx";
+import Sharedpage from "./pages/Projetspage/childrens/Sharedpage/Sharedpage.tsx";
 
 import Aboutpage from "./pages/Aboutpage/Aboutpage";
 import Errorpage from "./pages/Errorpage/Errorpage";
@@ -31,6 +32,7 @@ export const router = createBrowserRouter([
           { path: "", element: <Projectpage /> },
           { path: "learning/:id", element: <Learningpage /> },
           { path: "professional/:id", element: <Professionalpage /> },
+          { path: "shared/:id", element: <Sharedpage /> },
         ],
       },
       {

@@ -127,7 +127,7 @@ const Homepage = () => {
           (typeof contactButton === "boolean" && contactButton) ? (
             <motion.div variants={itemVariants}>
               <motion.header>
-                <Heading title="Get in touch" level="h4" className={``} />
+                <Heading title="Let's talk" level="h4" className={``} />
               </motion.header>
             </motion.div>
           ) : (
@@ -170,10 +170,7 @@ const Homepage = () => {
   return (
     <>
       <Main className="flex flex-col gap-y-12 md:gap-y-16 pb-16 overflow-hidden">
-        <Containers
-          type="section-large"
-          className="mt-12 rounded-xl bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] flex overflow-hidden"
-        >
+        <Containers type="section-large" className="mt-12 flex overflow-hidden">
           <section className="grid xl:grid-cols-2 w-full ">
             <article className="flex flex-col justify-between space-y-8">
               <ContactSection
@@ -342,10 +339,7 @@ const Homepage = () => {
         <figure className="overflow-hidden m-auto py-24 lg:py-16 xl:py-0">
           <ParallaxTextor velocity={1} />
         </figure>
-        <Containers
-          type="section-large"
-          className="py-8 md:py-12 space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
-        >
+        <Containers type="section-large" className="py-8 md:py-12 space-y-8 ">
           <article className="md:px-8 flex flex-col lg:flex-row gap-x-12 gap-y-6">
             <ScrollTextLeft>
               <MissionUpEn className={styleP} />
@@ -365,10 +359,7 @@ const Homepage = () => {
 
           <Scroller />
         </Containers>
-        <Containers
-          type="section-large"
-          className=" space-y-8 bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] rounded-xl"
-        >
+        <Containers type="section-large" className=" space-y-8 ">
           <article className="space-y-12 py-8 md:py-12">
             <ScrollHeading
               title="Shared for developpers"

@@ -58,13 +58,16 @@ const content = {
   professionals: {
     title: "Professional",
   },
+  shared: {
+    title: "Shared",
+  },
 };
 
 const shared = [
   {
     id: "1",
     src: "https://via.placeholder.com/150",
-    name: "HTML Sass Portfolio",
+    name: "Html portfolio",
     role: "Front-end",
     gallery: [{ id: 1, src: htmlSass, alt: "HTML/Sass Portfolio" }],
     description:
@@ -72,8 +75,8 @@ const shared = [
     tech: ["JavaScript", "Sass", "webpack"],
     link: "https://template-html-portfolio.vercel.app/",
     github: "https://github.com/matthieuGravy/template-html-portfolio",
-    preview: "/projects/learning/10",
-    next: "/projects/learning/2",
+    preview: "/projects/shared/3",
+    next: "/projects/shared/2",
   },
   {
     id: "2",
@@ -83,15 +86,15 @@ const shared = [
       { id: 2, src: pommepatateAchievement, alt: "pommepate achievement" },
       { id: 3, src: pommepatateAbout, alt: "pommepate about" },
     ],
-    name: "Pomme Patate",
+    name: "Vue Portfolio",
     role: "Front-end",
     description:
       "A portfolio made with Vue3 to understand the basics of this framework, including the use of slots, props, components, and transitions with Vue Router.",
     tech: ["JavaScript", "bootstrap", "Vue3", "vite"],
     link: "https://pommepatate-v1.vercel.app",
     github: "https://github.com/matthieuGravy/pommepatate-v1",
-    preview: "/projects/learning/1",
-    next: "/projects/learning/3",
+    preview: "/projects/shared/1",
+    next: "/projects/shared/3",
   },
   {
     id: "3",
@@ -100,15 +103,15 @@ const shared = [
       { id: 1, src: gsapTop, alt: "gsap top" },
       { id: 2, src: gsapBottom, alt: "gsap bottom" },
     ],
-    name: "GSAP Project",
+    name: "GSAP Portfolio",
     role: "Front-end",
     description:
       "A portfolio project using Vue3 and GSAP, started after a GSAP training and to understand the basics of this library. I added a multilingual feature to practice Vue Router.",
     tech: ["Vue3", "GSAP", "Sass", "Bootstrap", "vite"],
     link: "https://matthieugravy.github.io/Multilingual-HomePage/",
     github: "https://github.com/matthieuGravy/Multilingual-HomePage",
-    preview: "/projects/learning/2",
-    next: "/projects/learning/4",
+    preview: "/projects/shared/2",
+    next: "/projects/shared/1",
   },
 ];
 const learnings = [
@@ -129,8 +132,8 @@ const learnings = [
     tech: ["JavaScript", "bootstrap", "vite"],
     link: "https://matthieugravy.github.io/restaurant-css-framework/index.html",
     github: "https://github.com/matthieuGravy/restaurant-css-framework",
-    preview: "/projects/learning/3",
-    next: "/projects/learning/5",
+    preview: "/projects/learning/7",
+    next: "/projects/learning/2",
   },
   {
     id: "2",
@@ -146,8 +149,8 @@ const learnings = [
     tech: ["JavaScript", "CSS", "pixi.js", "vite"],
     link: "https://matthieugravy.github.io/plant-clicker/",
     github: "https://github.com/matthieuGravy/plant-clicker",
-    preview: "/projects/learning/4",
-    next: "/projects/learning/6",
+    preview: "/projects/learning/1",
+    next: "/projects/learning/3",
   },
   {
     id: "3",
@@ -158,8 +161,8 @@ const learnings = [
       "Exploration of the backend with Express and Pug to understand template principles, complementing my knowledge of EJS.",
     tech: ["Express", "PUG", "Tailwindcss"],
     github: "https://github.com/matthieuGravy/pug-express",
-    preview: "/projects/learning/5",
-    next: "/projects/learning/7",
+    preview: "/projects/learning/2",
+    next: "/projects/learning/4",
   },
   {
     id: "4",
@@ -170,8 +173,8 @@ const learnings = [
       "Introductory project on PHP, Docker, and Nginx. I already had some PHP basics and introduced Docker and Nginx to deepen my skills.",
     tech: ["Php", "Docker", "Nginx"],
     github: "https://github.com/matthieuGravy/my-docker-php",
-    preview: "/projects/learning/6",
-    next: "/projects/learning/8",
+    preview: "/projects/learning/3",
+    next: "/projects/learning/5",
   },
   {
     id: "5",
@@ -186,8 +189,8 @@ const learnings = [
       "Solo project to learn the MERN stack (MongoDB, Express, React, Node.js).",
     tech: ["MERN stack", "tailwindcss", "daisy-ui", "vite"],
     github: "https://github.com/matthieuGravy/its-gravy-nights",
-    preview: "/projects/learning/7",
-    next: "/projects/learning/9",
+    preview: "/projects/learning/4",
+    next: "/projects/learning/6",
   },
   {
     id: "6",
@@ -205,8 +208,8 @@ const learnings = [
     tech: ["MERN stack", "tailwindcss"],
     github: "https://github.com/matthieuGravy/sora-cine",
     link: "https://sora-cine.vercel.app/",
-    preview: "/projects/learning/8",
-    next: "/projects/learning/10",
+    preview: "/projects/learning/5",
+    next: "/projects/learning/7",
   },
   {
     id: "7",
@@ -218,7 +221,7 @@ const learnings = [
     role: "Back-end",
     tech: ["MERN stack", "typescript", "tailwindcss", "vite"],
     github: "https://github.com/matthieuGravy/book-face",
-    preview: "/projects/learning/9",
+    preview: "/projects/learning/6",
     next: "/projects/learning/1",
   },
 ];
