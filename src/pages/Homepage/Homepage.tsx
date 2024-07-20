@@ -359,6 +359,28 @@ const Homepage = () => {
 
           <Scroller />
         </Containers>
+        <section className=" space-y-12 pb-12 rounded-xl">
+          <ScrollHeading
+            title="My projects"
+            level="h3"
+            className="text-center pt-16"
+          />
+          <ul className="grid grid-rows-3 gap-y-8 md:grid-cols-3 md:grid-rows-1 pb-12">
+            {renderListItem(shared?.length || 0, "Shared Projects")}
+            {renderListItem(learnings?.length || 0, "Learnings")}
+            {renderListItem(
+              professionals?.length || 0,
+              "Professional Projects"
+            )}
+          </ul>
+          <div className="flex justify-center">
+            <ButtonTwo
+              content="View more"
+              to="/projects"
+              className="rounded-xl px-4"
+            />{" "}
+          </div>
+        </section>
         <Containers type="section-large" className=" space-y-8 ">
           <article className="space-y-12 py-8 md:py-12">
             <ScrollHeading
@@ -399,28 +421,6 @@ const Homepage = () => {
               </figure>
             </section>
           </article>
-          <section className="bg-[#101013] space-y-12 pb-12 rounded-xl">
-            <ScrollHeading
-              title="My projects"
-              level="h3"
-              className="text-center pt-16"
-            />
-            <ul className="grid grid-rows-3 gap-y-8 md:grid-cols-3 md:grid-rows-1 pb-12">
-              {renderListItem(shared?.length || 0, "Shared Projects")}
-              {renderListItem(learnings?.length || 0, "Learnings")}
-              {renderListItem(
-                professionals?.length || 0,
-                "Professional Projects"
-              )}
-            </ul>
-            <div className="flex justify-center">
-              <ButtonTwo
-                content="View more"
-                to="/projects"
-                className="rounded-xl px-4"
-              />{" "}
-            </div>
-          </section>
         </Containers>
       </Main>
     </>

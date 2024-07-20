@@ -22,8 +22,8 @@ const Templates: React.FC<TemplatesProps> = ({
 
   source,
 }) => {
-  const styleP = "text-xl tracking-widest font-sintony";
-  const styleAnsword = styleP + " text-zinc-400";
+  const styleP = "text-xl tracking-widest font-sintony text-zinc-500";
+  const styleAnsword = styleP;
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -32,7 +32,6 @@ const Templates: React.FC<TemplatesProps> = ({
         <article className="px-3.5 md:px-0 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 ">
           <section className="relative space-y-12">
             <article className="sticky top-40 space-y-12">
-              <Heading title={title} level="h2" className="lg:w-1/2" />
               <ScrollTextLeft className={styleP}>{paragraphe}</ScrollTextLeft>
               <article className="grid grid-cols-2 gap-y-8 w-4/5 ">
                 <ScrollHeading level="h6" title="role" />

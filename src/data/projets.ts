@@ -1,52 +1,39 @@
-//1
-import htmlSass from "../assets/projects/html-sass/html-sass.png";
+//1 portfolio
+import HtmlPortfolio from "../assets/projects/mockup/html-portfolio.png";
 
-//2
-import pommepatateHome from "../assets/projects/pomme-patate/pomme-patate-home.png";
-import pommepatateAchievement from "../assets/projects/pomme-patate/pomme-patate-achievement.png";
-import pommepatateAbout from "../assets/projects/pomme-patate/pomme-patate-about.png";
+//2 portfolio
+import vuePortfolio from "../assets/projects/mockup/vue3-portfolio.png";
 
-//3
-import gsapTop from "../assets/projects/gsap-project/gsap-bot.png";
-import gsapBottom from "../assets/projects/gsap-project/gsap-top.png";
+//3 portfolio
+import gsapPortfolio from "../assets/projects/mockup/gsap-portfolio.png";
 
-//4
-import IGKWelcome from "../assets/projects/kitchen/IGK-Welcome.png";
-import IGKMenu from "../assets/projects/kitchen/IGK-Menu.png";
-import IGKContact from "../assets/projects/kitchen/IGK-Contact.png";
-import IGKPictures from "../assets/projects/kitchen/IGK-Pictures.png";
-import IGKRestaurant from "../assets/projects/kitchen/IGK-Restaurants.png";
+//1 IGK
+import Igk from "../assets/projects/mockup/itgkitchen.png";
 
 //5
-import plantclicker from "../assets/projects/plant/plantclicker.png";
-import plantclickerPanel from "../assets/projects/plant/plantclicker-panel.png";
+import plantclicker from "../assets/projects/mockup/plantclicker.png";
 
 //6
-//need to add images
+import pug from "../assets/projects/mockup/pugjs.png";
 
 //7
-//need to add images
+import php from "../assets/projects/mockup/php.png";
 
 //8
-import nightHome from "../assets/projects/night/night-home.png";
-import nightProducts from "../assets/projects/night/night-products.png";
+import nightHome from "../assets/projects/mockup/itg-nights.png";
 
 //9
-import sorahome from "../assets/projects/sora/sora-home.png";
-import soralogin from "../assets/projects/sora/sora-login.png";
-import soralogged from "../assets/projects/sora/sora-logged.png";
-import soramovie from "../assets/projects/sora/sora-movies.png";
+import sorahome from "../assets/projects/mockup/Soracine.png";
 
 //10
-import bookface from "../assets/projects/bookface/bookface.png";
+import bookface from "../assets/projects/mockup/bookface.png";
 
 //Professionals
 //1
-import akwanzaHome from "../assets/projects/akwanza/akwanza-home.png";
-import akwanzaHomeMobile from "../assets/projects/akwanza/akwanza-home-mobile.png";
+import akwanzaHome from "../assets/projects/mockup/akwanza.png";
 
 //2
-import afitpilotHome from "../assets/projects/afitpilot/afitpilot.png";
+import afitpilotHome from "../assets/projects/mockup/afitpilot.png";
 
 const content = {
   heading: "Projects",
@@ -69,7 +56,7 @@ const shared = [
     src: "https://via.placeholder.com/150",
     name: "Html portfolio",
     role: "Front-end",
-    gallery: [{ id: 1, src: htmlSass, alt: "HTML/Sass Portfolio" }],
+    gallery: [{ id: 1, src: HtmlPortfolio, alt: "HTML/Sass Portfolio" }],
     description:
       "A portfolio no responsive to understand the basics of web development, including the use of Sass, webpack, and some simple CSS animations.",
     tech: ["JavaScript", "Sass", "webpack"],
@@ -81,11 +68,7 @@ const shared = [
   {
     id: "2",
     src: "https://via.placeholder.com/150",
-    gallery: [
-      { id: 1, src: pommepatateHome, alt: "pommepate homepage" },
-      { id: 2, src: pommepatateAchievement, alt: "pommepate achievement" },
-      { id: 3, src: pommepatateAbout, alt: "pommepate about" },
-    ],
+    gallery: [{ id: 1, src: vuePortfolio, alt: "pommepate homepage" }],
     name: "Vue Portfolio",
     role: "Front-end",
     description:
@@ -99,10 +82,7 @@ const shared = [
   {
     id: "3",
     src: "https://via.placeholder.com/150",
-    gallery: [
-      { id: 1, src: gsapTop, alt: "gsap top" },
-      { id: 2, src: gsapBottom, alt: "gsap bottom" },
-    ],
+    gallery: [{ id: 1, src: gsapPortfolio, alt: "gsap top" }],
     name: "GSAP Portfolio",
     role: "Front-end",
     description:
@@ -119,13 +99,7 @@ const learnings = [
     id: "1",
     src: "https://via.placeholder.com/150",
     name: "ITG Kitchens",
-    gallery: [
-      { id: 1, src: IGKWelcome, alt: "itg kitchens welcome" },
-      { id: 2, src: IGKMenu, alt: "itg kitchens menu" },
-      { id: 3, src: IGKContact, alt: "itg kitchens contact" },
-      { id: 4, src: IGKPictures, alt: "itg kitchens pictures" },
-      { id: 5, src: IGKRestaurant, alt: "itg kitchens restaurant" },
-    ],
+    gallery: [{ id: 1, src: Igk, alt: "itg kitchens welcome" }],
     role: "Front-end",
     description:
       "HTML/Bootstrap project without using JavaScript frameworks, with a lot of code repetition. This allowed me to work with constraints and improve my HTML and CSS skills.",
@@ -138,10 +112,7 @@ const learnings = [
   {
     id: "2",
     src: "https://via.placeholder.com/150",
-    gallery: [
-      { id: 1, src: plantclicker, alt: "plant clicker" },
-      { id: 2, src: plantclickerPanel, alt: "plant clicker panel" },
-    ],
+    gallery: [{ id: 1, src: plantclicker, alt: "plant clicker" }],
     name: "Plant Clicker",
     role: "Front-end",
     description:
@@ -156,6 +127,7 @@ const learnings = [
     id: "3",
     src: "https://via.placeholder.com/150",
     name: "Express Pug",
+    gallery: [{ id: 1, src: pug, alt: "pug/express" }],
     role: "Back-end",
     description:
       "Exploration of the backend with Express and Pug to understand template principles, complementing my knowledge of EJS.",
@@ -168,6 +140,7 @@ const learnings = [
     id: "4",
     src: "https://via.placeholder.com/150",
     name: "Docker Project",
+    gallery: [{ id: 1, src: php, alt: "php/docker" }],
     role: "Back-end",
     description:
       "Introductory project on PHP, Docker, and Nginx. I already had some PHP basics and introduced Docker and Nginx to deepen my skills.",
@@ -179,10 +152,7 @@ const learnings = [
   {
     id: "5",
     src: "https://via.placeholder.com/150",
-    gallery: [
-      { id: 1, src: nightHome, alt: "night home" },
-      { id: 2, src: nightProducts, alt: "night products" },
-    ],
+    gallery: [{ id: 1, src: nightHome, alt: "night home" }],
     name: "ITG Nights",
     role: "Full-stack",
     description:
@@ -195,12 +165,7 @@ const learnings = [
   {
     id: "6",
     src: "https://via.placeholder.com/150",
-    gallery: [
-      { id: 1, src: sorahome, alt: "sora home" },
-      { id: 2, src: soralogin, alt: "sora login" },
-      { id: 3, src: soralogged, alt: "sora logged" },
-      { id: 4, src: soramovie, alt: "sora movie" },
-    ],
+    gallery: [{ id: 1, src: sorahome, alt: "sora home" }],
     name: "Sora Cine",
     description:
       "First project with a backend. I collaborated with other developers, which helped me understand how APIs work and how to communicate between front-end and back-end.",
@@ -231,10 +196,7 @@ const professionals = [
     id: "1",
     src: "https://via.placeholder.com/150",
     name: "Akwanza",
-    gallery: [
-      { id: 1, src: akwanzaHome, alt: "akwanza home" },
-      { id: 2, src: akwanzaHomeMobile, alt: "akwanza home mobile" },
-    ],
+    gallery: [{ id: 1, src: akwanzaHome, alt: "akwanza home" }],
     description:
       "For my first professional team project, I was responsible for the front-end. I participated in designing the front-end with Figma and created product designs for the shop.",
     role: "Front-end, Design",
