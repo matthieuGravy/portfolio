@@ -9,13 +9,13 @@ const ArrowRigths = () => {
     hidden: {
       opacity: 0,
       pathLength: 0,
-      fill: "rgba(228, 228, 231, 0)",
+      fill: "rgba(24, 24, 27, 0)",
     },
     visible: {
       opacity: 1,
       pathLength: 1,
 
-      fill: "rgba(228, 228, 231, 1)",
+      fill: "rgba(24, 24, 27, 1)",
     },
   };
   return (

@@ -169,8 +169,8 @@ const Homepage = () => {
 
   return (
     <>
-      <Main className="flex flex-col gap-y-12 md:gap-y-16 pb-16 overflow-hidden">
-        <Containers type="section-large" className="mt-12 flex overflow-hidden">
+      <Main className="flex flex-col gap-y-12 md:gap-y-16 pb-16 overflow-hidden pt-12">
+        <Containers type="section-large" className=" flex overflow-hidden">
           <section className="grid xl:grid-cols-2 w-full ">
             <article className="flex flex-col justify-between space-y-8">
               <ContactSection

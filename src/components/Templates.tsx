@@ -9,7 +9,8 @@ import ScrollHeading from "./animate/ScrollHeading";
 import ArrowRigths from "./animate/ArrowRigths";
 import Heading from "./blocs/Heading";
 import Main from "./Main";
-import { Buttonext } from "./blocs/Buttons";
+import { Buttonext, ButtonTwo } from "./blocs/Buttons";
+import Containers from "./Containers";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
@@ -28,96 +29,100 @@ const Templates: React.FC<TemplatesProps> = ({
 
   return (
     <>
-      <Main>
-        <article className="px-3.5 md:px-0 flex flex-col md:grid md:grid-cols-2 md:gap-x-8 relative py-24 md:w-4/5 mx-auto gap-y-24 md:gap-y-24 ">
-          <section className="relative space-y-12">
-            <article className="sticky top-40 space-y-12">
-              <ScrollTextLeft className={styleP}>{paragraphe}</ScrollTextLeft>
-              <article className="grid grid-cols-2 gap-y-8 w-4/5 ">
-                <ScrollHeading level="h6" title="role" />
+      <Main className="pt-12 pb-16">
+        <Containers
+          type="section-bento"
+          className="flex flex-col xl:grid xl:grid-cols-2 xl:auto-rows-auto gap-y-16 gap-x-8"
+        >
+          <Containers
+            type="section-basic"
+            className="px-3.5 md:px-8 py-12 space-y-8"
+          >
+            <Heading level="h4" title={title} />
+            <ScrollTextLeft className={`md:col-span-2 ${styleP}`}>
+              {paragraphe}
+            </ScrollTextLeft>
+          </Containers>
+          <Containers
+            type="section-bento-bg"
+            className="px-3.5 md:px-8 md:py-12"
+          >
+            <article className="grid grid-cols-2 self-center gap-y-8 ">
+              <ScrollHeading level="h6" title="role" />
 
-                <p className={styleAnsword}>{role}</p>
+              <p className={styleAnsword}>{role}</p>
 
-                <ScrollHeading level="h6" className="" title="stack" />
+              <ScrollHeading level="h6" className="" title="stack" />
 
-                <p className={styleAnsword}>{ptech}</p>
+              <p className={styleAnsword}>{ptech}</p>
 
-                {link && (
-                  <>
-                    <ScrollHeading level="h6" className="" title="website" />
+              {link && (
+                <>
+                  <ScrollHeading level="h6" className="" title="website" />
 
-                    <Buttonext
-                      link={link}
-                      title={`View live ${title}`}
-                      content="View live website"
-                      className={`${styleAnsword}`}
-                    />
-                  </>
-                )}
+                  <Buttonext
+                    link={link}
+                    title={`View live ${title}`}
+                    content="View live website"
+                    className={`text-fuchsia-800 transition-all duration-500 ${styleAnsword}`}
+                  />
+                </>
+              )}
 
-                {source && (
-                  <>
-                    <ScrollHeading level="h6" className="" title="Git" />
+              {source && (
+                <>
+                  <ScrollHeading level="h6" className="" title="Git" />
 
-                    <Buttonext
-                      link={source}
-                      title={`${title} source code`}
-                      content="View source code"
-                      className={`${styleAnsword}`}
-                    />
-                  </>
-                )}
-              </article>
+                  <Buttonext
+                    link={source}
+                    title={`${title} source code`}
+                    content="View source code"
+                    className={`text-fuchsia-800 transition-all duration-500 ${styleAnsword}`}
+                  />
+                </>
+              )}
             </article>
-          </section>
-          {figure && (
-            <section className="grid gap-x-8 gap-y-16">{figure}</section>
-          )}
-          <nav className="md:col-span-2 h-20 grid grid-cols-2 md:gap-x-8 items-center ">
-            <NavLink
-              to={"/projects"}
-              className={
-                "flex h-20 items-center bg-teal-200 hover:bg-teal-300 transition-all duration-300 ease-in-out"
-              }
-            >
-              {
-                <>
-                  <Heading
-                    level="h5"
-                    title="all projects"
-                    className="flex text-zinc-700 ps-4"
-                  />
-                </>
-              }
-            </NavLink>
-            <NavLink
-              to={next}
-              className={
-                "flex flex-col md:flex-row h-20 items-center justify-center bg-fuchsia-600 hover:bg-fuchsia-500 transition-all duration-300 ease-in-out"
-              }
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              {
-                <>
-                  <Heading
-                    level="h5"
-                    title="Next Project"
-                    className="flex text-zinc-200 ps-4  "
-                  />
-                  <motion.div
-                    initial={{ x: 0 }}
-                    animate={{ x: isHovered ? 40 : 20 }}
-                    transition={{ duration: 0.4 }}
-                    className="hidden md:flex items-center"
-                  >
-                    <ArrowRigths />
-                  </motion.div>
-                </>
-              }
-            </NavLink>
-          </nav>
-        </article>
+          </Containers>
+          <Containers
+            type="section-bento-bg"
+            className="flex items-center justify-center"
+          >
+            {figure && <section className="">{figure}</section>}
+          </Containers>
+          <Containers type="section-bento" className="">
+            <nav className="flex flex-col items-center gap-y-8">
+              <ButtonTwo
+                content="All projects"
+                to="/projects"
+                className="rounded-xl px-4"
+              />
+              <NavLink
+                to={next}
+                className={
+                  "m-auto w-72 flex justify-center bg-fuchsia-500 text-zinc-900 transition-all duration-300 ease-in-out text-2xl font-sintony uppercase rounded-xl"
+                }
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                {
+                  <>
+                    <span className="flex gap-x-2 flex-col md:flex-row items-center px-4 py-2">
+                      Next Project
+                      <motion.div
+                        initial={{ x: 0 }}
+                        animate={{ x: isHovered ? 20 : 0 }}
+                        transition={{ duration: 0.4 }}
+                        className="hidden md:flex items-center justify-start"
+                      >
+                        <ArrowRigths />
+                      </motion.div>
+                    </span>
+                  </>
+                }
+              </NavLink>
+            </nav>
+          </Containers>
+        </Containers>
       </Main>
     </>
   );

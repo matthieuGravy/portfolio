@@ -1,7 +1,6 @@
 const toplinksEn = [
-  { id: 1, name: "Home", link: "/" },
-  { id: 2, name: "Projects", link: "/projects" },
-  { id: 3, name: "About", link: "/about" },
+  { id: 1, name: "Projects", link: "/projects" },
+  { id: 2, name: "Hiring me", link: "/about" },
 ];
 
 export { toplinksEn };

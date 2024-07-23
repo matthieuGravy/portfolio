@@ -6,7 +6,7 @@ const Rgpdpage = () => {
   return (
     <>
       <BlocCenter>
-        <Heading title={titleEn} level="h2" className="pb-4" />
+        <Heading title={titleEn} level="h3" className="pb-4" />
         <hr />
         <Ol>
           {rgpdEn.map((rgpd) => (

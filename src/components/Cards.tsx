@@ -36,7 +36,7 @@ const CardProject: React.FC<CardProjectProps> = ({
            `}
         >
           <article
-            className={`h-full flex flex-col justify-between px-4 py-4 space-y-4 border-[1px] border-teal-200 transition-all ease-in-out duration-500 ${className} ${
+            className={`h-full flex flex-col justify-between px-4 py-4 space-y-4 border-[1px]  border-zinc-800 transition-all ease-in-out duration-500 rounded-lg ${className} ${
               isHover ? "shadow-xl " : ""
             }`}
           >
@@ -48,7 +48,7 @@ const CardProject: React.FC<CardProjectProps> = ({
               content={
                 <>
                   <h3
-                    className={`font-rubik text-4xl xl:text-4xl  uppercase tracking-wide text-zinc-700 hover:text-fuchsia-600 transition-colors duration-500
+                    className={`font-rubik text-4xl xl:text-4xl uppercase tracking-wide text-zinc-700 hover:text-fuchsia-600 transition-colors duration-500
                     `}
                   >
                     {name}
@@ -57,8 +57,10 @@ const CardProject: React.FC<CardProjectProps> = ({
               }
             />
             <ul
-              className={`flex flex-wrap gap-x-4 gap-y-2 font-sintony tracking-widest ${
-                isHover ? "text-teal-400" : "text-zinc-400"
+              className={`flex flex-wrap  gap-x-4 gap-y-2 font-sintony tracking-widest ${
+                isHover
+                  ? "lg:text-zinc-700"
+                  : "lg:text-transparent text-zinc-700"
               }`}
             >
               {liste}
@@ -70,8 +72,8 @@ const CardProject: React.FC<CardProjectProps> = ({
               onClick={buttonOneClick}
               className={` uppercase  flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide ${
                 isTitleHover
-                  ? "md:text-zinc-300 text-fuchsia-600"
-                  : "md:invisible md:text-zinc-300 text-fuchsia-600"
+                  ? "md:text-zinc-800 text-fuchsia-600"
+                  : "lg:invisible lg:text-zinc-800 text-fuchsia-600"
               }`}
             >
               Discover

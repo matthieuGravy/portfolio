@@ -1,46 +1,48 @@
 //1 portfolio
-import HtmlPortfolio from "../assets/projects/mockup/html-portfolio.png";
+import HtmlPortfolio from "../assets/pictures/projects/html-portfolio.png";
 
 //2 portfolio
-import vuePortfolio from "../assets/projects/mockup/vue3-portfolio.png";
+import vuePortfolio from "../assets/pictures/projects/vue3-portfolio.png";
 
 //3 portfolio
-import gsapPortfolio from "../assets/projects/mockup/gsap-portfolio.png";
+import gsapPortfolio from "../assets/pictures/projects/gsap-portfolio.png";
 
 //1 IGK
-import Igk from "../assets/projects/mockup/itgkitchen.png";
+import Igk from "../assets/pictures/projects/itgkitchen.png";
 
 //5
-import plantclicker from "../assets/projects/mockup/plantclicker.png";
+import plantclicker from "../assets/pictures/projects/plantclicker.png";
 
 //6
-import pug from "../assets/projects/mockup/pugjs.png";
+import pug from "../assets/pictures/projects/pugjs.png";
 
 //7
-import php from "../assets/projects/mockup/php.png";
+import php from "../assets/pictures/projects/php.png";
 
 //8
-import nightHome from "../assets/projects/mockup/itg-nights.png";
+import nightHome from "../assets/pictures/projects/itg-nights.png";
 
 //9
-import sorahome from "../assets/projects/mockup/Soracine.png";
+import sorahome from "../assets/pictures/projects/Soracine.png";
 
 //10
-import bookface from "../assets/projects/mockup/bookface.png";
+import bookface from "../assets/pictures/projects/bookface.png";
 
 //Professionals
 //1
-import akwanzaHome from "../assets/projects/mockup/akwanza.png";
+import akwanzaHome from "../assets/pictures/projects/akwanza.png";
 
 //2
-import afitpilotHome from "../assets/projects/mockup/afitpilot.png";
+import afitpilotHome from "../assets/pictures/projects/afitpilot.png";
 
 const content = {
-  heading: "Projects",
+  heading: "Projects: A Developer's Growth Journey",
   learnings: {
     title: "Learnings",
     textOne:
-      "Bienvenue sur ma page de projets ! Ici, vous trouverez une sélection de mes travaux, incluant des templates de portfolio, des projets d'apprentissage et des projets professionnels.",
+      "Explore the evolution of my skills through diverse projects. From foundational exercises to recent achievements, each piece reflects my continuous learning and passion for development.",
+    textTwo:
+      "My drive to improve and ability to quickly master new technologies are my greatest strengths. Discover my work and witness my ongoing progress!",
   },
   professionals: {
     title: "Professional",
@@ -170,7 +172,7 @@ const learnings = [
     description:
       "First project with a backend. I collaborated with other developers, which helped me understand how APIs work and how to communicate between front-end and back-end.",
     role: "Front-end",
-    tech: ["MERN stack", "tailwindcss"],
+    tech: ["MERN stack", "tailwindcss", "framer", "vite"],
     github: "https://github.com/matthieuGravy/sora-cine",
     link: "https://sora-cine.vercel.app/",
     preview: "/projects/learning/5",
@@ -213,7 +215,7 @@ const professionals = [
     description:
       "For my second professional team project, I was responsible for debugging the sign-up system and researching a new architecture suitable for a micro-environment.",
     role: "Back-end, DevOps",
-    tech: ["MERN stack", "TypeScript", "MUI"],
+    tech: ["MERN stack", "TypeScript", "MUI", "webpack"],
     to: "afitpilot",
     link: "https://www.afitpilot.com/",
     preview: "/projects/professional/1",

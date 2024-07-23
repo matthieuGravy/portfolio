@@ -21,7 +21,7 @@ const Li: React.FC<LiProps> = ({ paragraphe, titre }) => {
         <Heading level="h4" title={titre} className="" />
         <Paragraphe
           children={paragraphe}
-          className="text-xl tracking-widest font-sintony"
+          className="text-2xl text-zinc-400 tracking-wide font-sintony "
         />
       </li>
     </>
