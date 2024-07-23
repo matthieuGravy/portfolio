@@ -38,7 +38,7 @@ const Containers: React.FC<ContainersProps> = ({
       return (
         <section
           id={id}
-          className={`w-full rounded-xl bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] md:w-[90%] lg:w-4/5 xl:w-5/5 m-auto ${className}`}
+          className={`w-full rounded-xl bg-gradient-to-r from-[#131316] from-40%  via-[#1d151d] to-[#131316] md:w-[90%] lg:w-4/5 xl:w-full xl:w-5/5 m-auto ${className}`}
         >
           {children}
         </section>
