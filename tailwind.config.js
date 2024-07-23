@@ -11,10 +11,6 @@ export default {
       animation: {
         "scroll-right": "animate-scroll-right 30s linear infinite",
       },
-      backgroundImage: {
-        matthieu: "url('/assets/Matthieu.svg')",
-        elipseTeal: "url('/assets/backgrounds/elipse-teal-items.svg')",
-      },
       keyframes: {
         "animate-scroll-right": {
           "0%": { transform: "translateX(0%)" },
