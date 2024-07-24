@@ -1,23 +1,34 @@
 import { MissionUpEnProps, MissionDownEnProps } from "../../../types/types";
+const mark =
+  "bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-300 to-pink-400";
 
 const MissionUpEn: React.FC<MissionUpEnProps> = ({ className }) => {
-  const strong = "bg-zinc-900 text-zinc-100";
   return (
     <p className={className}>
-      Innovative web developer based in Brussels, crafting cutting-edge digital
-      solutions. I transform complex ideas into sleek, user-friendly web
-      experiences with <mark className={strong}>speed</mark> and{" "}
-      <mark className={strong}>precision</mark>.
+      I transform{" "}
+      <mark className={mark}>bold ideas into digital realities</mark> using{" "}
+      <mark className={mark}>React, JavaScript, and Tailwind CSS</mark>. My
+      approach?{" "}
+      <mark className={mark}>
+        Efficient code, intuitive designs, and unwavering determination
+      </mark>
+      . My portfolio traces my evolution, from early projects to{" "}
+      <mark className={mark}>increasingly complex achievements</mark>.
     </p>
   );
 };
+
 const MissionDownEn: React.FC<MissionDownEnProps> = ({ className }) => {
-  const strong = "bg-zinc-900 text-zinc-100";
   return (
     <p className={` ${className}`}>
-      My expertise lies in React, JavaScript, and Tailwind CSS, allowing me to
-      build responsive and dynamic web applications. I bring projects to life
-      with <mark className={strong}>clean code</mark> and intuitive design.
+      Every application I develop tells a story of{" "}
+      <mark className={mark}>innovation and perseverance</mark>. No pretense
+      here - just a <mark className={mark}>passionate professional</mark> who{" "}
+      <mark className={mark}>
+        codes with precision, constantly learns, and pushes the envelope of
+        what's possible
+      </mark>
+      .
     </p>
   );
 };

@@ -13,11 +13,7 @@ import TemplateHtml from "../../assets/pictures/shine/template-html.png";
 import TemplateVue from "../../assets/pictures/shine/template-vue.png";
 import TemplateGsap from "../../assets/pictures/shine/template-vue-gsap.png";
 
-import {
-  ButtonOne,
-  Buttonext,
-  ButtonTwo,
-} from "../../components/blocs/Buttons";
+import { ButtonOne, Buttonext } from "../../components/blocs/Buttons";
 import Heading from "../../components/blocs/Heading";
 import Containers from "../../components/Containers";
 import ParallaxTextor from "../../components/ParallaxTextor";
@@ -340,7 +336,7 @@ const Homepage = () => {
           <ParallaxTextor velocity={1} />
         </figure>
         <Containers type="section-large" className="py-8 md:py-12 space-y-8 ">
-          <article className="md:px-8 flex flex-col lg:flex-row gap-x-12 gap-y-6">
+          <article className="md:px-8 flex flex-col lg:grid lg:grid-cols-2 gap-x-12 gap-y-6">
             <ScrollTextLeft>
               <MissionUpEn className={styleP} />
             </ScrollTextLeft>
@@ -348,14 +344,6 @@ const Homepage = () => {
               <MissionDownEn className={styleP} />
             </ScrollTextRight>
           </article>
-
-          <div className="flex justify-center">
-            <ButtonOne
-              content="Learn More"
-              to="/about"
-              className="rounded-xl px-4"
-            />{" "}
-          </div>
 
           <Scroller />
         </Containers>
@@ -374,8 +362,8 @@ const Homepage = () => {
             )}
           </ul>
           <div className="flex justify-center">
-            <ButtonTwo
-              content="View more"
+            <ButtonOne
+              content="View projects"
               to="/projects"
               className="rounded-xl px-4"
             />{" "}

@@ -1,8 +1,5 @@
-import { useRef } from "react";
-import { motion, useTransform, useScroll } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
-import Heading from "../../../../components/blocs/Heading";
 import Containers from "../../../../components/Containers";
 import ScrollHeading from "../../../../components/animate/ScrollHeading";
 import Main from "../../../../components/Main";
@@ -15,53 +12,13 @@ import {
 } from "../../../../data/projets";
 
 const Projectpage = () => {
-  const styleP = "text-2xl text-zinc-400 tracking-wide font-sintony";
   const styleContainer =
     "grid md:grid-cols-1 xl:grid-cols-3 gap-x-12 gap-y-8 md:px-8 py-12";
   const styleHeader = "py-12 px-8";
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
 
   return (
     <>
       <Main className="flex flex-col gap-y-12 pt-12 pb-16">
-        <Containers
-          type="section-basic-bg"
-          className="flex flex-col overflow-hidden"
-        >
-          <header className="py-12 px-8">
-            <Heading title={content.heading} level="h2" className="" />
-          </header>
-          <section className="py-12 md:px-8 relative">
-            <article className="space-y-8 pb-24">
-              <ul className={`space-y-6 px-3.5 md:px-0 `}>
-                {content.description.map((desc, index) => (
-                  <motion.div
-                    key={index}
-                    style={{
-                      translateY: useTransform(
-                        scrollYProgress,
-                        [0, 1],
-                        [200 + index * 25, -200 - index * 25]
-                      ),
-                      opacity: useTransform(
-                        scrollYProgress,
-                        [0, 0.5, 1],
-                        [0.3, 1, 0.3]
-                      ),
-                    }}
-                  >
-                    <li className={`${styleP}`}>{desc}</li>
-                  </motion.div>
-                ))}
-              </ul>
-            </article>
-          </section>
-        </Containers>
-
         <Containers type="section-large">
           <ScrollHeading
             level="h4"
