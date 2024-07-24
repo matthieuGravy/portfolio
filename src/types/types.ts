@@ -22,7 +22,12 @@ export interface MissionDownEnProps {
 export interface ContainersProps {
   id?: string;
   className?: string;
-  type: "section-large" | "jumbo-vertical";
+  type:
+    | "section-large"
+    | "section-basic"
+    | "section-basic-bg"
+    | "section-bento-bg"
+    | "section-bento";
   children: React.ReactNode;
   childrentwo?: React.ReactNode;
 }
@@ -32,7 +37,8 @@ export interface TemplatesProps {
   paragraphe?: string;
   ptech?: string;
   pversion?: string;
-  figure?: React.ReactNode[];
+  src?: string;
+  alt?: string;
   role?: string;
   next: string;
   preview: string;

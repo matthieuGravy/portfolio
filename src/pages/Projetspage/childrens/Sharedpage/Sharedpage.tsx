@@ -1,10 +1,7 @@
 import { useParams } from "react-router-dom";
-import { Suspense } from "react";
 
-import { Figure } from "../../../../components/blocs/Project.tsx";
 import Templates from "../../../../components/Templates.tsx";
 import { shared } from "../../../../data/projets.ts";
-import Loadingimage from "../../../../components/Loadingimage";
 
 const Sharedpage = () => {
   const { id } = useParams<{ id: string }>();
@@ -25,11 +22,8 @@ const Sharedpage = () => {
             preview={shared.preview}
             link={shared.link}
             source={shared.github}
-            figure={shared.gallery?.map((gallery, index) => (
-              <Suspense key={index} fallback={<Loadingimage />}>
-                <Figure src={gallery.src} alt={gallery.alt} />
-              </Suspense>
-            ))}
+            src={shared.src}
+            alt={shared.alt}
           />
         ))}
     </>

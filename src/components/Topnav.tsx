@@ -88,7 +88,7 @@ const Topnav = () => {
           <nav className="flex justify-between text-right w-full pointer-events-auto  ">
             <NavLink to="/" className=" ">
               <motion.h2
-                className="text-2xl tracking-wider font-regular uppercase text-zinc-700 font-rubik "
+                className="ps-3.5 md:ps-0 text-2xl tracking-wider font-regular uppercase text-zinc-700 font-rubik "
                 whileTap={{ scale: 0.8 }}
                 onClick={closeNav}
               >
@@ -106,7 +106,7 @@ const Topnav = () => {
             <motion.ul
               className={`pointer-events-auto md:hidden  ${
                 isNavVisible
-                  ? "absolute top-12 gap-y-4  py-4 bg-zinc-900 text-center w-screen"
+                  ? "absolute top-12 gap-y-4  py-4 bg-[#131316] md:bg-[#130e11] text-center w-screen"
                   : "hidden"
               }`}
               animate={controls}

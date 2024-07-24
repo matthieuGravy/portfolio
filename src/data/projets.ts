@@ -36,13 +36,14 @@ import akwanzaHome from "../assets/pictures/projects/akwanza.png";
 import afitpilotHome from "../assets/pictures/projects/afitpilot.png";
 
 const content = {
-  heading: "Projects: A Developer's Growth Journey",
+  heading: "Welcome to my portfolio,",
+  description: [
+    "Showcasing projects from my earliest attempts to my latest achievements. Each project, whether simple or complex, represents a step in my journey as a developer. They reflect my growth, perseverance, and increasing passion for coding.",
+
+    "As you explore, you'll see both my successes and learning experiences. While some solutions may be imperfect, they demonstrate my determination to progress and overcome challenges. I invite you to view these projects as milestones in the evolution of a dedicated developer, constantly striving to improve and push boundaries.",
+  ],
   learnings: {
     title: "Learnings",
-    textOne:
-      "Explore the evolution of my skills through diverse projects. From foundational exercises to recent achievements, each piece reflects my continuous learning and passion for development.",
-    textTwo:
-      "My drive to improve and ability to quickly master new technologies are my greatest strengths. Discover my work and witness my ongoing progress!",
   },
   professionals: {
     title: "Professional",
@@ -55,10 +56,10 @@ const content = {
 const shared = [
   {
     id: "1",
-    src: "https://via.placeholder.com/150",
     name: "Html portfolio",
     role: "Front-end",
-    gallery: [{ id: 1, src: HtmlPortfolio, alt: "HTML/Sass Portfolio" }],
+    src: HtmlPortfolio,
+    alt: "HTML/Sass Portfolio",
     description:
       "A portfolio no responsive to understand the basics of web development, including the use of Sass, webpack, and some simple CSS animations.",
     tech: ["JavaScript", "Sass", "webpack"],
@@ -69,8 +70,8 @@ const shared = [
   },
   {
     id: "2",
-    src: "https://via.placeholder.com/150",
-    gallery: [{ id: 1, src: vuePortfolio, alt: "pommepate homepage" }],
+    src: vuePortfolio,
+    alt: "pommepate homepage",
     name: "Vue Portfolio",
     role: "Front-end",
     description:
@@ -83,8 +84,8 @@ const shared = [
   },
   {
     id: "3",
-    src: "https://via.placeholder.com/150",
-    gallery: [{ id: 1, src: gsapPortfolio, alt: "gsap top" }],
+    src: gsapPortfolio,
+    alt: "gsap top",
     name: "GSAP Portfolio",
     role: "Front-end",
     description:
@@ -99,9 +100,9 @@ const shared = [
 const learnings = [
   {
     id: "1",
-    src: "https://via.placeholder.com/150",
     name: "ITG Kitchens",
-    gallery: [{ id: 1, src: Igk, alt: "itg kitchens welcome" }],
+    src: Igk,
+    alt: "itg kitchens welcome",
     role: "Front-end",
     description:
       "HTML/Bootstrap project without using JavaScript frameworks, with a lot of code repetition. This allowed me to work with constraints and improve my HTML and CSS skills.",
@@ -113,8 +114,8 @@ const learnings = [
   },
   {
     id: "2",
-    src: "https://via.placeholder.com/150",
-    gallery: [{ id: 1, src: plantclicker, alt: "plant clicker" }],
+    src: plantclicker,
+    alt: "plant clicker",
     name: "Plant Clicker",
     role: "Front-end",
     description:
@@ -127,9 +128,10 @@ const learnings = [
   },
   {
     id: "3",
-    src: "https://via.placeholder.com/150",
+
     name: "Express Pug",
-    gallery: [{ id: 1, src: pug, alt: "pug/express" }],
+    src: pug,
+    alt: "pug/express",
     role: "Back-end",
     description:
       "Exploration of the backend with Express and Pug to understand template principles, complementing my knowledge of EJS.",
@@ -140,9 +142,10 @@ const learnings = [
   },
   {
     id: "4",
-    src: "https://via.placeholder.com/150",
+
     name: "Docker Project",
-    gallery: [{ id: 1, src: php, alt: "php/docker" }],
+    src: php,
+    alt: "php/docker",
     role: "Back-end",
     description:
       "Introductory project on PHP, Docker, and Nginx. I already had some PHP basics and introduced Docker and Nginx to deepen my skills.",
@@ -153,8 +156,8 @@ const learnings = [
   },
   {
     id: "5",
-    src: "https://via.placeholder.com/150",
-    gallery: [{ id: 1, src: nightHome, alt: "night home" }],
+    src: nightHome,
+    alt: "night home",
     name: "ITG Nights",
     role: "Full-stack",
     description:
@@ -166,8 +169,9 @@ const learnings = [
   },
   {
     id: "6",
-    src: "https://via.placeholder.com/150",
-    gallery: [{ id: 1, src: sorahome, alt: "sora home" }],
+
+    src: sorahome,
+    alt: "sora home",
     name: "Sora Cine",
     description:
       "First project with a backend. I collaborated with other developers, which helped me understand how APIs work and how to communicate between front-end and back-end.",
@@ -180,9 +184,10 @@ const learnings = [
   },
   {
     id: "7",
-    src: "https://via.placeholder.com/150",
+
     name: "Bookface",
-    gallery: [{ id: 1, src: bookface, alt: "bookface" }],
+    src: bookface,
+    alt: "bookface",
     description:
       "After an unfinished previous project, I decided to create a backend with Express and TypeScript. Although the front-end was not completed by the team, this experience taught me to be more autonomous.",
     role: "Back-end",
@@ -196,9 +201,10 @@ const learnings = [
 const professionals = [
   {
     id: "1",
-    src: "https://via.placeholder.com/150",
+
     name: "Akwanza",
-    gallery: [{ id: 1, src: akwanzaHome, alt: "akwanza home" }],
+    src: akwanzaHome,
+    alt: "akwanza home",
     description:
       "For my first professional team project, I was responsible for the front-end. I participated in designing the front-end with Figma and created product designs for the shop.",
     role: "Front-end, Design",
@@ -209,9 +215,10 @@ const professionals = [
   },
   {
     id: "2",
-    src: "https://via.placeholder.com/150",
+
     name: "Afitpilot",
-    gallery: [{ id: 1, src: afitpilotHome, alt: "afitpilot home" }],
+    src: afitpilotHome,
+    alt: "afitpilot home",
     description:
       "For my second professional team project, I was responsible for debugging the sign-up system and researching a new architecture suitable for a micro-environment.",
     role: "Back-end, DevOps",

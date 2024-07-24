@@ -7,7 +7,7 @@ const ProjetOutletpage = () => {
   return (
     <>
       <Outlet />
-      <Containers type="section-large" className="space-y-8">
+      <Containers type="section-large" className="space-y-8 mb-16">
         <Heading level="h3" title="Get in touch" className="ps-8 pt-12" />
         <Getintouch className="md:py-12 md:px-8" />
       </Containers>

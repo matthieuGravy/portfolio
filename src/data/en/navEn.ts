@@ -1,6 +1,3 @@
-const toplinksEn = [
-  { id: 1, name: "Projects", link: "/projects" },
-  { id: 2, name: "Hiring me", link: "/about" },
-];
+const toplinksEn = [{ id: 1, name: "Projects", link: "/projects" }];
 
 export { toplinksEn };

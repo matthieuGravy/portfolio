@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 
 import { TemplatesProps } from "../types/types";
 
@@ -11,15 +11,18 @@ import Heading from "./blocs/Heading";
 import Main from "./Main";
 import { Buttonext, ButtonTwo } from "./blocs/Buttons";
 import Containers from "./Containers";
+import Loadingimage from "./Loadingimage";
+import { Figure } from "./blocs/Project.tsx";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,
   paragraphe,
   ptech,
   link,
-  figure,
+  src,
   role,
   next,
+  alt,
 
   source,
 }) => {
@@ -87,7 +90,13 @@ const Templates: React.FC<TemplatesProps> = ({
             type="section-bento-bg"
             className="flex items-center justify-center"
           >
-            {figure && <section className="">{figure}</section>}
+            {src && (
+              <section className="">
+                <Suspense fallback={<Loadingimage />}>
+                  <Figure src={src} alt={alt} />
+                </Suspense>
+              </section>
+            )}
           </Containers>
           <Containers type="section-bento" className="">
             <nav className="flex flex-col items-center gap-y-8">

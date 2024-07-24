@@ -218,14 +218,14 @@ const ButtonSubmit: React.FC<ButtonSubmitProps> = ({ content, className }) => {
   return (
     <button
       type="submit"
-      className={`overflow-hidden uppercase w-64 font-cairo text-2xl tracking-wide rounded-lg  text-teal-400 flex justify-center items-center py-2 hover:bg-teal-200 hover:text-zinc-800 transition-colors duration-500" ${className}`}
+      className={`overflow-hidden uppercase w-64 font-cairo text-2xl tracking-wide rounded-lg text-teal-400 flex justify-center items-center py-2 hover:bg-teal-200 hover:text-zinc-800 transition-all duration-500 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       {content}
       <span
-        className={`relative -left-32 duration-500 transition-all overflow-hidden ${
-          isHovered ? "left-5 opacity-1" : "opacity-0"
+        className={`relative duration-500 transition-all overflow-hidden ${
+          isHovered ? "left-5 opacity-1" : "-left-32 opacity-0"
         }`}
       >
         <GrSend size={22} />

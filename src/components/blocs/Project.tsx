@@ -1,6 +1,6 @@
 interface FigureProps {
   src: string;
-  alt: string;
+  alt?: string;
   figcaption?: string;
 }
 

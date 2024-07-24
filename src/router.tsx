@@ -10,7 +10,6 @@ import Learningpage from "./pages/Projetspage/childrens/Learningpage/Learningpag
 import Professionalpage from "./pages/Projetspage/childrens/Professionalpage/Professionalpage.tsx";
 import Sharedpage from "./pages/Projetspage/childrens/Sharedpage/Sharedpage.tsx";
 
-import Aboutpage from "./pages/Aboutpage/Aboutpage";
 import Errorpage from "./pages/Errorpage/Errorpage";
 import Rgpdpage from "./pages/Rgpdpage/Rgpdpage";
 import Mentionspage from "./pages/Mentionspage/Mentionspage";
@@ -34,10 +33,6 @@ export const router = createBrowserRouter([
           { path: "professional/:id", element: <Professionalpage /> },
           { path: "shared/:id", element: <Sharedpage /> },
         ],
-      },
-      {
-        path: "about",
-        element: <Aboutpage />,
       },
       {
         path: "privacy-policy",

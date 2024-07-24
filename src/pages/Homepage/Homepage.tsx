@@ -315,7 +315,7 @@ const Homepage = () => {
               ) : (
                 <figure
                   ref={figureRef}
-                  className="flex items-end xl:min-h-[700px] "
+                  className="flex items-end justify-center xl:justify-start xl:min-h-[700px] "
                 >
                   <Suspense fallback={<Loadingimage />}>
                     {isImageVisible && (
