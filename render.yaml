@@ -3,6 +3,32 @@ staticSites:
     buildCommand: npm run build
     publishDir: build
     routes:
+      # Route racine
+      - type: rewrite
+        source: /
+        destination: /index.html
+
+      # Route /projects
+      - type: rewrite
+        source: /projects
+        destination: /index.html
+
+      # Route /projects/shared/:id
+      - type: rewrite
+        source: /projects/shared/:id
+        destination: /index.html
+
+      # Route /projects/learnings/:id
+      - type: rewrite
+        source: /projects/learnings/:id
+        destination: /index.html
+
+      # Route /projects/professional/1
+      - type: rewrite
+        source: /projects/professional/:id
+        destination: /index.html
+
+      # Catch-all route pour toutes les autres URLs
       - type: rewrite
         source: /**
         destination: /index.html
