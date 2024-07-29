@@ -13,7 +13,7 @@ import {
 
 const Projectpage = () => {
   const styleContainer =
-    "grid md:grid-cols-1 xl:grid-cols-3 gap-x-12 gap-y-8 md:px-8 py-12";
+    "grid md:grid-cols-1 xl:grid-cols-3 gap-x-12 gap-y-8 md:px-8 py-12 place-items-center";
   const styleHeader = "py-12 px-8";
 
   return (
