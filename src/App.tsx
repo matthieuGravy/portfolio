@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-      <section className="bg-[#131316] md:bg-[#130e11] min-h-screen">
+      <section className="bg-[#130e11] min-h-screen">
         <Topnav />
         <Outlet />
         <Footer />

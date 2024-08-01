@@ -42,3 +42,9 @@
     background-color: transparent;
 
   }
+  @media (prefers-color-scheme: dark) {
+    html {
+      background-color: #130e11; 
+   
+    }
+  }
