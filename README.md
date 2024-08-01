@@ -4,7 +4,7 @@ This is my portfolio, created quickly to find an internship and a job. Now, I am
 
 I am new to this field but I am always fully engaged. I am unsure whether I will pursue freelance work or become an employee. I want to work on projects and collaborate with other developers with diverse skills to learn more. I enjoy challenges. My goal is to ensure that the new design will help me find partners.
 
-### Show : [here](https://itsgravy.onrender.com/)
+### Show : [here](https://itsgravy.dev/)
 
 ## Technologies utilisées :
 
@@ -14,11 +14,12 @@ I am new to this field but I am always fully engaged. I am unsure whether I will
 - **Formik :**
 - **Yup :**
 - **TailwindCSS :**
+- **Helmet :**
 
 ## Futur Features :
 
-- **site redesign in progress**
-- **Dark mode**
-- **Multilingual**
-- **Multilingual**
-- **Create blog**
+- [x] **site redesign in progress**
+- [ ] **Dark mode**
+- [ ] **Multilingual**
+- [ ] **Multilingual**
+- [ ] **Create blog**
