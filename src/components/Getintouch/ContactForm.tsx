@@ -239,7 +239,7 @@ const ContactForm = () => {
                             </p>
                           ) : null}
                         </label>
-                        <section className="md:col-span-2 mx-auto">
+                        <section className="pb-12 md:col-span-2 mx-auto">
                           <ButtonSubmit content="Send" />
                         </section>
                       </motion.section>
