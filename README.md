@@ -6,15 +6,15 @@ I am new to this field but I am always fully engaged. I am unsure whether I will
 
 ### Show : [here](https://itsgravy.dev/)
 
-## Technologies utilisées :
+## Techs used :
 
-- **React 18 :**
-- **React-router-dom V6:**
-- **Framer Motion :**
-- **Formik :**
-- **Yup :**
-- **TailwindCSS :**
-- **Helmet :**
+- **React 18**
+- **React-router-dom V6**
+- **Framer Motion**
+- **Formik**
+- **Yup**
+- **TailwindCSS**
+- **Helmet**
 
 ## Futur Features :
 
