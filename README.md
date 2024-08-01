@@ -6,7 +6,7 @@ I am new to this field but I am always fully engaged. I am unsure whether I will
 
 ### Show : [here](https://itsgravy.dev/)
 
-## Techs used :
+## Technologies used :
 
 - **React 18**
 - **React-router-dom V6**
