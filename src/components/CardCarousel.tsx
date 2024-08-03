@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 interface CardCarouselProps {
   images: string[];
 }
+
 const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
   const desktopContainerRef = useRef<HTMLDivElement>(null);
   const mobileContainerRef = useRef<HTMLDivElement>(null);
@@ -15,16 +16,32 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
   });
 
   useEffect(() => {
-    if (desktopContainerRef.current) {
-      setContainerWidth(desktopContainerRef.current.offsetWidth);
-      setContentWidth(desktopContainerRef.current.scrollWidth);
-    }
-    if (mobileContainerRef.current) {
-      const containerWidth = mobileContainerRef.current.offsetWidth;
-      const scrollWidth = mobileContainerRef.current.scrollWidth;
-      setMobileConstraints({ left: 0, right: containerWidth - scrollWidth });
-    }
-  }, []); // Assurez-vous d'ajouter des dépendances ici si nécessaire
+    const updateDesktopDimensions = () => {
+      if (desktopContainerRef.current) {
+        setContainerWidth(desktopContainerRef.current.offsetWidth);
+        setContentWidth(desktopContainerRef.current.scrollWidth);
+      }
+    };
+
+    const updateMobileConstraints = () => {
+      if (mobileContainerRef.current) {
+        const containerWidth = mobileContainerRef.current.offsetWidth;
+        const scrollWidth = mobileContainerRef.current.scrollWidth;
+        setMobileConstraints({ left: 0, right: containerWidth - scrollWidth });
+      }
+    };
+
+    updateDesktopDimensions();
+    updateMobileConstraints();
+
+    window.addEventListener("resize", updateDesktopDimensions);
+    window.addEventListener("resize", updateMobileConstraints);
+
+    return () => {
+      window.removeEventListener("resize", updateDesktopDimensions);
+      window.removeEventListener("resize", updateMobileConstraints);
+    };
+  }, [images]);
 
   const { scrollXProgress } = useScroll({ container: desktopContainerRef });
 
@@ -42,7 +59,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
 
   return (
     <>
-      <div className="lg:hidden w-full overflow-hidden">
+      <div className="md:hidden w-full overflow-hidden ">
         {" "}
         {/* Version mobile/tablette */}
         <motion.div ref={mobileContainerRef} className="cursor-grab">
@@ -50,6 +67,8 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
             drag="x"
             dragConstraints={mobileConstraints}
             className="flex"
+            onDragStart={() => console.log("Mobile drag started")}
+            onDragEnd={() => console.log("Mobile drag ended")}
           >
             {images.map((image, index) => (
               <motion.div
@@ -61,6 +80,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
                   src={image}
                   alt={`Gallery item ${index}`}
                   className="w-full h-auto rounded-lg pointer-events-none"
+                  onLoad={() => console.log(`Mobile image ${index} loaded`)}
                 />
               </motion.div>
             ))}
@@ -68,7 +88,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
         </motion.div>
       </div>
 
-      <div className="hidden lg:block w-full overflow-x-scroll scrollbar-hide">
+      <div className="hidden md:block w-full overflow-x-scroll scrollbar-hide">
         {" "}
         {/* Version desktop */}
         <div ref={desktopContainerRef}>
@@ -83,6 +103,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
                   src={image}
                   alt={`Gallery item ${index}`}
                   className="w-full h-auto rounded-lg"
+                  onLoad={() => console.log(`Desktop image ${index} loaded`)}
                 />
               </motion.div>
             ))}
