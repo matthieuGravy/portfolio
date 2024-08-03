@@ -180,7 +180,6 @@ const Homepage = () => {
                   level="h3"
                   className=""
                 />
-                <ScrollHeading title={jumbo.subtitle} level="h4" />
               </header>
               <footer className="z-30 md:pb-12 md:ps-8 flex gap-x-8 lg:items-center justify-end flex-col-reverse md:flex-row-reverse xl:flex-row ">
                 <motion.button
