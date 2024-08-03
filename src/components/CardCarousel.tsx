@@ -49,7 +49,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
 
   return (
     <>
-      <div className="md:hidden w-full overflow-hidden bg-gray-100 border border-gray-300">
+      <div className="md:hidden w-full overflow-hidden">
         <motion.div ref={mobileContainerRef} className="cursor-grab">
           <motion.div
             drag="x"
