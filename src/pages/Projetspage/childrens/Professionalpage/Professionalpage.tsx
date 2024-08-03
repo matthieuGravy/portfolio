@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-import Templates from "../../../../components/Templates.tsx";
+import Templates from "../../../../layouts/Templates.tsx";
 import { professionals } from "../../../../data/projets.ts";
 //import Loadingimage from "../../../../components/Loadingimage";
 

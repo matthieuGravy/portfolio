@@ -4,15 +4,15 @@ import { useState, Suspense } from "react";
 
 import { TemplatesProps } from "../types/types";
 
-import ScrollTextLeft from "./animate/ScrollTextLeft";
-import ScrollHeading from "./animate/ScrollHeading";
-import ArrowRigths from "./animate/ArrowRigths";
-import Heading from "./blocs/Heading";
-import Main from "./Main";
-import { Buttonext, ButtonTwo } from "./blocs/Buttons";
-import Containers from "./Containers";
-import Loadingimage from "./Loadingimage";
-import { Figure } from "./blocs/Project.tsx";
+import ScrollTextLeft from "../components/animate/ScrollTextLeft";
+import ScrollHeading from "../components/animate/ScrollHeading";
+import ArrowRigths from "../components/animate/ArrowRigths";
+import Heading from "../components/blocs/Heading";
+import Main from "../components/Main";
+import { Buttonext, ButtonTwo } from "../components/blocs/Buttons";
+import Containers from "../components/Containers";
+import Loadingimage from "../components/Loadingimage";
+import { Figure } from "../components/blocs/Project.tsx";
 
 const Templates: React.FC<TemplatesProps> = ({
   title,

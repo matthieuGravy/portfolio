@@ -16,14 +16,11 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
   });
 
   useEffect(() => {
-    const updateDesktopDimensions = () => {
+    const updateDimensions = () => {
       if (desktopContainerRef.current) {
         setContainerWidth(desktopContainerRef.current.offsetWidth);
         setContentWidth(desktopContainerRef.current.scrollWidth);
       }
-    };
-
-    const updateMobileConstraints = () => {
       if (mobileContainerRef.current) {
         const containerWidth = mobileContainerRef.current.offsetWidth;
         const scrollWidth = mobileContainerRef.current.scrollWidth;
@@ -31,16 +28,9 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
       }
     };
 
-    updateDesktopDimensions();
-    updateMobileConstraints();
-
-    window.addEventListener("resize", updateDesktopDimensions);
-    window.addEventListener("resize", updateMobileConstraints);
-
-    return () => {
-      window.removeEventListener("resize", updateDesktopDimensions);
-      window.removeEventListener("resize", updateMobileConstraints);
-    };
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
   }, [images]);
 
   const { scrollXProgress } = useScroll({ container: desktopContainerRef });
@@ -59,9 +49,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
 
   return (
     <>
-      <div className="md:hidden w-full overflow-hidden ">
-        {" "}
-        {/* Version mobile/tablette */}
+      <div className="md:hidden w-full overflow-hidden bg-gray-100 border border-gray-300">
         <motion.div ref={mobileContainerRef} className="cursor-grab">
           <motion.div
             drag="x"
@@ -89,10 +77,20 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
       </div>
 
       <div className="hidden md:block w-full overflow-x-scroll scrollbar-hide">
-        {" "}
-        {/* Version desktop */}
-        <div ref={desktopContainerRef}>
-          <motion.div style={{ x }} className="flex space-x-4 py-4">
+        <motion.div
+          ref={desktopContainerRef}
+          className="cursor-grab"
+          whileTap={{ cursor: "grabbing" }}
+        >
+          <motion.div
+            style={{ x }}
+            className="flex space-x-4 py-4"
+            drag="x"
+            dragConstraints={{
+              left: -(contentWidth - containerWidth),
+              right: 0,
+            }}
+          >
             {images.map((image, index) => (
               <motion.div
                 key={index}
@@ -108,7 +106,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
