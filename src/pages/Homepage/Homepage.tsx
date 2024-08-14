@@ -99,6 +99,11 @@ const Homepage = () => {
     contactButton: string | boolean;
     greeting: string;
   }
+  interface ContactSectionProps {
+    contactButton: string | boolean;
+    greeting: string;
+  }
+
   const ContactSection: React.FC<ContactSectionProps> = ({
     contactButton,
     greeting,
@@ -113,7 +118,7 @@ const Homepage = () => {
       <AnimatePresence mode="wait">
         <motion.article
           key={key}
-          className={`py-8 md:pt-12 md:ps-8 space-y-4`}
+          className="py-8 md:pt-12 md:ps-8 space-y-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -123,19 +128,18 @@ const Homepage = () => {
           (typeof contactButton === "boolean" && contactButton) ? (
             <motion.div variants={itemVariants}>
               <motion.header>
-                <Heading title="Let's talk" level="h4" className={``} />
+                <Heading title="Let's talk" level="h4" className="" />
               </motion.header>
             </motion.div>
           ) : (
             <motion.div variants={itemVariants}>
-              <Heading title={<>{greeting}</>} level="h4" className={``} />
+              <Heading title={<>{greeting}</>} level="h4" className="" />
             </motion.div>
           )}
         </motion.article>
       </AnimatePresence>
     );
   };
-
   const styleP = "text-2xl text-zinc-400 tracking-wide font-sintony ";
   const classname =
     "hover:scale-90 transition-transform duration-500 ease-in-out";
