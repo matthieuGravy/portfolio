@@ -113,7 +113,7 @@ const Homepage = () => {
       <AnimatePresence mode="wait">
         <motion.article
           key={key}
-          className={`md:pt-12 md:ps-8 space-y-4`}
+          className={`py-8 md:pt-12 md:ps-8 space-y-4`}
           variants={containerVariants}
           initial="hidden"
           animate="visible"

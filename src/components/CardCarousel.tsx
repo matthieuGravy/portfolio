@@ -1,4 +1,10 @@
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useSpring,
+  useDragControls,
+} from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 interface CardCarouselProps {
@@ -14,6 +20,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
     left: 0,
     right: 0,
   });
+  const dragControls = useDragControls();
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -53,10 +60,12 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
         <motion.div ref={mobileContainerRef} className="cursor-grab">
           <motion.div
             drag="x"
+            dragElastic={0.1}
+            dragControls={dragControls}
+            dragMomentum={true}
             dragConstraints={mobileConstraints}
             className="flex"
-            onDragStart={() => console.log("Mobile drag started")}
-            onDragEnd={() => console.log("Mobile drag ended")}
+            onPointerDown={(e) => dragControls.start(e)}
           >
             {images.map((image, index) => (
               <motion.div
