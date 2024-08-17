@@ -1,5 +1,5 @@
 const jumbo = {
-  title: "Web developer",
+  title: "Developer",
   subtitle: "Specialized in front-end",
 };
 
