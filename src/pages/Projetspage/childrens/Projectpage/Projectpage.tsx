@@ -1,15 +1,9 @@
-import { NavLink } from "react-router-dom";
-
 import Containers from "../../../../components/Containers";
 import ScrollHeading from "../../../../components/animate/ScrollHeading";
 import Main from "../../../../components/Main";
+import ListProject from "../../../../components/data/ListProject";
 
-import {
-  learnings,
-  professionals,
-  shared,
-  content,
-} from "../../../../data/projets";
+import { content } from "../../../../data/projets";
 
 const Projectpage = () => {
   const styleContainer =
@@ -26,21 +20,7 @@ const Projectpage = () => {
             className={styleHeader}
           />
           <article className={`${styleContainer}`}>
-            {shared.map((project) => (
-              <>
-                <figure className="flex flex-col justify-between rounded-xl">
-                  <NavLink to={`shared/${project.id}`}>
-                    <img src={project.src} alt={project.name} />
-                  </NavLink>
-                  <NavLink
-                    to={`shared/${project.id}`}
-                    className="flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide text-zinc-400"
-                  >
-                    {project.name}
-                  </NavLink>
-                </figure>
-              </>
-            ))}
+            <ListProject type="shared" />
           </article>
         </Containers>
 
@@ -51,21 +31,7 @@ const Projectpage = () => {
             className={styleHeader}
           />
           <article className={`${styleContainer}`}>
-            {learnings.map((project) => (
-              <>
-                <figure className="flex flex-col justify-between rounded-xl">
-                  <NavLink to={`learning/${project.id}`}>
-                    <img src={project.src} alt={project.name} />
-                  </NavLink>
-                  <NavLink
-                    to={`learning/${project.id}`}
-                    className="flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide text-zinc-400"
-                  >
-                    {project.name}
-                  </NavLink>
-                </figure>
-              </>
-            ))}
+            <ListProject type="learning" />
           </article>
         </Containers>
         <Containers type="section-large">
@@ -75,21 +41,7 @@ const Projectpage = () => {
             className={styleHeader}
           />
           <article className={`${styleContainer}`}>
-            {professionals.map((project) => (
-              <>
-                <figure className="flex flex-col justify-between rounded-xl">
-                  <NavLink to={`professional/${project.id}`}>
-                    <img src={project.src} alt={project.name} />
-                  </NavLink>
-                  <NavLink
-                    to={`professional/${project.id}`}
-                    className="flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide text-zinc-400"
-                  >
-                    {project.name}
-                  </NavLink>
-                </figure>
-              </>
-            ))}
+            <ListProject type="professional" />
           </article>
         </Containers>
       </Main>
