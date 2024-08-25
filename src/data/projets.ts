@@ -184,7 +184,6 @@ const learnings = [
   },
   {
     id: "7",
-
     name: "Bookface",
     src: bookface,
     alt: "bookface",
@@ -215,7 +214,6 @@ const professionals = [
   },
   {
     id: "2",
-
     name: "Afitpilot",
     src: afitpilotHome,
     alt: "afitpilot home",
