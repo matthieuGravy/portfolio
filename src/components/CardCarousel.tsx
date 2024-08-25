@@ -1,10 +1,4 @@
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useSpring,
-  useDragControls,
-} from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 interface CardCarouselProps {
@@ -16,11 +10,6 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
   const mobileContainerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const [contentWidth, setContentWidth] = useState(0);
-  const [mobileConstraints, setMobileConstraints] = useState({
-    left: 0,
-    right: 0,
-  });
-  const dragControls = useDragControls();
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -29,9 +18,8 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
         setContentWidth(desktopContainerRef.current.scrollWidth);
       }
       if (mobileContainerRef.current) {
-        const containerWidth = mobileContainerRef.current.offsetWidth;
-        const scrollWidth = mobileContainerRef.current.scrollWidth;
-        setMobileConstraints({ left: 0, right: containerWidth - scrollWidth });
+        setContainerWidth(mobileContainerRef.current.offsetWidth);
+        setContentWidth(mobileContainerRef.current.scrollWidth);
       }
     };
 
@@ -40,33 +28,42 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
     return () => window.removeEventListener("resize", updateDimensions);
   }, [images]);
 
-  const { scrollXProgress } = useScroll({ container: desktopContainerRef });
+  const { scrollXProgress: desktopScrollXProgress } = useScroll({
+    container: desktopContainerRef,
+  });
+  const { scrollXProgress: mobileScrollXProgress } = useScroll({
+    container: mobileContainerRef,
+  });
 
-  const smoothProgress = useSpring(scrollXProgress, {
+  const smoothDesktopProgress = useSpring(desktopScrollXProgress, {
     stiffness: 30,
     damping: 30,
     restDelta: 0.001,
   });
 
-  const x = useTransform(
-    smoothProgress,
+  const smoothMobileProgress = useSpring(mobileScrollXProgress, {
+    stiffness: 30,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
+  const desktopX = useTransform(
+    smoothDesktopProgress,
+    [0, 1],
+    ["0%", `-${((contentWidth - containerWidth) / contentWidth) * 100}%`]
+  );
+
+  const mobileX = useTransform(
+    smoothMobileProgress,
     [0, 1],
     ["0%", `-${((contentWidth - containerWidth) / contentWidth) * 100}%`]
   );
 
   return (
     <>
-      <div className="md:hidden w-full overflow-hidden">
-        <motion.div ref={mobileContainerRef} className="cursor-grab">
-          <motion.div
-            drag="x"
-            dragElastic={0.1}
-            dragControls={dragControls}
-            dragMomentum={true}
-            dragConstraints={mobileConstraints}
-            className="flex"
-            onPointerDown={(e) => dragControls.start(e)}
-          >
+      <div className="md:hidden w-full overflow-x-scroll scrollbar-hide">
+        <motion.div ref={mobileContainerRef} className="w-full">
+          <motion.div style={{ x: mobileX }} className="flex space-x-4 py-4">
             {images.map((image, index) => (
               <motion.div
                 key={index}
@@ -88,18 +85,10 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
       <div className="hidden md:block w-full overflow-x-scroll scrollbar-hide">
         <motion.div
           ref={desktopContainerRef}
-          className="cursor-grab"
+          className="w-full"
           whileTap={{ cursor: "grabbing" }}
         >
-          <motion.div
-            style={{ x }}
-            className="flex space-x-4 py-4"
-            drag="x"
-            dragConstraints={{
-              left: -(contentWidth - containerWidth),
-              right: 0,
-            }}
-          >
+          <motion.div style={{ x: desktopX }} className="flex space-x-4 py-4">
             {images.map((image, index) => (
               <motion.div
                 key={index}
