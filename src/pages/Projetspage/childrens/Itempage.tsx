@@ -15,7 +15,6 @@ const Itempage = () => {
     } else if (sharedMatch) {
       return <ProjectIterator project="shared" />;
     } else {
-      console.log("No match found");
       return null;
     }
   };
