@@ -1,9 +1,9 @@
-import Containers from "../../../../components/Containers";
-import ScrollHeading from "../../../../components/animate/ScrollHeading";
-import Main from "../../../../components/Main";
-import ListProject from "../../../../components/data/ListProject";
+import Containers from "../../../components/Containers";
+import ScrollHeading from "../../../components/animate/ScrollHeading";
+import Main from "../../../components/Main";
+import ListProject from "../../../components/data/ListProject";
 
-import { content } from "../../../../data/projets";
+import { content } from "../../../data/projets";
 
 const Projectpage = () => {
   const styleContainer =
