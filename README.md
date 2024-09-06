@@ -23,3 +23,7 @@ I am new to this field but I am always fully engaged. I am unsure whether I will
 - [ ] **Multilingual**
 - [ ] **Multilingual**
 - [ ] **Create blog**
+
+## Lighthouse
+
+[image](./public/lighthouse.png)
