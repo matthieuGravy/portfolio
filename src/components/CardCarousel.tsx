@@ -99,7 +99,6 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
                   src={image}
                   alt={`Gallery item ${index}`}
                   className="w-full h-auto rounded-lg"
-                  onLoad={() => console.log(`Desktop image ${index} loaded`)}
                 />
               </motion.div>
             ))}
