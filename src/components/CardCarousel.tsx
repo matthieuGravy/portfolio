@@ -74,7 +74,6 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
                   src={image}
                   alt={`Gallery item ${index}`}
                   className="w-full h-auto rounded-lg pointer-events-none"
-                  onLoad={() => console.log(`Mobile image ${index} loaded`)}
                 />
               </motion.div>
             ))}
