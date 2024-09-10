@@ -1,4 +1,5 @@
 import { useMatch } from "react-router-dom";
+import Breadcrumb from "../../../components/Breadcrumb.tsx";
 
 import ProjectIterator from "../../../components/data/ProjectIterator.tsx";
 
@@ -19,7 +20,12 @@ const Itempage = () => {
     }
   };
 
-  return <>{renderItem()}</>;
+  return (
+    <>
+      <Breadcrumb />
+      {renderItem()}
+    </>
+  );
 };
 
 export default Itempage;
