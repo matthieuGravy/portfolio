@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 interface CardCarouselProps {
-  images: string[];
+  images: { src: string; href: string }[];
 }
 
 const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
@@ -62,47 +62,49 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ images }) => {
   return (
     <>
       <div className="md:hidden w-full overflow-x-scroll scrollbar-hide">
-        <motion.div ref={mobileContainerRef} className="w-full">
-          <motion.div style={{ x: mobileX }} className="flex space-x-4 py-4">
+        <motion.nav ref={mobileContainerRef} className="w-full">
+          <motion.figure style={{ x: mobileX }} className="flex space-x-4 py-4">
             {images.map((image, index) => (
-              <motion.div
+              <motion.a
                 key={index}
                 className="flex-shrink-0 w-[200px] p-2"
                 whileHover={{ scale: 1.05 }}
+                href={image.href}
               >
                 <img
-                  src={image}
+                  src={image.src}
                   alt={`Gallery item ${index}`}
                   className="w-full h-auto rounded-lg pointer-events-none"
                 />
-              </motion.div>
+              </motion.a>
             ))}
-          </motion.div>
-        </motion.div>
+          </motion.figure>
+        </motion.nav>
       </div>
 
-      <div className="hidden md:block w-full overflow-x-scroll scrollbar-hide">
-        <motion.div
+      <div className="hidden md:block w-full overflow-x-scroll ">
+        <motion.nav
           ref={desktopContainerRef}
           className="w-full"
           whileTap={{ cursor: "grabbing" }}
         >
-          <motion.div style={{ x: desktopX }} className="flex space-x-4 py-4">
+          <motion.figure style={{ x: desktopX }} className="flex space-x-4 py-4">
             {images.map((image, index) => (
-              <motion.div
+              <motion.a
                 key={index}
                 className="flex-shrink-0 w-[300px]"
                 whileHover={{ scale: 1.05 }}
+                href={image.href}
               >
                 <img
-                  src={image}
+                  src={image.src}
                   alt={`Gallery item ${index}`}
                   className="w-full h-auto rounded-lg"
                 />
-              </motion.div>
+              </motion.a>
             ))}
-          </motion.div>
-        </motion.div>
+          </motion.figure>
+        </motion.nav>
       </div>
     </>
   );

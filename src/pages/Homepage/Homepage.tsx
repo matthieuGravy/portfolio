@@ -35,7 +35,11 @@ import {
 import { shared, learnings, professionals } from "../../data/projets";
 
 const Homepage = () => {
-  const galleryTemplate = [TemplateHtml, TemplateVue, TemplateGsap];
+  const galleryTemplate = [
+    { href: "/projects/shared/1", src: TemplateHtml },
+    { href: "/projects/shared/2", src: TemplateVue },
+    { href: "/projects/shared/3", src: TemplateGsap },
+  ];
   const renderListItem = (finalNumber: number, title: string) => (
     <li className="flex flex-col items-center gap-y-6">
       <article className="space-y-6 px-8 text-center">
