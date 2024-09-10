@@ -28,7 +28,7 @@ const Listpage = () => {
     } else if (sharedMatch) {
       return content.shared.title;
     } else {
-      return "Projets"; // Titre par défaut
+      return "Projets";
     }
   };
 
