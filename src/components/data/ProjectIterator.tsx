@@ -23,6 +23,7 @@ interface ProjectIteratorProps {
 
 const ProjectIterator: React.FC<ProjectIteratorProps> = ({ project }) => {
   const { id } = useParams<{ id: string }>();
+
   const renderProject = (data: ProjectItem[]) => (
     <>
       {data

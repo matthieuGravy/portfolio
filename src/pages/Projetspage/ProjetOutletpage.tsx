@@ -2,10 +2,12 @@ import { Outlet } from "react-router-dom";
 import Getintouch from "../../components/Getintouch/Getintouch";
 import Containers from "../../components/Containers";
 import Heading from "../../components/blocs/Heading";
+import Breadcrumb from "../../components/Breadcrumb";
 
 const ProjetOutletpage = () => {
   return (
     <>
+      <Breadcrumb />
       <Outlet />
       <Containers type="section-large" className="space-y-8 mb-16">
         <Heading level="h3" title="Get in touch" className="ps-8 pt-12" />

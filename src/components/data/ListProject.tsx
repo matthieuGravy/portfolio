@@ -33,11 +33,11 @@ const ListProject: React.FC<ListProjectProps> = ({ type }) => {
       {projects.map((project) => (
         <React.Fragment key={project.id}>
           <figure className="flex flex-col justify-between rounded-xl">
-            <NavLink to={`${type}/${project.id}`}>
+            <NavLink to={`/projects/${type}/${project.id}`}>
               <img src={project.src} alt={project.name} />
             </NavLink>
             <NavLink
-              to={`${type}/${project.id}`}
+              to={`/projects/${type}/${project.id}`}
               className="flex justify-center py-2 transition-colors duration-500 px-2 font-cairo text-2xl tracking-wide text-zinc-400"
             >
               {project.name}
