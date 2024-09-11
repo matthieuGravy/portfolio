@@ -43,7 +43,7 @@ const content = {
     "As you explore, you'll see both my successes and learning experiences. While some solutions may be imperfect, they demonstrate my determination to progress and overcome challenges. I invite you to view these projects as milestones in the evolution of a dedicated developer, constantly striving to improve and push boundaries.",
   ],
   learnings: {
-    title: "Learnings",
+    title: "Learning",
   },
   professionals: {
     title: "Professional",
