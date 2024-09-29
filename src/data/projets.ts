@@ -7,6 +7,9 @@ import vuePortfolio from "../assets/pictures/projects/vue3-portfolio.png";
 //3 portfolio
 import gsapPortfolio from "../assets/pictures/projects/gsap-portfolio.png";
 
+//4 panicmode
+import panicmode from "../assets/pictures/projects/panicmode.png";
+
 //1 IGK
 import Igk from "../assets/pictures/projects/itgkitchen.png";
 
@@ -94,6 +97,20 @@ const shared = [
     link: "https://matthieugravy.github.io/Multilingual-HomePage/",
     github: "https://github.com/matthieuGravy/Multilingual-HomePage",
     preview: "/projects/shared/2",
+    next: "/projects/shared/4",
+  },
+  {
+    id: "4",
+    src: panicmode,
+    alt: "package npm PanicMode",
+    name: "PanicMode",
+    role: "Owner",
+    description:
+      "PanicMode is a small package currently under development, designed to simplify the creation of static sites.",
+    tech: ["TypeScript", "Daisy-ui", "Tailwind css", "npm packages", "vite"],
+    link: "https://panicmode-example.vercel.app/",
+    github: "https://github.com/matthieuGravy/panicmode",
+    preview: "/projects/shared/3",
     next: "/projects/shared/1",
   },
 ];
