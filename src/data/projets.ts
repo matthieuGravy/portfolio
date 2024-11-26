@@ -38,6 +38,9 @@ import akwanzaHome from "../assets/pictures/projects/akwanza.png";
 //2
 import afitpilotHome from "../assets/pictures/projects/afitpilot.png";
 
+//3
+import evClub from "../assets/pictures/projects/ev-club.png";
+
 const content = {
   heading: "Welcome to my portfolio,",
   description: [
@@ -226,7 +229,7 @@ const professionals = [
     role: "Front-end, Design",
     tech: ["MERN stack", "Framer", "tailwindcss", "vite"],
     link: "https://www.akwanza.com/",
-    preview: "/projects/professional/2",
+    preview: "/projects/professional/3",
     next: "/projects/professional/2",
   },
   {
@@ -241,6 +244,19 @@ const professionals = [
     to: "afitpilot",
     link: "https://www.afitpilot.com/",
     preview: "/projects/professional/1",
+    next: "/projects/professional/3",
+  },
+  {
+    id: "3",
+    name: "Evolution Verticale",
+    src: evClub,
+    alt: "evo verticale",
+    description:
+      "Recently, I volunteered to help the development of improving the accessibility of the registration website and adding some features to improve the user experience. This project is still in progress and they are many things to do. I began by upgrading the registration form, updating the design for admins and adding some features to improve the user experience.",
+    role: "Full-stack",
+    tech: ["React", "Node", "Tailwind", "Motion"],
+    link: "https://www.ev-club.be/",
+    preview: "/projects/professional/3",
     next: "/projects/professional/1",
   },
 ];
